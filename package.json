@@ -1,0 +1,38 @@
+{
+  "name": "web-tool",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "generate-seo": "node scripts/generate-seo-pages.mjs"
+  },
+  "dependencies": {
+    "dompurify": "^3.4.11",
+    "js-yaml": "^5.2.1",
+    "jsqr": "^1.4.0",
+    "marked": "^18.0.5",
+    "naive-ui": "^2.40.3",
+    "opencc-js": "^1.4.0",
+    "qrcode": "^1.5.4",
+    "sql-formatter": "^15.8.2",
+    "terser": "^5.48.0",
+    "tesseract.js": "^7.0.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/dompurify": "^3.0.5",
+    "@types/js-yaml": "^4.0.9",
+    "@types/qrcode": "^1.5.6",
+    "@unocss/preset-uno": "^0.65.3",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "~5.6.0",
+    "unocss": "^0.65.3",
+    "vite": "^6.0.0",
+    "vue-tsc": "^2.2.0"
+  }
+}
