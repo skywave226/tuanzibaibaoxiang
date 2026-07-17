@@ -28,7 +28,6 @@
           clearable
           round
           class="search-input"
-          @focus="goHome"
           @update:value="onSearch"
         >
           <template #prefix>
@@ -112,12 +111,6 @@ function onSearch(value: string) {
     router.push({ path: '/', query: { q: value || undefined } })
   } else {
     router.replace({ query: { ...route.query, q: value || undefined } })
-  }
-}
-
-function goHome() {
-  if (route.path !== '/') {
-    router.push('/')
   }
 }
 </script>
