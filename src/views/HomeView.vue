@@ -5,10 +5,10 @@
       <p class="text-gray-500 mt-2">共 {{ displayTools.length }} 个工具可用{{ filterHint }}</p>
     </div>
     <div class="tool-grid">
-      <router-link
+      <a
         v-for="tool in displayTools"
         :key="tool.path"
-        :to="tool.path"
+        :href="`${baseUrl}tools${tool.path}/`"
         class="tool-card"
       >
         <div class="tool-icon" v-html="tool.icon"></div>
@@ -19,7 +19,7 @@
         <div class="tool-category">
           <n-tag size="small" :bordered="false">{{ tool.category }}</n-tag>
         </div>
-      </router-link>
+      </a>
     </div>
     <n-empty v-if="displayTools.length === 0" description="没有找到匹配的工具" class="mt-16" />
   </div>
@@ -32,6 +32,7 @@ import { NTag, NEmpty } from 'naive-ui'
 import { tools } from '@/tools/registry'
 
 const route = useRoute()
+const baseUrl = import.meta.env.BASE_URL
 
 const activeCategory = computed(() => (route.query.category as string) || '__all__')
 const searchQuery = computed(() => (route.query.q as string) || '')
