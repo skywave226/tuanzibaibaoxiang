@@ -20,7 +20,8 @@ function escapeHtml(str) {
 
 function parseMeta(content) {
   const get = (key) => {
-    const m = content.match(new RegExp(`${key}:\\s*['"]([^'"]*)['"]`))
+    const m = content.match(new RegExp(`${key}:\\s*'([^']*)'`))
+      || content.match(new RegExp(`${key}:\\s*"([^"]*)"`))
     return m ? m[1] : ''
   }
   const keywordsMatch = content.match(/keywords:\s*\[([^\]]*)\]/s)
@@ -175,7 +176,7 @@ async function main() {
     const content = await readFile(file, 'utf-8')
     const meta = parseMeta(content)
     if (!meta.name || !meta.path) continue
-    const iconMatch = content.match(/icon:\s*['"]([^'"]*)['"]/)
+    const iconMatch = content.match(/icon:\s*'([^']*)'/) || content.match(/icon:\s*"([^"]*)"/)
     meta.icon = iconMatch ? iconMatch[1] : ''
     tools.push(meta)
   }
