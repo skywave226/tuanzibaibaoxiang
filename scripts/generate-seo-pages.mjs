@@ -6,7 +6,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const TOOLS_DIR = join(__dirname, '../src/tools')
 const PUBLIC_DIR = join(__dirname, '../public')
 const BASE_PATH = '/tuanzibaibaoxiang'
-const SITE_URL = 'https://tuanzibaibaoxiang.github.io/tuanzibaibaoxiang'
+const SITE_URL = 'https://skywave226.github.io/tuanzibaibaoxiang'
 
 function escapeHtml(str) {
   return String(str)
