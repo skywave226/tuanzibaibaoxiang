@@ -5,9 +5,12 @@ import { fileURLToPath } from 'url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const TOOLS_DIR = join(__dirname, '../src/tools')
 const PUBLIC_DIR = join(__dirname, '../public')
+const DIST_DIR = join(__dirname, '../dist')
 const BASE_PATH = '/tuanzibaibaoxiang'
 const SITE_URL = 'https://skywave226.github.io/tuanzibaibaoxiang'
 const BRAND = '团子百宝箱'
+const INJECT_SPA = process.argv.includes('--inject-spa')
+const ANALYTICS_SCRIPT = `<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js?id=3QaSafSRwObXL74l&ck=3QaSafSRwObXL74l"></script>`
 
 function escapeHtml(str) {
   return String(str)
@@ -16,6 +19,15 @@ function escapeHtml(str) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;')
+}
+
+function extractSpaAssets(distHtml) {
+  const cssMatch = distHtml.match(/<link rel="stylesheet"[^>]*>/)
+  const jsMatch = distHtml.match(/<script type="module"[^>]*><\/script>/)
+  return {
+    css: cssMatch ? cssMatch[0] : '',
+    js: jsMatch ? jsMatch[0] : '',
+  }
 }
 
 function parseMeta(content) {
@@ -55,7 +67,7 @@ async function findMetaFiles(dir) {
   return files
 }
 
-function toolPageHtml(tool) {
+function toolPageHtml(tool, spaAssets = null) {
   const title = `${tool.name} - 在线工具 | ${BRAND}`
   const desc = tool.description || `${tool.name}是一款免费的在线工具，支持${tool.keywords.slice(0, 5).join('、')}等功能。`
   const keywords = [...tool.keywords, tool.name, tool.category, '在线工具'].join(',')
@@ -75,11 +87,7 @@ function toolPageHtml(tool) {
     },
   }
 
-  return `<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  const seoHead = `
   <title>${escapeHtml(title)}</title>
   <meta name="description" content="${escapeHtml(desc)}">
   <meta name="keywords" content="${escapeHtml(keywords)}">
@@ -89,7 +97,9 @@ function toolPageHtml(tool) {
   <meta property="og:url" content="${escapeHtml(pageUrl)}">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
-  <script type="application/ld+json">${JSON.stringify(jsonLd, null, 2)}</script>
+  <script type="application/ld+json">${JSON.stringify(jsonLd, null, 2)}</script>`
+
+  const commonStyle = `
   <style>
     * { box-sizing: border-box; }
     body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
@@ -112,9 +122,9 @@ function toolPageHtml(tool) {
       .tool-title { font-size: 22px; }
       .tool-header { flex-direction: column; align-items: flex-start; }
     }
-  </style>
-</head>
-<body>
+  </style>`
+
+  const staticBody = `
   <header class="header">
     <a href="${BASE_PATH}/">
       <img src="${BASE_PATH}/logo.svg" width="24" height="24" alt="${BRAND}">
@@ -140,7 +150,41 @@ function toolPageHtml(tool) {
   </main>
   <footer class="footer">
     <p>&copy; ${new Date().getFullYear()} ${BRAND} - 在线工具集合</p>
-  </footer>
+  </footer>`
+
+  if (spaAssets && spaAssets.css && spaAssets.js) {
+    return `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+${seoHead}
+${commonStyle}
+  ${spaAssets.css}
+  <script>history.replaceState(null, '', '#${tool.path}')</script>
+  ${spaAssets.js}
+</head>
+<body>
+  <div id="app">
+${staticBody}
+  </div>
+  ${ANALYTICS_SCRIPT}
+</body>
+</html>
+`
+  }
+
+  return `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+${seoHead}
+${commonStyle}
+</head>
+<body>
+${staticBody}
+  ${ANALYTICS_SCRIPT}
 </body>
 </html>
 `
@@ -183,20 +227,35 @@ async function main() {
 
   tools.sort((a, b) => a.category.localeCompare(b.category) || a.name.localeCompare(b.name))
 
+  let spaAssets = null
+  let outputDir = PUBLIC_DIR
+
+  if (INJECT_SPA) {
+    const distIndexPath = join(DIST_DIR, 'index.html')
+    try {
+      const distHtml = await readFile(distIndexPath, 'utf-8')
+      spaAssets = extractSpaAssets(distHtml)
+      outputDir = DIST_DIR
+      console.log('Injecting SPA assets into static pages')
+    } catch (e) {
+      console.warn('dist/index.html not found, generating landing pages only')
+    }
+  }
+
   // 生成每个工具的静态落地页
   for (const tool of tools) {
-    const pageDir = join(PUBLIC_DIR, 'tools', tool.path.replace(/^\//, ''))
+    const pageDir = join(outputDir, 'tools', tool.path.replace(/^\//, ''))
     await mkdir(pageDir, { recursive: true })
-    await writeFile(join(pageDir, 'index.html'), toolPageHtml(tool), 'utf-8')
+    await writeFile(join(pageDir, 'index.html'), toolPageHtml(tool, spaAssets), 'utf-8')
   }
 
   // 生成 sitemap.xml 和 robots.txt
-  await writeFile(join(PUBLIC_DIR, 'sitemap.xml'), sitemapXml(tools), 'utf-8')
-  await writeFile(join(PUBLIC_DIR, 'robots.txt'), robotsTxt(), 'utf-8')
+  await writeFile(join(outputDir, 'sitemap.xml'), sitemapXml(tools), 'utf-8')
+  await writeFile(join(outputDir, 'robots.txt'), robotsTxt(), 'utf-8')
 
-  console.log(`Generated ${tools.length} SEO pages in public/tools/`)
-  console.log('Generated public/sitemap.xml')
-  console.log('Generated public/robots.txt')
+  console.log(`Generated ${tools.length} SEO pages in ${outputDir.replace(__dirname + '/', '')}/tools/`)
+  console.log(`Generated ${outputDir.replace(__dirname + '/', '')}/sitemap.xml`)
+  console.log(`Generated ${outputDir.replace(__dirname + '/', '')}/robots.txt`)
 }
 
 main().catch(console.error)
