@@ -18,7 +18,7 @@
             <rect x="17" y="38" width="66" height="43" rx="9" fill="white"/>
             <rect x="43" y="38" width="14" height="16" rx="3" fill="url(#layout-logo-grad)"/>
           </svg>
-          <span class="font-bold text-lg logo-text">Web Tool</span>
+          <span class="font-bold text-lg logo-text">团子百宝箱</span>
         </router-link>
       </div>
       <div class="header-center">

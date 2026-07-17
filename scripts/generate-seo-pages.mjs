@@ -7,6 +7,7 @@ const TOOLS_DIR = join(__dirname, '../src/tools')
 const PUBLIC_DIR = join(__dirname, '../public')
 const BASE_PATH = '/tuanzibaibaoxiang'
 const SITE_URL = 'https://skywave226.github.io/tuanzibaibaoxiang'
+const BRAND = '团子百宝箱'
 
 function escapeHtml(str) {
   return String(str)
@@ -54,7 +55,7 @@ async function findMetaFiles(dir) {
 }
 
 function toolPageHtml(tool) {
-  const title = `${tool.name} - 在线工具 | Web Tool`
+  const title = `${tool.name} - 在线工具 | ${BRAND}`
   const desc = tool.description || `${tool.name}是一款免费的在线工具，支持${tool.keywords.slice(0, 5).join('、')}等功能。`
   const keywords = [...tool.keywords, tool.name, tool.category, '在线工具'].join(',')
   const pageUrl = `${SITE_URL}/tools${tool.path}`
@@ -115,8 +116,8 @@ function toolPageHtml(tool) {
 <body>
   <header class="header">
     <a href="${BASE_PATH}/">
-      <img src="${BASE_PATH}/logo.svg" width="24" height="24" alt="Web Tool">
-      <span>Web Tool</span>
+      <img src="${BASE_PATH}/logo.svg" width="24" height="24" alt="${BRAND}">
+      <span>${BRAND}</span>
     </a>
   </header>
   <main class="container">
@@ -137,7 +138,7 @@ function toolPageHtml(tool) {
     </article>
   </main>
   <footer class="footer">
-    <p>&copy; ${new Date().getFullYear()} Web Tool - 在线工具集合</p>
+    <p>&copy; ${new Date().getFullYear()} ${BRAND} - 在线工具集合</p>
   </footer>
 </body>
 </html>
