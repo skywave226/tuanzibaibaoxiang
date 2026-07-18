@@ -1,24 +1,25 @@
 <template>
   <div class="html-entity-codec">
-    <div class="toolbar">
+    <div class="toolbar mb-4 flex items-center justify-between flex-wrap gap-3">
       <n-space>
         <n-button type="primary" @click="encode">编码 →</n-button>
         <n-button type="primary" @click="decode">← 解码</n-button>
         <n-button @click="clearAll">清空</n-button>
       </n-space>
-    </div>
-
-    <div class="mode-switch mb-4">
       <n-radio-group v-model:value="mode" size="small">
-        <n-radio-button value="named">命名实体（&amp; &lt; &gt;）</n-radio-button>
-        <n-radio-button value="decimal">十进制（&amp;#60;）</n-radio-button>
-        <n-radio-button value="hex">十六进制（&amp;#x3c;）</n-radio-button>
+        <n-radio-button value="named">命名实体</n-radio-button>
+        <n-radio-button value="decimal">十进制</n-radio-button>
+        <n-radio-button value="hex">十六进制</n-radio-button>
+        <n-radio-button value="all">全部编码</n-radio-button>
       </n-radio-group>
     </div>
 
     <div class="editor-area">
       <div class="editor-pane">
-        <div class="pane-label">原文</div>
+        <div class="pane-label flex justify-between">
+          <span>原文</span>
+          <n-button size="tiny" quaternary @click="copyText(text)">复制</n-button>
+        </div>
         <n-input
           v-model:value="text"
           type="textarea"
@@ -28,7 +29,10 @@
         />
       </div>
       <div class="editor-pane">
-        <div class="pane-label">HTML 实体结果</div>
+        <div class="pane-label flex justify-between">
+          <span>HTML 实体结果</span>
+          <n-button size="tiny" quaternary @click="copyText(result)">复制</n-button>
+        </div>
         <n-input
           v-model:value="result"
           type="textarea"
@@ -39,35 +43,38 @@
       </div>
     </div>
 
+    <div class="actions mt-4 flex gap-3 flex-wrap">
+      <n-button size="small" @click="downloadResult" :disabled="!result">下载结果</n-button>
+      <n-button size="small" @click="text = result" :disabled="!result">结果作为输入</n-button>
+    </div>
+
     <n-alert type="error" v-if="errorMsg" class="mt-4" closable @close="errorMsg = ''">
       {{ errorMsg }}
     </n-alert>
 
-    <div class="examples card mt-4">
-      <h3 class="text-sm font-bold mb-3">常用实体对照</h3>
-      <n-space vertical size="small">
-        <div v-for="ex in entities" :key="ex.name" class="example-row">
-          <span class="text-sm text-gray-500 w-32">{{ ex.name }}</span>
-          <span class="text-sm font-mono w-16">{{ ex.char }}</span>
-          <n-button text size="small" @click="text = ex.char" class="example-btn">
-            {{ ex.named }}
-          </n-button>
+    <n-card title="常用实体对照" class="mt-6">
+      <div class="entity-grid">
+        <div v-for="ex in entities" :key="ex.name" class="entity-row">
+          <span class="entity-name">{{ ex.name }}</span>
+          <span class="entity-char">{{ ex.char }}</span>
+          <span class="entity-code">{{ ex.named }}</span>
+          <n-button text size="small" @click="insertEntity(ex.char)">插入</n-button>
         </div>
-      </n-space>
-    </div>
+      </div>
+    </n-card>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { NButton, NSpace, NInput, NAlert, NRadioGroup, NRadioButton } from 'naive-ui'
+import { NButton, NSpace, NInput, NAlert, NCard, NRadioGroup, NRadioButton, useMessage } from 'naive-ui'
 
+const message = useMessage()
 const text = ref('')
 const result = ref('')
 const errorMsg = ref('')
-const mode = ref<'named' | 'decimal' | 'hex'>('named')
+const mode = ref<'named' | 'decimal' | 'hex' | 'all'>('named')
 
-// 常用命名实体映射表
 const namedEntities: Record<string, string> = {
   '&': '&amp;',
   '<': '&lt;',
@@ -97,23 +104,27 @@ const namedEntities: Record<string, string> = {
   'µ': '&micro;',
 }
 
-// 反向映射（命名实体 → 字符）
 const reverseNamedEntities: Record<string, string> = {}
 Object.entries(namedEntities).forEach(([char, entity]) => {
   reverseNamedEntities[entity] = char
 })
 
 const entities = [
-  { name: '< 小于号', char: '<', named: '&lt;' },
-  { name: '> 大于号', char: '>', named: '&gt;' },
-  { name: '& 与号', char: '&', named: '&amp;' },
-  { name: '" 引号', char: '"', named: '&quot;' },
-  { name: "撇号 '", char: "'", named: '&apos;' },
-  { name: '© 版权', char: '©', named: '&copy;' },
-  { name: '® 注册', char: '®', named: '&reg;' },
-  { name: '¥ 人民币', char: '¥', named: '&yen;' },
-  { name: '€ 欧元', char: '€', named: '&euro;' },
-  { name: '— 破折号', char: '—', named: '&mdash;' },
+  { name: '小于号', char: '<', named: '&lt;' },
+  { name: '大于号', char: '>', named: '&gt;' },
+  { name: '与号', char: '&', named: '&amp;' },
+  { name: '双引号', char: '"', named: '&quot;' },
+  { name: '撇号', char: "'", named: '&apos;' },
+  { name: '空格', char: ' ', named: '&nbsp;' },
+  { name: '版权', char: '©', named: '&copy;' },
+  { name: '注册', char: '®', named: '&reg;' },
+  { name: '人民币', char: '¥', named: '&yen;' },
+  { name: '欧元', char: '€', named: '&euro;' },
+  { name: '破折号', char: '—', named: '&mdash;' },
+  { name: '乘号', char: '×', named: '&times;' },
+  { name: '除号', char: '÷', named: '&divide;' },
+  { name: '省略号', char: '…', named: '&hellip;' },
+  { name: '度', char: '°', named: '&deg;' },
 ]
 
 function encodeChar(ch: string): string {
@@ -124,18 +135,26 @@ function encodeChar(ch: string): string {
   if (mode.value === 'decimal') {
     return `&#${code};`
   }
-  return `&#x${code.toString(16).toLowerCase()};`
+  if (mode.value === 'hex') {
+    return `&#x${code.toString(16).toLowerCase()};`
+  }
+  // all
+  if (code < 128 && !Object.prototype.hasOwnProperty.call(namedEntities, ch)) {
+    return ch
+  }
+  return namedEntities[ch] ?? `&#${code};`
 }
 
 function encode() {
   errorMsg.value = ''
   try {
     if (mode.value === 'named') {
-      // 命名实体模式：仅转换映射表中的字符
-      result.value = text.value.replace(/[<>&"' ©®™¥€£¢§¶·«»—–…°±×÷µ]/g, (ch) => encodeChar(ch))
+      result.value = text.value.replace(/[<>&"' ©®™¥€£¢§¶·«»—–…°±×÷µ]/g, ch => encodeChar(ch))
+    } else if (mode.value === 'all') {
+      result.value = text.value.split('').map(ch => encodeChar(ch)).join('')
     } else {
-      // 数字实体模式：转换所有非 ASCII 字符 + 特殊字符
-      result.value = text.value.replace(/[^\x20-\x7E]/g, (ch) => encodeChar(ch))
+      result.value = text.value.replace(/[^\x20-\x7E]/g, ch => encodeChar(ch))
+        .replace(/[<>&"']/g, ch => namedEntities[ch] ?? ch)
     }
   } catch (e: unknown) {
     const msg = e instanceof Error ? e.message : String(e)
@@ -148,12 +167,12 @@ function decode() {
   try {
     let decoded = text.value
 
-    // 1. 先解码命名实体
+    // 先解码命名实体
     decoded = decoded.replace(/&[a-zA-Z]+;/g, (entity) => {
       return reverseNamedEntities[entity] ?? entity
     })
 
-    // 2. 再解码数字实体（十进制 &#60; 和十六进制 &#x3c;）
+    // 再解码数字实体（十进制 &#60; 和十六进制 &#x3c;）
     decoded = decoded.replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => {
       return String.fromCharCode(parseInt(hex, 16))
     })
@@ -173,17 +192,29 @@ function clearAll() {
   result.value = ''
   errorMsg.value = ''
 }
+
+function copyText(value: string) {
+  navigator.clipboard.writeText(value)
+  message.success('已复制')
+}
+
+function insertEntity(char: string) {
+  text.value += char
+}
+
+function downloadResult() {
+  const blob = new Blob([result.value], { type: 'text/plain' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = 'html-entity-result.txt'
+  a.click()
+  URL.revokeObjectURL(url)
+}
 </script>
 
 <style scoped>
-.toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-  gap: 8px;
-}
+.html-entity-codec { max-width: 900px; margin: 0 auto; }
 
 .editor-area {
   display: grid;
@@ -199,15 +230,46 @@ function clearAll() {
   text-transform: uppercase;
 }
 
-.example-row {
-  display: flex;
-  align-items: center;
+.entity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 8px;
 }
 
-.example-btn {
-  font-family: 'Fira Code', 'Consolas', monospace;
+.entity-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  background: #f9f9f9;
+}
+
+.dark .entity-row {
+  background: #1e1e1e;
+}
+
+.entity-name {
+  flex: 1;
+  font-size: 13px;
+  color: #666;
+}
+
+.dark .entity-name {
+  color: #aaa;
+}
+
+.entity-char {
+  width: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.entity-code {
+  width: 70px;
+  font-family: monospace;
   font-size: 12px;
+  color: #888;
 }
 
 @media (max-width: 768px) {
