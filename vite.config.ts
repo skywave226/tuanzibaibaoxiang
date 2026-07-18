@@ -4,7 +4,7 @@ import UnoCSS from 'unocss/vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  base: '/tuanzibaibaoxiang/',
+  base: '/',
   plugins: [
     vue(),
     UnoCSS(),

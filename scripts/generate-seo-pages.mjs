@@ -6,8 +6,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const TOOLS_DIR = join(__dirname, '../src/tools')
 const PUBLIC_DIR = join(__dirname, '../public')
 const DIST_DIR = join(__dirname, '../dist')
-const BASE_PATH = '/tuanzibaibaoxiang'
-const SITE_URL = 'https://skywave226.github.io/tuanzibaibaoxiang'
+const BASE_PATH = ''
+const SITE_URL = 'https://tool.youxianmengguan.com'
 const BRAND = '团子百宝箱'
 const INJECT_SPA = process.argv.includes('--inject-spa')
 const ANALYTICS_SCRIPT = `<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js?id=3QaSafSRwObXL74l&ck=3QaSafSRwObXL74l"></script>`

@@ -40,6 +40,59 @@
           <span class="info-value font-mono">{{ hslDisplay }}</span>
           <n-button text size="tiny" @click="copy(hslDisplay)">复制</n-button>
         </div>
+        <div class="info-item">
+          <span class="info-label">CMYK</span>
+          <span class="info-value font-mono">{{ cmykDisplay }}</span>
+          <n-button text size="tiny" @click="copy(cmykDisplay)">复制</n-button>
+        </div>
+        <div class="info-item" v-if="cssName">
+          <span class="info-label">CSS 名</span>
+          <span class="info-value font-mono">{{ cssName }}</span>
+        </div>
+        <div class="info-item">
+          <n-button size="tiny" @click="randomColor">随机颜色</n-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <h3 class="font-bold mb-3">对比度检查（WCAG）</h3>
+      <div class="contrast-checker">
+        <div class="contrast-color">
+          <label>前景色</label>
+          <n-color-picker v-model:value="foregroundColor" :modes="['hex']" @update:value="updateContrast" />
+        </div>
+        <div class="contrast-result">
+          <div class="contrast-ratio">{{ contrastRatio }}:1</div>
+          <div class="contrast-levels">
+            <n-tag :type="aaNormal ? 'success' : 'error'" size="small">AA 普通文本</n-tag>
+            <n-tag :type="aaaNormal ? 'success' : 'error'" size="small">AAA 普通文本</n-tag>
+            <n-tag :type="aaLarge ? 'success' : 'error'" size="small">AA 大文本</n-tag>
+            <n-tag :type="aaaLarge ? 'success' : 'error'" size="small">AAA 大文本</n-tag>
+          </div>
+        </div>
+      </div>
+      <div class="contrast-preview" :style="{ backgroundColor: hexColor, color: foregroundColor }">
+        示例文字：The quick brown fox jumps over the lazy dog.
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <h3 class="font-bold mb-3">配色方案</h3>
+      <div class="color-schemes">
+        <div class="scheme-item" v-for="scheme in schemes" :key="scheme.name">
+          <div class="scheme-name">{{ scheme.name }}</div>
+          <div class="scheme-colors">
+            <div
+              v-for="color in scheme.colors"
+              :key="color"
+              class="scheme-color"
+              :style="{ backgroundColor: color }"
+              :title="color"
+              @click="applyPreset(color)"
+            ></div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -68,11 +121,17 @@ import { ref, computed } from 'vue'
 import { NColorPicker, NInput, NTag, NButton, useMessage } from 'naive-ui'
 
 const message = useMessage()
-const hexColor = ref('#000000')
-const hexInput = ref('#000000')
-const rgbInput = ref('rgb(0, 0, 0)')
-const hslInput = ref('hsl(0, 0%, 0%)')
+const hexColor = ref('#3b82f6')
+const hexInput = ref('#3b82f6')
+const rgbInput = ref('rgb(59, 130, 246)')
+const hslInput = ref('hsl(217, 91%, 60%)')
 const errorMsg = ref('')
+const foregroundColor = ref('#ffffff')
+const contrastRatio = ref('1')
+const aaNormal = ref(false)
+const aaaNormal = ref(false)
+const aaLarge = ref(false)
+const aaaLarge = ref(false)
 
 const rgbDisplay = computed(() => {
   const rgb = hexToRgb(hexColor.value)
@@ -85,6 +144,77 @@ const hslDisplay = computed(() => {
   const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b)
   return `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`
 })
+
+const cmykDisplay = computed(() => {
+  const rgb = hexToRgb(hexColor.value)
+  if (!rgb) return ''
+  const cmyk = rgbToCmyk(rgb.r, rgb.g, rgb.b)
+  return `cmyk(${cmyk.c}%, ${cmyk.m}%, ${cmyk.y}%, ${cmyk.k}%)`
+})
+
+const cssName = computed(() => {
+  return findClosestColorName(hexColor.value)
+})
+
+const schemes = computed(() => {
+  const rgb = hexToRgb(hexColor.value) || { r: 0, g: 0, b: 0 }
+  const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b)
+  return [
+    { name: '互补色', colors: [hexColor.value, hslToHex((hsl.h + 180) % 360, hsl.s, hsl.l)] },
+    { name: '类似色', colors: [
+      hslToHex((hsl.h - 30 + 360) % 360, hsl.s, hsl.l),
+      hexColor.value,
+      hslToHex((hsl.h + 30) % 360, hsl.s, hsl.l),
+    ]},
+    { name: '三角色', colors: [
+      hexColor.value,
+      hslToHex((hsl.h + 120) % 360, hsl.s, hsl.l),
+      hslToHex((hsl.h + 240) % 360, hsl.s, hsl.l),
+    ]},
+    { name: '分裂互补', colors: [
+      hexColor.value,
+      hslToHex((hsl.h + 150) % 360, hsl.s, hsl.l),
+      hslToHex((hsl.h + 210) % 360, hsl.s, hsl.l),
+    ]},
+  ]
+})
+
+function updateContrast() {
+  const bg = hexToRgb(hexColor.value)
+  const fg = hexToRgb(foregroundColor.value)
+  if (!bg || !fg) return
+  const ratio = calculateContrastRatio(bg, fg)
+  contrastRatio.value = ratio.toFixed(2)
+  aaNormal.value = ratio >= 4.5
+  aaaNormal.value = ratio >= 7
+  aaLarge.value = ratio >= 3
+  aaaLarge.value = ratio >= 4.5
+}
+
+function calculateContrastRatio(rgb1: { r: number; g: number; b: number }, rgb2: { r: number; g: number; b: number }): number {
+  const l1 = relativeLuminance(rgb1)
+  const l2 = relativeLuminance(rgb2)
+  const lighter = Math.max(l1, l2)
+  const darker = Math.min(l1, l2)
+  return (lighter + 0.05) / (darker + 0.05)
+}
+
+function relativeLuminance(rgb: { r: number; g: number; b: number }): number {
+  const rs = rgb.r / 255
+  const gs = rgb.g / 255
+  const bs = rgb.b / 255
+  const r = rs <= 0.03928 ? rs / 12.92 : Math.pow((rs + 0.055) / 1.055, 2.4)
+  const g = gs <= 0.03928 ? gs / 12.92 : Math.pow((gs + 0.055) / 1.055, 2.4)
+  const b = bs <= 0.03928 ? bs / 12.92 : Math.pow((bs + 0.055) / 1.055, 2.4)
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b
+}
+
+function randomColor() {
+  const r = Math.floor(Math.random() * 256)
+  const g = Math.floor(Math.random() * 256)
+  const b = Math.floor(Math.random() * 256)
+  applyPreset(rgbToHex(r, g, b))
+}
 
 function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
@@ -147,8 +277,30 @@ function hslToRgb(h: number, s: number, l: number): { r: number; g: number; b: n
   }
 }
 
+function rgbToCmyk(r: number, g: number, b: number): { c: number; m: number; y: number; k: number } {
+  const r_ = r / 255
+  const g_ = g / 255
+  const b_ = b / 255
+  const k = 1 - Math.max(r_, g_, b_)
+  if (k === 1) return { c: 0, m: 0, y: 0, k: 100 }
+  const c = (1 - r_ - k) / (1 - k)
+  const m = (1 - g_ - k) / (1 - k)
+  const y = (1 - b_ - k) / (1 - k)
+  return {
+    c: Math.round(c * 100),
+    m: Math.round(m * 100),
+    y: Math.round(y * 100),
+    k: Math.round(k * 100),
+  }
+}
+
 function rgbToHex(r: number, g: number, b: number): string {
   return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('')
+}
+
+function hslToHex(h: number, s: number, l: number): string {
+  const rgb = hslToRgb(h, s, l)
+  return rgbToHex(rgb.r, rgb.g, rgb.b)
 }
 
 function fromHex(val: string) {
@@ -158,8 +310,9 @@ function fromHex(val: string) {
     rgbInput.value = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`
     const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b)
     hslInput.value = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`
+    errorMsg.value = ''
+    updateContrast()
   }
-  errorMsg.value = ''
 }
 
 function fromHexInput() {
@@ -188,6 +341,7 @@ function fromRgbInput() {
       const hsl = rgbToHsl(r, g, b)
       hslInput.value = `hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)`
       errorMsg.value = ''
+      updateContrast()
     } else {
       errorMsg.value = 'RGB 值必须在 0-255 之间'
     }
@@ -209,6 +363,7 @@ function fromHslInput() {
       hexInput.value = rgbToHex(rgb.r, rgb.g, rgb.b)
       rgbInput.value = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`
       errorMsg.value = ''
+      updateContrast()
     } else {
       errorMsg.value = 'HSL 值超出范围'
     }
@@ -227,6 +382,46 @@ function copy(text: string) {
   message.success('已复制')
 }
 
+function findClosestColorName(hex: string): string {
+  const rgb = hexToRgb(hex)
+  if (!rgb) return ''
+  let closest = ''
+  let minDist = Infinity
+  for (const [name, value] of Object.entries(CSS_COLOR_NAMES)) {
+    const target = hexToRgb(value)
+    if (!target) continue
+    const dist = Math.pow(rgb.r - target.r, 2) + Math.pow(rgb.g - target.g, 2) + Math.pow(rgb.b - target.b, 2)
+    if (dist < minDist) {
+      minDist = dist
+      closest = name
+    }
+  }
+  return minDist < 500 ? closest : ''
+}
+
+const CSS_COLOR_NAMES: Record<string, string> = {
+  '黑色': '#000000',
+  '白色': '#ffffff',
+  '红色': '#ff0000',
+  '绿色': '#00ff00',
+  '蓝色': '#0000ff',
+  '黄色': '#ffff00',
+  '青色': '#00ffff',
+  '品红': '#ff00ff',
+  '灰色': '#808080',
+  '橙色': '#ffa500',
+  '紫色': '#800080',
+  '棕色': '#a52a2a',
+  '粉色': '#ffc0cb',
+  '天蓝': '#87ceeb',
+  '森林绿': '#228b22',
+  '海军蓝': '#000080',
+  '橄榄绿': '#808000',
+  '番茄红': '#ff6347',
+  '薰衣草': '#e6e6fa',
+  '薄荷绿': '#98ff98',
+}
+
 const presetColors = [
   { name: '红色', hex: '#FF0000' },
   { name: '绿色', hex: '#00FF00' },
@@ -241,6 +436,8 @@ const presetColors = [
   { name: '紫色', hex: '#800080' },
   { name: '棕色', hex: '#A52A2A' },
 ]
+
+updateContrast()
 </script>
 
 <style scoped>
@@ -294,7 +491,7 @@ const presetColors = [
 }
 
 .info-label {
-  width: 50px;
+  width: 60px;
   font-size: 13px;
   font-weight: 500;
   color: #888;
@@ -303,6 +500,82 @@ const presetColors = [
 .info-value {
   flex: 1;
   font-size: 14px;
+}
+
+.contrast-checker {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contrast-color {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contrast-result {
+  flex: 1;
+  min-width: 200px;
+}
+
+.contrast-ratio {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #36ad6a;
+  margin-bottom: 8px;
+}
+
+.contrast-levels {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.contrast-preview {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.color-schemes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.scheme-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.scheme-name {
+  width: 80px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.scheme-colors {
+  display: flex;
+  gap: 8px;
+}
+
+.scheme-color {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.scheme-color:hover {
+  transform: scale(1.1);
 }
 
 .preset-colors {
@@ -344,10 +617,6 @@ const presetColors = [
   flex-shrink: 0;
 }
 
-.dark .preset-preview {
-  border-color: #2a2a4a;
-}
-
 .preset-info {
   flex: 1;
   min-width: 0;
@@ -361,6 +630,41 @@ const presetColors = [
 
 .preset-hex {
   color: #888;
+}
+
+.card {
+  background: var(--n-color);
+  border: 1px solid var(--n-border-color);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.mb-3 {
+  margin-bottom: 12px;
+}
+
+.mb-2 {
+  margin-bottom: 8px;
+}
+
+.mt-2 {
+  margin-top: 8px;
+}
+
+.font-mono {
+  font-family: 'Fira Code', 'Consolas', monospace;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+.text-xs {
+  font-size: 12px;
 }
 
 @media (max-width: 768px) {

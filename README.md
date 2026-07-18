@@ -2,7 +2,7 @@
 
 一个基于 Vue 3 + TypeScript 的免费在线工具集合，包含 160+ 实用工具，支持开发、转换、图片、文本、加密、生活等多个分类。
 
-在线访问：**https://skywave226.github.io/tuanzibaibaoxiang/**
+在线访问：**https://tool.youxianmengguan.com/**
 
 ## 特性
 
