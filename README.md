@@ -4,6 +4,8 @@
 
 在线访问：**https://tool.youxianmengguan.com/**
 
+更新说明：[CHANGELOG.md](./CHANGELOG.md)
+
 ## 特性
 
 - 160+ 在线工具，无需注册即可使用
