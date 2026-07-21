@@ -21,33 +21,23 @@
 
     <div v-if="result" class="results">
       <div class="card mb-4">
-        <h3 class="text-sm font-bold mb-3">解析结果</h3>
+        <h3 class="text-sm font-bold mb-3">UA 解析结果</h3>
         <div class="info-grid">
           <div class="info-item">
             <div class="info-label">浏览器</div>
-            <div class="info-value">
-              <span class=" mr-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg></span>
-              {{ result.browser.name }} {{ result.browser.version }}
-            </div>
+            <div class="info-value">{{ result.browser.name }} {{ result.browser.version }}</div>
           </div>
           <div class="info-item">
             <div class="info-label">引擎</div>
-            <div class="info-value">
-              <span class=" mr-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
-              {{ result.engine.name }} {{ result.engine.version }}
-            </div>
+            <div class="info-value">{{ result.engine.name }} {{ result.engine.version }}</div>
           </div>
           <div class="info-item">
             <div class="info-label">操作系统</div>
-            <div class="info-value">
-              <span class=" mr-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
-              {{ result.os.name }} {{ result.os.version }}
-            </div>
+            <div class="info-value">{{ result.os.name }} {{ result.os.version }}</div>
           </div>
           <div class="info-item">
             <div class="info-label">设备类型</div>
             <div class="info-value">
-              <span class=" mr-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span>
               {{ result.device.type || '桌面端' }}
               <span v-if="result.device.vendor"> · {{ result.device.vendor }}</span>
               <span v-if="result.device.model"> · {{ result.device.model }}</span>
@@ -69,8 +59,69 @@
         </div>
       </div>
 
+      <div class="card mb-4">
+        <h3 class="text-sm font-bold mb-3">浏览器环境信息</h3>
+        <div class="info-grid">
+          <div class="info-item">
+            <div class="info-label">屏幕分辨率</div>
+            <div class="info-value">{{ envInfo.screen }}</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">可用视口</div>
+            <div class="info-value">{{ envInfo.viewport }}</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">设备像素比</div>
+            <div class="info-value">{{ envInfo.dpr }}</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">色彩深度</div>
+            <div class="info-value">{{ envInfo.colorDepth }}</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">语言</div>
+            <div class="info-value">{{ envInfo.language }}</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">时区</div>
+            <div class="info-value">{{ envInfo.timezone }}</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">在线状态</div>
+            <div class="info-value">
+              <n-tag :type="envInfo.online ? 'success' : 'warning'" size="small" :bordered="false">
+                {{ envInfo.online ? '在线' : '离线' }}
+              </n-tag>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">Cookies 启用</div>
+            <div class="info-value">{{ envInfo.cookiesEnabled ? '是' : '否' }}</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">触控支持</div>
+            <div class="info-value">{{ envInfo.touch ? '是' : '否' }}</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">WebGL 渲染器</div>
+            <div class="info-value">{{ envInfo.webgl || '未知' }}</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">内存 / 核心数</div>
+            <div class="info-value">{{ envInfo.hardware }}</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">平台</div>
+            <div class="info-value">{{ envInfo.platform }}</div>
+          </div>
+        </div>
+      </div>
+
       <div class="card">
-        <h3 class="text-sm font-bold mb-3">详细分解</h3>
+        <div class="section-header mb-3">
+          <h3 class="text-sm font-bold">详细分解</h3>
+          <n-button size="tiny" quaternary @click="copyDetails">复制详情</n-button>
+        </div>
         <n-data-table
           :columns="columns"
           :data="details"
@@ -88,7 +139,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { NButton, NSpace, NInput, NEmpty, NTag, NDataTable } from 'naive-ui'
 import type { DataTableColumns } from 'naive-ui'
 
@@ -108,8 +159,37 @@ interface DetailRow {
   value: string
 }
 
+interface EnvInfo {
+  screen: string
+  viewport: string
+  dpr: string
+  colorDepth: string
+  language: string
+  timezone: string
+  online: boolean
+  cookiesEnabled: boolean
+  touch: boolean
+  webgl: string
+  hardware: string
+  platform: string
+}
+
 const ua = ref('')
 const result = ref<ParseResult | null>(null)
+const envInfo = ref<EnvInfo>({
+  screen: '',
+  viewport: '',
+  dpr: '',
+  colorDepth: '',
+  language: '',
+  timezone: '',
+  online: true,
+  cookiesEnabled: false,
+  touch: false,
+  webgl: '',
+  hardware: '',
+  platform: '',
+})
 
 const columns: DataTableColumns<DetailRow> = [
   { title: '分类', key: 'category', width: 120 },
@@ -127,9 +207,8 @@ const examples = [
   'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
 ]
 
-// 浏览器识别规则
 const browserRules: Array<{ name: string; regex: RegExp; version: (m: RegExpMatchArray) => string }> = [
-  { name: 'Edge', regex: /Edge?\/([\d.]+)/, version: (m) => m[1] },
+  { name: 'Edge', regex: /Edg\/([\d.]+)/, version: (m) => m[1] },
   { name: 'Opera', regex: /OPR\/([\d.]+)/, version: (m) => m[1] },
   { name: 'Chrome', regex: /Chrome\/([\d.]+)/, version: (m) => m[1] },
   { name: 'Firefox', regex: /Firefox\/([\d.]+)/, version: (m) => m[1] },
@@ -137,7 +216,6 @@ const browserRules: Array<{ name: string; regex: RegExp; version: (m: RegExpMatc
   { name: 'IE', regex: /(?:MSIE |Trident\/.*rv:)([\d.]+)/, version: (m) => m[1] },
 ]
 
-// 引擎识别规则
 const engineRules: Array<{ name: string; regex: RegExp; version: (m: RegExpMatchArray) => string }> = [
   { name: 'Blink', regex: /Chrome\/([\d.]+)/, version: (m) => m[1] },
   { name: 'Gecko', regex: /rv:([\d.]+).*Gecko/, version: (m) => m[1] },
@@ -145,7 +223,6 @@ const engineRules: Array<{ name: string; regex: RegExp; version: (m: RegExpMatch
   { name: 'Trident', regex: /Trident\/([\d.]+)/, version: (m) => m[1] },
 ]
 
-// 操作系统识别规则
 const osRules: Array<{ name: string; regex: RegExp; version: (m: RegExpMatchArray) => string }> = [
   { name: 'Windows', regex: /Windows NT ([\d.]+)/, version: (m) => mapWindowsVersion(m[1]) },
   { name: 'macOS', regex: /Mac OS X ([\d_]+)/, version: (m) => m[1].replace(/_/g, '.') },
@@ -155,8 +232,7 @@ const osRules: Array<{ name: string; regex: RegExp; version: (m: RegExpMatchArra
   { name: 'Chrome OS', regex: /CrOS/, version: () => '' },
 ]
 
-// 设备识别规则
-const deviceRules: Array<{ type: string; regex: RegExp; vendor?: string; model?: (m: RegExpMatchArray) => string }> = [
+const deviceRules: Array<{ type: string; regex: RegExp; vendor?: string }> = [
   { type: 'iPhone', regex: /iPhone/, vendor: 'Apple' },
   { type: 'iPad', regex: /iPad/, vendor: 'Apple' },
   { type: 'iPod', regex: /iPod/, vendor: 'Apple' },
@@ -165,7 +241,6 @@ const deviceRules: Array<{ type: string; regex: RegExp; vendor?: string; model?:
   { type: 'Windows Phone', regex: /Windows Phone/, vendor: 'Microsoft' },
 ]
 
-// 爬虫识别
 const botRules: Array<{ name: string; regex: RegExp }> = [
   { name: 'Googlebot', regex: /Googlebot/i },
   { name: 'Bingbot', regex: /bingbot/i },
@@ -180,6 +255,42 @@ const botRules: Array<{ name: string; regex: RegExp }> = [
   { name: 'SemrushBot', regex: /SemrushBot/i },
   { name: '通用爬虫', regex: /(bot|crawler|spider|scraper)/i },
 ]
+
+onMounted(() => {
+  collectEnvInfo()
+})
+
+function collectEnvInfo() {
+  const nav = navigator as any
+  envInfo.value = {
+    screen: `${window.screen.width} × ${window.screen.height}`,
+    viewport: `${window.innerWidth} × ${window.innerHeight}`,
+    dpr: String(window.devicePixelRatio || 1),
+    colorDepth: `${window.screen.colorDepth}-bit`,
+    language: nav.language || '未知',
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone || '未知',
+    online: nav.onLine ?? true,
+    cookiesEnabled: nav.cookieEnabled ?? false,
+    touch: 'ontouchstart' in window || nav.maxTouchPoints > 0,
+    webgl: getWebglRenderer(),
+    hardware: `${nav.deviceMemory || '?'} GB / ${nav.hardwareConcurrency || '?'} 核`,
+    platform: nav.platform || '未知',
+  }
+}
+
+function getWebglRenderer(): string {
+  try {
+    const canvas = document.createElement('canvas')
+    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl')
+    if (!gl) return '不支持'
+    const ext = (gl as WebGLRenderingContext).getExtension('WEBGL_debug_renderer_info')
+    if (!ext) return '无法获取'
+    const renderer = (gl as WebGLRenderingContext).getParameter(ext.UNMASKED_RENDERER_WEBGL)
+    return renderer || '未知'
+  } catch {
+    return '未知'
+  }
+}
 
 function mapWindowsVersion(version: string): string {
   const map: Record<string, string> = {
@@ -207,7 +318,6 @@ function parse() {
     botName: '',
   }
 
-  // 解析浏览器
   for (const rule of browserRules) {
     const match = str.match(rule.regex)
     if (match) {
@@ -216,7 +326,6 @@ function parse() {
     }
   }
 
-  // 解析引擎
   for (const rule of engineRules) {
     const match = str.match(rule.regex)
     if (match) {
@@ -225,7 +334,6 @@ function parse() {
     }
   }
 
-  // 解析操作系统
   for (const rule of osRules) {
     const match = str.match(rule.regex)
     if (match) {
@@ -234,28 +342,23 @@ function parse() {
     }
   }
 
-  // 解析设备
   for (const rule of deviceRules) {
     if (rule.regex.test(str)) {
-      parsed.device = {
-        type: rule.type,
-        vendor: rule.vendor || '',
-        model: '',
-      }
+      parsed.device = { type: rule.type, vendor: rule.vendor || '', model: '' }
       break
     }
   }
 
-  // 解析 CPU 架构
-  if (/x64|Win64|x86_64/.test(str)) {
-    parsed.cpu.architecture = 'amd64 (64位)'
-  } else if (/arm|aarch64/i.test(str)) {
+  if (/x64|Win64|x86_64|amd64/i.test(str)) {
+    parsed.cpu.architecture = 'x64 (64位)'
+  } else if (/arm64|aarch64/i.test(str)) {
+    parsed.cpu.architecture = 'ARM64'
+  } else if (/arm/i.test(str)) {
     parsed.cpu.architecture = 'ARM'
-  } else if (/WOW64|x86/.test(str)) {
+  } else if (/WOW64|x86/i.test(str)) {
     parsed.cpu.architecture = 'x86 (32位)'
   }
 
-  // 识别爬虫
   for (const rule of botRules) {
     if (rule.regex.test(str)) {
       parsed.isBot = true
@@ -265,8 +368,8 @@ function parse() {
   }
 
   result.value = parsed
+  collectEnvInfo()
 
-  // 构建详细分解
   details.value = [
     { category: '浏览器', field: '名称', value: parsed.browser.name },
     { category: '浏览器', field: '版本', value: parsed.browser.version },
@@ -279,6 +382,10 @@ function parse() {
     { category: 'CPU', field: '架构', value: parsed.cpu.architecture || '未知' },
     { category: '爬虫', field: '是否爬虫', value: parsed.isBot ? '是' : '否' },
     { category: '爬虫', field: '名称', value: parsed.botName || '无' },
+    { category: '环境', field: '屏幕', value: envInfo.value.screen },
+    { category: '环境', field: '视口', value: envInfo.value.viewport },
+    { category: '环境', field: '语言', value: envInfo.value.language },
+    { category: '环境', field: '平台', value: envInfo.value.platform },
   ]
 }
 
@@ -297,13 +404,15 @@ function clear() {
   result.value = null
   details.value = []
 }
+
+function copyDetails() {
+  const text = details.value.map(d => `${d.category} / ${d.field}: ${d.value}`).join('\n')
+  navigator.clipboard.writeText(text)
+}
 </script>
 
 <style scoped>
-.ua-parser {
-  max-width: 900px;
-  margin: 0 auto;
-}
+.ua-parser { max-width: 1000px; margin: 0 auto; }
 
 .pane-label {
   font-size: 12px;
@@ -337,8 +446,15 @@ function clear() {
   align-items: center;
 }
 
-.toolbar {
+.toolbar { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.section-header {
   display: flex;
-  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
+
+.ml-2 { margin-left: 8px; }
 </style>
