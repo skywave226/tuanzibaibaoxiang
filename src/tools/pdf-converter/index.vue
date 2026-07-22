@@ -25,6 +25,8 @@
       <div class="toolbar mt-4">
         <n-radio-group v-model:value="mode" size="small">
           <n-radio-button value="word">转 Word</n-radio-button>
+          <n-radio-button value="excel">转 Excel</n-radio-button>
+          <n-radio-button value="ocr">OCR 识别</n-radio-button>
           <n-radio-button value="text">提取文本</n-radio-button>
           <n-radio-button value="images">转图片</n-radio-button>
         </n-radio-group>
@@ -47,12 +49,14 @@
       </n-button>
     </div>
 
-    <div v-if="textResult || images.length" class="card">
+    <div v-if="textResult || images.length || excelRows.length || ocrText" class="card">
       <div class="result-header mb-3 flex justify-between items-center flex-wrap gap-2">
         <h3 class="text-sm font-bold">转换结果</h3>
         <n-space>
           <n-button v-if="textResult" size="small" @click="downloadText">下载 TXT</n-button>
+          <n-button v-if="ocrText" size="small" @click="downloadOcrText">下载 OCR 文本</n-button>
           <n-button v-if="docxBlob" size="small" @click="downloadWord">下载 Word</n-button>
+          <n-button v-if="excelRows.length" size="small" @click="downloadExcel">下载 Excel</n-button>
           <n-button v-if="images.length" size="small" @click="downloadAllImages" :disabled="images.length === 1">打包下载</n-button>
         </n-space>
       </div>
@@ -64,6 +68,28 @@
         :rows="16"
         readonly
       />
+
+      <n-input
+        v-if="ocrText"
+        v-model:value="ocrText"
+        type="textarea"
+        :rows="16"
+        readonly
+      />
+
+      <div v-if="excelRows.length" class="excel-preview">
+        <n-data-table
+          :columns="excelColumns"
+          :data="excelRows.slice(0, 20)"
+          :bordered="false"
+          :single-line="false"
+          size="small"
+          :max-height="400"
+        />
+        <div v-if="excelRows.length > 20" class="mt-2 text-sm text-gray-500">
+          仅展示前 20 行，共 {{ excelRows.length }} 行
+        </div>
+      </div>
 
       <div v-if="images.length" class="images-grid">
         <div v-for="(img, index) in images" :key="index" class="image-card">
@@ -81,14 +107,14 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { NUpload, NButton, NRadioGroup, NRadioButton, NInput, NInputNumber, NAlert, NSpace } from 'naive-ui'
-import type { UploadCustomRequestOptions } from 'naive-ui'
+import { ref, computed } from 'vue'
+import { NUpload, NButton, NRadioGroup, NRadioButton, NInput, NInputNumber, NAlert, NSpace, NDataTable } from 'naive-ui'
+import type { UploadCustomRequestOptions, DataTableColumns } from 'naive-ui'
 
 const fileName = ref('')
 const fileSize = ref(0)
 const pdfData = ref<ArrayBuffer | null>(null)
-const mode = ref<'word' | 'text' | 'images'>('word')
+const mode = ref<'word' | 'excel' | 'ocr' | 'text' | 'images'>('word')
 const imageFormat = ref<'png' | 'jpeg'>('png')
 const scale = ref(1.5)
 const loading = ref(false)
@@ -96,6 +122,17 @@ const error = ref('')
 const textResult = ref('')
 const docxBlob = ref<Blob | null>(null)
 const images = ref<{ url: string; name: string }[]>([])
+const excelRows = ref<Record<string, string>[]>([])
+const excelHeaders = ref<string[]>([])
+const ocrText = ref('')
+
+const excelColumns = computed<DataTableColumns<Record<string, string>>>(() => {
+  return excelHeaders.value.map(h => ({
+    title: h,
+    key: h,
+    ellipsis: { tooltip: true },
+  }))
+})
 
 function formatSize(bytes: number): string {
   if (bytes < 1024) return bytes + ' B'
@@ -110,6 +147,9 @@ function handleUpload({ file }: UploadCustomRequestOptions) {
   docxBlob.value = null
   images.value.forEach(img => URL.revokeObjectURL(img.url))
   images.value = []
+  excelRows.value = []
+  excelHeaders.value = []
+  ocrText.value = ''
 
   fileName.value = uploadFile.name
   fileSize.value = uploadFile.size
@@ -127,8 +167,11 @@ async function convert() {
   error.value = ''
   textResult.value = ''
   docxBlob.value = null
+  ocrText.value = ''
   images.value.forEach(img => URL.revokeObjectURL(img.url))
   images.value = []
+  excelRows.value = []
+  excelHeaders.value = []
 
   try {
     const pdfjs = await import('pdfjs-dist')
@@ -148,14 +191,30 @@ async function convert() {
         texts.push(`--- 第 ${i} 页 ---\n${pageText}`)
       }
 
-      if (mode.value === 'images') {
-        const viewport = page.getViewport({ scale: scale.value })
+      if (mode.value === 'excel') {
+        const pageData = await extractPageTable(page)
+        if (pageData.length > 0) {
+          if (excelRows.value.length === 0) {
+            excelHeaders.value = Object.keys(pageData[0])
+          }
+          excelRows.value.push(...pageData)
+        }
+      }
+
+      if (mode.value === 'images' || mode.value === 'ocr') {
+        const viewport = page.getViewport({ scale: mode.value === 'ocr' ? 2 : scale.value })
         const canvas = document.createElement('canvas')
         canvas.width = viewport.width
         canvas.height = viewport.height
         await page.render({ canvas, viewport }).promise
-        const url = canvas.toDataURL(`image/${imageFormat.value}`)
-        imgUrls.push({ url, name: `page-${String(i).padStart(3, '0')}.${imageFormat.value}` })
+
+        if (mode.value === 'images') {
+          const url = canvas.toDataURL(`image/${imageFormat.value}`)
+          imgUrls.push({ url, name: `page-${String(i).padStart(3, '0')}.${imageFormat.value}` })
+        } else {
+          const pageOcr = await recognizePage(canvas)
+          ocrText.value += `--- 第 ${i} 页 ---\n${pageOcr}\n\n`
+        }
       }
     }
 
@@ -164,6 +223,14 @@ async function convert() {
     } else if (mode.value === 'word') {
       textResult.value = texts.join('\n\n')
       await generateDocx(texts)
+    } else if (mode.value === 'excel') {
+      if (excelRows.value.length === 0) {
+        throw new Error('未检测到表格数据，可尝试先用"提取文本"模式查看内容')
+      }
+    } else if (mode.value === 'ocr') {
+      if (!ocrText.value.trim()) {
+        throw new Error('OCR 未识别到文字')
+      }
     } else if (mode.value === 'images') {
       images.value = imgUrls
     }
@@ -172,6 +239,57 @@ async function convert() {
   } finally {
     loading.value = false
   }
+}
+
+async function recognizePage(canvas: HTMLCanvasElement): Promise<string> {
+  const Tesseract = await import('tesseract.js')
+  const result = await Tesseract.recognize(canvas.toDataURL('image/png'), 'chi_sim+eng', {
+    logger: () => {},
+  })
+  return result.data.text
+}
+
+async function extractPageTable(page: any): Promise<Record<string, string>[]> {
+  const textContent = await page.getTextContent()
+  const items = textContent.items as Array<{ str: string; transform: number[]; width: number; height: number }>
+
+  if (items.length === 0) return []
+
+  // 按 Y 坐标分组到行，允许 4px 误差
+  const rows: Map<number, typeof items> = new Map()
+  items.forEach(item => {
+    const y = Math.round(item.transform[5] / 4) * 4
+    if (!rows.has(y)) rows.set(y, [])
+    rows.get(y)!.push(item)
+  })
+
+  const sortedRows = Array.from(rows.entries())
+    .sort((a, b) => b[0] - a[0])
+    .map(([_, rowItems]) => rowItems.sort((a, b) => a.transform[4] - b.transform[4]))
+
+  if (sortedRows.length < 2) return []
+
+  // 根据所有 X 坐标构建统一列
+  const xPositions = Array.from(new Set(
+    sortedRows.flatMap(row => row.map(item => Math.round(item.transform[4] / 8) * 8))
+  )).sort((a, b) => a - b)
+
+  const headers = xPositions.map((_, i) => `列${i + 1}`)
+
+  return sortedRows.map(row => {
+    const rowData: Record<string, string> = {}
+    headers.forEach(h => { rowData[h] = '' })
+
+    row.forEach(item => {
+      const x = Math.round(item.transform[4] / 8) * 8
+      const index = xPositions.indexOf(x)
+      if (index >= 0) {
+        rowData[headers[index]] = (rowData[headers[index]] || '') + item.str
+      }
+    })
+
+    return rowData
+  })
 }
 
 async function generateDocx(pageTexts: string[]) {
@@ -207,9 +325,28 @@ function downloadText() {
   downloadBlob(blob, fileName.value.replace(/\.pdf$/i, '.txt'))
 }
 
+function downloadOcrText() {
+  const blob = new Blob([ocrText.value], { type: 'text/plain' })
+  downloadBlob(blob, fileName.value.replace(/\.pdf$/i, '-ocr.txt'))
+}
+
 function downloadWord() {
   if (!docxBlob.value) return
   downloadBlob(docxBlob.value, fileName.value.replace(/\.pdf$/i, '.docx'))
+}
+
+async function downloadExcel() {
+  if (!excelRows.value.length) return
+  const XLSX = await import('xlsx')
+  const data = excelRows.value.map(row => {
+    const obj: Record<string, string> = {}
+    excelHeaders.value.forEach(h => { obj[h] = row[h] || '' })
+    return obj
+  })
+  const ws = XLSX.utils.json_to_sheet(data)
+  const wb = XLSX.utils.book_new()
+  XLSX.utils.book_append_sheet(wb, ws, 'Sheet1')
+  XLSX.writeFile(wb, fileName.value.replace(/\.pdf$/i, '.xlsx'))
 }
 
 function downloadImage(url: string, index: number) {

@@ -30,6 +30,18 @@ const router = createRouter({
 router.afterEach((to) => {
   const tool = tools.find(t => t.path === to.path)
   recordVisit(to.path, tool?.name || '首页')
+  trackPageView(to.path, tool?.name || '首页')
 })
+
+function trackPageView(path: string, name: string) {
+  const la = (window as any)._la
+  if (la && typeof la.track === 'function') {
+    la.track('pageview', {
+      url: window.location.href,
+      title: name,
+      path: path,
+    })
+  }
+}
 
 export default router
