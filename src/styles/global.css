@@ -16,8 +16,8 @@ body {
 }
 
 .dark body {
-  background-color: #1a1a2e;
-  color: #e0e0e0;
+  background-color: #0f172a;
+  color: #e2e8f0;
 }
 
 ::-webkit-scrollbar {
@@ -32,4 +32,57 @@ body {
 
 .dark ::-webkit-scrollbar-thumb {
   background: #444;
+}
+
+/* 工具页面通用组件样式 */
+.card {
+  padding: 20px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  border: 1px solid #f0f0f0;
+}
+
+.dark .card {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.pane-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.dark .pane-label {
+  color: #94a3b8;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.section-header h3,
+.section-header .section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+}
+
+.dark .section-header h3,
+.dark .section-header .section-title {
+  color: #f1f5f9;
 }
