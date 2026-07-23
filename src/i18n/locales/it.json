@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "logo_text": "Cassetta degli Attrezzi Tuanzi",
+    "search_placeholder": "Cerca strumenti...",
+    "all_tools": "Tutti gli Strumenti",
+    "categories": "Categorie",
+    "search": "Cerca"
+  },
+  "home": {
+    "title": "Raccolta di Strumenti Online",
+    "tool_count": "{count} strumenti disponibili",
+    "tool_count_filtered": "{count} strumenti disponibili ({filters})",
+    "search_result": "Risultati di ricerca per \"{query}\"",
+    "filter_hint_category": "Categoria: {category}",
+    "filter_hint_keyword": "Parola chiave: {keyword}",
+    "no_results": "Nessuno strumento corrispondente trovato",
+    "view_all": "Visualizza Tutti",
+    "tools_count": "{count} strumenti"
+  },
+  "common": {
+    "dark": "Modalità Scura",
+    "light": "Modalità Chiara",
+    "language": "Lingua"
+  },
+  "language": {
+    "name": "Italiano"
+  }
+}

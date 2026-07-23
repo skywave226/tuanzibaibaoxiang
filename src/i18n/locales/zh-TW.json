@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "logo_text": "團子百寶箱",
+    "search_placeholder": "搜尋工具...",
+    "all_tools": "全部工具",
+    "categories": "工具分類",
+    "search": "搜尋"
+  },
+  "home": {
+    "title": "線上工具集合",
+    "tool_count": "共 {count} 個工具可用",
+    "tool_count_filtered": "共 {count} 個工具可用（{filters}）",
+    "search_result": "搜尋 \"{query}\" 的結果",
+    "filter_hint_category": "分類：{category}",
+    "filter_hint_keyword": "關鍵字：{keyword}",
+    "no_results": "沒有找到符合的工具",
+    "view_all": "查看全部",
+    "tools_count": "共 {count} 個工具"
+  },
+  "common": {
+    "dark": "暗色模式",
+    "light": "亮色模式",
+    "language": "語言"
+  },
+  "language": {
+    "name": "中文（繁體）"
+  }
+}

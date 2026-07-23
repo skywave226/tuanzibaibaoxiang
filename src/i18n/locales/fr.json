@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "logo_text": "Boîte à Outils Tuanzi",
+    "search_placeholder": "Rechercher des outils...",
+    "all_tools": "Tous les Outils",
+    "categories": "Catégories",
+    "search": "Rechercher"
+  },
+  "home": {
+    "title": "Collection d'Outils en Ligne",
+    "tool_count": "{count} outils disponibles",
+    "tool_count_filtered": "{count} outils disponibles ({filters})",
+    "search_result": "Résultats de recherche pour \"{query}\"",
+    "filter_hint_category": "Catégorie : {category}",
+    "filter_hint_keyword": "Mot-clé : {keyword}",
+    "no_results": "Aucun outil correspondant trouvé",
+    "view_all": "Voir Tout",
+    "tools_count": "{count} outils"
+  },
+  "common": {
+    "dark": "Mode Sombre",
+    "light": "Mode Clair",
+    "language": "Langue"
+  },
+  "language": {
+    "name": "Français"
+  }
+}

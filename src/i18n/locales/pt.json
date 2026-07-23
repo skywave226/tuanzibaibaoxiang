@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "logo_text": "Caixa de Ferramentas Tuanzi",
+    "search_placeholder": "Pesquisar ferramentas...",
+    "all_tools": "Todas as Ferramentas",
+    "categories": "Categorias",
+    "search": "Pesquisar"
+  },
+  "home": {
+    "title": "Coleção de Ferramentas Online",
+    "tool_count": "{count} ferramentas disponíveis",
+    "tool_count_filtered": "{count} ferramentas disponíveis ({filters})",
+    "search_result": "Resultados da pesquisa por \"{query}\"",
+    "filter_hint_category": "Categoria: {category}",
+    "filter_hint_keyword": "Palavra-chave: {keyword}",
+    "no_results": "Nenhuma ferramenta correspondente encontrada",
+    "view_all": "Ver Todas",
+    "tools_count": "{count} ferramentas"
+  },
+  "common": {
+    "dark": "Modo Escuro",
+    "light": "Modo Claro",
+    "language": "Idioma"
+  },
+  "language": {
+    "name": "Português"
+  }
+}

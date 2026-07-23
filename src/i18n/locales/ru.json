@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "logo_text": "Набор Инструментов Туанзи",
+    "search_placeholder": "Поиск инструментов...",
+    "all_tools": "Все Инструменты",
+    "categories": "Категории",
+    "search": "Поиск"
+  },
+  "home": {
+    "title": "Коллекция Онлайн-Инструментов",
+    "tool_count": "Доступно инструментов: {count}",
+    "tool_count_filtered": "Доступно инструментов: {count} ({filters})",
+    "search_result": "Результаты поиска по \"{query}\"",
+    "filter_hint_category": "Категория: {category}",
+    "filter_hint_keyword": "Ключевое слово: {keyword}",
+    "no_results": "Подходящие инструменты не найдены",
+    "view_all": "Смотреть Все",
+    "tools_count": "{count} инструментов"
+  },
+  "common": {
+    "dark": "Тёмный Режим",
+    "light": "Светлый Режим",
+    "language": "Язык"
+  },
+  "language": {
+    "name": "Русский"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "logo_text": "떡이의 도구상자",
+    "search_placeholder": "도구 검색...",
+    "all_tools": "모든 도구",
+    "categories": "카테고리",
+    "search": "검색"
+  },
+  "home": {
+    "title": "온라인 도구 모음",
+    "tool_count": "{count}개의 도구 이용 가능",
+    "tool_count_filtered": "{count}개의 도구 이용 가능 ({filters})",
+    "search_result": "\"{query}\" 검색 결과",
+    "filter_hint_category": "카테고리: {category}",
+    "filter_hint_keyword": "키워드: {keyword}",
+    "no_results": "일치하는 도구를 찾을 수 없습니다",
+    "view_all": "모두 보기",
+    "tools_count": "{count}개의 도구"
+  },
+  "common": {
+    "dark": "다크 모드",
+    "light": "라이트 모드",
+    "language": "언어"
+  },
+  "language": {
+    "name": "한국어"
+  }
+}

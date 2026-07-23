@@ -18,13 +18,13 @@
             <rect x="17" y="38" width="66" height="43" rx="9" fill="white"/>
             <rect x="43" y="38" width="14" height="16" rx="3" fill="url(#layout-logo-grad)"/>
           </svg>
-          <span class="font-bold text-lg logo-text">团子百宝箱</span>
+          <span class="font-bold text-lg logo-text">{{ t('nav.logo_text') }}</span>
         </router-link>
       </div>
       <div class="header-center">
         <n-input
           v-model:value="searchQuery"
-          placeholder="搜索工具..."
+          :placeholder="t('nav.search_placeholder')"
           clearable
           round
           class="search-input"
@@ -36,6 +36,13 @@
         </n-input>
       </div>
       <div class="header-right">
+        <n-select
+          v-model:value="currentLocale"
+          :options="localeOptions"
+          size="small"
+          class="locale-select"
+          @update:value="onLocaleChange"
+        />
         <n-button quaternary circle @click="toggleDark">
           <svg v-if="isDark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           <svg v-else xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -56,8 +63,8 @@
     </div>
 
     <!-- 移动端抽屉式侧边栏 -->
-    <n-drawer v-model:show="showSidebar" :width="240" placement="left">
-      <n-drawer-content title="工具分类" closable>
+    <n-drawer v-model:show="showSidebar" :width="260" placement="left">
+      <n-drawer-content :title="t('nav.categories')" closable>
         <n-menu
           :options="menuOptions"
           :value="activeCategory"
@@ -71,26 +78,49 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { NInput, NButton, NMenu, NDrawer, NDrawerContent } from 'naive-ui'
+import { useI18n } from 'vue-i18n'
+import { NInput, NButton, NMenu, NDrawer, NDrawerContent, NSelect } from 'naive-ui'
 import { categories, tools } from '@/tools/registry'
 import { useDark } from '@/composables/useDark'
 import { categoryIcons, renderCategoryIcon } from '@/composables/useCategoryStyle'
+import { SUPPORT_LOCALES, setLocale, type SupportedLocale } from '@/i18n'
 
 const route = useRoute()
 const router = useRouter()
+const { t, locale } = useI18n()
 const { isDark, toggle: toggleDark } = useDark()
 const searchQuery = ref('')
 const showSidebar = ref(false)
 const selectedCategory = ref('__all__')
 
+function translateCategory(category: string) {
+  return t(`categories.${category}`, category)
+}
+
+const localeOptions = computed(() =>
+  SUPPORT_LOCALES.map(l => ({
+    label: l.name,
+    value: l.code,
+  }))
+)
+
+const currentLocale = computed<SupportedLocale>({
+  get: () => locale.value as SupportedLocale,
+  set: (value: SupportedLocale) => setLocale(value),
+})
+
+function onLocaleChange(value: SupportedLocale) {
+  setLocale(value)
+}
+
 const menuOptions = computed(() => {
   const allItem = {
-    label: '全部工具',
+    label: t('nav.all_tools'),
     key: '__all__',
     icon: renderCategoryIcon(categoryIcons['其他']),
   }
   const categoryItems = categories.map(c => ({
-    label: `${c} (${tools.filter(t => t.category === c).length})`,
+    label: `${translateCategory(c)} (${tools.filter(t => t.category === c).length})`,
     key: c,
     icon: renderCategoryIcon(categoryIcons[c] || categoryIcons['其他']),
   }))
@@ -213,6 +243,20 @@ function onSearch(value: string) {
   gap: 8px;
 }
 
+.locale-select {
+  width: 110px;
+}
+
+:deep(.locale-select .n-base-selection-input) {
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .locale-select {
+    width: 90px;
+  }
+}
+
 .layout-body {
   flex: 1;
   display: flex;
@@ -305,6 +349,10 @@ function onSearch(value: string) {
 
   .header-center {
     margin: 0;
+  }
+
+  .locale-select {
+    width: 80px;
   }
 }
 </style>

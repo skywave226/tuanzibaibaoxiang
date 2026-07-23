@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "logo_text": "Tuanzi Werkzeugkasten",
+    "search_placeholder": "Werkzeuge suchen...",
+    "all_tools": "Alle Werkzeuge",
+    "categories": "Kategorien",
+    "search": "Suchen"
+  },
+  "home": {
+    "title": "Online-Werkzeugsammlung",
+    "tool_count": "{count} Werkzeuge verfügbar",
+    "tool_count_filtered": "{count} Werkzeuge verfügbar ({filters})",
+    "search_result": "Suchergebnisse für \"{query}\"",
+    "filter_hint_category": "Kategorie: {category}",
+    "filter_hint_keyword": "Schlüsselwort: {keyword}",
+    "no_results": "Keine passenden Werkzeuge gefunden",
+    "view_all": "Alle Anzeigen",
+    "tools_count": "{count} Werkzeuge"
+  },
+  "common": {
+    "dark": "Dunkelmodus",
+    "light": "Hellmodus",
+    "language": "Sprache"
+  },
+  "language": {
+    "name": "Deutsch"
+  }
+}

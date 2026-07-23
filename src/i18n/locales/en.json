@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "logo_text": "Tuanzi Toolbox",
+    "search_placeholder": "Search tools...",
+    "all_tools": "All Tools",
+    "categories": "Categories",
+    "search": "Search"
+  },
+  "home": {
+    "title": "Online Tools Collection",
+    "tool_count": "{count} tools available",
+    "tool_count_filtered": "{count} tools available ({filters})",
+    "search_result": "Search results for \"{query}\"",
+    "filter_hint_category": "Category: {category}",
+    "filter_hint_keyword": "Keyword: {keyword}",
+    "no_results": "No matching tools found",
+    "view_all": "View All",
+    "tools_count": "{count} tools"
+  },
+  "common": {
+    "dark": "Dark Mode",
+    "light": "Light Mode",
+    "language": "Language"
+  },
+  "language": {
+    "name": "English"
+  }
+}

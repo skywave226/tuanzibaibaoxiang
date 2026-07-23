@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "logo_text": "团子百宝箱",
+    "search_placeholder": "搜索工具...",
+    "all_tools": "全部工具",
+    "categories": "工具分类",
+    "search": "搜索"
+  },
+  "home": {
+    "title": "在线工具集合",
+    "tool_count": "共 {count} 个工具可用",
+    "tool_count_filtered": "共 {count} 个工具可用（{filters}）",
+    "search_result": "搜索 \"{query}\" 的结果",
+    "filter_hint_category": "分类：{category}",
+    "filter_hint_keyword": "关键词：{keyword}",
+    "no_results": "没有找到匹配的工具",
+    "view_all": "查看全部",
+    "tools_count": "共 {count} 个工具"
+  },
+  "common": {
+    "dark": "暗色模式",
+    "light": "亮色模式",
+    "language": "语言"
+  },
+  "language": {
+    "name": "中文（简体）"
+  }
+}

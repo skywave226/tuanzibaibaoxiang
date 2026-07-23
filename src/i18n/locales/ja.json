@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "logo_text": "団子ツールボックス",
+    "search_placeholder": "ツールを検索...",
+    "all_tools": "すべてのツール",
+    "categories": "カテゴリ",
+    "search": "検索"
+  },
+  "home": {
+    "title": "オンラインツール集",
+    "tool_count": "{count} 件のツールが利用可能",
+    "tool_count_filtered": "{count} 件のツールが利用可能（{filters}）",
+    "search_result": "\"{query}\" の検索結果",
+    "filter_hint_category": "カテゴリ：{category}",
+    "filter_hint_keyword": "キーワード：{keyword}",
+    "no_results": "一致するツールが見つかりません",
+    "view_all": "すべて表示",
+    "tools_count": "{count} 件のツール"
+  },
+  "common": {
+    "dark": "ダークモード",
+    "light": "ライトモード",
+    "language": "言語"
+  },
+  "language": {
+    "name": "日本語"
+  }
+}

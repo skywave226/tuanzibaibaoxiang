@@ -11,16 +11,16 @@
           v-html="getCategoryIcon(activeCategory)"
         ></div>
         <div class="category-banner-info">
-          <h1 class="category-banner-title">{{ activeCategory }}</h1>
-          <p class="category-banner-count">共 {{ displayTools.length }} 个工具</p>
+          <h1 class="category-banner-title">{{ translateCategory(activeCategory) }}</h1>
+          <p class="category-banner-count">{{ t('home.tools_count', { count: displayTools.length }) }}</p>
         </div>
         <router-link to="/" class="category-banner-back">
-          查看全部
+          {{ t('home.view_all') }}
         </router-link>
       </div>
       <template v-else>
         <h1 class="text-2xl font-bold">{{ headerTitle }}</h1>
-        <p class="text-gray-500 mt-2">共 {{ displayTools.length }} 个工具可用{{ filterHint }}</p>
+        <p class="text-gray-500 mt-2">{{ headerSubtitle }}</p>
       </template>
     </div>
     <div class="tool-grid">
@@ -51,37 +51,46 @@
               '--n-text-color': getCategoryStyle(tool.category).color,
             }"
           >
-            {{ tool.category }}
+            {{ translateCategory(tool.category) }}
           </n-tag>
         </div>
       </a>
     </div>
-    <n-empty v-if="displayTools.length === 0" description="没有找到匹配的工具" class="mt-16" />
+    <n-empty v-if="displayTools.length === 0" :description="t('home.no_results')" class="mt-16" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { NTag, NEmpty } from 'naive-ui'
 import { tools } from '@/tools/registry'
 import { getCategoryStyle, getCategoryIcon } from '@/composables/useCategoryStyle'
 
 const route = useRoute()
+const { t } = useI18n()
 const baseUrl = import.meta.env.BASE_URL
+
+function translateCategory(category: string) {
+  return t(`categories.${category}`, category)
+}
 
 const activeCategory = computed(() => (route.query.category as string) || '__all__')
 const searchQuery = computed(() => (route.query.q as string) || '')
 
 const headerTitle = computed(() => {
-  if (searchQuery.value) return `搜索 "${searchQuery.value}" 的结果`
-  return '在线工具集合'
+  if (searchQuery.value) return t('home.search_result', { query: searchQuery.value })
+  return t('home.title')
 })
 
-const filterHint = computed(() => {
+const headerSubtitle = computed(() => {
   const parts: string[] = []
-  if (searchQuery.value) parts.push(`关键词：${searchQuery.value}`)
-  return parts.length ? `（${parts.join('，')}）` : ''
+  if (searchQuery.value) parts.push(t('home.filter_hint_keyword', { keyword: searchQuery.value }))
+  if (parts.length) {
+    return t('home.tool_count_filtered', { count: displayTools.value.length, filters: parts.join('，') })
+  }
+  return t('home.tool_count', { count: displayTools.value.length })
 })
 
 const displayTools = computed(() => {
