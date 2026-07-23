@@ -205,6 +205,15 @@ const displayTools = computed(() => {
 
 .tool-category {
   flex-shrink: 0;
+  max-width: 80px;
+  overflow: hidden;
+}
+
+.tool-category :deep(.n-tag__content) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 /* 移动端：单列卡片、更大触摸区域 */

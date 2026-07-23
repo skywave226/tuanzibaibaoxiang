@@ -80,6 +80,7 @@ const router = useRouter()
 const { isDark, toggle: toggleDark } = useDark()
 const searchQuery = ref('')
 const showSidebar = ref(false)
+const selectedCategory = ref('__all__')
 
 const categoryIcons: Record<string, string> = {
   'AI 工具': '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12 2.5 12"/><path d="M12 12v9.5"/></svg>',
@@ -122,7 +123,11 @@ const menuOptions = computed(() => {
 })
 
 // 从 URL query 同步当前激活分类
-const activeCategory = computed(() => (route.query.category as string) || '__all__')
+watch(() => route.query.category, (category) => {
+  selectedCategory.value = typeof category === 'string' ? category : '__all__'
+}, { immediate: true })
+
+const activeCategory = computed(() => selectedCategory.value)
 
 // 从 URL query 同步搜索词
 watch(() => route.query.q, (q) => {
@@ -130,6 +135,8 @@ watch(() => route.query.q, (q) => {
 }, { immediate: true })
 
 function onCategoryChange(key: string) {
+  // 立即更新本地选中态，避免路由异步导致高亮闪烁或丢失
+  selectedCategory.value = key
   // 点击分类时跳转首页并带上分类参数
   router.push({ path: '/', query: { category: key === '__all__' ? undefined : key } })
   // 移动端：选择后关闭抽屉
