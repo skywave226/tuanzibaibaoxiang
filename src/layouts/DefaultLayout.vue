@@ -143,13 +143,14 @@ function onSearch(value: string) {
   background: white;
   border-bottom: 1px solid #e8e8e8;
   gap: 16px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  z-index: 10;
 }
 
 .dark .layout-header {
   background: #1e293b;
   border-bottom-color: #334155;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .header-left {
@@ -219,17 +220,19 @@ function onSearch(value: string) {
 }
 
 .layout-sidebar {
-  width: 220px;
+  width: 240px;
   flex-shrink: 0;
-  padding: 16px 10px;
+  padding: 16px 12px;
   overflow-y: auto;
   background: white;
   border-right: 1px solid #e8e8e8;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.04);
 }
 
 .dark .layout-sidebar {
   background: #1e293b;
   border-right-color: #334155;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
 }
 
 /* 优化菜单选中态 */
@@ -257,6 +260,11 @@ function onSearch(value: string) {
   flex: 1;
   overflow-y: auto;
   padding: 20px;
+  background: #f8f9fa;
+}
+
+.dark .layout-main {
+  background: #0b1220;
 }
 
 @media (min-width: 1280px) {
