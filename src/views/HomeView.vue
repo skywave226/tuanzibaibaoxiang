@@ -1,8 +1,27 @@
 <template>
   <div class="home">
     <div class="home-header">
-      <h1 class="text-2xl font-bold">{{ headerTitle }}</h1>
-      <p class="text-gray-500 mt-2">共 {{ displayTools.length }} 个工具可用{{ filterHint }}</p>
+      <div v-if="activeCategory !== '__all__'" class="category-banner">
+        <div
+          class="category-banner-icon"
+          :style="{
+            background: getCategoryStyle(activeCategory).bg,
+            color: getCategoryStyle(activeCategory).color,
+          }"
+          v-html="getCategoryIcon(activeCategory)"
+        ></div>
+        <div class="category-banner-info">
+          <h1 class="category-banner-title">{{ activeCategory }}</h1>
+          <p class="category-banner-count">共 {{ displayTools.length }} 个工具</p>
+        </div>
+        <router-link to="/" class="category-banner-back">
+          查看全部
+        </router-link>
+      </div>
+      <template v-else>
+        <h1 class="text-2xl font-bold">{{ headerTitle }}</h1>
+        <p class="text-gray-500 mt-2">共 {{ displayTools.length }} 个工具可用{{ filterHint }}</p>
+      </template>
     </div>
     <div class="tool-grid">
       <a
@@ -23,7 +42,7 @@
           <div class="tool-name">{{ tool.name }}</div>
           <div class="tool-desc">{{ tool.description }}</div>
         </div>
-        <div class="tool-category">
+        <div v-if="activeCategory === '__all__'" class="tool-category">
           <n-tag
             size="small"
             :bordered="false"
@@ -46,48 +65,21 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { NTag, NEmpty } from 'naive-ui'
 import { tools } from '@/tools/registry'
+import { getCategoryStyle, getCategoryIcon } from '@/composables/useCategoryStyle'
 
 const route = useRoute()
 const baseUrl = import.meta.env.BASE_URL
-
-const categoryColors: Record<string, { bg: string; color: string; darkBg: string; darkColor: string }> = {
-  'AI 工具': { bg: '#f0e6ff', color: '#7b2cbf', darkBg: '#2d1b4e', darkColor: '#c77dff' },
-  'PDF 工具': { bg: '#fff0e6', color: '#c75100', darkBg: '#4a2815', darkColor: '#ffb380' },
-  '图片工具': { bg: '#e6f7ff', color: '#0066cc', darkBg: '#0f2d47', darkColor: '#74c0fc' },
-  '文档工具': { bg: '#f6ffed', color: '#389e0d', darkBg: '#1a3a1a', darkColor: '#95de64' },
-  '开发工具': { bg: '#fff2f0', color: '#cf1322', darkBg: '#4a1a1a', darkColor: '#ff9c9c' },
-  '文本工具': { bg: '#fffbe6', color: '#d48806', darkBg: '#4a3a12', darkColor: '#ffd666' },
-  '数据工具': { bg: '#e6fffb', color: '#08979c', darkBg: '#0a3a3a', darkColor: '#5cdbd3' },
-  '编码工具': { bg: '#f0f5ff', color: '#1d39c4', darkBg: '#151c4a', darkColor: '#85a5ff' },
-  '网络工具': { bg: '#e6f4ff', color: '#0958d9', darkBg: '#0f274a', darkColor: '#74a9ff' },
-  '加密安全': { bg: '#f2f0ff', color: '#531dab', darkBg: '#24133d', darkColor: '#b39ddb' },
-  '设计工具': { bg: '#fff0f6', color: '#c41d7f', darkBg: '#4a1a33', darkColor: '#ffadd2' },
-  '生活工具': { bg: '#e8f5e9', color: '#2e7d32', darkBg: '#1a3a1a', darkColor: '#a5d6a7' },
-  '计算工具': { bg: '#e3f2fd', color: '#1565c0', darkBg: '#0d2a47', darkColor: '#90caf9' },
-  '视频工具': { bg: '#fce4ec', color: '#ad1457', darkBg: '#4a1a2e', darkColor: '#f48fb1' },
-  '音频工具': { bg: '#e0f7fa', color: '#00838f', darkBg: '#0a3338', darkColor: '#80deea' },
-  '游戏工具': { bg: '#f3e5f5', color: '#6a1b9a', darkBg: '#2a1538', darkColor: '#ce93d8' },
-  '教育工具': { bg: '#e8eaf6', color: '#283593', darkBg: '#151a3d', darkColor: '#9fa8da' },
-  'SEO 工具': { bg: '#e0f2f1', color: '#00695c', darkBg: '#0a2e2a', darkColor: '#80cbc4' },
-  '其他': { bg: '#f5f5f5', color: '#595959', darkBg: '#2a2a2a', darkColor: '#a6a6a6' },
-}
-
-function getCategoryStyle(category: string) {
-  return categoryColors[category] || categoryColors['其他']
-}
 
 const activeCategory = computed(() => (route.query.category as string) || '__all__')
 const searchQuery = computed(() => (route.query.q as string) || '')
 
 const headerTitle = computed(() => {
   if (searchQuery.value) return `搜索 "${searchQuery.value}" 的结果`
-  if (activeCategory.value !== '__all__') return activeCategory.value
   return '在线工具集合'
 })
 
 const filterHint = computed(() => {
   const parts: string[] = []
-  if (activeCategory.value !== '__all__') parts.push(`分类：${activeCategory.value}`)
   if (searchQuery.value) parts.push(`关键词：${searchQuery.value}`)
   return parts.length ? `（${parts.join('，')}）` : ''
 })
@@ -117,7 +109,90 @@ const displayTools = computed(() => {
 
 <style scoped>
 .home-header {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+}
+
+.category-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: white;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.dark .category-banner {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.category-banner-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.category-banner-icon :deep(svg) {
+  width: 26px;
+  height: 26px;
+}
+
+.category-banner-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.category-banner-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #333;
+}
+
+.dark .category-banner-title {
+  color: #f1f5f9;
+}
+
+.category-banner-count {
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.dark .category-banner-count {
+  color: #94a3b8;
+}
+
+.category-banner-back {
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: #36ad6a;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(54, 173, 106, 0.08);
+  transition: background 0.2s;
+}
+
+.category-banner-back:hover {
+  background: rgba(54, 173, 106, 0.15);
+}
+
+.dark .category-banner-back {
+  color: #63e2b7;
+  background: rgba(99, 226, 183, 0.12);
+}
+
+.dark .category-banner-back:hover {
+  background: rgba(99, 226, 183, 0.2);
 }
 
 .tool-grid {
@@ -218,6 +293,31 @@ const displayTools = computed(() => {
 
 /* 移动端：单列卡片、更大触摸区域 */
 @media (max-width: 640px) {
+  .category-banner {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .category-banner-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .category-banner-icon :deep(svg) {
+    width: 22px;
+    height: 22px;
+  }
+
+  .category-banner-title {
+    font-size: 16px;
+  }
+
+  .category-banner-back {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
   .tool-grid {
     grid-template-columns: 1fr;
     gap: 12px;
