@@ -1,0 +1,222 @@
+{
+  "/json-tree-viewer": {
+    "en": { "name": "JSON Tree Viewer", "description": "Display JSON data in a collapsible tree structure", "keywords": ["json", "tree", "viewer", "collapsible"] },
+    "es": { "name": "Visor de Árbol JSON", "description": "Muestra datos JSON en una estructura de árbol plegable", "keywords": ["json", "tree", "visor", "plegable"] },
+    "fr": { "name": "Visualiseur d'Arbre JSON", "description": "Affiche les données JSON dans une structure arborescente pliable", "keywords": ["json", "tree", "visualiseur", "pliable"] },
+    "de": { "name": "JSON-Baumansicht", "description": "Zeigt JSON-Daten in einer einklappbaren Baumstruktur an", "keywords": ["json", "tree", "viewer", "einklappbar"] },
+    "ja": { "name": "JSON ツリービューア", "description": "JSON データを折りたたみ可能なツリー構造で表示", "keywords": ["json", "tree", "ビューア", "折りたたみ"] },
+    "it": { "name": "Visualizzatore Albero JSON", "description": "Mostra i dati JSON in una struttura ad albero comprimibile", "keywords": ["json", "tree", "visualizzatore", "comprimibile"] },
+    "ko": { "name": "JSON 트리 뷰어", "description": "JSON 데이터를 접을 수 있는 트리 구조로 표시", "keywords": ["json", "tree", "뷰어", "접기"] },
+    "ru": { "name": "JSON Дерево", "description": "Отображает данные JSON в сворачиваемой древовидной структуре", "keywords": ["json", "tree", "просмотр", "сворачиваемый"] },
+    "pt": { "name": "Visualizador de Árvore JSON", "description": "Exibe dados JSON em uma estrutura de árvore recolhível", "keywords": ["json", "tree", "visualizador", "recolhível"] }
+  },
+  "/table-schema-gen": {
+    "en": { "name": "Table Schema Generator", "description": "Visually design database table schemas and generate DDL", "keywords": ["table", "schema", "ddl", "design"] },
+    "es": { "name": "Generador de Esquema de Tablas", "description": "Diseña esquemas de tablas de bases de datos visualmente y genera DDL", "keywords": ["table", "schema", "ddl", "diseño"] },
+    "fr": { "name": "Générateur de Schéma de Table", "description": "Concevez visuellement la structure des tables de base de données et générez du DDL", "keywords": ["table", "schema", "ddl", "conception"] },
+    "de": { "name": "Tabellenschemagenerator", "description": "Entwerfen Sie Datenbanktabellenstrukturen visuell und generieren Sie DDL", "keywords": ["table", "schema", "ddl", "design"] },
+    "ja": { "name": "テーブルスキーマ生成", "description": "データベースのテーブル構造を視覚的に設計し DDL を生成", "keywords": ["table", "schema", "ddl", "設計"] },
+    "it": { "name": "Generatore di Schema Tabelle", "description": "Progetta visivamente la struttura delle tabelle del database e genera DDL", "keywords": ["table", "schema", "ddl", "progettazione"] },
+    "ko": { "name": "테이블 스키마 생성기", "description": "데이터베이스 테이블 구조를 시각적으로 설계하고 DDL 생성", "keywords": ["table", "schema", "ddl", "설계"] },
+    "ru": { "name": "Генератор Схем Таблиц", "description": "Визуально проектируйте структуру таблиц баз данных и генерируйте DDL", "keywords": ["table", "schema", "ddl", "проектирование"] },
+    "pt": { "name": "Gerador de Esquema de Tabela", "description": "Projete estruturas de tabelas de banco de dados visualmente e gere DDL", "keywords": ["table", "schema", "ddl", "design"] }
+  },
+  "/connection-string-parser": {
+    "en": { "name": "Connection String Parser", "description": "Parse database connection strings for MySQL, PostgreSQL, MongoDB, and more", "keywords": ["connection", "string", "url", "database"] },
+    "es": { "name": "Analizador de Cadenas de Conexión", "description": "Analiza cadenas de conexión de bases de datos como MySQL, PostgreSQL y MongoDB", "keywords": ["connection", "string", "url", "base de datos"] },
+    "fr": { "name": "Analyseur de Chaîne de Connexion", "description": "Analyse les chaînes de connexion de bases de données telles que MySQL, PostgreSQL et MongoDB", "keywords": ["connection", "string", "url", "base de données"] },
+    "de": { "name": "Verbindungsstring-Parser", "description": "Analysiert Datenbankverbindungsstrings wie MySQL, PostgreSQL und MongoDB", "keywords": ["connection", "string", "url", "datenbank"] },
+    "ja": { "name": "接続文字列パーサー", "description": "MySQL、PostgreSQL、MongoDB などのデータベース接続文字列を解析", "keywords": ["connection", "string", "url", "データベース"] },
+    "it": { "name": "Parser Stringa di Connessione", "description": "Analizza le stringhe di connessione ai database come MySQL, PostgreSQL e MongoDB", "keywords": ["connection", "string", "url", "database"] },
+    "ko": { "name": "연결 문자열 파서", "description": "MySQL, PostgreSQL, MongoDB 등의 데이터베이스 연결 문자열을 분석", "keywords": ["connection", "string", "url", "데이터베이스"] },
+    "ru": { "name": "Парсер Строк Подключения", "description": "Анализирует строки подключения к базам данных: MySQL, PostgreSQL, MongoDB и другие", "keywords": ["connection", "string", "url", "база данных"] },
+    "pt": { "name": "Analisador de String de Conexão", "description": "Analisa strings de conexão de banco de dados como MySQL, PostgreSQL e MongoDB", "keywords": ["connection", "string", "url", "banco de dados"] }
+  },
+  "/index-optimizer": {
+    "en": { "name": "Index Optimizer", "description": "Analyze SQL queries and get index optimization suggestions", "keywords": ["index", "sql", "optimization", "query", "performance"] },
+    "es": { "name": "Optimizador de Índices", "description": "Analiza consultas SQL y sugiere optimizaciones de índices", "keywords": ["index", "sql", "optimización", "consulta", "rendimiento"] },
+    "fr": { "name": "Optimiseur d'Index", "description": "Analyse les requêtes SQL et propose des suggestions d'optimisation d'index", "keywords": ["index", "sql", "optimisation", "requête", "performance"] },
+    "de": { "name": "Index-Optimierer", "description": "Analysiert SQL-Abfragen und gibt Index-Optimierungsvorschläge", "keywords": ["index", "sql", "optimierung", "abfrage", "leistung"] },
+    "ja": { "name": "インデックス最適化", "description": "SQL クエリを分析し、インデックス最適化の提案を行う", "keywords": ["index", "sql", "最適化", "クエリ", "パフォーマンス"] },
+    "it": { "name": "Ottimizzatore di Indici", "description": "Analizza le query SQL e fornisce suggerimenti per l'ottimizzazione degli indici", "keywords": ["index", "sql", "ottimizzazione", "query", "prestazioni"] },
+    "ko": { "name": "인덱스 최적화", "description": "SQL 쿼리를 분석하고 인덱스 최적화 제안 제공", "keywords": ["index", "sql", "최적화", "쿼리", "성능"] },
+    "ru": { "name": "Оптимизатор Индексов", "description": "Анализирует SQL-запросы и даёт рекомендации по оптимизации индексов", "keywords": ["index", "sql", "оптимизация", "запрос", "производительность"] },
+    "pt": { "name": "Otimizador de Índices", "description": "Analisa consultas SQL e fornece sugestões de otimização de índices", "keywords": ["index", "sql", "otimização", "consulta", "desempenho"] }
+  },
+  "/er-diagram-gen": {
+    "en": { "name": "ER Diagram Generator", "description": "Generate ER entity-relationship diagrams from table structures using Mermaid", "keywords": ["er", "diagram", "mermaid", "entity", "design"] },
+    "es": { "name": "Generador de Diagramas ER", "description": "Genera diagramas de entidad-relación a partir de estructuras de tablas con Mermaid", "keywords": ["er", "diagram", "mermaid", "entidad", "diseño"] },
+    "fr": { "name": "Générateur de Diagramme ER", "description": "Génère des diagrammes entité-relation à partir des structures de tables avec Mermaid", "keywords": ["er", "diagram", "mermaid", "entité", "conception"] },
+    "de": { "name": "ER-Diagramm-Generator", "description": "Erzeugt ER-Entity-Relationship-Diagramme aus Tabellenstrukturen mit Mermaid", "keywords": ["er", "diagram", "mermaid", "entity", "design"] },
+    "ja": { "name": "ER 図生成", "description": "テーブル構造から Mermaid で ER エンティティ関連図を生成", "keywords": ["er", "diagram", "mermaid", "エンティティ", "設計"] },
+    "it": { "name": "Generatore di Diagrammi ER", "description": "Genera diagrammi entità-relazione dalle strutture delle tabelle con Mermaid", "keywords": ["er", "diagram", "mermaid", "entità", "progettazione"] },
+    "ko": { "name": "ER 다이어그램 생성기", "description": "테이블 구조에서 Mermaid로 ER 엔터티 관계도 생성", "keywords": ["er", "diagram", "mermaid", "엔터티", "설계"] },
+    "ru": { "name": "Генератор ER-Диаграмм", "description": "Создаёт ER-диаграммы сущность-связь по структурам таблиц с помощью Mermaid", "keywords": ["er", "diagram", "mermaid", "сущность", "проектирование"] },
+    "pt": { "name": "Gerador de Diagrama ER", "description": "Gera diagramas de entidade-relacionamento a partir de estruturas de tabelas com Mermaid", "keywords": ["er", "diagram", "mermaid", "entidade", "design"] }
+  },
+  "/mongo-query-builder": {
+    "en": { "name": "MongoDB Query Builder", "description": "Visually build MongoDB query statements", "keywords": ["mongodb", "query", "nosql", "builder"] },
+    "es": { "name": "Constructor de Consultas MongoDB", "description": "Construye consultas MongoDB visualmente", "keywords": ["mongodb", "query", "nosql", "constructor"] },
+    "fr": { "name": "Constructeur de Requêtes MongoDB", "description": "Construit visuellement des requêtes MongoDB", "keywords": ["mongodb", "query", "nosql", "constructeur"] },
+    "de": { "name": "MongoDB-Abfragegenerator", "description": "Erstellt MongoDB-Abfragen visuell", "keywords": ["mongodb", "query", "nosql", "generator"] },
+    "ja": { "name": "MongoDB クエリビルダー", "description": "MongoDB クエリを視覚的に構築", "keywords": ["mongodb", "query", "nosql", "ビルダー"] },
+    "it": { "name": "Costruttore di Query MongoDB", "description": "Costruisce visivamente le query MongoDB", "keywords": ["mongodb", "query", "nosql", "costruttore"] },
+    "ko": { "name": "MongoDB 쿼리 빌더", "description": "MongoDB 쿼리를 시각적으로 구축", "keywords": ["mongodb", "query", "nosql", "빌더"] },
+    "ru": { "name": "Конструктор Запросов MongoDB", "description": "Визуально создавайте запросы MongoDB", "keywords": ["mongodb", "query", "nosql", "конструктор"] },
+    "pt": { "name": "Construtor de Consultas MongoDB", "description": "Constrói consultas MongoDB visualmente", "keywords": ["mongodb", "query", "nosql", "construtor"] }
+  },
+  "/redis-command-ref": {
+    "en": { "name": "Redis Command Reference", "description": "Quick reference handbook and examples for Redis commands", "keywords": ["redis", "command", "cache", "reference"] },
+    "es": { "name": "Referencia de Comandos Redis", "description": "Manual de referencia rápida y ejemplos de comandos Redis", "keywords": ["redis", "command", "caché", "referencia"] },
+    "fr": { "name": "Référence des Commandes Redis", "description": "Manuel de référence rapide et exemples pour les commandes Redis", "keywords": ["redis", "command", "cache", "référence"] },
+    "de": { "name": "Redis-Befehlsreferenz", "description": "Schnellreferenz-Handbuch und Beispiele für Redis-Befehle", "keywords": ["redis", "command", "cache", "referenz"] },
+    "ja": { "name": "Redis コマンドリファレンス", "description": "Redis コマンドの早見表と使用例", "keywords": ["redis", "command", "キャッシュ", "リファレンス"] },
+    "it": { "name": "Riferimento Comandi Redis", "description": "Manuale di riferimento rapido ed esempi per i comandi Redis", "keywords": ["redis", "command", "cache", "riferimento"] },
+    "ko": { "name": "Redis 명령어 참조", "description": "Redis 명령어 빠른 참조 안내서 및 예제", "keywords": ["redis", "command", "캐시", "참조"] },
+    "ru": { "name": "Справочник Команд Redis", "description": "Справочник и примеры команд Redis для быстрого поиска", "keywords": ["redis", "command", "кэш", "справочник"] },
+    "pt": { "name": "Referência de Comandos Redis", "description": "Manual de referência rápida e exemplos de comandos Redis", "keywords": ["redis", "command", "cache", "referência"] }
+  },
+  "/sql-formatter": {
+    "en": { "name": "SQL Formatter", "description": "Format and beautify SQL statements, supporting multiple dialects", "keywords": ["sql", "format", "mysql", "postgres", "beautify"] },
+    "es": { "name": "Formateador SQL", "description": "Formatea y embellece sentencias SQL, compatible con múltiples dialectos", "keywords": ["sql", "format", "mysql", "postgres", "embellecer"] },
+    "fr": { "name": "Formateur SQL", "description": "Formate et embellit les instructions SQL, avec prise en charge de plusieurs dialectes", "keywords": ["sql", "format", "mysql", "postgres", "embellir"] },
+    "de": { "name": "SQL-Formatierer", "description": "Formatiert und verschönert SQL-Anweisungen mit Unterstützung mehrerer Dialekte", "keywords": ["sql", "format", "mysql", "postgres", "verschönern"] },
+    "ja": { "name": "SQL フォーマッタ", "description": "SQL 文を整形・美化し、複数の方言に対応", "keywords": ["sql", "format", "mysql", "postgres", "美化"] },
+    "it": { "name": "Formattatore SQL", "description": "Formatta e abbellisce le istruzioni SQL, supportando più dialetti", "keywords": ["sql", "format", "mysql", "postgres", "abbellire"] },
+    "ko": { "name": "SQL 포맷터", "description": "SQL 문을 포맷팅 및 다듬고 여러 방언 지원", "keywords": ["sql", "format", "mysql", "postgres", "다듬기"] },
+    "ru": { "name": "SQL Форматтер", "description": "Форматирует и улучшает SQL-запросы, поддерживает несколько диалектов", "keywords": ["sql", "format", "mysql", "postgres", "улучшение"] },
+    "pt": { "name": "Formatador SQL", "description": "Formata e embeleza instruções SQL, com suporte a vários dialetos", "keywords": ["sql", "format", "mysql", "postgres", "embelezar"] }
+  },
+  "/sql-injection-check": {
+    "en": { "name": "SQL Injection Checker", "description": "Detect injection risks in SQL statements", "keywords": ["sql", "injection", "security", "detection"] },
+    "es": { "name": "Detector de Inyección SQL", "description": "Detecta riesgos de inyección en sentencias SQL", "keywords": ["sql", "injection", "seguridad", "detección"] },
+    "fr": { "name": "Vérificateur d'Injection SQL", "description": "Détecte les risques d'injection dans les instructions SQL", "keywords": ["sql", "injection", "sécurité", "détection"] },
+    "de": { "name": "SQL-Injection-Prüfer", "description": "Erkennt Injektionsrisiken in SQL-Anweisungen", "keywords": ["sql", "injection", "sicherheit", "erkennung"] },
+    "ja": { "name": "SQL インジェクション検出", "description": "SQL 文におけるインジェクションリスクを検出", "keywords": ["sql", "injection", "セキュリティ", "検出"] },
+    "it": { "name": "Controllo Injection SQL", "description": "Rileva i rischi di injection nelle istruzioni SQL", "keywords": ["sql", "injection", "sicurezza", "rilevamento"] },
+    "ko": { "name": "SQL 인젝션 검사기", "description": "SQL 문의 인젝션 위험 탐지", "keywords": ["sql", "injection", "보안", "탐지"] },
+    "ru": { "name": "Проверка SQL-Инъекций", "description": "Выявляет риски инъекций в SQL-запросах", "keywords": ["sql", "injection", "безопасность", "обнаружение"] },
+    "pt": { "name": "Verificador de Injeção SQL", "description": "Detecta riscos de injeção em instruções SQL", "keywords": ["sql", "injection", "segurança", "detecção"] }
+  },
+  "/sql-to-mongo": {
+    "en": { "name": "SQL to MongoDB", "description": "Convert SQL queries into MongoDB query syntax", "keywords": ["sql", "mongodb", "convert", "nosql"] },
+    "es": { "name": "SQL a MongoDB", "description": "Convierte consultas SQL en sintaxis de consulta MongoDB", "keywords": ["sql", "mongodb", "convertir", "nosql"] },
+    "fr": { "name": "SQL vers MongoDB", "description": "Convertit les requêtes SQL en syntaxe de requête MongoDB", "keywords": ["sql", "mongodb", "convertir", "nosql"] },
+    "de": { "name": "SQL zu MongoDB", "description": "Konvertiert SQL-Abfragen in MongoDB-Abfragesyntax", "keywords": ["sql", "mongodb", "konvertieren", "nosql"] },
+    "ja": { "name": "SQL から MongoDB", "description": "SQL クエリを MongoDB クエリ構文に変換", "keywords": ["sql", "mongodb", "変換", "nosql"] },
+    "it": { "name": "SQL a MongoDB", "description": "Converte le query SQL in sintassi di query MongoDB", "keywords": ["sql", "mongodb", "convertire", "nosql"] },
+    "ko": { "name": "SQL에서 MongoDB로", "description": "SQL 쿼리를 MongoDB 쿼리 구문으로 변환", "keywords": ["sql", "mongodb", "변환", "nosql"] },
+    "ru": { "name": "SQL в MongoDB", "description": "Преобразует SQL-запросы в синтаксис запросов MongoDB", "keywords": ["sql", "mongodb", "конвертация", "nosql"] },
+    "pt": { "name": "SQL para MongoDB", "description": "Converte consultas SQL em sintaxe de consulta MongoDB", "keywords": ["sql", "mongodb", "converter", "nosql"] }
+  },
+  "/sql-to-entity": {
+    "en": { "name": "SQL to Entity", "description": "Convert SQL CREATE TABLE statements into TypeScript entity classes", "keywords": ["sql", "entity", "typescript", "ddl"] },
+    "es": { "name": "SQL a Entidad", "description": "Convierte sentencias CREATE TABLE de SQL en clases de entidad TypeScript", "keywords": ["sql", "entity", "typescript", "ddl"] },
+    "fr": { "name": "SQL vers Entité", "description": "Convertit les instructions CREATE TABLE SQL en classes d'entité TypeScript", "keywords": ["sql", "entity", "typescript", "ddl"] },
+    "de": { "name": "SQL zu Entität", "description": "Konvertiert SQL-CREATE-TABLE-Anweisungen in TypeScript-Entitätsklassen", "keywords": ["sql", "entity", "typescript", "ddl"] },
+    "ja": { "name": "SQL からエンティティ", "description": "SQL の CREATE TABLE 文を TypeScript エンティティクラスに変換", "keywords": ["sql", "entity", "typescript", "ddl"] },
+    "it": { "name": "SQL a Entità", "description": "Converte le istruzioni SQL CREATE TABLE in classi entità TypeScript", "keywords": ["sql", "entity", "typescript", "ddl"] },
+    "ko": { "name": "SQL에서 엔터티로", "description": "SQL CREATE TABLE 문을 TypeScript 엔터티 클래스로 변환", "keywords": ["sql", "entity", "typescript", "ddl"] },
+    "ru": { "name": "SQL в Сущность", "description": "Преобразует SQL-операторы CREATE TABLE в классы сущностей TypeScript", "keywords": ["sql", "entity", "typescript", "ddl"] },
+    "pt": { "name": "SQL para Entidade", "description": "Converte instruções SQL CREATE TABLE em classes de entidade TypeScript", "keywords": ["sql", "entity", "typescript", "ddl"] }
+  },
+  "/qrcode-beautifier": {
+    "en": { "name": "QR Code Beautifier", "description": "Generate stylish QR codes with dots, rounded corners, gradients, logo overlays, and eye styles, exportable to PNG/SVG", "keywords": ["qr", "code", "beautifier", "gradient", "logo", "svg", "png"] },
+    "es": { "name": "Embellecedor de Códigos QR", "description": "Genera códigos QR elegantes con puntos, esquinas redondeadas, degradados, superposición de logos y estilos de ojo, exportables a PNG/SVG", "keywords": ["qr", "code", "embellecedor", "degradado", "logo", "svg", "png"] },
+    "fr": { "name": "Embellisseur de QR Code", "description": "Génère des QR codes stylisés avec points, coins arrondis, dégradés, superposition de logos et styles d'œil, exportables en PNG/SVG", "keywords": ["qr", "code", "embellisseur", "dégradé", "logo", "svg", "png"] },
+    "de": { "name": "QR-Code-Verbesserer", "description": "Erstellt stilvolle QR-Codes mit Punkten, abgerundeten Ecken, Farbverläufen, Logo-Overlays und Augenstilen, exportierbar als PNG/SVG", "keywords": ["qr", "code", "verbesserer", "farbverlauf", "logo", "svg", "png"] },
+    "ja": { "name": "QR コード美化", "description": "ドット、角丸、グラデーション、ロゴ重ね込み、複数の eye スタイルを備えた高品質な QR コードを生成し、PNG / SVG 出力可能", "keywords": ["qr", "code", "美化", "グラデーション", "ロゴ", "svg", "png"] },
+    "it": { "name": "Abbellitore QR Code", "description": "Genera QR code accattivanti con punti, angoli arrotondati, sfumature, sovrapposizioni di logo e stili occhio, esportabili in PNG/SVG", "keywords": ["qr", "code", "abbellitore", "sfumatura", "logo", "svg", "png"] },
+    "ko": { "name": "QR 코드 꾸미기", "description": "점, 둥근 모서리, 그라데이션, 로고 오버레이, 다양한 eye 스타일을 지원하는 세련된 QR 코드를 생성하고 PNG/SVG로 날 수 있음", "keywords": ["qr", "code", "꾸미기", "그라데이션", "로고", "svg", "png"] },
+    "ru": { "name": "Улучшатель QR-Кодов", "description": "Создаёт стильные QR-коды с точками, скруглёнными углами, градиентами, наложением логотипов и стилями eye, с экспортом в PNG/SVG", "keywords": ["qr", "code", "улучшение", "градиент", "логотип", "svg", "png"] },
+    "pt": { "name": "Embelezador de QR Code", "description": "Gera QR codes estilosos com pontos, cantos arredondados, gradientes, sobreposição de logotipos e estilos de olho, exportáveis para PNG/SVG", "keywords": ["qr", "code", "embelezador", "gradiente", "logo", "svg", "png"] }
+  },
+  "/qrcode-generator": {
+    "en": { "name": "QR Code Generator", "description": "Generate QR codes with custom colors, error correction levels, center logos, batch generation, PNG/SVG export, and history", "keywords": ["qr", "code", "generator", "logo", "batch", "svg", "png"] },
+    "es": { "name": "Generador de Códigos QR", "description": "Genera códigos QR con colores personalizados, niveles de corrección de errores, logos centrales, generación por lotes, exportación PNG/SVG e historial", "keywords": ["qr", "code", "generador", "logo", "lote", "svg", "png"] },
+    "fr": { "name": "Générateur de QR Code", "description": "Génère des QR codes avec couleurs personnalisées, niveaux de correction d'erreurs, logos centraux, génération par lots, exportation PNG/SVG et historique", "keywords": ["qr", "code", "générateur", "logo", "lot", "svg", "png"] },
+    "de": { "name": "QR-Code-Generator", "description": "Erstellt QR-Codes mit benutzerdefinierten Farben, Fehlerkorrekturstufen, zentralem Logo, Stapelverarbeitung, PNG/SVG-Export und Verlauf", "keywords": ["qr", "code", "generator", "logo", "stapel", "svg", "png"] },
+    "ja": { "name": "QR コード生成器", "description": "カスタム色、誤り訂正レベル、中央ロゴ、一括生成、PNG/SVG 出力、履歴に対応した QR コードを生成", "keywords": ["qr", "code", "生成器", "ロゴ", "一括", "svg", "png"] },
+    "it": { "name": "Generatore di QR Code", "description": "Genera QR code con colori personalizzati, livelli di correzione errori, logo centrale, generazione batch, esportazione PNG/SVG e cronologia", "keywords": ["qr", "code", "generatore", "logo", "batch", "svg", "png"] },
+    "ko": { "name": "QR 코드 생성기", "description": "사용자 지정 색상, 오류 수정 레벨, 중앙 로고, 일괄 생성, PNG/SVG 날 내기 및 기록을 지원하는 QR 코드 생성", "keywords": ["qr", "code", "생성기", "로고", "일괄", "svg", "png"] },
+    "ru": { "name": "Генератор QR-Кодов", "description": "Создаёт QR-коды с настраиваемыми цветами, уровнями коррекции ошибок, центральным логотипом, пакетной генерацией, экспортом PNG/SVG и историей", "keywords": ["qr", "code", "генератор", "логотип", "пакет", "svg", "png"] },
+    "pt": { "name": "Gerador de QR Code", "description": "Gera QR codes com cores personalizadas, níveis de correção de erros, logos centrais, geração em lote, exportação PNG/SVG e histórico", "keywords": ["qr", "code", "gerador", "logo", "lote", "svg", "png"] }
+  },
+  "/qrcode-reader": {
+    "en": { "name": "QR Code Reader", "description": "Read QR code content from images", "keywords": ["qr", "code", "reader", "scanner"] },
+    "es": { "name": "Lector de Códigos QR", "description": "Lee el contenido de códigos QR desde imágenes", "keywords": ["qr", "code", "lector", "escáner"] },
+    "fr": { "name": "Lecteur de QR Code", "description": "Lit le contenu des QR codes à partir d'images", "keywords": ["qr", "code", "lecteur", "scanner"] },
+    "de": { "name": "QR-Code-Leser", "description": "Liest QR-Code-Inhalte aus Bildern", "keywords": ["qr", "code", "leser", "scanner"] },
+    "ja": { "name": "QR コードリーダー", "description": "画像から QR コードの内容を読み取る", "keywords": ["qr", "code", "リーダー", "スキャナー"] },
+    "it": { "name": "Lettore di QR Code", "description": "Legge il contenuto dei QR code dalle immagini", "keywords": ["qr", "code", "lettore", "scanner"] },
+    "ko": { "name": "QR 코드 리더", "description": "이미지에서 QR 코드 콘텐츠를 인식", "keywords": ["qr", "code", "리더", "스캐너"] },
+    "ru": { "name": "Сканер QR-Кодов", "description": "Распознаёт содержимое QR-кодов на изображениях", "keywords": ["qr", "code", "сканер", "распознавание"] },
+    "pt": { "name": "Leitor de QR Code", "description": "Lê o conteúdo de QR codes a partir de imagens", "keywords": ["qr", "code", "leitor", "scanner"] }
+  },
+  "/image-crop": {
+    "en": { "name": "Image Crop", "description": "Crop image size and area", "keywords": ["image", "crop", "resize", "editor"] },
+    "es": { "name": "Recorte de Imagen", "description": "Recorta el tamaño y área de las imágenes", "keywords": ["imagen", "recortar", "tamaño", "editor"] },
+    "fr": { "name": "Recadrage d'Image", "description": "Recadre la taille et la zone des images", "keywords": ["image", "recadrer", "taille", "éditeur"] },
+    "de": { "name": "Bildzuschnitt", "description": "Schneidet Bildgröße und -bereich zu", "keywords": ["bild", "zuschnitt", "größe", "editor"] },
+    "ja": { "name": "画像切り抜き", "description": "画像のサイズと領域を切り抜く", "keywords": ["画像", "切り抜き", "サイズ", "エディター"] },
+    "it": { "name": "Ritaglio Immagine", "description": "Ritaglia dimensione e area delle immagini", "keywords": ["immagine", "ritaglio", "dimensione", "editor"] },
+    "ko": { "name": "이미지 자르기", "description": "이미지 크기와 영역을 자름", "keywords": ["이미지", "자르기", "크기", "편집기"] },
+    "ru": { "name": "Обрезка Изображений", "description": "Обрезает размер и область изображений", "keywords": ["изображение", "обрезка", "размер", "редактор"] },
+    "pt": { "name": "Corte de Imagem", "description": "Recorta o tamanho e a área da imagem", "keywords": ["imagem", "recortar", "tamanho", "editor"] }
+  },
+  "/image-format": {
+    "en": { "name": "Image Format Converter", "description": "Convert images between JPG, PNG, WebP, and GIF formats", "keywords": ["image", "convert", "jpg", "png", "webp", "gif"] },
+    "es": { "name": "Conversor de Formato de Imagen", "description": "Convierte imágenes entre formatos JPG, PNG, WebP y GIF", "keywords": ["imagen", "convertir", "jpg", "png", "webp", "gif"] },
+    "fr": { "name": "Convertisseur de Format d'Image", "description": "Convertit les images entre les formats JPG, PNG, WebP et GIF", "keywords": ["image", "convertir", "jpg", "png", "webp", "gif"] },
+    "de": { "name": "Bildformat-Konverter", "description": "Konvertiert Bilder zwischen den Formaten JPG, PNG, WebP und GIF", "keywords": ["bild", "konvertieren", "jpg", "png", "webp", "gif"] },
+    "ja": { "name": "画像形式変換", "description": "JPG、PNG、WebP、GIF 形式間で画像を変換", "keywords": ["画像", "変換", "jpg", "png", "webp", "gif"] },
+    "it": { "name": "Convertitore di Formato Immagine", "description": "Converte le immagini tra i formati JPG, PNG, WebP e GIF", "keywords": ["immagine", "convertire", "jpg", "png", "webp", "gif"] },
+    "ko": { "name": "이미지 형식 변환", "description": "JPG, PNG, WebP, GIF 형식 간 이미지 변환", "keywords": ["이미지", "변환", "jpg", "png", "webp", "gif"] },
+    "ru": { "name": "Конвертер Форматов Изображений", "description": "Конвертирует изображения между форматами JPG, PNG, WebP и GIF", "keywords": ["изображение", "конвертация", "jpg", "png", "webp", "gif"] },
+    "pt": { "name": "Conversor de Formato de Imagem", "description": "Converte imagens entre os formatos JPG, PNG, WebP e GIF", "keywords": ["imagem", "converter", "jpg", "png", "webp", "gif"] }
+  },
+  "/image-merge": {
+    "en": { "name": "Image Merge", "description": "Merge multiple images horizontally or vertically with adjustable spacing and background color", "keywords": ["image", "merge", "combine", "horizontal", "vertical"] },
+    "es": { "name": "Fusión de Imágenes", "description": "Combina varias imágenes horizontal o verticalmente con espaciado y color de fondo ajustables", "keywords": ["imagen", "fusionar", "combinar", "horizontal", "vertical"] },
+    "fr": { "name": "Fusion d'Images", "description": "Fusionne plusieurs images horizontalement ou verticalement avec espacement et couleur de fond ajustables", "keywords": ["image", "fusionner", "combiner", "horizontal", "vertical"] },
+    "de": { "name": "Bildzusammenführung", "description": "Fügt mehrere Bilder horizontal oder vertikal mit anpassbarem Abstand und Hintergrundfarbe zusammen", "keywords": ["bild", "zusammenführen", "kombinieren", "horizontal", "vertikal"] },
+    "ja": { "name": "画像結合", "description": "複数の画像を横または縦に結合し、間隔と背景色を調整可能", "keywords": ["画像", "結合", "マージ", "横", "縦"] },
+    "it": { "name": "Unione Immagini", "description": "Unisce più immagini orizzontalmente o verticalmente con spaziatura e colore di sfondo regolabili", "keywords": ["immagine", "unire", "combinare", "orizzontale", "verticale"] },
+    "ko": { "name": "이미지 병합", "description": "여러 이미지를 가로 또는 세로로 병합하고 간격과 배경색 조정", "keywords": ["이미지", "병합", "결합", "가로", "세로"] },
+    "ru": { "name": "Объединение Изображений", "description": "Объединяет несколько изображений по горизонтали или вертикали с настраиваемыми интервалами и цветом фона", "keywords": ["изображение", "объединение", "сочетание", "горизонтальный", "вертикальный"] },
+    "pt": { "name": "Mesclagem de Imagem", "description": "Mescla várias imagens horizontalmente ou verticalmente com espaçamento e cor de fundo ajustáveis", "keywords": ["imagem", "mesclar", "combinar", "horizontal", "vertical"] }
+  },
+  "/bg-remover": {
+    "en": { "name": "Background Remover", "description": "Remove image backgrounds or replace them with a custom color, ideal for quick cutouts of solid-color photos", "keywords": ["background", "remove", "transparent", "image", "cutout"] },
+    "es": { "name": "Eliminador de Fondo", "description": "Elimina los fondos de las imágenes o los reemplaza por un color personalizado, ideal para recortes rápidos de fotos de fondo sólido", "keywords": ["fondo", "eliminar", "transparente", "imagen", "recorte"] },
+    "fr": { "name": "Suppresseur d'Arrière-plan", "description": "Supprime les arrière-plans des images ou les remplace par une couleur personnalisée, idéal pour les découpages rapides de photos à fond uni", "keywords": ["arrière-plan", "supprimer", "transparent", "image", "découpe"] },
+    "de": { "name": "Hintergrundentferner", "description": "Entfernt Bildhintergründe oder ersetzt sie durch eine benutzerdefinierte Farbe, ideal für schnelle Ausschnitte von Fotos mit einfarbigem Hintergrund", "keywords": ["hintergrund", "entfernen", "transparent", "bild", "ausschnitt"] },
+    "ja": { "name": "背景除去", "description": "画像の背景を削除または指定色に置き換え、単色背景写真の簡単な切り抜きに最適", "keywords": ["背景", "除去", "透明", "画像", "切り抜き"] },
+    "it": { "name": "Rimuovi Sfondo", "description": "Rimuove gli sfondi delle immagini o li sostituisce con un colore personalizzato, ideale per ritagli rapidi di foto con sfondo uniforme", "keywords": ["sfondo", "rimuovere", "trasparente", "immagine", "ritaglio"] },
+    "ko": { "name": "배경 제거", "description": "이미지 배경을 제거하거나 지정색으로 대체하여 단색 배경 사진의 빠른 마스킹에 적합", "keywords": ["배경", "제거", "투명", "이미지", "마스킹"] },
+    "ru": { "name": "Удаление Фона", "description": "Удаляет фон изображений или заменяет его на заданный цвет, подходит для быстрого вырезания объектов на однотонном фоне", "keywords": ["фон", "удаление", "прозрачный", "изображение", "вырезание"] },
+    "pt": { "name": "Removedor de Fundo", "description": "Remove fundos de imagens ou os substitui por uma cor personalizada, ideal para recortes rápidos de fotos com fundo sólido", "keywords": ["fundo", "remover", "transparente", "imagem", "recorte"] }
+  },
+  "/watermark-remover": {
+    "en": { "name": "Watermark Remover", "description": "Cover watermarks using nearby image areas, suitable for removing marks on solid or simple backgrounds", "keywords": ["watermark", "remove", "image", "repair", "inpaint"] },
+    "es": { "name": "Eliminador de Marcas de Agua", "description": "Cubre las marcas de agua usando áreas cercanas de la imagen, adecuado para eliminar marcas en fondos sólidos o simples", "keywords": ["watermark", "remove", "imagen", "reparar", "restaurar"] },
+    "fr": { "name": "Suppresseur de Filigrane", "description": "Recouvre les filigranes avec des zones voisines de l'image, adapté pour supprimer les filigranes sur des fonds unis ou simples", "keywords": ["watermark", "remove", "image", "réparer", "restaurer"] },
+    "de": { "name": "Wasserzeichen-Entferner", "description": "Bedeckt Wasserzeichen mit benachbarten Bildbereichen, geeignet zum Entfernen von Wasserzeichen auf einfarbigen oder einfachen Hintergründen", "keywords": ["watermark", "remove", "bild", "reparieren", "restaurieren"] },
+    "ja": { "name": "水印除去", "description": "画像の周辺領域で水印を覆い、単色または簡単な背景上の水印除去に適する", "keywords": ["watermark", "remove", "画像", "修復", "復元"] },
+    "it": { "name": "Rimuovi Filigrana", "description": "Copre le filigrane usando aree vicine dell'immagine, adatto per rimuovere filigrane su sfondi uniformi o semplici", "keywords": ["watermark", "remove", "immagine", "riparare", "ripristinare"] },
+    "ko": { "name": "워터마크 제거", "description": "이미지의 인근 영역으로 워터마크를 덮어 단색 또는 단순 배경의 워터마크 제거에 적합", "keywords": ["watermark", "remove", "이미지", "복구", "복원"] },
+    "ru": { "name": "Удаление Водяных Знаков", "description": "Накладывает на водяные знаки близлежащие области изображения, подходит для удаления знаков на однотонном или простом фоне", "keywords": ["watermark", "remove", "изображение", "восстановление", "ремонт"] },
+    "pt": { "name": "Removedor de Marca d'Água", "description": "Cobre marcas d'água usando áreas próximas da imagem, adequado para remover marcas em fundos sólidos ou simples", "keywords": ["watermark", "remove", "imagem", "reparar", "restaurar"] }
+  },
+  "/image-watermark": {
+    "en": { "name": "Image Watermark", "description": "Add text or image watermarks to images with adjustable position, opacity, and size", "keywords": ["watermark", "image", "text", "logo", "copyright"] },
+    "es": { "name": "Marca de Agua en Imagen", "description": "Añade marcas de agua de texto o imagen a las imágenes con posición, opacidad y tamaño ajustables", "keywords": ["watermark", "imagen", "texto", "logo", "copyright"] },
+    "fr": { "name": "Filigrane d'Image", "description": "Ajoute des filigranes texte ou image aux images avec position, opacité et taille ajustables", "keywords": ["watermark", "image", "texte", "logo", "copyright"] },
+    "de": { "name": "Bildwasserzeichen", "description": "Fügt Bildern Text- oder Bildwasserzeichen mit anpassbarer Position, Deckkraft und Größe hinzu", "keywords": ["watermark", "bild", "text", "logo", "urheberrecht"] },
+    "ja": { "name": "画像水印", "description": "画像にテキストまたは画像水印を追加し、位置、透明度、サイズを調整可能", "keywords": ["watermark", "画像", "テキスト", "ロゴ", "著作権"] },
+    "it": { "name": "Filigrana Immagine", "description": "Aggiunge filigrane di testo o immagine alle immagini con posizione, opacità e dimensioni regolabili", "keywords": ["watermark", "immagine", "testo", "logo", "copyright"] },
+    "ko": { "name": "이미지 워터마크", "description": "이미지에 텍스트 또는 이미지 워터마크를 추가하고 위치, 불투명도, 크기 조정", "keywords": ["watermark", "이미지", "텍스트", "로고", "저작권"] },
+    "ru": { "name": "Водяной Знак на Изображении", "description": "Добавляет текстовые или графические водяные знаки на изображения с настраиваемым положением, прозрачностью и размером", "keywords": ["watermark", "изображение", "текст", "логотип", "авторское право"] },
+    "pt": { "name": "Marca d'Água em Imagem", "description": "Adiciona marcas d'água de texto ou imagem às imagens com posição, opacidade e tamanho ajustáveis", "keywords": ["watermark", "imagem", "texto", "logo", "copyright"] }
+  }
+}

@@ -1,0 +1,283 @@
+[
+  {
+    "name": "图片压缩",
+    "path": "/image-compress",
+    "description": "批量压缩 JPG/PNG/WebP 图片，支持格式转换与 ZIP 打包下载",
+    "category": "图片工具",
+    "keywords": [
+      "图片",
+      "压缩",
+      "JPG",
+      "PNG",
+      "WebP",
+      "批量",
+      "ZIP"
+    ]
+  },
+  {
+    "name": "图片转 Base64",
+    "path": "/image-to-base64",
+    "description": "图片转 Base64 编码",
+    "category": "图片工具",
+    "keywords": [
+      "图片",
+      "Base64",
+      "转换",
+      "编码"
+    ]
+  },
+  {
+    "name": "证件照换底色",
+    "path": "/id-photo",
+    "description": "上传照片一键更换证件照背景色，支持蓝底、白底、红底及常用尺寸裁剪",
+    "category": "图片工具",
+    "keywords": [
+      "证件照",
+      "换底色",
+      "蓝底",
+      "白底",
+      "红底",
+      "一寸照",
+      "二寸照"
+    ]
+  },
+  {
+    "name": "端口查询",
+    "path": "/port-lookup",
+    "description": "查询常用端口号及其对应的服务和用途",
+    "category": "网络工具",
+    "keywords": [
+      "port",
+      "端口",
+      "tcp",
+      "udp",
+      "服务"
+    ]
+  },
+  {
+    "name": "网络延迟测试",
+    "path": "/network-speed",
+    "description": "测试到各大网站的网络延迟",
+    "category": "网络工具",
+    "keywords": [
+      "网络",
+      "延迟",
+      "ping",
+      "速度",
+      "测试"
+    ]
+  },
+  {
+    "name": "DNS 查询",
+    "path": "/dns-query",
+    "description": "查询域名 DNS 解析记录，支持多种记录类型",
+    "category": "网络工具",
+    "keywords": [
+      "dns",
+      "域名",
+      "解析",
+      "A记录",
+      "CNAME",
+      "MX",
+      "TXT"
+    ]
+  },
+  {
+    "name": "HTTP 请求测试",
+    "path": "/http-request",
+    "description": "发送 HTTP 请求测试 API，支持多方法、自定义请求头、环境变量、请求历史、cURL 导入导出",
+    "category": "网络工具",
+    "keywords": [
+      "http",
+      "request",
+      "api",
+      "fetch",
+      "postman",
+      "接口",
+      "测试",
+      "curl",
+      "环境变量",
+      "历史"
+    ]
+  },
+  {
+    "name": "HTTP 状态码查询",
+    "path": "/http-status",
+    "description": "查询 HTTP 状态码的含义和用途",
+    "category": "网络工具",
+    "keywords": [
+      "http",
+      "status",
+      "状态码",
+      "404",
+      "500",
+      "200"
+    ]
+  },
+  {
+    "name": "IP 地址查询",
+    "path": "/ip-query",
+    "description": "查询当前公网 IP 地址及地理位置信息",
+    "category": "网络工具",
+    "keywords": [
+      "ip",
+      "地址",
+      "查询",
+      "地理位置",
+      "运营商",
+      "网络"
+    ]
+  },
+  {
+    "name": "IP 子网计算器",
+    "path": "/subnet-calculator",
+    "description": "计算 IP 子网信息，包括网络地址、广播地址、可用主机数等",
+    "category": "网络工具",
+    "keywords": [
+      "ip",
+      "subnet",
+      "子网",
+      "掩码",
+      "cidr",
+      "网络"
+    ]
+  },
+  {
+    "name": "UserAgent 解析",
+    "path": "/ua-parser",
+    "description": "解析 User-Agent 字符串，识别浏览器、操作系统与设备信息",
+    "category": "网络工具",
+    "keywords": [
+      "useragent",
+      "ua",
+      "browser",
+      "os",
+      "浏览器",
+      "设备",
+      "解析"
+    ]
+  },
+  {
+    "name": "大小写转换",
+    "path": "/case-converter",
+    "description": "英文大小写转换，支持驼峰、帕斯卡、蛇形、短横线、常量、路径、点分隔、URL Slug、反转大小写等",
+    "category": "文本处理",
+    "keywords": [
+      "大小写",
+      "转换",
+      "大写",
+      "小写",
+      "驼峰",
+      "蛇形",
+      "kebab",
+      "slug",
+      "常量命名",
+      "反转大小写"
+    ]
+  },
+  {
+    "name": "繁简转换",
+    "path": "/traditional-simplified",
+    "description": "繁体中文和简体中文互转",
+    "category": "文本处理",
+    "keywords": [
+      "繁体",
+      "简体",
+      "中文",
+      "转换"
+    ]
+  },
+  {
+    "name": "金额大写转换",
+    "path": "/money-cn",
+    "description": "数字金额转中文大写（壹贰叁）",
+    "category": "文本处理",
+    "keywords": [
+      "金额",
+      "大写",
+      "中文",
+      "壹贰叁"
+    ]
+  },
+  {
+    "name": "摩斯密码",
+    "path": "/morse-code",
+    "description": "摩斯密码（Morse Code）编解码，支持中英文与音频播放",
+    "category": "文本处理",
+    "keywords": [
+      "morse",
+      "摩斯",
+      "电码",
+      "编码",
+      "解码",
+      "telegraph"
+    ]
+  },
+  {
+    "name": "图片表格识别",
+    "path": "/image-table-recognizer",
+    "description": "上传图片识别表格内容，自动生成可编辑表格并导出",
+    "category": "文本处理",
+    "keywords": [
+      "图片",
+      "表格",
+      "OCR",
+      "识别",
+      "Excel",
+      "转换"
+    ]
+  },
+  {
+    "name": "文本对比",
+    "path": "/text-diff",
+    "description": "对比两段文本的差异，高亮显示新增、删除和修改的内容",
+    "category": "文本处理",
+    "keywords": [
+      "diff",
+      "compare",
+      "对比",
+      "比较",
+      "差异"
+    ]
+  },
+  {
+    "name": "文本去重排序",
+    "path": "/text-dedup-sort",
+    "description": "去除重复行、按字母/数字排序",
+    "category": "文本处理",
+    "keywords": [
+      "去重",
+      "排序",
+      "重复",
+      "排序"
+    ]
+  },
+  {
+    "name": "文本转语音",
+    "path": "/text-to-speech",
+    "description": "将文本转换为语音播放，支持多语言与语速调节",
+    "category": "文本处理",
+    "keywords": [
+      "tts",
+      "speech",
+      "语音",
+      "朗读",
+      "speechSynthesis"
+    ]
+  },
+  {
+    "name": "正则测试器",
+    "path": "/regex-tester",
+    "description": "正则表达式匹配、替换测试与表达式解析，含常用正则库",
+    "category": "文本处理",
+    "keywords": [
+      "regex",
+      "regular expression",
+      "正则",
+      "匹配",
+      "测试",
+      "替换",
+      "解释"
+    ]
+  }
+]

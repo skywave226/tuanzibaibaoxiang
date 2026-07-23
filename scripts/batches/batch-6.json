@@ -1,0 +1,263 @@
+[
+  {
+    "name": "字数统计",
+    "path": "/word-counter",
+    "description": "统计文本字符数、单词数、行数、段落数、中文字符、阅读/朗读时间，并展示词频排行",
+    "category": "文本处理",
+    "keywords": [
+      "字数",
+      "统计",
+      "字符",
+      "单词",
+      "行数",
+      "词频",
+      "阅读时间",
+      "中文字符"
+    ]
+  },
+  {
+    "name": "Markdown 预览",
+    "path": "/markdown-preview",
+    "description": "实时预览 Markdown 渲染效果",
+    "category": "文本处理",
+    "keywords": [
+      "markdown",
+      "md",
+      "预览",
+      "渲染",
+      "文档"
+    ]
+  },
+  {
+    "name": "文档字数统计",
+    "path": "/doc-word-count",
+    "description": "统计文档字数、行数、段落数",
+    "category": "文档处理",
+    "keywords": [
+      "word",
+      "count",
+      "字数",
+      "统计",
+      "文档"
+    ]
+  },
+  {
+    "name": "CSV 转 JSON",
+    "path": "/csv-to-json",
+    "description": "将 CSV 数据转换为 JSON 数组",
+    "category": "文档处理",
+    "keywords": [
+      "csv",
+      "json",
+      "转换"
+    ]
+  },
+  {
+    "name": "Excel 转 CSV",
+    "path": "/excel-to-csv",
+    "description": "将 Excel 文件转换为 CSV 格式",
+    "category": "文档处理",
+    "keywords": [
+      "excel",
+      "csv",
+      "xlsx",
+      "转换"
+    ]
+  },
+  {
+    "name": "Markdown 转 PDF",
+    "path": "/markdown-to-pdf",
+    "description": "将 Markdown 转换为 PDF 文档",
+    "category": "文档处理",
+    "keywords": [
+      "markdown",
+      "pdf",
+      "转换"
+    ]
+  },
+  {
+    "name": "Markdown 转 Word",
+    "path": "/markdown-to-word",
+    "description": "将 Markdown 转换为 Word 文档（.doc）",
+    "category": "文档处理",
+    "keywords": [
+      "markdown",
+      "word",
+      "doc",
+      "转换"
+    ]
+  },
+  {
+    "name": "PDF 工具箱",
+    "path": "/pdf-toolbox",
+    "description": "PDF 合并、拆分、旋转、压缩、提取文本多功能工具箱",
+    "category": "文档处理",
+    "keywords": [
+      "pdf",
+      "合并",
+      "拆分",
+      "旋转",
+      "压缩",
+      "提取文本",
+      "工具箱"
+    ]
+  },
+  {
+    "name": "TXT 转 EPUB",
+    "path": "/txt-to-epub",
+    "description": "将纯文本文件转换为 EPUB 电子书",
+    "category": "文档处理",
+    "keywords": [
+      "txt",
+      "epub",
+      "电子书",
+      "转换"
+    ]
+  },
+  {
+    "name": "Word 转 Markdown",
+    "path": "/word-to-markdown",
+    "description": "将 Word 文档转换为 Markdown",
+    "category": "文档处理",
+    "keywords": [
+      "word",
+      "markdown",
+      "docx",
+      "转换"
+    ]
+  },
+  {
+    "name": "PDF 转换器",
+    "path": "/pdf-converter",
+    "description": "将 PDF 转换为 Word、Excel、OCR 文本或图片，支持页面预览与批量导出",
+    "category": "文档工具",
+    "keywords": [
+      "pdf",
+      "word",
+      "docx",
+      "excel",
+      "xlsx",
+      "ocr",
+      "转换",
+      "提取",
+      "图片",
+      "text",
+      "文档"
+    ]
+  },
+  {
+    "name": "波形图生成",
+    "path": "/waveform-generator",
+    "description": "生成音频波形图",
+    "category": "音视频处理",
+    "keywords": [
+      "waveform",
+      "波形图",
+      "音频",
+      "audio"
+    ]
+  },
+  {
+    "name": "视频截图",
+    "path": "/video-screenshot",
+    "description": "从视频中截取画面图片",
+    "category": "音视频处理",
+    "keywords": [
+      "video",
+      "screenshot",
+      "视频",
+      "截图",
+      "帧"
+    ]
+  },
+  {
+    "name": "视频信息提取",
+    "path": "/video-info-extract",
+    "description": "提取视频元数据信息",
+    "category": "音视频处理",
+    "keywords": [
+      "video",
+      "info",
+      "metadata",
+      "视频",
+      "信息"
+    ]
+  },
+  {
+    "name": "视频转 GIF",
+    "path": "/video-to-gif",
+    "description": "将视频片段转换为 GIF 动图",
+    "category": "音视频处理",
+    "keywords": [
+      "video",
+      "gif",
+      "转换",
+      "动图"
+    ]
+  },
+  {
+    "name": "音频变速",
+    "path": "/audio-speed-changer",
+    "description": "改变音频播放速度",
+    "category": "音视频处理",
+    "keywords": [
+      "audio",
+      "speed",
+      "变速",
+      "音频"
+    ]
+  },
+  {
+    "name": "音频格式转换",
+    "path": "/audio-converter",
+    "description": "音频文件格式转换",
+    "category": "音视频处理",
+    "keywords": [
+      "audio",
+      "convert",
+      "音频",
+      "转换",
+      "mp3",
+      "wav"
+    ]
+  },
+  {
+    "name": "音频剪辑",
+    "path": "/audio-trimmer",
+    "description": "剪辑音频片段",
+    "category": "音视频处理",
+    "keywords": [
+      "audio",
+      "trim",
+      "clip",
+      "剪辑",
+      "音频"
+    ]
+  },
+  {
+    "name": "音频降噪",
+    "path": "/audio-noise-reduction",
+    "description": "简单音频降噪处理",
+    "category": "音视频处理",
+    "keywords": [
+      "audio",
+      "noise",
+      "reduction",
+      "降噪",
+      "音频"
+    ]
+  },
+  {
+    "name": "音频可视化",
+    "path": "/audio-visualizer",
+    "description": "音频频谱可视化",
+    "category": "音视频处理",
+    "keywords": [
+      "audio",
+      "visualizer",
+      "可视化",
+      "频谱",
+      "波形"
+    ]
+  }
+]

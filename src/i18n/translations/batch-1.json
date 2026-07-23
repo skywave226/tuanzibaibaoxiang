@@ -1,0 +1,222 @@
+{
+  "/password-strength": {
+    "en": { "name": "Password Strength Checker", "description": "Check password strength and get improvement suggestions.", "keywords": ["password", "strength", "check", "security"] },
+    "es": { "name": "Comprobador de Fortaleza de Contraseña", "description": "Comprueba la fortaleza de la contraseña y obtén recomendaciones.", "keywords": ["contraseña", "fortaleza", "comprobar", "seguridad"] },
+    "fr": { "name": "Vérificateur de Force du Mot de Passe", "description": "Vérifie la force du mot de passe et donne des conseils.", "keywords": ["mot de passe", "force", "vérifier", "sécurité"] },
+    "de": { "name": "Passwortstärke-Prüfer", "description": "Prüft die Passwortstärke und gibt Empfehlungen.", "keywords": ["passwort", "stärke", "prüfen", "sicherheit"] },
+    "ja": { "name": "パスワード強度チェッカー", "description": "パスワードの強度を検証し、改善提案を表示します。", "keywords": ["パスワード", "強度", "検証", "セキュリティ"] },
+    "it": { "name": "Verifica Robustezza Password", "description": "Verifica la robustezza della password e ricevi suggerimenti.", "keywords": ["password", "robustezza", "verificare", "sicurezza"] },
+    "ko": { "name": "비밀번호 강도 검사기", "description": "비밀번호 강도를 검사하고 개선 제안을 제공합니다.", "keywords": ["비밀번호", "강도", "검사", "보안"] },
+    "ru": { "name": "Проверка Надёжности Пароля", "description": "Проверяет надёжность пароля и даёт рекомендации.", "keywords": ["пароль", "надёжность", "проверка", "безопасность"] },
+    "pt": { "name": "Verificador de Força de Senha", "description": "Verifica a força da senha e fornece sugestões.", "keywords": ["senha", "força", "verificar", "segurança"] }
+  },
+  "/aes-encrypt": {
+    "en": { "name": "AES Encryption", "description": "AES-128/192/256 encryption and decryption.", "keywords": ["AES", "encrypt", "decrypt", "security"] },
+    "es": { "name": "Cifrado AES", "description": "Cifrado y descifrado AES-128/192/256.", "keywords": ["AES", "cifrar", "descifrar", "seguridad"] },
+    "fr": { "name": "Chiffrement AES", "description": "Chiffrement et déchiffrement AES-128/192/256.", "keywords": ["AES", "chiffrer", "déchiffrer", "sécurité"] },
+    "de": { "name": "AES-Verschlüsselung", "description": "AES-128/192/256 Verschlüsselung und Entschlüsselung.", "keywords": ["AES", "verschlüsseln", "entschlüsseln", "sicherheit"] },
+    "ja": { "name": "AES 暗号化", "description": "AES-128/192/256 の暗号化と復号を行います。", "keywords": ["AES", "暗号化", "復号", "セキュリティ"] },
+    "it": { "name": "Crittografia AES", "description": "Crittografia e decrittografia AES-128/192/256.", "keywords": ["AES", "crittografare", "decrittografare", "sicurezza"] },
+    "ko": { "name": "AES 암호화", "description": "AES-128/192/256 암호화 및 복호화를 제공합니다.", "keywords": ["AES", "암호화", "복호화", "보안"] },
+    "ru": { "name": "AES Шифрование", "description": "Шифрование и расшифровка AES-128/192/256.", "keywords": ["AES", "шифрование", "расшифровка", "безопасность"] },
+    "pt": { "name": "Criptografia AES", "description": "Criptografia e descriptografia AES-128/192/256.", "keywords": ["AES", "criptografar", "descriptografar", "segurança"] }
+  },
+  "/base32-codec": {
+    "en": { "name": "Base32 Codec", "description": "Base32 encoding and decoding (RFC 4648 standard).", "keywords": ["base32", "encode", "decode", "codec", "rfc4648"] },
+    "es": { "name": "Códec Base32", "description": "Codificación y decodificación Base32 (estándar RFC 4648).", "keywords": ["base32", "codificar", "decodificar", "códec", "rfc4648"] },
+    "fr": { "name": "Codec Base32", "description": "Encodage et décodage Base32 (norme RFC 4648).", "keywords": ["base32", "encoder", "décoder", "codec", "rfc4648"] },
+    "de": { "name": "Base32-Codec", "description": "Base32-Kodierung und -Dekodierung (RFC 4648-Standard).", "keywords": ["base32", "kodieren", "dekodieren", "codec", "rfc4648"] },
+    "ja": { "name": "Base32 コーデック", "description": "Base32 エンコード・デコード（RFC 4648 規格）に対応します。", "keywords": ["base32", "エンコード", "デコード", "コーデック", "rfc4648"] },
+    "it": { "name": "Codec Base32", "description": "Codifica e decodifica Base32 (standard RFC 4648).", "keywords": ["base32", "codificare", "decodificare", "codec", "rfc4648"] },
+    "ko": { "name": "Base32 코덱", "description": "Base32 인코딩 및 디코딩(RFC 4648 표준)을 지원합니다.", "keywords": ["base32", "인코딩", "디코딩", "코덱", "rfc4648"] },
+    "ru": { "name": "Base32 Кодек", "description": "Кодирование и декодирование Base32 (стандарт RFC 4648).", "keywords": ["base32", "кодировать", "декодировать", "кодек", "rfc4648"] },
+    "pt": { "name": "Codec Base32", "description": "Codificação e decodificação Base32 (padrão RFC 4648).", "keywords": ["base32", "codificar", "decodificar", "codec", "rfc4648"] }
+  },
+  "/rsa-encrypt": {
+    "en": { "name": "RSA Encryption", "description": "RSA public-key encryption and private-key decryption.", "keywords": ["RSA", "encrypt", "decrypt", "public key", "private key"] },
+    "es": { "name": "Cifrado RSA", "description": "Cifrado con clave pública RSA y descifrado con clave privada.", "keywords": ["RSA", "cifrar", "descifrar", "clave pública", "clave privada"] },
+    "fr": { "name": "Chiffrement RSA", "description": "Chiffrement RSA par clé publique et déchiffrement par clé privée.", "keywords": ["RSA", "chiffrer", "déchiffrer", "clé publique", "clé privée"] },
+    "de": { "name": "RSA-Verschlüsselung", "description": "RSA-Verschlüsselung mit öffentlichem Schlüssel und Entschlüsselung mit privatem Schlüssel.", "keywords": ["RSA", "verschlüsseln", "entschlüsseln", "öffentlicher schlüssel", "privater schlüssel"] },
+    "ja": { "name": "RSA 暗号化", "description": "RSA 公開鍵暗号化と秘密鍵復号を行います。", "keywords": ["RSA", "暗号化", "復号", "公開鍵", "秘密鍵"] },
+    "it": { "name": "Crittografia RSA", "description": "Crittografia RSA con chiave pubblica e decrittografia con chiave privata.", "keywords": ["RSA", "crittografare", "decrittografare", "chiave pubblica", "chiave privata"] },
+    "ko": { "name": "RSA 암호화", "description": "RSA 공개키 암호화 및 개인키 복호화를 제공합니다.", "keywords": ["RSA", "암호화", "복호화", "공개키", "개인키"] },
+    "ru": { "name": "RSA Шифрование", "description": "Шифрование RSA открытым ключом и расшифровка закрытым ключом.", "keywords": ["RSA", "шифрование", "расшифровка", "открытый ключ", "закрытый ключ"] },
+    "pt": { "name": "Criptografia RSA", "description": "Criptografia RSA com chave pública e descriptografia com chave privada.", "keywords": ["RSA", "criptografar", "descriptografar", "chave pública", "chave privada"] }
+  },
+  "/data-processor": {
+    "en": { "name": "Spreadsheet Data Processor", "description": "Process CSV / Excel data online with deduplication, split columns, merge files, filter, sort and format conversion.", "keywords": ["csv", "excel", "data processing", "deduplicate", "merge", "filter", "spreadsheet"] },
+    "es": { "name": "Procesador de Datos de Hojas de Cálculo", "description": "Procesa datos CSV / Excel en línea con deduplicación, división de columnas, fusión de archivos, filtrado, ordenación y conversión de formato.", "keywords": ["csv", "excel", "procesamiento de datos", "deduplicar", "fusionar", "filtrar", "hoja de cálculo"] },
+    "fr": { "name": "Processeur de Données de Tableur", "description": "Traitez les données CSV / Excel en ligne avec déduplication, fractionnement de colonnes, fusion de fichiers, filtrage, tri et conversion de format.", "keywords": ["csv", "excel", "traitement de données", "dédoublonner", "fusionner", "filtrer", "tableur"] },
+    "de": { "name": "Tabellendaten-Prozessor", "description": "Verarbeiten Sie CSV / Excel-Daten online mit Deduplizierung, Spalten teilen, Dateien zusammenführen, filtern, sortieren und Formatkonvertierung.", "keywords": ["csv", "excel", "datenverarbeitung", "deduplizieren", "zusammenführen", "filtern", "tabelle"] },
+    "ja": { "name": "表データ処理", "description": "CSV / Excel データをオンラインで処理し、重複除去、列の分割、ファイルの結合、フィルタリング、ソート、形式変換に対応します。", "keywords": ["csv", "excel", "データ処理", "重複除去", "結合", "フィルタ", "表"] },
+    "it": { "name": "Elaboratore Dati Foglio di Calcolo", "description": "Elabora dati CSV / Excel online con deduplicazione, divisione colonne, unione file, filtro, ordinamento e conversione formato.", "keywords": ["csv", "excel", "elaborazione dati", "deduplicare", "unire", "filtrare", "foglio di calcolo"] },
+    "ko": { "name": "스프레드시트 데이터 처리기", "description": "CSV / Excel 데이터를 온라인으로 처리하고 중복 제거, 열 분할, 파일 병합, 필터링, 정렬 및 형식 변환을 지원합니다.", "keywords": ["csv", "excel", "데이터 처리", "중복 제거", "병합", "필터", "스프레드시트"] },
+    "ru": { "name": "Обработчик Табличных Данных", "description": "Обрабатывайте данные CSV / Excel онлайн с удалением дубликатов, разделением столбцов, слиянием файлов, фильтрацией, сортировкой и преобразованием формата.", "keywords": ["csv", "excel", "обработка данных", "удаление дубликатов", "слияние", "фильтр", "таблица"] },
+    "pt": { "name": "Processador de Dados de Planilhas", "description": "Processe dados CSV / Excel online com deduplicação, divisão de colunas, mesclagem de arquivos, filtragem, ordenação e conversão de formato.", "keywords": ["csv", "excel", "processamento de dados", "deduplicar", "mesclar", "filtrar", "planilha"] }
+  },
+  "/base64-codec": {
+    "en": { "name": "Base64 Codec", "description": "Convert text and Base64 to each other, supporting URL-safe Base64, file drag-and-drop to Base64, image preview and original file download.", "keywords": ["base64", "encode", "decode", "file", "image", "url-safe"] },
+    "es": { "name": "Códec Base64", "description": "Convierte texto y Base64 mutuamente, con soporte para Base64 seguro para URL, arrastrar archivos a Base64, vista previa de imágenes y descarga del archivo original.", "keywords": ["base64", "codificar", "decodificar", "archivo", "imagen", "url-safe"] },
+    "fr": { "name": "Codec Base64", "description": "Convertissez du texte et du Base64 dans les deux sens, avec prise en charge du Base64 compatible URL, glisser-déposer de fichiers vers Base64, aperçu d'images et téléchargement du fichier original.", "keywords": ["base64", "encoder", "décoder", "fichier", "image", "url-safe"] },
+    "de": { "name": "Base64-Codec", "description": "Text und Base64 ineinander umwandeln, unterstützt URL-sicheres Base64, Drag & Drop von Dateien zu Base64, Bildvorschau und Download der Originaldatei.", "keywords": ["base64", "kodieren", "dekodieren", "datei", "bild", "url-safe"] },
+    "ja": { "name": "Base64 コーデック", "description": "テキストと Base64 を相互変換し、URL セーフ Base64、ファイルのドラッグ＆ドロップによる Base64 変換、画像プレビュー、元ファイルのダウンロードに対応します。", "keywords": ["base64", "エンコード", "デコード", "ファイル", "画像", "url-safe"] },
+    "it": { "name": "Codec Base64", "description": "Converti testo e Base64 reciprocamente, supporta Base64 sicuro per URL, trascinamento file in Base64, anteprima immagini e download file originale.", "keywords": ["base64", "codificare", "decodificare", "file", "immagine", "url-safe"] },
+    "ko": { "name": "Base64 코덱", "description": "텍스트와 Base64를 상호 변환하고 URL 안전 Base64, 파일 드래그 앤 드롭 Base64 변환, 이미지 미리보기 및 원본 파일 다운로드를 지원합니다.", "keywords": ["base64", "인코딩", "디코딩", "파일", "이미지", "url-safe"] },
+    "ru": { "name": "Base64 Кодек", "description": "Взаимное преобразование текста и Base64 с поддержкой URL-безопасного Base64, перетаскивания файлов в Base64, предпросмотра изображений и скачивания исходного файла.", "keywords": ["base64", "кодировать", "декодировать", "файл", "изображение", "url-safe"] },
+    "pt": { "name": "Codec Base64", "description": "Converta texto e Base64 entre si, com suporte a Base64 seguro para URL, arrastar e soltar arquivos para Base64, visualização de imagens e download do arquivo original.", "keywords": ["base64", "codificar", "decodificar", "arquivo", "imagem", "url-safe"] }
+  },
+  "/html-entity-codec": {
+    "en": { "name": "HTML Entity Codec", "description": "Encode and decode HTML entities, supporting special characters like &amp; &lt; &gt;.", "keywords": ["html", "entity", "encode", "decode", "escape", "unescape"] },
+    "es": { "name": "Códec de Entidades HTML", "description": "Codifica y decodifica entidades HTML, compatibles con caracteres especiales como &amp; &lt; &gt;.", "keywords": ["html", "entidad", "codificar", "decodificar", "escape", "unescape"] },
+    "fr": { "name": "Codec d'Entités HTML", "description": "Encode et décode les entités HTML, prend en charge les caractères spéciaux comme &amp; &lt; &gt;.", "keywords": ["html", "entité", "encoder", "décoder", "escape", "unescape"] },
+    "de": { "name": "HTML-Entity-Codec", "description": "Kodiert und dekodiert HTML-Entitäten, unterstützt Sonderzeichen wie &amp; &lt; &gt;.", "keywords": ["html", "entity", "kodieren", "dekodieren", "escape", "unescape"] },
+    "ja": { "name": "HTML エンティティ コーデック", "description": "HTML エンティティをエンコード・デコードし、&amp; &lt; &gt; などの特殊文字に対応します。", "keywords": ["html", "エンティティ", "エンコード", "デコード", "escape", "unescape"] },
+    "it": { "name": "Codec Entità HTML", "description": "Codifica e decodifica entità HTML, supporta caratteri speciali come &amp; &lt; &gt;.", "keywords": ["html", "entità", "codificare", "decodificare", "escape", "unescape"] },
+    "ko": { "name": "HTML 엔티티 코덱", "description": "HTML 엔티티를 인코딩 및 디코딩하고 &amp; &lt; &gt; 등의 특수 문자를 지원합니다.", "keywords": ["html", "엔티티", "인코딩", "디코딩", "escape", "unescape"] },
+    "ru": { "name": "HTML Сущности Кодек", "description": "Кодирует и декодирует HTML-сущности, поддерживает специальные символы, такие как &amp; &lt; &gt;.", "keywords": ["html", "сущность", "кодировать", "декодировать", "escape", "unescape"] },
+    "pt": { "name": "Codec de Entidades HTML", "description": "Codifica e decodifica entidades HTML, com suporte a caracteres especiais como &amp; &lt; &gt;.", "keywords": ["html", "entidade", "codificar", "decodificar", "escape", "unescape"] }
+  },
+  "/json-formatter": {
+    "en": { "name": "JSON Formatter", "description": "Format, minify and validate JSON data, supporting JSONPath queries, Schema validation and CSV/TSV export.", "keywords": ["json", "format", "validate", "jsonpath", "schema", "csv"] },
+    "es": { "name": "Formateador JSON", "description": "Formatea, minifica y valida datos JSON, con soporte para consultas JSONPath, validación de Schema y exportación CSV/TSV.", "keywords": ["json", "formato", "validar", "jsonpath", "schema", "csv"] },
+    "fr": { "name": "Formateur JSON", "description": "Formate, minimise et valide les données JSON, prend en charge les requêtes JSONPath, la validation de Schema et l'export CSV/TSV.", "keywords": ["json", "formater", "valider", "jsonpath", "schema", "csv"] },
+    "de": { "name": "JSON-Formatierer", "description": "Formatiert, minimiert und validiert JSON-Daten, unterstützt JSONPath-Abfragen, Schema-Validierung und CSV/TSV-Export.", "keywords": ["json", "formatieren", "validieren", "jsonpath", "schema", "csv"] },
+    "ja": { "name": "JSON フォーマッタ", "description": "JSON データをフォーマット、圧縮、検証し、JSONPath クエリ、Schema 検証、CSV/TSV エクスポートに対応します。", "keywords": ["json", "フォーマット", "検証", "jsonpath", "schema", "csv"] },
+    "it": { "name": "Formattatore JSON", "description": "Formatta, minimizza e valida dati JSON, supporta query JSONPath, validazione Schema ed esportazione CSV/TSV.", "keywords": ["json", "formattare", "validare", "jsonpath", "schema", "csv"] },
+    "ko": { "name": "JSON 포매터", "description": "JSON 데이터를 포맷팅, 압축, 검증하고 JSONPath 쿼리, Schema 검증, CSV/TSV 내보내기를 지원합니다.", "keywords": ["json", "포맷", "검증", "jsonpath", "schema", "csv"] },
+    "ru": { "name": "JSON Форматтер", "description": "Форматирует, сжимает и проверяет данные JSON, поддерживает запросы JSONPath, валидацию Schema и экспорт CSV/TSV.", "keywords": ["json", "формат", "проверка", "jsonpath", "schema", "csv"] },
+    "pt": { "name": "Formatador JSON", "description": "Formata, minifica e valida dados JSON, com suporte a consultas JSONPath, validação de Schema e exportação CSV/TSV.", "keywords": ["json", "formatar", "validar", "jsonpath", "schema", "csv"] }
+  },
+  "/unicode-converter": {
+    "en": { "name": "Unicode Converter", "description": "Convert Unicode escape sequences (\\uXXXX), supporting Chinese and special characters.", "keywords": ["unicode", "escape", "unescape", "chinese", "encoding"] },
+    "es": { "name": "Conversor Unicode", "description": "Convierte secuencias de escape Unicode (\\uXXXX), compatible con chino y caracteres especiales.", "keywords": ["unicode", "escape", "unescape", "chino", "codificación"] },
+    "fr": { "name": "Convertisseur Unicode", "description": "Convertit les séquences d'échappement Unicode (\\uXXXX), prend en charge le chinois et les caractères spéciaux.", "keywords": ["unicode", "escape", "unescape", "chinois", "encodage"] },
+    "de": { "name": "Unicode-Konverter", "description": "Konvertiert Unicode-Escapesequenzen (\\uXXXX), unterstützt Chinesisch und Sonderzeichen.", "keywords": ["unicode", "escape", "unescape", "chinesisch", "kodierung"] },
+    "ja": { "name": "Unicode 変換", "description": "Unicode エスケープ シーケンス（\\uXXXX）を変換し、中国語と特殊文字に対応します。", "keywords": ["unicode", "escape", "unescape", "中国語", "エンコード"] },
+    "it": { "name": "Convertitore Unicode", "description": "Converte sequenze di escape Unicode (\\uXXXX), supporta cinese e caratteri speciali.", "keywords": ["unicode", "escape", "unescape", "cinese", "codifica"] },
+    "ko": { "name": "Unicode 변환기", "description": "Unicode 이스케이프 시퀀스(\\uXXXX)를 변환하고 중국어 및 특수 문자를 지원합니다.", "keywords": ["unicode", "escape", "unescape", "중국어", "인코딩"] },
+    "ru": { "name": "Конвертер Unicode", "description": "Преобразует escape-последовательности Unicode (\\uXXXX), поддерживает китайские и специальные символы.", "keywords": ["unicode", "escape", "unescape", "китайский", "кодировка"] },
+    "pt": { "name": "Conversor Unicode", "description": "Converte sequências de escape Unicode (\\uXXXX), com suporte a chinês e caracteres especiais.", "keywords": ["unicode", "escape", "unescape", "chinês", "codificação"] }
+  },
+  "/url-codec": {
+    "en": { "name": "URL Codec", "description": "URL encoding and decoding, supporting URL parameter parsing, batch processing and automatic direction detection.", "keywords": ["url", "encode", "decode", "percent-encoding", "parameter", "batch"] },
+    "es": { "name": "Códec URL", "description": "Codificación y decodificación URL, con soporte para análisis de parámetros URL, procesamiento por lotes y detección automática de dirección.", "keywords": ["url", "codificar", "decodificar", "percent-encoding", "parámetro", "lote"] },
+    "fr": { "name": "Codec URL", "description": "Encodage et décodage URL, prend en charge l'analyse des paramètres URL, le traitement par lots et la détection automatique de la direction.", "keywords": ["url", "encoder", "décoder", "percent-encoding", "paramètre", "lot"] },
+    "de": { "name": "URL-Codec", "description": "URL-Kodierung und -Dekodierung, unterstützt URL-Parameteranalyse, Stapelverarbeitung und automatische Richtungserkennung.", "keywords": ["url", "kodieren", "dekodieren", "percent-encoding", "parameter", "stapel"] },
+    "ja": { "name": "URL コーデック", "description": "URL エンコード・デコード、URL パラメーター解析、一括処理、方向の自動判定に対応します。", "keywords": ["url", "エンコード", "デコード", "percent-encoding", "パラメータ", "一括"] },
+    "it": { "name": "Codec URL", "description": "Codifica e decodifica URL, supporta analisi parametri URL, elaborazione batch e rilevamento automatico della direzione.", "keywords": ["url", "codificare", "decodificare", "percent-encoding", "parametro", "batch"] },
+    "ko": { "name": "URL 코덱", "description": "URL 인코딩 및 디코딩, URL 매개변수 분석, 일괄 처리, 방향 자동 판단을 지원합니다.", "keywords": ["url", "인코딩", "디코딩", "percent-encoding", "매개변수", "일괄"] },
+    "ru": { "name": "URL Кодек", "description": "Кодирование и декодирование URL, поддерживает разбор URL-параметров, пакетную обработку и автоматическое определение направления.", "keywords": ["url", "кодировать", "декодировать", "percent-encoding", "параметр", "пакет"] },
+    "pt": { "name": "Codec URL", "description": "Codificação e decodificação URL, com suporte a análise de parâmetros URL, processamento em lote e detecção automática de direção.", "keywords": ["url", "codificar", "decodificar", "percent-encoding", "parâmetro", "lote"] }
+  },
+  "/percentage-calculator": {
+    "en": { "name": "Percentage Calculator", "description": "Various percentage calculations including percentage, increase/decrease ratio and base value.", "keywords": ["percentage", "ratio", "increase", "decrease", "calculate"] },
+    "es": { "name": "Calculadora de Porcentajes", "description": "Cálculos de porcentajes varios, incluyendo porcentaje, ratio de aumento/disminución y valor base.", "keywords": ["porcentaje", "ratio", "aumento", "disminución", "calcular"] },
+    "fr": { "name": "Calculateur de Pourcentage", "description": "Divers calculs de pourcentage, y compris le pourcentage, le ratio d'augmentation/diminution et la valeur de base.", "keywords": ["pourcentage", "ratio", "augmentation", "diminution", "calculer"] },
+    "de": { "name": "Prozentrechner", "description": "Verschiedene Prozentrechnungen wie Prozentsatz, Zu-/Abnahmequote und Grundwert.", "keywords": ["prozentsatz", "quote", "zunahme", "abnahme", "berechnen"] },
+    "ja": { "name": "パーセンテージ計算機", "description": "パーセンテージ、増減率、基数などのさまざまなパーセンテージ計算に対応します。", "keywords": ["パーセンテージ", "比率", "増加", "減少", "計算"] },
+    "it": { "name": "Calcolatore Percentuale", "description": "Diversi calcoli percentuali, inclusi percentuale, rapporto di aumento/diminuzione e valore base.", "keywords": ["percentuale", "rapporto", "aumento", "diminuzione", "calcolare"] },
+    "ko": { "name": "퍼센트 계산기", "description": "퍼센트, 증감 비율, 기수 등 다양한 퍼센트 계산을 지원합니다.", "keywords": ["퍼센트", "비율", "증가", "감소", "계산"] },
+    "ru": { "name": "Калькулятор Процентов", "description": "Различные процентные расчёты: процент, коэффициент увеличения/уменьшения и базовое значение.", "keywords": ["процент", "коэффициент", "увеличение", "уменьшение", "расчёт"] },
+    "pt": { "name": "Calculadora de Porcentagem", "description": "Vários cálculos de porcentagem, incluindo porcentagem, taxa de aumento/diminuição e valor base.", "keywords": ["porcentagem", "taxa", "aumento", "diminuição", "calcular"] }
+  },
+  "/number-base-converter": {
+    "en": { "name": "Number Base Converter", "description": "Convert between binary, octal, decimal and hexadecimal.", "keywords": ["binary", "octal", "hex", "decimal", "base", "converter"] },
+    "es": { "name": "Conversor de Bases Numéricas", "description": "Convierte entre binario, octal, decimal y hexadecimal.", "keywords": ["binario", "octal", "hex", "decimal", "base", "convertidor"] },
+    "fr": { "name": "Convertisseur de Base Numérique", "description": "Convertit entre binaire, octal, décimal et hexadécimal.", "keywords": ["binaire", "octal", "hex", "décimal", "base", "convertisseur"] },
+    "de": { "name": "Zahlensystem-Umrechner", "description": "Rechnet zwischen Binär, Oktal, Dezimal und Hexadezimal um.", "keywords": ["binär", "oktal", "hex", "dezimal", "basis", "umrechner"] },
+    "ja": { "name": "進数変換", "description": "2 進数、8 進数、10 進数、16 進数を相互変換します。", "keywords": ["binary", "octal", "hex", "decimal", "進数", "変換"] },
+    "it": { "name": "Convertitore di Base Numerica", "description": "Converte tra binario, ottale, decimale ed esadecimale.", "keywords": ["binario", "ottale", "hex", "decimale", "base", "convertitore"] },
+    "ko": { "name": "진수 변환기", "description": "2진수, 8진수, 10진수, 16진수를 상호 변환합니다.", "keywords": ["binary", "octal", "hex", "decimal", "진수", "변환"] },
+    "ru": { "name": "Конвертер Систем Счисления", "description": "Преобразует между двоичной, восьмеричной, десятичной и шестнадцатеричной системами.", "keywords": ["binary", "octal", "hex", "decimal", "основание", "конвертер"] },
+    "pt": { "name": "Conversor de Base Numérica", "description": "Converte entre binário, octal, decimal e hexadecimal.", "keywords": ["binário", "octal", "hex", "decimal", "base", "conversor"] }
+  },
+  "/scientific-calculator": {
+    "en": { "name": "Scientific Calculator", "description": "Supports scientific calculations including trigonometric functions, logarithms and exponentiation.", "keywords": ["calculator", "scientific", "trigonometry", "logarithm", "sin", "cos", "log"] },
+    "es": { "name": "Calculadora Científica", "description": "Admite cálculos científicos como funciones trigonométricas, logaritmos y potencias.", "keywords": ["calculadora", "científica", "trigonometría", "logaritmo", "sin", "cos", "log"] },
+    "fr": { "name": "Calculatrice Scientifique", "description": "Prend en charge les calculs scientifiques, fonctions trigonométriques, logarithmes et exponentiation.", "keywords": ["calculatrice", "scientifique", "trigonométrie", "logarithme", "sin", "cos", "log"] },
+    "de": { "name": "Wissenschaftlicher Rechner", "description": "Unterstützt wissenschaftliche Berechnungen wie trigonometrische Funktionen, Logarithmen und Potenzierung.", "keywords": ["rechner", "wissenschaftlich", "trigonometrie", "logarithmus", "sin", "cos", "log"] },
+    "ja": { "name": "関数電卓", "description": "三角関数、対数、累乗などの科学計算機能に対応します。", "keywords": ["calculator", "科学", "三角関数", "対数", "sin", "cos", "log"] },
+    "it": { "name": "Calcolatrice Scientifica", "description": "Supporta calcoli scientifici come funzioni trigonometriche, logaritmi e potenze.", "keywords": ["calcolatrice", "scientifica", "trigonometria", "logaritmo", "sin", "cos", "log"] },
+    "ko": { "name": "공학용 계산기", "description": "삼각함수, 로그, 거듭제곱 등의 과학 계산 기능을 지원합니다.", "keywords": ["calculator", "과학", "삼각함수", "로그", "sin", "cos", "log"] },
+    "ru": { "name": "Инженерный Калькулятор", "description": "Поддерживает научные вычисления: тригонометрические функции, логарифмы и возведение в степень.", "keywords": ["калькулятор", "научный", "тригонометрия", "логарифм", "sin", "cos", "log"] },
+    "pt": { "name": "Calculadora Científica", "description": "Suporta cálculos científicos como funções trigonométricas, logaritmos e potenciação.", "keywords": ["calculadora", "científica", "trigonometria", "logaritmo", "sin", "cos", "log"] }
+  },
+  "/color-converter": {
+    "en": { "name": "Color Converter", "description": "Convert between HEX, RGB, HSL and CMYK color formats, supporting WCAG contrast check, color schemes and CSS color name recognition.", "keywords": ["color", "hex", "rgb", "hsl", "cmyk", "contrast", "scheme"] },
+    "es": { "name": "Conversor de Colores", "description": "Convierte entre formatos de color HEX, RGB, HSL y CMYK, con soporte para verificación de contraste WCAG, esquemas de color y reconocimiento de nombres de color CSS.", "keywords": ["color", "hex", "rgb", "hsl", "cmyk", "contraste", "esquema"] },
+    "fr": { "name": "Convertisseur de Couleurs", "description": "Convertit entre les formats de couleur HEX, RGB, HSL et CMYK, prend en charge la vérification du contraste WCAG, les palettes de couleurs et la reconnaissance des noms de couleurs CSS.", "keywords": ["couleur", "hex", "rgb", "hsl", "cmyk", "contraste", "palette"] },
+    "de": { "name": "Farbkonverter", "description": "Konvertiert zwischen den Farbformaten HEX, RGB, HSL und CMYK, unterstützt WCAG-Kontrastprüfung, Farbschemata und Erkennung von CSS-Farbnamen.", "keywords": ["farbe", "hex", "rgb", "hsl", "cmyk", "kontrast", "schema"] },
+    "ja": { "name": "カラー変換", "description": "HEX、RGB、HSL、CMYK カラー形式を相互変換し、WCAG コントラストチェック、配色、CSS カラー名認識に対応します。", "keywords": ["color", "hex", "rgb", "hsl", "cmyk", "コントラスト", "配色"] },
+    "it": { "name": "Convertitore di Colori", "description": "Converte tra formati colore HEX, RGB, HSL e CMYK, supporta controllo contrasto WCAG, combinazioni di colori e riconoscimento nomi colori CSS.", "keywords": ["colore", "hex", "rgb", "hsl", "cmyk", "contrasto", "schema"] },
+    "ko": { "name": "색상 변환기", "description": "HEX, RGB, HSL, CMYK 색상 형식을 상호 변환하고 WCAG 대비 확인, 배색, CSS 색상명 인식을 지원합니다.", "keywords": ["color", "hex", "rgb", "hsl", "cmyk", "대비", "배색"] },
+    "ru": { "name": "Конвертер Цветов", "description": "Преобразует между цветовыми форматами HEX, RGB, HSL и CMYK, поддерживает проверку контраста WCAG, цветовые схемы и распознавание имён цветов CSS.", "keywords": ["цвет", "hex", "rgb", "hsl", "cmyk", "контраст", "схема"] },
+    "pt": { "name": "Conversor de Cores", "description": "Converte entre formatos de cor HEX, RGB, HSL e CMYK, com suporte a verificação de contraste WCAG, esquemas de cores e reconhecimento de nomes de cores CSS.", "keywords": ["cor", "hex", "rgb", "hsl", "cmyk", "contraste", "esquema"] }
+  },
+  "/hash-calculator": {
+    "en": { "name": "Hash Calculator", "description": "Calculate MD5, SHA-1, SHA-256 and SHA-512 hashes for text and files, supporting HMAC and Base64 output.", "keywords": ["hash", "md5", "sha", "hmac", "file", "base64"] },
+    "es": { "name": "Calculadora de Hash", "description": "Calcula hashes MD5, SHA-1, SHA-256 y SHA-512 para texto y archivos, con soporte para HMAC y salida Base64.", "keywords": ["hash", "md5", "sha", "hmac", "archivo", "base64"] },
+    "fr": { "name": "Calculateur de Hash", "description": "Calcule les empreintes MD5, SHA-1, SHA-256 et SHA-512 pour texte et fichiers, prend en charge HMAC et sortie Base64.", "keywords": ["hash", "md5", "sha", "hmac", "fichier", "base64"] },
+    "de": { "name": "Hash-Rechner", "description": "Berechnet MD5-, SHA-1-, SHA-256- und SHA-512-Hashes für Text und Dateien, unterstützt HMAC und Base64-Ausgabe.", "keywords": ["hash", "md5", "sha", "hmac", "datei", "base64"] },
+    "ja": { "name": "Hash 計算", "description": "テキストとファイルの MD5、SHA-1、SHA-256、SHA-512 ハッシュ値を計算し、HMAC と Base64 出力に対応します。", "keywords": ["hash", "md5", "sha", "hmac", "ファイル", "base64"] },
+    "it": { "name": "Calcolatore di Hash", "description": "Calcola hash MD5, SHA-1, SHA-256 e SHA-512 per testo e file, supporta HMAC e output Base64.", "keywords": ["hash", "md5", "sha", "hmac", "file", "base64"] },
+    "ko": { "name": "Hash 계산기", "description": "텍스트와 파일의 MD5, SHA-1, SHA-256, SHA-512 해시값을 계산하고 HMAC 및 Base64 출력을 지원합니다.", "keywords": ["hash", "md5", "sha", "hmac", "파일", "base64"] },
+    "ru": { "name": "Калькулятор Хешей", "description": "Вычисляет хеши MD5, SHA-1, SHA-256 и SHA-512 для текста и файлов, поддерживает HMAC и вывод Base64.", "keywords": ["hash", "md5", "sha", "hmac", "файл", "base64"] },
+    "pt": { "name": "Calculadora de Hash", "description": "Calcula hashes MD5, SHA-1, SHA-256 e SHA-512 para texto e arquivos, com suporte a HMAC e saída Base64.", "keywords": ["hash", "md5", "sha", "hmac", "arquivo", "base64"] }
+  },
+  "/idiom-dictionary": {
+    "en": { "name": "Chinese Idiom Dictionary", "description": "Chinese idiom dictionary with meanings, origins and example sentences.", "keywords": ["idiom", "chinese", "dictionary", "query"] },
+    "es": { "name": "Diccionario de Modismos Chinos", "description": "Diccionario de modismos chinos con significados, orígenes y ejemplos.", "keywords": ["idiom", "chino", "diccionario", "consulta"] },
+    "fr": { "name": "Dictionnaire d'Idiomes Chinois", "description": "Dictionnaire d'idiomes chinois avec significations, origines et exemples.", "keywords": ["idiome", "chinois", "dictionnaire", "recherche"] },
+    "de": { "name": "Chinesisches Idiom-Wörterbuch", "description": "Chinesisches Idiom-Wörterbuch mit Bedeutungen, Herkunft und Beispielsätzen.", "keywords": ["idiom", "chinesisch", "wörterbuch", "suche"] },
+    "ja": { "name": "中国語成語辞典", "description": "意味、出典、例文をサポートする中国語の成語辞典です。", "keywords": ["idiom", "中国語", "辞典", "検索"] },
+    "it": { "name": "Dizionario di Modi di Dire Cinesi", "description": "Dizionario di espressioni idiomatiche cinesi con significati, origini ed esempi.", "keywords": ["idiom", "cinese", "dizionario", "ricerca"] },
+    "ko": { "name": "중국 관용어 사전", "description": "의미, 출처, 예문을 지원하는 중국 관용어 사전입니다.", "keywords": ["idiom", "중국어", "사전", "검색"] },
+    "ru": { "name": "Словарь Китайских Идиом", "description": "Словарь китайских идиом со значениями, происхождением и примерами.", "keywords": ["идиома", "китайский", "словарь", "поиск"] },
+    "pt": { "name": "Dicionário de Expressões Idiomáticas Chinesas", "description": "Dicionário de expressões idiomáticas chinesas com significados, origens e exemplos.", "keywords": ["idiom", "chinês", "dicionário", "consulta"] }
+  },
+  "/unit-converter-edu": {
+    "en": { "name": "Unit Converter", "description": "Multi-category unit conversion tool supporting length, mass, temperature, time, area, volume, speed and data.", "keywords": ["unit", "converter", "length", "mass", "temperature", "time"] },
+    "es": { "name": "Conversor de Unidades", "description": "Herramienta de conversión de unidades multicategoría, compatible con longitud, masa, temperatura, tiempo, área, volumen, velocidad y datos.", "keywords": ["unidad", "conversor", "longitud", "masa", "temperatura", "tiempo"] },
+    "fr": { "name": "Convertisseur d'Unités", "description": "Outil de conversion multi-catégories prenant en charge la longueur, la masse, la température, le temps, la surface, le volume, la vitesse et les données.", "keywords": ["unité", "convertisseur", "longueur", "masse", "température", "temps"] },
+    "de": { "name": "Einheitenumrechner", "description": "Mehrkategorie-Umrechnungstool für Länge, Masse, Temperatur, Zeit, Fläche, Volumen, Geschwindigkeit und Daten.", "keywords": ["einheit", "umrechner", "länge", "masse", "temperatur", "zeit"] },
+    "ja": { "name": "単位換算", "description": "長さ、質量、温度、時間、面積、体積、速度、データをサポートする多カテゴリ単位換算ツールです。", "keywords": ["単位", "換算", "長さ", "質量", "温度", "時間"] },
+    "it": { "name": "Convertitore di Unità", "description": "Strumento di conversione multi-categoria che supporta lunghezza, massa, temperatura, tempo, area, volume, velocità e dati.", "keywords": ["unità", "convertitore", "lunghezza", "massa", "temperatura", "tempo"] },
+    "ko": { "name": "단위 변환기", "description": "길이, 질량, 온도, 시간, 면적, 부피, 속도, 데이터를 지원하는 다중 카테고리 단위 변환 도구입니다.", "keywords": ["단위", "변환", "길이", "질량", "온도", "시간"] },
+    "ru": { "name": "Конвертер Единиц Измерения", "description": "Многокатегориальный инструмент конвертации, поддерживает длину, массу, температуру, время, площадь, объём, скорость и данные.", "keywords": ["единица", "конвертер", "длина", "масса", "температура", "время"] },
+    "pt": { "name": "Conversor de Unidades", "description": "Ferramenta de conversão de unidades multicategoria, com suporte a comprimento, massa, temperatura, tempo, área, volume, velocidade e dados.", "keywords": ["unidade", "conversor", "comprimento", "massa", "temperatura", "tempo"] }
+  },
+  "/formula-reference": {
+    "en": { "name": "Formula Reference", "description": "Quick reference for math and physics formulas, browse by category, with search and variable explanations.", "keywords": ["formula", "math", "physics", "reference", "search"] },
+    "es": { "name": "Referencia de Fórmulas", "description": "Tabla de consulta rápida de fórmulas de matemáticas y física, navegación por categorías, búsqueda y explicación de variables.", "keywords": ["fórmula", "matemáticas", "física", "referencia", "búsqueda"] },
+    "fr": { "name": "Référence des Formules", "description": "Table de référence rapide des formules de mathématiques et physique, navigation par catégorie, recherche et explication des variables.", "keywords": ["formule", "math", "physique", "référence", "recherche"] },
+    "de": { "name": "Formelsammlung", "description": "Schnellübersicht für Mathematik- und Physikformeln, kategorienweise Durchsicht, mit Suche und Variabenerklärung.", "keywords": ["formel", "mathematik", "physik", "referenz", "suche"] },
+    "ja": { "name": "公式早見表", "description": "数学と物理の公式を分類して参照し、検索と変数説明に対応します。", "keywords": ["公式", "数学", "物理", "早見表", "検索"] },
+    "it": { "name": "Riferimento Formule", "description": "Tabella di consultazione rapida per formule di matematica e fisica, navigazione per categoria, ricerca e spiegazione variabili.", "keywords": ["formula", "matematica", "fisica", "riferimento", "ricerca"] },
+    "ko": { "name": "공식 참고 자료", "description": "수학과 물리 공식을 분류하여 빠르게 찾아보고 검색과 변수 설명을 지원합니다.", "keywords": ["공식", "수학", "물리", "참고", "검색"] },
+    "ru": { "name": "Справочник Формул", "description": "Шпаргалка по формулам математики и физики, просмотр по категориям, поиск и объяснение переменных.", "keywords": ["формула", "математика", "физика", "справочник", "поиск"] },
+    "pt": { "name": "Referência de Fórmulas", "description": "Tabela de consulta rápida de fórmulas de matemática e física, navegação por categoria, pesquisa e explicação de variáveis.", "keywords": ["fórmula", "matemática", "física", "referência", "pesquisa"] }
+  },
+  "/poetry-collection": {
+    "en": { "name": "Classical Chinese Poetry", "description": "Appreciation and query of classical Chinese poetry, browse by dynasty, author and theme.", "keywords": ["poetry", "classical", "chinese", "dynasty", "author"] },
+    "es": { "name": "Poesía Clásica China", "description": "Apreciación y consulta de poesía clásica china, navegación por dinastía, autor y tema.", "keywords": ["poesía", "clásica", "china", "dinastía", "autor"] },
+    "fr": { "name": "Poésie Classique Chinoise", "description": "Appréciation et consultation de poésie classique chinoise, navigation par dynastie, auteur et thème.", "keywords": ["poésie", "classique", "chinoise", "dynastie", "auteur"] },
+    "de": { "name": "Klassische Chinesische Poesie", "description": "Würdigung und Suche klassischer chinesischer Gedichte, Durchsicht nach Dynastie, Autor und Thema.", "keywords": ["poesie", "klassisch", "chinesisch", "dynastie", "autor"] },
+    "ja": { "name": "中国古典詩", "description": "中国古典詩の鑑賞・検索、朝代、作者、テーマ別の閲覧に対応します。", "keywords": ["poetry", "古典", "中国", "朝代", "作者"] },
+    "it": { "name": "Poesia Classica Cinese", "description": "Apprezzamento e consultazione di poesia classica cinese, navigazione per dinastia, autore e tema.", "keywords": ["poesia", "classica", "cinese", "dinastia", "autore"] },
+    "ko": { "name": "중국 고전 시", "description": "중국 고전 시 감상 및 검색, 왕조, 작가, 주제별 탐색을 지원합니다.", "keywords": ["poetry", "고전", "중국", "왕조", "작가"] },
+    "ru": { "name": "Классическая Китайская Поэзия", "description": "Изучение и поиск классической китайской поэзии, просмотр по династии, автору и теме.", "keywords": ["поэзия", "классическая", "китайская", "династия", "автор"] },
+    "pt": { "name": "Poesia Clássica Chinesa", "description": "Apreciação e consulta de poesia clássica chinesa, navegação por dinastia, autor e tema.", "keywords": ["poesia", "clássica", "chinesa", "dinastia", "autor"] }
+  },
+  "/flashcard": {
+    "en": { "name": "Flashcards", "description": "Flashcard and vocabulary tool supporting deck management, flip animations, sequential/random review, mastery marking, study mode and import/export.", "keywords": ["flashcard", "vocabulary", "memory", "deck", "review", "study"] },
+    "es": { "name": "Tarjetas de Memoria", "description": "Herramienta de tarjetas y vocabulario, con gestión de mazos, animaciones de volteo, revisión secuencial/aleatoria, marcado de dominio, modo de estudio e importación/exportación.", "keywords": ["flashcard", "vocabulario", "memoria", "mazo", "revisar", "estudio"] },
+    "fr": { "name": "Fiches de Révision", "description": "Outil de fiches et de vocabulaire, prend en charge la gestion de jeux, animations de retournement, révision séquentielle/aléatoire, marquage de maîtrise, mode d'étude et import/export.", "keywords": ["flashcard", "vocabulaire", "mémoire", "jeu", "révision", "étude"] },
+    "de": { "name": "Lernkarten", "description": "Lernkarten- und Vokabeltool mit Stapelverwaltung, Dreh-Animationen, sequentieller/zufälliger Wiederholung, Beherrschungsmarkierung, Lernmodus und Import/Export.", "keywords": ["flashcard", "vokabeln", "gedächtnis", "stapel", "wiederholung", "lernen"] },
+    "ja": { "name": "記憶カード", "description": "フラッシュカードと単語帳ツール、カードセット管理、反転アニメーション、順番/ランダム閲覧、習得マーク、復習モード、インポート/エクスポートに対応します。", "keywords": ["flashcard", "単語帳", "記憶", "カードセット", "復習", "学習"] },
+    "it": { "name": "Flashcard", "description": "Strumento di flashcard e vocabolario, supporta gestione mazzi, animazioni di capovolgimento, revisione sequenziale/casuale, marcatura padronanza, modalità studio e import/export.", "keywords": ["flashcard", "vocabolario", "memoria", "mazzo", "ripasso", "studio"] },
+    "ko": { "name": "플래시카드", "description": "플래시카드 및 단어장 도구, 카드 세트 관리, 뒤집기 애니메이션, 순차/랜덤 학습, 숙련도 표시, 복습 모드, 가져오기/내보내기를 지원합니다.", "keywords": ["flashcard", "단어장", "기억", "카드 세트", "복습", "학습"] },
+    "ru": { "name": "Карточки для Запоминания", "description": "Инструмент карточек и словарного запаса, поддерживает управление наборами, анимацию переворота, последовательное/случайное повторение, отметку усвоения, режим повторения и импорт/экспорт.", "keywords": ["flashcard", "словарь", "память", "набор", "повторение", "обучение"] },
+    "pt": { "name": "Flashcards", "description": "Ferramenta de flashcards e vocabulário, com gerenciamento de baralhos, animações de virar, revisão sequencial/aleatória, marcação de domínio, modo de estudo e importação/exportação.", "keywords": ["flashcard", "vocabulário", "memória", "baralho", "revisão", "estudo"] }
+  }
+}

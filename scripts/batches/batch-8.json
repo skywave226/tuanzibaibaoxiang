@@ -1,0 +1,273 @@
+[
+  {
+    "name": "Docker Compose 生成",
+    "path": "/docker-compose-gen",
+    "description": "生成 docker-compose.yml",
+    "category": "运维工具",
+    "keywords": [
+      "docker",
+      "compose",
+      "yaml",
+      "容器",
+      "生成"
+    ]
+  },
+  {
+    "name": "Nginx 配置生成",
+    "path": "/nginx-config-gen",
+    "description": "生成 Nginx 配置文件",
+    "category": "运维工具",
+    "keywords": [
+      "nginx",
+      "config",
+      "配置",
+      "生成",
+      "server"
+    ]
+  },
+  {
+    "name": "SSH 密钥生成",
+    "path": "/ssh-keygen",
+    "description": "生成 SSH 密钥对（浏览器内）",
+    "category": "运维工具",
+    "keywords": [
+      "ssh",
+      "key",
+      "密钥",
+      "rsa",
+      "ed25519"
+    ]
+  },
+  {
+    "name": "SSL 证书解析",
+    "path": "/ssl-cert-parser",
+    "description": "解析 X.509 SSL 证书",
+    "category": "运维工具",
+    "keywords": [
+      "ssl",
+      "certificate",
+      "cert",
+      "证书",
+      "x509",
+      "解析"
+    ]
+  },
+  {
+    "name": "访问统计",
+    "path": "/site-stats",
+    "description": "查看本站访问数据，支持时间范围筛选、趋势图、热门排行与 CSV 导出",
+    "category": "站长工具",
+    "keywords": [
+      "统计",
+      "访问",
+      "排行",
+      "数据",
+      "analytics",
+      "趋势图",
+      "CSV",
+      "时间范围"
+    ]
+  },
+  {
+    "name": "关键词挖掘",
+    "path": "/keyword-miner",
+    "description": "基于种子词生成长尾关键词组合，并分析文本关键词密度与搜索意图",
+    "category": "站长工具",
+    "keywords": [
+      "关键词",
+      "seo",
+      "长尾词",
+      "搜索",
+      "关键词密度",
+      "挖掘"
+    ]
+  },
+  {
+    "name": "翻译对比",
+    "path": "/translation-compare",
+    "description": "多引擎翻译结果对比（链接生成）",
+    "category": "AI 辅助",
+    "keywords": [
+      "translation",
+      "translate",
+      "翻译",
+      "对比"
+    ]
+  },
+  {
+    "name": "关键词提取",
+    "path": "/keyword-extractor",
+    "description": "从文本中提取关键词",
+    "category": "AI 辅助",
+    "keywords": [
+      "keyword",
+      "extract",
+      "关键词",
+      "提取",
+      "text"
+    ]
+  },
+  {
+    "name": "情感分析",
+    "path": "/sentiment-analyzer",
+    "description": "分析文本的情感倾向",
+    "category": "AI 辅助",
+    "keywords": [
+      "sentiment",
+      "情感",
+      "分析",
+      "情绪"
+    ]
+  },
+  {
+    "name": "提示词模板",
+    "path": "/prompt-templates",
+    "description": "AI 提示词模板库",
+    "category": "AI 辅助",
+    "keywords": [
+      "prompt",
+      "template",
+      "提示词",
+      "模板",
+      "ai"
+    ]
+  },
+  {
+    "name": "文本分类",
+    "path": "/text-classifier",
+    "description": "基于规则的文本分类",
+    "category": "AI 辅助",
+    "keywords": [
+      "text",
+      "classify",
+      "分类",
+      "文本"
+    ]
+  },
+  {
+    "name": "文本摘要",
+    "path": "/text-summarizer",
+    "description": "自动提取文本摘要",
+    "category": "AI 辅助",
+    "keywords": [
+      "summary",
+      "summarize",
+      "摘要",
+      "总结",
+      "文本"
+    ]
+  },
+  {
+    "name": "语法检查",
+    "path": "/grammar-checker",
+    "description": "英文语法基础检查",
+    "category": "AI 辅助",
+    "keywords": [
+      "grammar",
+      "check",
+      "语法",
+      "检查",
+      "英文"
+    ]
+  },
+  {
+    "name": "AI 配置生成",
+    "path": "/ai-config-generator",
+    "description": "生成 AI 模型配置文件",
+    "category": "AI 辅助",
+    "keywords": [
+      "ai",
+      "config",
+      "配置",
+      "生成",
+      "模型"
+    ]
+  },
+  {
+    "name": "Markdown 润色",
+    "path": "/markdown-polisher",
+    "description": "Markdown 文档格式润色",
+    "category": "AI 辅助",
+    "keywords": [
+      "markdown",
+      "polish",
+      "润色",
+      "格式",
+      "文档"
+    ]
+  },
+  {
+    "name": "Token 计数器",
+    "path": "/token-counter",
+    "description": "估算文本的 Token 数量",
+    "category": "AI 辅助",
+    "keywords": [
+      "token",
+      "count",
+      "计数",
+      "ai",
+      "llm"
+    ]
+  },
+  {
+    "name": "中英文翻译",
+    "path": "/translator",
+    "description": "调用 OpenAI 兼容接口进行中英文互译，支持自定义接口配置",
+    "category": "AI 工具",
+    "keywords": [
+      "translate",
+      "translation",
+      "中文",
+      "英文",
+      "翻译",
+      "中英文",
+      "ai",
+      "deepl"
+    ]
+  },
+  {
+    "name": "AI 图片生成",
+    "path": "/ai-image-generator",
+    "description": "调用 OpenAI 兼容接口根据提示词生成图片，支持自定义模型和尺寸",
+    "category": "AI 工具",
+    "keywords": [
+      "ai",
+      "image",
+      "picture",
+      "generate",
+      "绘画",
+      "图片生成",
+      "文生图",
+      "dall-e",
+      "stability"
+    ]
+  },
+  {
+    "name": "AI 写作助手",
+    "path": "/ai-writer",
+    "description": "基于 OpenAI 兼容接口的 AI 写作、改写、标题生成与文案润色工具",
+    "category": "AI 工具",
+    "keywords": [
+      "ai",
+      "写作",
+      "改写",
+      "润色",
+      "标题",
+      "openai",
+      "gpt",
+      "文案"
+    ]
+  },
+  {
+    "name": "API 密钥生成",
+    "path": "/api-key-generator",
+    "description": "批量生成随机 API 密钥，支持自定义前缀、长度与编码格式",
+    "category": "API 测试",
+    "keywords": [
+      "api",
+      "key",
+      "secret",
+      "密钥"
+    ]
+  }
+]

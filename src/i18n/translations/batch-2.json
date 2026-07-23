@@ -1,0 +1,222 @@
+{
+  "/history-timeline": {
+    "en": { "name": "History Timeline", "description": "Chinese and world historical timeline displayed on a horizontal axis, with China/world filtering and event details.", "keywords": ["history", "timeline", "dynasty", "event", "china", "world"] },
+    "es": { "name": "Cronología Histórica", "description": "Cronología histórica de China y el mundo en un eje horizontal, con filtros de China/mundo y detalles de eventos.", "keywords": ["historia", "cronología", "dinastía", "evento", "china", "mundo"] },
+    "fr": { "name": "Chronologie Historique", "description": "Chronologie historique chinoise et mondiale sur un axe horizontal, avec filtres Chine/monde et détails des événements.", "keywords": ["histoire", "chronologie", "dynastie", "événement", "chine", "monde"] },
+    "de": { "name": "Historische Zeitleiste", "description": "Chinesische und weltweite historische Zeitleiste auf einer horizontalen Achse, mit China/Welt-Filter und Ereignisdetails.", "keywords": ["geschichte", "zeitleiste", "dynastie", "ereignis", "china", "welt"] },
+    "ja": { "name": "歴史年表", "description": "中国と世界の歴史年表を横軸で表示し、中国/世界の絞り込みとイベント詳細に対応します。", "keywords": ["歴史", "年表", "王朝", "イベント", "中国", "世界"] },
+    "it": { "name": "Cronologia Storica", "description": "Cronologia storica cinese e mondiale su un asse orizzontale, con filtri Cina/mondo e dettagli degli eventi.", "keywords": ["storia", "cronologia", "dinastia", "evento", "cina", "mondo"] },
+    "ko": { "name": "역사 연표", "description": "중국과 세계 역사 연표를 가로 축으로 표시하고, 중국/세계 필터링과 사건 상세 정보를 제공합니다.", "keywords": ["역사", "연표", "왕조", "사건", "중국", "세계"] },
+    "ru": { "name": "Историческая хронология", "description": "Китайская и мировая историческая хронология на горизонтальной оси с фильтрацией Китай/мир и деталями событий.", "keywords": ["история", "хронология", "династия", "событие", "китай", "мир"] },
+    "pt": { "name": "Cronologia Histórica", "description": "Cronologia histórica da China e do mundo em um eixo horizontal, com filtros China/mundo e detalhes dos eventos.", "keywords": ["história", "cronologia", "dinastia", "evento", "china", "mundo"] }
+  },
+  "/pinyin-converter": {
+    "en": { "name": "Pinyin Converter", "description": "Convert Chinese characters to pinyin, supporting tone marks, no tones, and initial-letter modes.", "keywords": ["pinyin", "chinese characters", "convert", "tone", "initial"] },
+    "es": { "name": "Conversor de Pinyin", "description": "Convierte caracteres chinos a pinyin, con soporte para tonos, sin tonos y modo de iniciales.", "keywords": ["pinyin", "caracteres chinos", "convertir", "tono", "inicial"] },
+    "fr": { "name": "Convertisseur Pinyin", "description": "Convertit les caractères chinois en pinyin, avec prise en charge des tons, sans tons et du mode initiales.", "keywords": ["pinyin", "caractères chinois", "convertir", "ton", "initiale"] },
+    "de": { "name": "Pinyin-Konverter", "description": "Wandelt chinesische Schriftzeichen in Pinyin um, mit Unterstützung für Töne, tonlos und Anfangsbuchstaben-Modus.", "keywords": ["pinyin", "chinesische schriftzeichen", "konvertieren", "ton", "anfangsbuchstabe"] },
+    "ja": { "name": "拼音変換", "description": "漢字を拼音に変換し、声调付き、声调なし、頭文字モードに対応します。", "keywords": ["拼音", "漢字", "変換", "声调", "頭文字"] },
+    "it": { "name": "Convertitore Pinyin", "description": "Converte i caratteri cinesi in pinyin, con supporto per toni, senza toni e modalità iniziali.", "keywords": ["pinyin", "caratteri cinesi", "convertire", "tono", "iniziale"] },
+    "ko": { "name": "병음 변환", "description": "한자를 병음으로 변환하며, 성조 표시, 무성조, 초성 모드를 지원합니다.", "keywords": ["병음", "한자", "변환", "성조", "초성"] },
+    "ru": { "name": "Конвертер Пиньинь", "description": "Преобразует китайские иероглифы в пиньинь с поддержкой тонов, без тонов и режима первых букв.", "keywords": ["пиньинь", "китайские иероглифы", "конвертировать", "тон", "первая буква"] },
+    "pt": { "name": "Conversor de Pinyin", "description": "Converte caracteres chineses em pinyin, com suporte a tons, sem tons e modo de iniciais.", "keywords": ["pinyin", "caracteres chineses", "converter", "tom", "inicial"] }
+  },
+  "/math-practice": {
+    "en": { "name": "Math Practice", "description": "Math exercise generator supporting addition, subtraction, multiplication, division, difficulty levels, and timing.", "keywords": ["math", "practice", "arithmetic", "exercise", "difficulty", "timer"] },
+    "es": { "name": "Práctica de Matemáticas", "description": "Generador de ejercicios matemáticos con suma, resta, multiplicación, división, niveles de dificultad y temporizador.", "keywords": ["matemáticas", "práctica", "aritmética", "ejercicio", "dificultad", "temporizador"] },
+    "fr": { "name": "Exercices de Maths", "description": "Générateur d'exercices mathématiques prenant en charge l'addition, la soustraction, la multiplication, la division, les niveaux de difficulté et le chronomètre.", "keywords": ["maths", "exercice", "arithmétique", "pratique", "difficulté", "chronomètre"] },
+    "de": { "name": "Mathe-Übungen", "description": "Mathe-Aufgabengenerator mit Addition, Subtraktion, Multiplikation, Division, Schwierigkeitsgraden und Zeitmessung.", "keywords": ["mathe", "übung", "arithmetik", "aufgabe", "schwierigkeit", "timer"] },
+    "ja": { "name": "数学練習", "description": "足し算、引き算、掛け算、割り算、難易度分け、タイマー機能を備えた数学練習問題ジェネレーターです。", "keywords": ["数学", "練習", "算数", "問題", "難易度", "タイマー"] },
+    "it": { "name": "Esercizi di Matematica", "description": "Generatore di esercizi di matematica con addizione, sottrazione, moltiplicazione, divisione, livelli di difficoltà e timer.", "keywords": ["matematica", "esercizio", "aritmetica", "pratica", "difficoltà", "timer"] },
+    "ko": { "name": "수학 연습", "description": "덧셈, 뺄셈, 곱셈, 나눗셈, 난이도별, 타이머 기능을 지원하는 수학 연습 문제 생성기입니다.", "keywords": ["수학", "연습", "산술", "문제", "난이도", "타이머"] },
+    "ru": { "name": "Практика по Математике", "description": "Генератор математических упражнений с поддержкой сложения, вычитания, умножения, деления, уровней сложности и таймера.", "keywords": ["математика", "практика", "арифметика", "упражнение", "сложность", "таймер"] },
+    "pt": { "name": "Prática de Matemática", "description": "Gerador de exercícios matemáticos com adição, subtração, multiplicação, divisão, níveis de dificuldade e temporizador.", "keywords": ["matemática", "prática", "aritmética", "exercício", "dificuldade", "temporizador"] }
+  },
+  "/english-grammar": {
+    "en": { "name": "English Grammar", "description": "English grammar reference tool with detailed explanations of tenses, sentence patterns, and parts of speech.", "keywords": ["english", "grammar", "tense", "sentence pattern", "part of speech"] },
+    "es": { "name": "Gramática Inglesa", "description": "Herramienta de referencia de gramática inglesa con explicaciones detalladas de tiempos verbales, estructuras y categorías gramaticales.", "keywords": ["inglés", "gramática", "tiempo verbal", "estructura", "categoría gramatical"] },
+    "fr": { "name": "Grammaire Anglaise", "description": "Outil de référence de grammaire anglaise avec explications détaillées des temps, structures et catégories grammaticales.", "keywords": ["anglais", "grammaire", "temps", "structure", "catégorie grammaticale"] },
+    "de": { "name": "Englische Grammatik", "description": "Englische Grammatik-Referenz mit detaillierten Erklärungen zu Zeiten, Satzmustern und Wortarten.", "keywords": ["englisch", "grammatik", "zeitform", "satzmuster", "wortart"] },
+    "ja": { "name": "英語文法", "description": "時制、文型、品詞を詳しく解説する英語文法参考ツールです。", "keywords": ["英語", "文法", "時制", "文型", "品詞"] },
+    "it": { "name": "Grammatica Inglese", "description": "Strumento di riferimento per la grammatica inglese con spiegazioni dettagliate su tempi verbali, modelli di frase e parti del discorso.", "keywords": ["inglese", "grammatica", "tempo verbale", "modello di frase", "parte del discorso"] },
+    "ko": { "name": "영어 문법", "description": "시제, 문형, 품사를 상세히 설명하는 영어 문법 참고 도구입니다.", "keywords": ["영어", "문법", "시제", "문형", "품사"] },
+    "ru": { "name": "Английская Грамматика", "description": "Справочник по английской грамматике с подробными объяснениями времён, структур предложений и частей речи.", "keywords": ["английский", "грамматика", "время", "структура предложения", "часть речи"] },
+    "pt": { "name": "Gramática Inglesa", "description": "Ferramenta de referência de gramática inglesa com explicações detalhadas sobre tempos verbais, estruturas e classes gramaticais.", "keywords": ["inglês", "gramática", "tempo verbal", "estrutura", "classe gramatical"] }
+  },
+  "/grammar-reference": {
+    "en": { "name": "Grammar Reference", "description": "Quick English grammar reference covering tenses, sentence patterns, clauses, subjunctive mood, and more.", "keywords": ["english", "grammar", "tense", "sentence pattern", "clause", "subjunctive"] },
+    "es": { "name": "Referencia de Gramática", "description": "Referencia rápida de gramática inglesa que abarca tiempos verbales, estructuras, oraciones subordinadas y subjuntivo.", "keywords": ["inglés", "gramática", "tiempo verbal", "estructura", "subordinada", "subjuntivo"] },
+    "fr": { "name": "Référence de Grammaire", "description": "Référence rapide de grammaire anglaise couvrant les temps, structures, propositions subordonnées et subjonctif.", "keywords": ["anglais", "grammaire", "temps", "structure", "subordonnée", "subjonctif"] },
+    "de": { "name": "Grammatik-Referenz", "description": "Schnelle englische Grammatik-Referenz zu Zeiten, Satzmustern, Nebensätzen und Konjunktiv.", "keywords": ["englisch", "grammatik", "zeitform", "satzmuster", "nebensatz", "konjunktiv"] },
+    "ja": { "name": "文法リファレンス", "description": "時制、文型、節、仮定法などをカバーする英語文法のクイックリファレンスです。", "keywords": ["英語", "文法", "時制", "文型", "節", "仮定法"] },
+    "it": { "name": "Riferimento Grammaticale", "description": "Riferimento rapido di grammatica inglese che copre tempi verbali, modelli di frase, proposizioni e congiuntivo.", "keywords": ["inglese", "grammatica", "tempo verbale", "modello di frase", "proposizione", "congiuntivo"] },
+    "ko": { "name": "문법 참고", "description": "시제, 문형, 절, 가정법 등을 다루는 영어 문법 빠른 참고 자료입니다.", "keywords": ["영어", "문법", "시제", "문형", "절", "가정법"] },
+    "ru": { "name": "Справка по Грамматике", "description": "Краткий справочник по английской грамматике: времена, структуры предложений, придаточные предложения, сослагательное наклонение.", "keywords": ["английский", "грамматика", "время", "структура предложения", "придаточное", "сослагательное наклонение"] },
+    "pt": { "name": "Referência Gramatical", "description": "Referência rápida de gramática inglesa cobrindo tempos verbais, estruturas, orações subordinadas e subjuntivo.", "keywords": ["inglês", "gramática", "tempo verbal", "estrutura", "subordinada", "subjuntivo"] }
+  },
+  "/periodic-table": {
+    "en": { "name": "Periodic Table", "description": "Chemical periodic table with complete data for 118 elements; click to view detailed information.", "keywords": ["element", "periodic table", "chemistry", "atom", "properties"] },
+    "es": { "name": "Tabla Periódica", "description": "Tabla periódica química con datos completos de 118 elementos; haz clic para ver información detallada.", "keywords": ["elemento", "tabla periódica", "química", "átomo", "propiedades"] },
+    "fr": { "name": "Tableau Périodique", "description": "Tableau périodique des éléments avec données complètes pour 118 éléments ; cliquez pour voir les détails.", "keywords": ["élément", "tableau périodique", "chimie", "atome", "propriétés"] },
+    "de": { "name": "Periodensystem", "description": "Chemisches Periodensystem mit vollständigen Daten für 118 Elemente; klicken Sie für detaillierte Informationen.", "keywords": ["element", "periodensystem", "chemie", "atom", "eigenschaften"] },
+    "ja": { "name": "元素周期表", "description": "118種類の元素の完全なデータを含む化学元素周期表です。クリックして詳細情報を表示します。", "keywords": ["元素", "周期表", "化学", "原子", "性質"] },
+    "it": { "name": "Tavola Periodica", "description": "Tavola periodica chimica con dati completi per 118 elementi; clicca per vedere i dettagli.", "keywords": ["elemento", "tavola periodica", "chimica", "atomo", "proprietà"] },
+    "ko": { "name": "원소주기율표", "description": "118가지 원소의 완전한 데이터를 포함한 화학 원소주기율표입니다. 클릭하면 상세 정보를 확인할 수 있습니다.", "keywords": ["원소", "주기율표", "화학", "원자", "성질"] },
+    "ru": { "name": "Периодическая Таблица", "description": "Химическая периодическая таблица с полными данными по 118 элементам; нажмите для просмотра подробной информации.", "keywords": ["элемент", "периодическая таблица", "химия", "атом", "свойства"] },
+    "pt": { "name": "Tabela Periódica", "description": "Tabela periódica química com dados completos de 118 elementos; clique para ver informações detalhadas.", "keywords": ["elemento", "tabela periódica", "química", "átomo", "propriedades"] }
+  },
+  "/code-minifier": {
+    "en": { "name": "Code Minifier", "description": "HTML/CSS/JS code minification and beautification.", "keywords": ["code", "minify", "html", "css", "js", "beautify"] },
+    "es": { "name": "Minificador de Código", "description": "Minificación y embellecimiento de código HTML/CSS/JS.", "keywords": ["código", "minificar", "html", "css", "js", "embellecer"] },
+    "fr": { "name": "Minificateur de Code", "description": "Minification et mise en forme de code HTML/CSS/JS.", "keywords": ["code", "minifier", "html", "css", "js", "formater"] },
+    "de": { "name": "Code-Minifier", "description": "Minifizierung und Formatierung von HTML/CSS/JS-Code.", "keywords": ["code", "minifizieren", "html", "css", "js", "formatieren"] },
+    "ja": { "name": "コード圧縮", "description": "HTML/CSS/JS コードの圧縮と美化に対応します。", "keywords": ["コード", "圧縮", "html", "css", "js", "美化"] },
+    "it": { "name": "Minificatore di Codice", "description": "Minificazione e formattazione del codice HTML/CSS/JS.", "keywords": ["codice", "minificare", "html", "css", "js", "formattare"] },
+    "ko": { "name": "코드 압축", "description": "HTML/CSS/JS 코드 압축 및 정리를 지원합니다.", "keywords": ["코드", "압축", "html", "css", "js", "정리"] },
+    "ru": { "name": "Минификатор Кода", "description": "Минификация и форматирование кода HTML/CSS/JS.", "keywords": ["код", "минифицировать", "html", "css", "js", "форматировать"] },
+    "pt": { "name": "Minificador de Código", "description": "Minificação e formatação de código HTML/CSS/JS.", "keywords": ["código", "minificar", "html", "css", "js", "formatar"] }
+  },
+  "/css-unit": {
+    "en": { "name": "CSS Unit Converter", "description": "Convert between CSS units such as px, rem, em, vw, and vh, with configurable root font size.", "keywords": ["css", "unit", "px", "rem", "em", "vw", "vh", "convert"] },
+    "es": { "name": "Conversor de Unidades CSS", "description": "Convierte entre unidades CSS como px, rem, em, vw y vh, con tamaño de fuente raíz configurable.", "keywords": ["css", "unidad", "px", "rem", "em", "vw", "vh", "convertir"] },
+    "fr": { "name": "Convertisseur d'Unités CSS", "description": "Convertissez entre les unités CSS telles que px, rem, em, vw et vh, avec une taille de police racine configurable.", "keywords": ["css", "unité", "px", "rem", "em", "vw", "vh", "convertir"] },
+    "de": { "name": "CSS-Einheiten-Umrechner", "description": "Umrechnung zwischen CSS-Einheiten wie px, rem, em, vw und vh, mit konfigurierbarer Basis-Schriftgröße.", "keywords": ["css", "einheit", "px", "rem", "em", "vw", "vh", "umrechnen"] },
+    "ja": { "name": "CSS単位変換", "description": "px、rem、em、vw、vh などの CSS 単位を相互変換し、ルートフォントサイズを設定できます。", "keywords": ["css", "単位", "px", "rem", "em", "vw", "vh", "変換"] },
+    "it": { "name": "Convertitore di Unità CSS", "description": "Converte unità CSS come px, rem, em, vw e vh, con dimensione del font root configurabile.", "keywords": ["css", "unità", "px", "rem", "em", "vw", "vh", "convertire"] },
+    "ko": { "name": "CSS 단위 변환", "description": "px, rem, em, vw, vh 등의 CSS 단위를 변환하고 루트 글꼴 크기를 설정할 수 있습니다.", "keywords": ["css", "단위", "px", "rem", "em", "vw", "vh", "변환"] },
+    "ru": { "name": "Конвертер CSS Единиц", "description": "Преобразование CSS-единиц: px, rem, em, vw, vh с настраиваемым размером корневого шрифта.", "keywords": ["css", "единица", "px", "rem", "em", "vw", "vh", "конвертировать"] },
+    "pt": { "name": "Conversor de Unidades CSS", "description": "Converta entre unidades CSS como px, rem, em, vw e vh, com tamanho de fonte raiz configurável.", "keywords": ["css", "unidade", "px", "rem", "em", "vw", "vh", "converter"] }
+  },
+  "/json-table-editor": {
+    "en": { "name": "JSON Table Editor", "description": "Visualize JSON arrays as tables, edit cells, add or delete rows and columns, and export as JSON or CSV.", "keywords": ["json", "table", "editor", "csv", "array", "cell"] },
+    "es": { "name": "Editor de Tabla JSON", "description": "Visualiza matrices JSON como tablas, edita celdas, agrega o elimina filas y columnas, y exporta a JSON o CSV.", "keywords": ["json", "tabla", "editor", "csv", "array", "celda"] },
+    "fr": { "name": "Éditeur de Tableau JSON", "description": "Visualisez les tableaux JSON sous forme de tableaux, modifiez les cellules, ajoutez ou supprimez des lignes et colonnes, et exportez en JSON ou CSV.", "keywords": ["json", "tableau", "éditeur", "csv", "tableau", "cellule"] },
+    "de": { "name": "JSON-Tabellen-Editor", "description": "Visualisieren Sie JSON-Arrays als Tabellen, bearbeiten Sie Zellen, fügen Sie Zeilen und Spalten hinzu oder löschen Sie sie, und exportieren Sie als JSON oder CSV.", "keywords": ["json", "tabelle", "editor", "csv", "array", "zelle"] },
+    "ja": { "name": "JSONテーブルエディタ", "description": "JSON 配列をテーブルとして表示し、セルの編集、行と列の追加・削除、JSON または CSV へのエクスポートに対応します。", "keywords": ["json", "テーブル", "エディタ", "csv", "配列", "セル"] },
+    "it": { "name": "Editor di Tabella JSON", "description": "Visualizza array JSON come tabelle, modifica celle, aggiungi o elimina righe e colonne, ed esporta in JSON o CSV.", "keywords": ["json", "tabella", "editor", "csv", "array", "cella"] },
+    "ko": { "name": "JSON 테이블 편집기", "description": "JSON 배열을 테이블로 시각화하고, 셀 편집, 행과 열 추가/삭제, JSON 또는 CSV 내보내기를 지원합니다.", "keywords": ["json", "테이블", "편집기", "csv", "배열", "셀"] },
+    "ru": { "name": "Редактор JSON Таблиц", "description": "Визуализация JSON-массивов в виде таблиц, редактирование ячеек, добавление и удаление строк и столбцов, экспорт в JSON или CSV.", "keywords": ["json", "таблица", "редактор", "csv", "массив", "ячейка"] },
+    "pt": { "name": "Editor de Tabela JSON", "description": "Visualize arrays JSON como tabelas, edite células, adicione ou exclua linhas e colunas, e exporte para JSON ou CSV.", "keywords": ["json", "tabela", "editor", "csv", "array", "célula"] }
+  },
+  "/json-to-ts": {
+    "en": { "name": "JSON to TS Types", "description": "Automatically generate TypeScript interface type definitions from JSON data.", "keywords": ["json", "typescript", "interface", "type", "generate"] },
+    "es": { "name": "JSON a Tipos TS", "description": "Genera automáticamente definiciones de tipos de interfaces TypeScript a partir de datos JSON.", "keywords": ["json", "typescript", "interface", "tipo", "generar"] },
+    "fr": { "name": "JSON vers Types TS", "description": "Générez automatiquement des définitions de types d'interface TypeScript à partir de données JSON.", "keywords": ["json", "typescript", "interface", "type", "générer"] },
+    "de": { "name": "JSON zu TS-Typen", "description": "Generiert automatisch TypeScript-Interface-Typdefinitionen aus JSON-Daten.", "keywords": ["json", "typescript", "interface", "typ", "generieren"] },
+    "ja": { "name": "JSONからTS型へ", "description": "JSON データから TypeScript のインターフェース型定義を自動生成します。", "keywords": ["json", "typescript", "interface", "型", "生成"] },
+    "it": { "name": "JSON a Tipi TS", "description": "Genera automaticamente definizioni di tipo di interfaccia TypeScript da dati JSON.", "keywords": ["json", "typescript", "interface", "tipo", "generare"] },
+    "ko": { "name": "JSON에서 TS 타입으로", "description": "JSON 데이터에서 TypeScript 인터페이스 타입 정의를 자동으로 생성합니다.", "keywords": ["json", "typescript", "interface", "타입", "생성"] },
+    "ru": { "name": "JSON в TS Типы", "description": "Автоматическая генерация определений типов интерфейсов TypeScript из JSON-данных.", "keywords": ["json", "typescript", "interface", "тип", "генерация"] },
+    "pt": { "name": "JSON para Tipos TS", "description": "Gere automaticamente definições de tipos de interface TypeScript a partir de dados JSON.", "keywords": ["json", "typescript", "interface", "tipo", "gerar"] }
+  },
+  "/jwt-decoder": {
+    "en": { "name": "JWT Decoder", "description": "Decode JSON Web Tokens and view the header, payload, and signature.", "keywords": ["jwt", "token", "decode", "web", "header", "payload"] },
+    "es": { "name": "Decodificador JWT", "description": "Decodifica JSON Web Tokens y visualiza el encabezado, la carga útil y la firma.", "keywords": ["jwt", "token", "decodificar", "web", "header", "payload"] },
+    "fr": { "name": "Décodeur JWT", "description": "Décodez les JSON Web Tokens et consultez l'en-tête, la charge utile et la signature.", "keywords": ["jwt", "token", "décoder", "web", "header", "payload"] },
+    "de": { "name": "JWT-Decoder", "description": "Dekodieren Sie JSON Web Tokens und zeigen Sie Header, Payload und Signatur an.", "keywords": ["jwt", "token", "dekodieren", "web", "header", "payload"] },
+    "ja": { "name": "JWTデコーダー", "description": "JSON Web Token をデコードし、header、payload、signature を表示します。", "keywords": ["jwt", "token", "デコード", "web", "header", "payload"] },
+    "it": { "name": "Decoder JWT", "description": "Decodifica i JSON Web Token e visualizza header, payload e firma.", "keywords": ["jwt", "token", "decodificare", "web", "header", "payload"] },
+    "ko": { "name": "JWT 디코더", "description": "JSON Web Token을 디코딩하여 header, payload, signature를 확인합니다.", "keywords": ["jwt", "token", "디코딩", "web", "header", "payload"] },
+    "ru": { "name": "Декодер JWT", "description": "Декодируйте JSON Web Tokens и просматривайте заголовок, полезную нагрузку и подпись.", "keywords": ["jwt", "token", "декодировать", "web", "header", "payload"] },
+    "pt": { "name": "Decodificador JWT", "description": "Decodifique JSON Web Tokens e visualize o cabeçalho, o payload e a assinatura.", "keywords": ["jwt", "token", "decodificar", "web", "header", "payload"] }
+  },
+  "/sql-formatter": {
+    "en": { "name": "SQL Formatter", "description": "SQL statement beautification and minification.", "keywords": ["sql", "format", "beautify", "minify"] },
+    "es": { "name": "Formateador SQL", "description": "Embellecimiento y minificación de sentencias SQL.", "keywords": ["sql", "formatear", "embellecer", "minificar"] },
+    "fr": { "name": "Formateur SQL", "description": "Mise en forme et minification des instructions SQL.", "keywords": ["sql", "formater", "mettre en forme", "minifier"] },
+    "de": { "name": "SQL-Formatter", "description": "Formatierung und Minifizierung von SQL-Anweisungen.", "keywords": ["sql", "formatieren", "format", "minifizieren"] },
+    "ja": { "name": "SQLフォーマッタ", "description": "SQL 文の美化と圧縮に対応します。", "keywords": ["sql", "フォーマット", "美化", "圧縮"] },
+    "it": { "name": "Formattatore SQL", "description": "Formattazione e minificazione delle istruzioni SQL.", "keywords": ["sql", "formattare", "formatta", "minificare"] },
+    "ko": { "name": "SQL 포맷터", "description": "SQL 문의 정리와 압축을 지원합니다.", "keywords": ["sql", "포맷", "정리", "압축"] },
+    "ru": { "name": "Форматтер SQL", "description": "Форматирование и минификация SQL-запросов.", "keywords": ["sql", "формат", "форматировать", "минифицировать"] },
+    "pt": { "name": "Formatador SQL", "description": "Formatação e minificação de instruções SQL.", "keywords": ["sql", "formatar", "formatador", "minificar"] }
+  },
+  "/xml-formatter": {
+    "en": { "name": "XML Formatter", "description": "XML formatting, minification, and validation.", "keywords": ["xml", "format", "minify", "validate"] },
+    "es": { "name": "Formateador XML", "description": "Formateo, minificación y validación de XML.", "keywords": ["xml", "formatear", "minificar", "validar"] },
+    "fr": { "name": "Formateur XML", "description": "Formatage, minification et validation XML.", "keywords": ["xml", "formater", "minifier", "valider"] },
+    "de": { "name": "XML-Formatter", "description": "XML-Formatierung, -Minifizierung und -Validierung.", "keywords": ["xml", "formatieren", "minifizieren", "validieren"] },
+    "ja": { "name": "XMLフォーマッタ", "description": "XML のフォーマット、圧縮、検証に対応します。", "keywords": ["xml", "フォーマット", "圧縮", "検証"] },
+    "it": { "name": "Formattatore XML", "description": "Formattazione, minificazione e validazione XML.", "keywords": ["xml", "formattare", "minificare", "validare"] },
+    "ko": { "name": "XML 포맷터", "description": "XML 포맷팅, 압축, 검증을 지원합니다.", "keywords": ["xml", "포맷", "압축", "검증"] },
+    "ru": { "name": "Форматтер XML", "description": "Форматирование, минификация и валидация XML.", "keywords": ["xml", "формат", "минифицировать", "валидировать"] },
+    "pt": { "name": "Formatador XML", "description": "Formatação, minificação e validação de XML.", "keywords": ["xml", "formatar", "minificar", "validar"] }
+  },
+  "/yaml-json": {
+    "en": { "name": "YAML ↔ JSON Converter", "description": "Bidirectional conversion between YAML and JSON formats.", "keywords": ["yaml", "json", "convert", "config"] },
+    "es": { "name": "Conversor YAML ↔ JSON", "description": "Conversión bidireccional entre los formatos YAML y JSON.", "keywords": ["yaml", "json", "convertir", "configuración"] },
+    "fr": { "name": "Convertisseur YAML ↔ JSON", "description": "Conversion bidirectionnelle entre les formats YAML et JSON.", "keywords": ["yaml", "json", "convertir", "configuration"] },
+    "de": { "name": "YAML ↔ JSON Konverter", "description": "Bidirektionale Konvertierung zwischen den Formaten YAML und JSON.", "keywords": ["yaml", "json", "konvertieren", "konfiguration"] },
+    "ja": { "name": "YAML ↔ JSON 変換", "description": "YAML と JSON 形式の双方向変換に対応します。", "keywords": ["yaml", "json", "変換", "設定"] },
+    "it": { "name": "Convertitore YAML ↔ JSON", "description": "Conversione bidirezionale tra i formati YAML e JSON.", "keywords": ["yaml", "json", "convertire", "configurazione"] },
+    "ko": { "name": "YAML ↔ JSON 변환", "description": "YAML과 JSON 형식 간의 양방향 변환을 지원합니다.", "keywords": ["yaml", "json", "변환", "설정"] },
+    "ru": { "name": "Конвертер YAML ↔ JSON", "description": "Двустороннее преобразование между форматами YAML и JSON.", "keywords": ["yaml", "json", "конвертировать", "конфигурация"] },
+    "pt": { "name": "Conversor YAML ↔ JSON", "description": "Conversão bidirecional entre os formatos YAML e JSON.", "keywords": ["yaml", "json", "converter", "configuração"] }
+  },
+  "/solar-term-query": {
+    "en": { "name": "Solar Term Query", "description": "Query dates, meanings, customs, and wellness advice for the 24 solar terms.", "keywords": ["solar term", "24 solar terms", "lunar calendar", "tradition", "wellness"] },
+    "es": { "name": "Consulta de Términos Solares", "description": "Consulta fechas, significados, costumbres y consejos de bienestar para los 24 términos solares.", "keywords": ["término solar", "24 términos solares", "calendario lunar", "tradición", "bienestar"] },
+    "fr": { "name": "Requête des Termes Solaires", "description": "Consultez les dates, significations, coutumes et conseils de bien-être des 24 termes solaires.", "keywords": ["terme solaire", "24 termes solaires", "calendrier lunaire", "tradition", "bien-être"] },
+    "de": { "name": "Sonnenperioden-Abfrage", "description": "Abfrage von Daten, Bedeutungen, Bräuchen und Wellness-Tipps für die 24 Sonnenperioden.", "keywords": ["sonnenperiode", "24 sonnenperioden", "mondkalender", "tradition", "wohlbefinden"] },
+    "ja": { "name": "節気検索", "description": "24節気の日付、意味、風習、養生アドバイスを検索できます。", "keywords": ["節気", "二十四節気", "旧暦", "伝統", "養生"] },
+    "it": { "name": "Ricerca Termini Solari", "description": "Consulta date, significati, usanze e consigli di benessere per i 24 termini solari.", "keywords": ["termine solare", "24 termini solari", "calendario lunare", "tradizione", "benessere"] },
+    "ko": { "name": "절기 조회", "description": "24절기의 날짜, 의미, 풍속, 건강 관리 팁을 조회할 수 있습니다.", "keywords": ["절기", "24절기", "음력", "전통", "건강"] },
+    "ru": { "name": "Запрос Солнечных Терминов", "description": "Запрос дат, значений, обычаев и рекомендаций по здоровью для 24 солнечных терминов.", "keywords": ["солнечный термин", "24 солнечных термина", "лунный календарь", "традиция", "здоровье"] },
+    "pt": { "name": "Consulta de Termos Solares", "description": "Consulte datas, significados, costumes e conselhos de bem-estar para os 24 termos solares.", "keywords": ["termo solar", "24 termos solares", "calendário lunar", "tradição", "bem-estar"] }
+  },
+  "/timestamp-converter": {
+    "en": { "name": "Timestamp Converter", "description": "Convert between Unix timestamps and date/time, with timezone selection, multiple format templates, and batch conversion.", "keywords": ["timestamp", "unix", "date", "time", "timezone", "batch"] },
+    "es": { "name": "Conversor de Timestamp", "description": "Convierte entre timestamps Unix y fecha/hora, con selección de zona horaria, varias plantillas de formato y conversión por lotes.", "keywords": ["timestamp", "unix", "fecha", "hora", "zona horaria", "lote"] },
+    "fr": { "name": "Convertisseur d'Horodatage", "description": "Convertissez entre les horodatages Unix et la date/heure, avec sélection de fuseau horaire, plusieurs modèles de format et conversion par lots.", "keywords": ["horodatage", "unix", "date", "heure", "fuseau horaire", "lot"] },
+    "de": { "name": "Zeitstempel-Konverter", "description": "Konvertierung zwischen Unix-Zeitstempeln und Datum/Uhrzeit, mit Zeitzonenauswahl, mehreren Formatvorlagen und Batch-Konvertierung.", "keywords": ["zeitstempel", "unix", "datum", "uhrzeit", "zeitzone", "stapel"] },
+    "ja": { "name": "タイムスタンプ変換", "description": "Unix タイムスタンプと日時を相互変換し、タイムゾーン選択、複数の形式テンプレート、一括変換に対応します。", "keywords": ["timestamp", "unix", "日付", "時刻", "タイムゾーン", "一括"] },
+    "it": { "name": "Convertitore di Timestamp", "description": "Converti tra timestamp Unix e data/ora, con selezione del fuso orario, più modelli di formato e conversione in batch.", "keywords": ["timestamp", "unix", "data", "ora", "fuso orario", "batch"] },
+    "ko": { "name": "타임스탬프 변환", "description": "Unix 타임스탬프와 날짜/시간을 변환하고, 시간대 선택, 여러 형식 템플릿, 일괄 변환을 지원합니다.", "keywords": ["timestamp", "unix", "날짜", "시간", "시간대", "일괄"] },
+    "ru": { "name": "Конвертер Временных Меток", "description": "Преобразование между Unix-метками времени и датой/временем, с выбором часового пояса, несколькими шаблонами формата и пакетным преобразованием.", "keywords": ["timestamp", "unix", "дата", "время", "часовой пояс", "пакет"] },
+    "pt": { "name": "Conversor de Timestamp", "description": "Converta entre timestamps Unix e data/hora, com seleção de fuso horário, vários modelos de formato e conversão em lote.", "keywords": ["timestamp", "unix", "data", "hora", "fuso horário", "lote"] }
+  },
+  "/timezone-converter": {
+    "en": { "name": "Timezone Converter", "description": "Global time zone comparison and conversion, including business-day calculation.", "keywords": ["timezone", "time", "utc", "convert", "business day", "world time"] },
+    "es": { "name": "Conversor de Zona Horaria", "description": "Comparación y conversión de zonas horarias mundiales, incluido el cálculo de días laborables.", "keywords": ["zona horaria", "hora", "utc", "convertir", "día laborable", "hora mundial"] },
+    "fr": { "name": "Convertisseur de Fuseau Horaire", "description": "Comparaison et conversion des fuseaux horaires mondiaux, y compris le calcul des jours ouvrables.", "keywords": ["fuseau horaire", "heure", "utc", "convertir", "jour ouvrable", "heure mondiale"] },
+    "de": { "name": "Zeitzonen-Konverter", "description": "Vergleich und Umrechnung weltweiter Zeitzonen, einschließlich Werktagsberechnung.", "keywords": ["zeitzone", "zeit", "utc", "umrechnen", "werktag", "weltzeit"] },
+    "ja": { "name": "タイムゾーン変換", "description": "世界のタイムゾーンを比較・変換し、営業日の換算にも対応します。", "keywords": ["タイムゾーン", "時刻", "utc", "変換", "営業日", "世界時刻"] },
+    "it": { "name": "Convertitore di Fuso Orario", "description": "Confronto e conversione dei fusi orari globali, incluso il calcolo dei giorni lavorativi.", "keywords": ["fuso orario", "ora", "utc", "convertire", "giorno lavorativo", "ora mondiale"] },
+    "ko": { "name": "시간대 변환", "description": "전 세계 시간대를 비교·변환하고, 근무일 환산을 지원합니다.", "keywords": ["시간대", "시간", "utc", "변환", "근무일", "세계 시간"] },
+    "ru": { "name": "Конвертер Часовых Поясов", "description": "Сравнение и преобразование мировых часовых поясов, включая расчёт рабочих дней.", "keywords": ["часовой пояс", "время", "utc", "конвертировать", "рабочий день", "мировое время"] },
+    "pt": { "name": "Conversor de Fuso Horário", "description": "Comparação e conversão de fusos horários globais, incluindo cálculo de dias úteis.", "keywords": ["fuso horário", "hora", "utc", "converter", "dia útil", "hora mundial"] }
+  },
+  "/palette-generator": {
+    "en": { "name": "Palette Generator", "description": "Generate color palettes such as complementary, analogous, and triadic, and export CSS variables.", "keywords": ["palette", "color scheme", "complementary", "analogous", "triadic", "css"] },
+    "es": { "name": "Generador de Paletas", "description": "Genera paletas de colores como complementarias, análogas y triádicas, y exporta variables CSS.", "keywords": ["paleta", "esquema de color", "complementario", "análogo", "triádico", "css"] },
+    "fr": { "name": "Générateur de Palettes", "description": "Générez des palettes de couleurs complémentaires, analogues et triadiques, et exportez des variables CSS.", "keywords": ["palette", "schéma de couleur", "complémentaire", "analogue", "triadique", "css"] },
+    "de": { "name": "Palettengenerator", "description": "Generiert Farbpaletten wie komplementäre, analoge und triadische, und exportiert CSS-Variablen.", "keywords": ["palette", "farbschema", "komplementär", "analog", "triadisch", "css"] },
+    "ja": { "name": "パレットジェネレータ", "description": "補色、類似色、トライアド配色などのカラーパレットを生成し、CSS 変数としてエクスポートできます。", "keywords": ["パレット", "配色", "補色", "類似色", "トライアド", "css"] },
+    "it": { "name": "Generatore di Palette", "description": "Genera palette di colori complementari, analoghe e triadiche, ed esporta variabili CSS.", "keywords": ["palette", "schema di colore", "complementare", "analogo", "triadico", "css"] },
+    "ko": { "name": "팔레트 생성기", "description": "보색, 유사색, 삼각 배색 등의 색상 팔레트를 생성하고 CSS 변수로 내보냅니다.", "keywords": ["팔레트", "색상 구성", "보색", "유사색", "삼각", "css"] },
+    "ru": { "name": "Генератор Палитр", "description": "Генерация цветовых палитр: комплементарных, аналоговых, триадных, с экспортом CSS-переменных.", "keywords": ["палитра", "цветовая схема", "комплементарный", "аналоговый", "триадный", "css"] },
+    "pt": { "name": "Gerador de Paletas", "description": "Gere paletas de cores complementares, análogas e triádicas, e exporte variáveis CSS.", "keywords": ["paleta", "esquema de cor", "complementar", "análogo", "triádico", "css"] }
+  },
+  "/gradient-generator": {
+    "en": { "name": "Gradient Generator", "description": "Generate CSS linear and radial gradient code.", "keywords": ["gradient", "css", "linear", "radial"] },
+    "es": { "name": "Generador de Degradados", "description": "Genera código de degradados CSS lineales y radiales.", "keywords": ["degradado", "css", "lineal", "radial"] },
+    "fr": { "name": "Générateur de Dégradés", "description": "Générez du code de dégradés CSS linéaires et radiaux.", "keywords": ["dégradé", "css", "linéaire", "radial"] },
+    "de": { "name": "Verlaufsgenerator", "description": "Generiert CSS-Code für lineare und radiale Farbverläufe.", "keywords": ["farbverlauf", "css", "linear", "radial"] },
+    "ja": { "name": "グラデーションジェネレータ", "description": "CSS の線形/放射グラデーションコードを生成します。", "keywords": ["グラデーション", "css", "linear", "radial"] },
+    "it": { "name": "Generatore di Gradienti", "description": "Genera codice CSS per gradienti lineari e radiali.", "keywords": ["gradiente", "css", "lineare", "radiale"] },
+    "ko": { "name": "그라데이션 생성기", "description": "CSS 선형/방사형 그라데이션 코드를 생성합니다.", "keywords": ["그라데이션", "css", "linear", "radial"] },
+    "ru": { "name": "Генератор Градиентов", "description": "Генерация CSS-кода линейных и радиальных градиентов.", "keywords": ["градиент", "css", "linear", "radial"] },
+    "pt": { "name": "Gerador de Gradientes", "description": "Gere código de gradientes CSS lineares e radiais.", "keywords": ["gradiente", "css", "linear", "radial"] }
+  },
+  "/color-picker": {
+    "en": { "name": "Color Picker", "description": "Visually select colors with support for multiple formats.", "keywords": ["color", "picker", "hex", "rgb", "hsl"] },
+    "es": { "name": "Selector de Color", "description": "Selecciona colores visualmente con soporte para varios formatos.", "keywords": ["color", "selector", "hex", "rgb", "hsl"] },
+    "fr": { "name": "Sélecteur de Couleur", "description": "Sélectionnez des couleurs visuellement avec prise en charge de plusieurs formats.", "keywords": ["couleur", "sélecteur", "hex", "rgb", "hsl"] },
+    "de": { "name": "Farbwähler", "description": "Wählen Sie Farben visuell aus, mit Unterstützung für mehrere Formate.", "keywords": ["farbe", "wähler", "hex", "rgb", "hsl"] },
+    "ja": { "name": "カラーピッカー", "description": "視覚的に色を選択し、複数の形式に対応します。", "keywords": ["色", "ピッカー", "hex", "rgb", "hsl"] },
+    "it": { "name": "Selettore Colori", "description": "Seleziona i colori visivamente con supporto per più formati.", "keywords": ["colore", "selettore", "hex", "rgb", "hsl"] },
+    "ko": { "name": "컬러 피커", "description": "시각적으로 색상을 선택하고, 여러 형식을 지원합니다.", "keywords": ["색상", "피커", "hex", "rgb", "hsl"] },
+    "ru": { "name": "Выбор Цвета", "description": "Визуальный выбор цвета с поддержкой нескольких форматов.", "keywords": ["цвет", "выбор", "hex", "rgb", "hsl"] },
+    "pt": { "name": "Seletor de Cores", "description": "Selecione cores visualmente com suporte a vários formatos.", "keywords": ["cor", "seletor", "hex", "rgb", "hsl"] }
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "/docker-compose-gen": {
+    "en": { "name": "Docker Compose Generator", "description": "Generate docker-compose.yml files.", "keywords": ["docker", "compose", "yaml", "container", "generate"] },
+    "es": { "name": "Generador de Docker Compose", "description": "Genera archivos docker-compose.yml.", "keywords": ["docker", "compose", "yaml", "contenedor", "generar"] },
+    "fr": { "name": "Générateur Docker Compose", "description": "Génère des fichiers docker-compose.yml.", "keywords": ["docker", "compose", "yaml", "conteneur", "générer"] },
+    "de": { "name": "Docker Compose Generator", "description": "Erzeugt docker-compose.yml-Dateien.", "keywords": ["docker", "compose", "yaml", "container", "generieren"] },
+    "ja": { "name": "Docker Compose ジェネレーター", "description": "docker-compose.yml ファイルを生成します。", "keywords": ["docker", "compose", "yaml", "コンテナ", "生成"] },
+    "it": { "name": "Generatore Docker Compose", "description": "Genera file docker-compose.yml.", "keywords": ["docker", "compose", "yaml", "container", "generare"] },
+    "ko": { "name": "Docker Compose 생성기", "description": "docker-compose.yml 파일을 생성합니다.", "keywords": ["docker", "compose", "yaml", "컨테이너", "생성"] },
+    "ru": { "name": "Генератор Docker Compose", "description": "Создаёт файлы docker-compose.yml.", "keywords": ["docker", "compose", "yaml", "контейнер", "генерация"] },
+    "pt": { "name": "Gerador de Docker Compose", "description": "Gera arquivos docker-compose.yml.", "keywords": ["docker", "compose", "yaml", "contêiner", "gerar"] }
+  },
+  "/nginx-config-gen": {
+    "en": { "name": "Nginx Config Generator", "description": "Generate Nginx configuration files.", "keywords": ["nginx", "config", "server", "generate"] },
+    "es": { "name": "Generador de Config Nginx", "description": "Genera archivos de configuración de Nginx.", "keywords": ["nginx", "config", "servidor", "generar"] },
+    "fr": { "name": "Générateur Config Nginx", "description": "Génère des fichiers de configuration Nginx.", "keywords": ["nginx", "config", "serveur", "générer"] },
+    "de": { "name": "Nginx Config Generator", "description": "Erzeugt Nginx-Konfigurationsdateien.", "keywords": ["nginx", "config", "server", "generieren"] },
+    "ja": { "name": "Nginx 設定ジェネレーター", "description": "Nginx 設定ファイルを生成します。", "keywords": ["nginx", "config", "server", "生成"] },
+    "it": { "name": "Generatore Config Nginx", "description": "Genera file di configurazione Nginx.", "keywords": ["nginx", "config", "server", "generare"] },
+    "ko": { "name": "Nginx 설정 생성기", "description": "Nginx 설정 파일을 생성합니다.", "keywords": ["nginx", "config", "server", "생성"] },
+    "ru": { "name": "Генератор конфигурации Nginx", "description": "Создаёт файлы конфигурации Nginx.", "keywords": ["nginx", "config", "сервер", "генерация"] },
+    "pt": { "name": "Gerador de Config Nginx", "description": "Gera arquivos de configuração do Nginx.", "keywords": ["nginx", "config", "servidor", "gerar"] }
+  },
+  "/ssh-keygen": {
+    "en": { "name": "SSH Key Generator", "description": "Generate SSH key pairs in the browser.", "keywords": ["ssh", "key", "rsa", "ed25519"] },
+    "es": { "name": "Generador de Claves SSH", "description": "Genera pares de claves SSH en el navegador.", "keywords": ["ssh", "key", "rsa", "ed25519"] },
+    "fr": { "name": "Générateur de Clés SSH", "description": "Génère des paires de clés SSH dans le navigateur.", "keywords": ["ssh", "key", "rsa", "ed25519"] },
+    "de": { "name": "SSH-Schlüssel Generator", "description": "Erzeugt SSH-Schlüsselpaare im Browser.", "keywords": ["ssh", "key", "rsa", "ed25519"] },
+    "ja": { "name": "SSH 鍵ジェネレーター", "description": "ブラウザ内で SSH 鍵ペアを生成します。", "keywords": ["ssh", "key", "rsa", "ed25519"] },
+    "it": { "name": "Generatore di Chiavi SSH", "description": "Genera coppie di chiavi SSH nel browser.", "keywords": ["ssh", "key", "rsa", "ed25519"] },
+    "ko": { "name": "SSH 키 생성기", "description": "브라우저에서 SSH 키 쌍을 생성합니다.", "keywords": ["ssh", "key", "rsa", "ed25519"] },
+    "ru": { "name": "Генератор SSH-ключей", "description": "Создаёт пары SSH-ключей в браузере.", "keywords": ["ssh", "key", "rsa", "ed25519"] },
+    "pt": { "name": "Gerador de Chaves SSH", "description": "Gera pares de chaves SSH no navegador.", "keywords": ["ssh", "key", "rsa", "ed25519"] }
+  },
+  "/ssl-cert-parser": {
+    "en": { "name": "SSL Certificate Parser", "description": "Parse X.509 SSL certificates.", "keywords": ["ssl", "certificate", "cert", "x509", "parser"] },
+    "es": { "name": "Analizador de Certificados SSL", "description": "Analiza certificados SSL X.509.", "keywords": ["ssl", "certificate", "cert", "x509", "analizador"] },
+    "fr": { "name": "Analyseur de Certificat SSL", "description": "Analyse les certificats SSL X.509.", "keywords": ["ssl", "certificate", "cert", "x509", "analyseur"] },
+    "de": { "name": "SSL-Zertifikat Parser", "description": "Parst X.509 SSL-Zertifikate.", "keywords": ["ssl", "certificate", "cert", "x509", "parser"] },
+    "ja": { "name": "SSL 証明書パーサー", "description": "X.509 SSL 証明書を解析します。", "keywords": ["ssl", "certificate", "cert", "x509", "パーサー"] },
+    "it": { "name": "Analizzatore Certificati SSL", "description": "Analizza certificati SSL X.509.", "keywords": ["ssl", "certificate", "cert", "x509", "analizzatore"] },
+    "ko": { "name": "SSL 인증서 파서", "description": "X.509 SSL 인증서를 분석합니다.", "keywords": ["ssl", "certificate", "cert", "x509", "파서"] },
+    "ru": { "name": "Парсер SSL-сертификатов", "description": "Разбирает SSL-сертификаты X.509.", "keywords": ["ssl", "certificate", "cert", "x509", "парсер"] },
+    "pt": { "name": "Analisador de Certificados SSL", "description": "Analisa certificados SSL X.509.", "keywords": ["ssl", "certificate", "cert", "x509", "analisador"] }
+  },
+  "/site-stats": {
+    "en": { "name": "Site Statistics", "description": "View site visit data with time-range filtering, trend charts, rankings and CSV export.", "keywords": ["statistics", "visits", "ranking", "data", "analytics", "trend chart", "csv", "time range"] },
+    "es": { "name": "Estadísticas del Sitio", "description": "Consulta datos de visitas con filtrado por rango de tiempo, gráficos de tendencia, rankings y exportación CSV.", "keywords": ["estadísticas", "visitas", "ranking", "datos", "analytics", "gráfico de tendencia", "csv", "rango de tiempo"] },
+    "fr": { "name": "Statistiques du Site", "description": "Consultez les données de visite avec filtre par période, graphiques de tendance, classements et export CSV.", "keywords": ["statistiques", "visites", "classement", "données", "analytics", "graphique de tendance", "csv", "période"] },
+    "de": { "name": "Seitenstatistik", "description": "Zeigt Besuchsdaten mit Zeitraumfilter, Trenddiagrammen, Ranglisten und CSV-Export.", "keywords": ["statistik", "besuche", "rangliste", "daten", "analytics", "trenddiagramm", "csv", "zeitraum"] },
+    "ja": { "name": "アクセス統計", "description": "時間範囲フィルタ、推移グラフ、人気ランキング、CSVエクスポートに対応したアクセスデータを表示します。", "keywords": ["統計", "アクセス", "ランキング", "データ", "analytics", "推移グラフ", "csv", "時間範囲"] },
+    "it": { "name": "Statistiche del Sito", "description": "Visualizza dati di visita con filtro per intervallo di tempo, grafici di tendenza, classifiche ed esportazione CSV.", "keywords": ["statistiche", "visite", "classifica", "dati", "analytics", "grafico tendenza", "csv", "intervallo"] },
+    "ko": { "name": "사이트 통계", "description": "시간 범위 필터, 추세 그래프, 인기 순위, CSV 내보내기를 지원하는 접속 데이터를 보여줍니다.", "keywords": ["통계", "방문", "순위", "데이터", "analytics", "추세 그래프", "csv", "시간 범위"] },
+    "ru": { "name": "Статистика Посещений", "description": "Просмотр данных о посещениях с фильтром по диапазону времени, графиками трендов, рейтингом и экспортом CSV.", "keywords": ["статистика", "посещения", "рейтинг", "данные", "analytics", "график тренда", "csv", "диапазон времени"] },
+    "pt": { "name": "Estatísticas do Site", "description": "Veja dados de visitas com filtro de período, gráficos de tendência, rankings e exportação CSV.", "keywords": ["estatísticas", "visitas", "ranking", "dados", "analytics", "gráfico de tendência", "csv", "período"] }
+  },
+  "/keyword-miner": {
+    "en": { "name": "Keyword Miner", "description": "Generate long-tail keyword combinations from seed words and analyze keyword density and search intent.", "keywords": ["keyword", "seo", "long-tail", "search", "keyword density", "miner"] },
+    "es": { "name": "Minero de Palabras Clave", "description": "Genera combinaciones de palabras clave de cola larga desde semillas y analiza densidad e intención de búsqueda.", "keywords": ["keyword", "seo", "long-tail", "búsqueda", "densidad de palabras clave", "minero"] },
+    "fr": { "name": "Chercheur de Mots-clés", "description": "Génère des combinaisons de mots-clés longue traîne et analyse la densité et l'intention de recherche.", "keywords": ["keyword", "seo", "long-tail", "recherche", "densité de mots-clés", "chercheur"] },
+    "de": { "name": "Keyword Miner", "description": "Erzeugt Long-Tail-Keyword-Kombinationen aus Seed-Wörtern und analysiert Keyword-Dichte und Suchintention.", "keywords": ["keyword", "seo", "long-tail", "suche", "keyword-dichte", "miner"] },
+    "ja": { "name": "キーワードマイナー", "description": "シードワードからロングテールキーワードを生成し、キーワード密度と検索意図を分析します。", "keywords": ["keyword", "seo", "ロングテール", "検索", "キーワード密度", "マイナー"] },
+    "it": { "name": "Minatore di Parole Chiave", "description": "Genera combinazioni di keyword long-tail da seed word e analizza densità e intento di ricerca.", "keywords": ["keyword", "seo", "long-tail", "ricerca", "densità keyword", "miner"] },
+    "ko": { "name": "키워드 마이너", "description": "시드 단어에서 롱테일 키워드 조합을 생성하고 키워드 밀도와 검색 의도를 분석합니다.", "keywords": ["keyword", "seo", "롱테일", "검색", "키워드 밀도", "마이너"] },
+    "ru": { "name": "Майнер Ключевых Слов", "description": "Генерирует комбинации длиннохвостых ключевых слов из семян и анализирует плотность и поисковый интент.", "keywords": ["keyword", "seo", "long-tail", "поиск", "плотность ключевых слов", "майнер"] },
+    "pt": { "name": "Minerador de Palavras-chave", "description": "Gera combinações de palavras-chave de cauda longa a partir de sementes e analisa densidade e intenção de busca.", "keywords": ["keyword", "seo", "long-tail", "busca", "densidade de palavras-chave", "minerador"] }
+  },
+  "/translation-compare": {
+    "en": { "name": "Translation Compare", "description": "Compare multi-engine translation results and generate shareable links.", "keywords": ["translation", "translate", "compare", "engine"] },
+    "es": { "name": "Comparador de Traducciones", "description": "Compara resultados de traducción de varios motores y genera enlaces compartibles.", "keywords": ["translation", "translate", "comparar", "motor"] },
+    "fr": { "name": "Comparaison de Traductions", "description": "Compare les résultats de traduction multi-moteurs et génère des liens partageables.", "keywords": ["translation", "translate", "comparer", "moteur"] },
+    "de": { "name": "Übersetzungsvergleich", "description": "Vergleicht Übersetzungsergebnisse mehrerer Engines und erzeugt teilbare Links.", "keywords": ["translation", "translate", "vergleichen", "engine"] },
+    "ja": { "name": "翻訳比較", "description": "複数エンジンの翻訳結果を比較し、共有可能なリンクを生成します。", "keywords": ["translation", "translate", "比較", "エンジン"] },
+    "it": { "name": "Confronto Traduzioni", "description": "Confronta risultati di traduzione multi-motore e genera link condivisibili.", "keywords": ["translation", "translate", "confrontare", "motore"] },
+    "ko": { "name": "번역 비교", "description": "여러 엔진의 번역 결과를 비교하고 공유 가능한 링크를 생성합니다.", "keywords": ["translation", "translate", "비교", "엔진"] },
+    "ru": { "name": "Сравнение Переводов", "description": "Сравнивает результаты перевода нескольких движков и генерирует ссылки для обмена.", "keywords": ["translation", "translate", "сравнение", "движок"] },
+    "pt": { "name": "Comparação de Traduções", "description": "Compare resultados de tradução de vários motores e gere links compartilháveis.", "keywords": ["translation", "translate", "comparar", "motor"] }
+  },
+  "/keyword-extractor": {
+    "en": { "name": "Keyword Extractor", "description": "Extract keywords from text.", "keywords": ["keyword", "extract", "text", "nlp"] },
+    "es": { "name": "Extractor de Palabras Clave", "description": "Extrae palabras clave del texto.", "keywords": ["keyword", "extract", "texto", "nlp"] },
+    "fr": { "name": "Extracteur de Mots-clés", "description": "Extrait les mots-clés d'un texte.", "keywords": ["keyword", "extract", "texte", "nlp"] },
+    "de": { "name": "Keyword Extractor", "description": "Extrahiert Keywords aus Text.", "keywords": ["keyword", "extract", "text", "nlp"] },
+    "ja": { "name": "キーワード抽出", "description": "テキストからキーワードを抽出します。", "keywords": ["keyword", "extract", "テキスト", "nlp"] },
+    "it": { "name": "Estrattore di Parole Chiave", "description": "Estrae keyword dal testo.", "keywords": ["keyword", "extract", "testo", "nlp"] },
+    "ko": { "name": "키워드 추출", "description": "텍스트에서 키워드를 추출합니다.", "keywords": ["keyword", "extract", "텍스트", "nlp"] },
+    "ru": { "name": "Извлекатель Ключевых Слов", "description": "Извлекает ключевые слова из текста.", "keywords": ["keyword", "extract", "текст", "nlp"] },
+    "pt": { "name": "Extrator de Palavras-chave", "description": "Extrai palavras-chave do texto.", "keywords": ["keyword", "extract", "texto", "nlp"] }
+  },
+  "/sentiment-analyzer": {
+    "en": { "name": "Sentiment Analyzer", "description": "Analyze the sentiment orientation of text.", "keywords": ["sentiment", "analysis", "emotion", "analyzer"] },
+    "es": { "name": "Analizador de Sentimiento", "description": "Analiza la orientación sentimental del texto.", "keywords": ["sentiment", "análisis", "emoción", "analizador"] },
+    "fr": { "name": "Analyseur de Sentiment", "description": "Analyse l'orientation sentimentale du texte.", "keywords": ["sentiment", "analyse", "émotion", "analyseur"] },
+    "de": { "name": "Stimmungsanalyse", "description": "Analysiert die Stimmungslage von Text.", "keywords": ["sentiment", "analyse", "emotion", "analyse"] },
+    "ja": { "name": "感情分析", "description": "テキストの感情傾向を分析します。", "keywords": ["sentiment", "分析", "感情", "アナライザー"] },
+    "it": { "name": "Analizzatore di Sentiment", "description": "Analizza l'orientamento emotivo del testo.", "keywords": ["sentiment", "analisi", "emozione", "analizzatore"] },
+    "ko": { "name": "감성 분석", "description": "텍스트의 감성 경향을 분석합니다.", "keywords": ["sentiment", "분석", "감정", "분석기"] },
+    "ru": { "name": "Анализатор Тональности", "description": "Анализирует эмоциональную окраску текста.", "keywords": ["sentiment", "анализ", "эмоция", "анализатор"] },
+    "pt": { "name": "Analisador de Sentimento", "description": "Analisa a orientação sentimental do texto.", "keywords": ["sentiment", "análise", "emoção", "analisador"] }
+  },
+  "/prompt-templates": {
+    "en": { "name": "Prompt Templates", "description": "AI prompt template library.", "keywords": ["prompt", "template", "ai", "library"] },
+    "es": { "name": "Plantillas de Prompts", "description": "Biblioteca de plantillas de prompts para IA.", "keywords": ["prompt", "template", "ia", "biblioteca"] },
+    "fr": { "name": "Modèles de Prompts", "description": "Bibliothèque de modèles de prompts IA.", "keywords": ["prompt", "template", "ia", "bibliothèque"] },
+    "de": { "name": "Prompt-Vorlagen", "description": "Bibliothek für KI-Prompt-Vorlagen.", "keywords": ["prompt", "template", "ki", "bibliothek"] },
+    "ja": { "name": "プロンプトテンプレート", "description": "AI プロンプトテンプレート集です。", "keywords": ["prompt", "template", "ai", "ライブラリ"] },
+    "it": { "name": "Template di Prompt", "description": "Libreria di template di prompt AI.", "keywords": ["prompt", "template", "ai", "libreria"] },
+    "ko": { "name": "프롬프트 템플릿", "description": "AI 프롬프트 템플릿 라이브러리입니다.", "keywords": ["prompt", "template", "ai", "라이브러리"] },
+    "ru": { "name": "Шаблоны Промптов", "description": "Библиотека шаблонов промптов для ИИ.", "keywords": ["prompt", "template", "ии", "библиотека"] },
+    "pt": { "name": "Modelos de Prompts", "description": "Biblioteca de modelos de prompts de IA.", "keywords": ["prompt", "template", "ia", "biblioteca"] }
+  },
+  "/text-classifier": {
+    "en": { "name": "Text Classifier", "description": "Rule-based text classification.", "keywords": ["text", "classify", "classification", "rules"] },
+    "es": { "name": "Clasificador de Texto", "description": "Clasificación de texto basada en reglas.", "keywords": ["text", "classify", "clasificación", "reglas"] },
+    "fr": { "name": "Classificateur de Texte", "description": "Classification de texte basée sur des règles.", "keywords": ["text", "classify", "classification", "règles"] },
+    "de": { "name": "Textklassifizierung", "description": "Regelbasierte Textklassifizierung.", "keywords": ["text", "classify", "klassifizierung", "regeln"] },
+    "ja": { "name": "テキスト分類", "description": "ルールベースのテキスト分類です。", "keywords": ["text", "classify", "分類", "ルール"] },
+    "it": { "name": "Classificatore di Testo", "description": "Classificazione di testo basata su regole.", "keywords": ["text", "classify", "classificazione", "regole"] },
+    "ko": { "name": "텍스트 분류", "description": "규칙 기반 텍스트 분류입니다.", "keywords": ["text", "classify", "분류", "규칙"] },
+    "ru": { "name": "Классификатор Текста", "description": "Классификация текста на основе правил.", "keywords": ["text", "classify", "классификация", "правила"] },
+    "pt": { "name": "Classificador de Texto", "description": "Classificação de texto baseada em regras.", "keywords": ["text", "classify", "classificação", "regras"] }
+  },
+  "/text-summarizer": {
+    "en": { "name": "Text Summarizer", "description": "Automatically extract text summaries.", "keywords": ["summary", "summarize", "text", "automatic"] },
+    "es": { "name": "Resumidor de Texto", "description": "Extrae resúmenes de texto automáticamente.", "keywords": ["summary", "summarize", "texto", "automático"] },
+    "fr": { "name": "Résumé de Texte", "description": "Extrait automatiquement les résumés de texte.", "keywords": ["summary", "summarize", "texte", "automatique"] },
+    "de": { "name": "Textzusammenfassung", "description": "Extrahiert automatisch Textzusammenfassungen.", "keywords": ["summary", "summarize", "text", "automatisch"] },
+    "ja": { "name": "テキスト要約", "description": "テキストの要約を自動抽出します。", "keywords": ["summary", "summarize", "テキスト", "自動"] },
+    "it": { "name": "Riassuntore di Testo", "description": "Estrae automaticamente riassunti di testo.", "keywords": ["summary", "summarize", "testo", "automatico"] },
+    "ko": { "name": "텍스트 요약", "description": "텍스트 요약을 자동으로 추출합니다.", "keywords": ["summary", "summarize", "텍스트", "자동"] },
+    "ru": { "name": "Суммаризатор Текста", "description": "Автоматически извлекает краткое содержание текста.", "keywords": ["summary", "summarize", "текст", "автоматический"] },
+    "pt": { "name": "Resumidor de Texto", "description": "Extrai resumos de texto automaticamente.", "keywords": ["summary", "summarize", "texto", "automático"] }
+  },
+  "/grammar-checker": {
+    "en": { "name": "Grammar Checker", "description": "Basic English grammar check.", "keywords": ["grammar", "check", "english", "basic"] },
+    "es": { "name": "Corrector Gramatical", "description": "Corrección básica de gramática en inglés.", "keywords": ["grammar", "check", "inglés", "básico"] },
+    "fr": { "name": "Vérificateur de Grammaire", "description": "Vérification grammaticale anglaise de base.", "keywords": ["grammar", "check", "anglais", "basique"] },
+    "de": { "name": "Grammatikprüfung", "description": "Grundlegende englische Grammatikprüfung.", "keywords": ["grammar", "check", "englisch", "grundlegend"] },
+    "ja": { "name": "文法チェッカー", "description": "英語の基本的な文法チェックです。", "keywords": ["grammar", "check", "英語", "基本"] },
+    "it": { "name": "Correttore Grammaticale", "description": "Controllo grammaticale base dell'inglese.", "keywords": ["grammar", "check", "inglese", "base"] },
+    "ko": { "name": "문법 검사기", "description": "기본적인 영어 문법 검사입니다.", "keywords": ["grammar", "check", "영어", "기본"] },
+    "ru": { "name": "Проверка Грамматики", "description": "Базовая проверка английской грамматики.", "keywords": ["grammar", "check", "английский", "базовый"] },
+    "pt": { "name": "Verificador Gramatical", "description": "Verificação básica de gramática em inglês.", "keywords": ["grammar", "check", "inglês", "básico"] }
+  },
+  "/ai-config-generator": {
+    "en": { "name": "AI Config Generator", "description": "Generate AI model configuration files.", "keywords": ["ai", "config", "model", "generate"] },
+    "es": { "name": "Generador de Config de IA", "description": "Genera archivos de configuración de modelos de IA.", "keywords": ["ai", "config", "modelo", "generar"] },
+    "fr": { "name": "Générateur Config IA", "description": "Génère des fichiers de configuration de modèles IA.", "keywords": ["ai", "config", "modèle", "générer"] },
+    "de": { "name": "KI-Konfig Generator", "description": "Erzeugt Konfigurationsdateien für KI-Modelle.", "keywords": ["ai", "config", "modell", "generieren"] },
+    "ja": { "name": "AI 設定ジェネレーター", "description": "AI モデルの設定ファイルを生成します。", "keywords": ["ai", "config", "モデル", "生成"] },
+    "it": { "name": "Generatore Config AI", "description": "Genera file di configurazione per modelli AI.", "keywords": ["ai", "config", "modello", "generare"] },
+    "ko": { "name": "AI 설정 생성기", "description": "AI 모델 설정 파일을 생성합니다.", "keywords": ["ai", "config", "모델", "생성"] },
+    "ru": { "name": "Генератор Конфигураций ИИ", "description": "Создаёт файлы конфигурации моделей ИИ.", "keywords": ["ai", "config", "модель", "генерация"] },
+    "pt": { "name": "Gerador de Config de IA", "description": "Gera arquivos de configuração de modelos de IA.", "keywords": ["ai", "config", "modelo", "gerar"] }
+  },
+  "/markdown-polisher": {
+    "en": { "name": "Markdown Polisher", "description": "Polish Markdown document formatting.", "keywords": ["markdown", "polish", "format", "document"] },
+    "es": { "name": "Pulidor de Markdown", "description": "Mejora el formato de documentos Markdown.", "keywords": ["markdown", "polish", "formato", "documento"] },
+    "fr": { "name": "Polisseur Markdown", "description": "Peaufine la mise en forme des documents Markdown.", "keywords": ["markdown", "polish", "format", "document"] },
+    "de": { "name": "Markdown Polierer", "description": "Verbessert die Formatierung von Markdown-Dokumenten.", "keywords": ["markdown", "polish", "format", "dokument"] },
+    "ja": { "name": "Markdown 整形", "description": "Markdown ドキュメントの書式を整えます。", "keywords": ["markdown", "polish", "書式", "ドキュメント"] },
+    "it": { "name": "Lucidatore Markdown", "description": "Migliora la formattazione dei documenti Markdown.", "keywords": ["markdown", "polish", "formato", "documento"] },
+    "ko": { "name": "Markdown 다듬기", "description": "Markdown 문서 서식을 다듬습니다.", "keywords": ["markdown", "polish", "서식", "문서"] },
+    "ru": { "name": "Полировщик Markdown", "description": "Улучшает форматирование Markdown-документов.", "keywords": ["markdown", "polish", "формат", "документ"] },
+    "pt": { "name": "Polidor de Markdown", "description": "Polir a formatação de documentos Markdown.", "keywords": ["markdown", "polish", "formatação", "documento"] }
+  },
+  "/token-counter": {
+    "en": { "name": "Token Counter", "description": "Estimate token count of text.", "keywords": ["token", "count", "ai", "llm"] },
+    "es": { "name": "Contador de Tokens", "description": "Estima la cantidad de tokens de un texto.", "keywords": ["token", "count", "ia", "llm"] },
+    "fr": { "name": "Compteur de Tokens", "description": "Estime le nombre de tokens d'un texte.", "keywords": ["token", "count", "ia", "llm"] },
+    "de": { "name": "Token-Zähler", "description": "Schätzt die Token-Anzahl eines Textes.", "keywords": ["token", "count", "ki", "llm"] },
+    "ja": { "name": "Token カウンター", "description": "テキストのトークン数を推定します。", "keywords": ["token", "count", "ai", "llm"] },
+    "it": { "name": "Contatore di Token", "description": "Stima il numero di token di un testo.", "keywords": ["token", "count", "ai", "llm"] },
+    "ko": { "name": "토큰 카운터", "description": "텍스트의 토큰 수를 예측합니다.", "keywords": ["token", "count", "ai", "llm"] },
+    "ru": { "name": "Счётчик Токенов", "description": "Оценивает количество токенов в тексте.", "keywords": ["token", "count", "ии", "llm"] },
+    "pt": { "name": "Contador de Tokens", "description": "Estima a quantidade de tokens de um texto.", "keywords": ["token", "count", "ia", "llm"] }
+  },
+  "/translator": {
+    "en": { "name": "Chinese-English Translator", "description": "Call an OpenAI-compatible API for Chinese-English translation with custom endpoint configuration.", "keywords": ["translate", "translation", "chinese", "english", "ai", "deepl"] },
+    "es": { "name": "Traductor Chino-Inglés", "description": "Llama a una API compatible con OpenAI para traducir chino-inglés con configuración personalizada.", "keywords": ["translate", "translation", "chino", "inglés", "ia", "deepl"] },
+    "fr": { "name": "Traducteur Chinois-Anglais", "description": "Appelle une API compatible OpenAI pour traduire du chinois vers l'anglais avec configuration personnalisée.", "keywords": ["translate", "translation", "chinois", "anglais", "ia", "deepl"] },
+    "de": { "name": "Chinesisch-Englisch Übersetzer", "description": "Ruft OpenAI-kompatible API für Übersetzungen mit benutzerdefinierter Endpunktkonfiguration auf.", "keywords": ["translate", "translation", "chinesisch", "englisch", "ki", "deepl"] },
+    "ja": { "name": "中国語⇔英語翻訳", "description": "OpenAI 互換 API を呼び出し、カスタムエンドポイント設定で中国語と英語を翻訳します。", "keywords": ["translate", "translation", "中国語", "英語", "ai", "deepl"] },
+    "it": { "name": "Traduttore Cinese-Inglese", "description": "Chiama API compatibile OpenAI per traduzioni cinese-inglese con configurazione endpoint personalizzata.", "keywords": ["translate", "translation", "cinese", "inglese", "ai", "deepl"] },
+    "ko": { "name": "중영 번역", "description": "OpenAI 호환 API를 호출하여 사용자 정의 엔드포인트 설정으로 중국어-영어 번역을 합니다.", "keywords": ["translate", "translation", "중국어", "영어", "ai", "deepl"] },
+    "ru": { "name": "Переводчик Китайский-Английский", "description": "Вызывает API, совместимое с OpenAI, для перевода китайский-английский с настройкой endpoint.", "keywords": ["translate", "translation", "китайский", "английский", "ии", "deepl"] },
+    "pt": { "name": "Tradutor Chinês-Inglês", "description": "Chama API compatível com OpenAI para tradução chinês-inglês com configuração de endpoint personalizada.", "keywords": ["translate", "translation", "chinês", "inglês", "ia", "deepl"] }
+  },
+  "/ai-image-generator": {
+    "en": { "name": "AI Image Generator", "description": "Call an OpenAI-compatible API to generate images from prompts with custom model and size.", "keywords": ["ai", "image", "generate", "dall-e", "stability"] },
+    "es": { "name": "Generador de Imágenes IA", "description": "Llama a una API compatible con OpenAI para generar imágenes desde prompts con modelo y tamaño personalizados.", "keywords": ["ia", "image", "generate", "dall-e", "stability"] },
+    "fr": { "name": "Générateur d'Images IA", "description": "Appelle une API compatible OpenAI pour générer des images à partir de prompts avec modèle et taille personnalisés.", "keywords": ["ia", "image", "generate", "dall-e", "stability"] },
+    "de": { "name": "KI-Bildgenerator", "description": "Ruft OpenAI-kompatible API auf, um Bilder aus Prompts mit benutzerdefiniertem Modell und Größe zu erzeugen.", "keywords": ["ki", "image", "generate", "dall-e", "stability"] },
+    "ja": { "name": "AI 画像生成", "description": "OpenAI 互換 API を呼び出し、カスタムモデルとサイズでプロンプトから画像を生成します。", "keywords": ["ai", "image", "generate", "dall-e", "stability"] },
+    "it": { "name": "Generatore di Immagini AI", "description": "Chiama API compatibile OpenAI per generare immagini dai prompt con modello e dimensione personalizzati.", "keywords": ["ai", "image", "generate", "dall-e", "stability"] },
+    "ko": { "name": "AI 이미지 생성", "description": "OpenAI 호환 API를 호출하여 사용자 정의 모델과 크기로 프롬프트에서 이미지를 생성합니다.", "keywords": ["ai", "image", "generate", "dall-e", "stability"] },
+    "ru": { "name": "Генератор Изображений ИИ", "description": "Вызывает API, совместимое с OpenAI, для генерации изображений по промптам с пользовательской моделью и размером.", "keywords": ["ии", "image", "generate", "dall-e", "stability"] },
+    "pt": { "name": "Gerador de Imagens IA", "description": "Chama API compatível com OpenAI para gerar imagens a partir de prompts com modelo e tamanho personalizados.", "keywords": ["ia", "image", "generate", "dall-e", "stability"] }
+  },
+  "/ai-writer": {
+    "en": { "name": "AI Writing Assistant", "description": "AI writing, rewriting, title generation and copy polishing via an OpenAI-compatible API.", "keywords": ["ai", "writing", "rewrite", "polish", "title", "openai", "gpt", "copy"] },
+    "es": { "name": "Asistente de Escritura IA", "description": "Escritura, reescritura, generación de títulos y pulido de textos con API compatible con OpenAI.", "keywords": ["ia", "escritura", "reescribir", "pulir", "título", "openai", "gpt", "copy"] },
+    "fr": { "name": "Assistant d'Écriture IA", "description": "Rédaction, réécriture, génération de titres et peaufinage de textes via API compatible OpenAI.", "keywords": ["ia", "rédaction", "réécrire", "peaufiner", "titre", "openai", "gpt", "copy"] },
+    "de": { "name": "KI-Schreibassistent", "description": "Schreiben, Umschreiben, Titelgenerierung und Textpolitur über OpenAI-kompatible API.", "keywords": ["ki", "schreiben", "umschreiben", "polieren", "titel", "openai", "gpt", "copy"] },
+    "ja": { "name": "AI ライティングアシスタント", "description": "OpenAI 互換 API で執筆、書き換え、タイトル生成、文案の磨き上げを行います。", "keywords": ["ai", "執筆", "書き換え", "磨き上げ", "タイトル", "openai", "gpt", "文案"] },
+    "it": { "name": "Assistente di Scrittura AI", "description": "Scrittura, riscrittura, generazione titoli e rifinitura testi tramite API compatibile OpenAI.", "keywords": ["ai", "scrittura", "riscrivere", "rifinire", "titolo", "openai", "gpt", "copy"] },
+    "ko": { "name": "AI 글쓰기 도우미", "description": "OpenAI 호환 API를 통한 AI 글쓰기, 다시 쓰기, 제목 생성 및 카피 다듬기를 제공합니다.", "keywords": ["ai", "글쓰기", "다시쓰기", "다듬기", "제목", "openai", "gpt", "카피"] },
+    "ru": { "name": "ИИ Помощник по Написанию Текстов", "description": "Написание, переписывание, генерация заголовков и полировка текстов через API, совместимое с OpenAI.", "keywords": ["ии", "написание", "переписать", "полировать", "заголовок", "openai", "gpt", "текст"] },
+    "pt": { "name": "Assistente de Escrita IA", "description": "Escrita, reescrita, geração de títulos e polimento de textos via API compatível com OpenAI.", "keywords": ["ia", "escrita", "reescrever", "polir", "título", "openai", "gpt", "copy"] }
+  },
+  "/api-key-generator": {
+    "en": { "name": "API Key Generator", "description": "Batch generate random API keys with custom prefix, length and encoding format.", "keywords": ["api", "key", "secret", "generate"] },
+    "es": { "name": "Generador de Claves API", "description": "Genera claves API aleatorias en lote con prefijo, longitud y formato de codificación personalizados.", "keywords": ["api", "key", "secret", "generar"] },
+    "fr": { "name": "Générateur de Clés API", "description": "Génère des clés API aléatoires par lot avec préfixe, longueur et format d'encodage personnalisés.", "keywords": ["api", "key", "secret", "générer"] },
+    "de": { "name": "API-Schlüssel Generator", "description": "Erzeugt stapelweise zufällige API-Schlüssel mit benutzerdefiniertem Präfix, Länge und Kodierung.", "keywords": ["api", "key", "secret", "generieren"] },
+    "ja": { "name": "API キー生成", "description": "カスタム接頭辞、長さ、エンコーディング形式でランダムな API キーを一括生成します。", "keywords": ["api", "key", "secret", "生成"] },
+    "it": { "name": "Generatore di Chiavi API", "description": "Genera chiavi API casuali in batch con prefisso, lunghezza e formato di codifica personalizzati.", "keywords": ["api", "key", "secret", "generare"] },
+    "ko": { "name": "API 키 생성기", "description": "사용자 정의 접두사, 길이, 인코딩 형식으로 무작위 API 키를 일괄 생성합니다.", "keywords": ["api", "key", "secret", "생성"] },
+    "ru": { "name": "Генератор API-ключей", "description": "Пакетно создаёт случайные API-ключи с пользовательским префиксом, длиной и форматом кодирования.", "keywords": ["api", "key", "secret", "генерация"] },
+    "pt": { "name": "Gerador de Chaves API", "description": "Gera chaves API aleatórias em lote com prefixo, comprimento e formato de codificação personalizados.", "keywords": ["api", "key", "secret", "gerar"] }
+  }
+}

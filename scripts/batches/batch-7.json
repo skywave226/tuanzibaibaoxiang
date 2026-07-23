@@ -1,0 +1,295 @@
+[
+  {
+    "name": "TTS 音频合成",
+    "path": "/tts-audio-synth",
+    "description": "文本转语音并导出音频",
+    "category": "音视频处理",
+    "keywords": [
+      "tts",
+      "speech",
+      "语音",
+      "合成",
+      "音频"
+    ]
+  },
+  {
+    "name": "地图生成",
+    "path": "/map-generator",
+    "description": "程序化地图生成工具，支持洞穴、迷宫、BSP 房间生成，可导出二维数组",
+    "category": "游戏开发",
+    "keywords": [
+      "地图",
+      "map",
+      "生成",
+      "洞穴",
+      "迷宫",
+      "BSP",
+      "随机"
+    ]
+  },
+  {
+    "name": "精灵图切片工具",
+    "path": "/sprite-slicer",
+    "description": "精灵图切片工具，支持上传精灵图、网格切分、帧预览、手动调整切片区域及导出单帧或全部帧",
+    "category": "游戏开发",
+    "keywords": [
+      "精灵图",
+      "sprite",
+      "切片",
+      "帧",
+      "动画",
+      "tile",
+      "导出",
+      "toDataURL"
+    ]
+  },
+  {
+    "name": "碰撞检测工具",
+    "path": "/collision-detector",
+    "description": "2D 碰撞检测可视化工具，支持 AABB、圆形、矩形圆形、点与图形、线段碰撞检测及算法公式",
+    "category": "游戏开发",
+    "keywords": [
+      "碰撞",
+      "collision",
+      "检测",
+      "AABB",
+      "圆形",
+      "矩形",
+      "可视化",
+      "算法"
+    ]
+  },
+  {
+    "name": "随机数生成",
+    "path": "/random-generator",
+    "description": "多种分布随机数生成器，支持均匀/正态/指数分布，含统计直方图",
+    "category": "游戏开发",
+    "keywords": [
+      "随机",
+      "random",
+      "分布",
+      "正态",
+      "指数",
+      "种子"
+    ]
+  },
+  {
+    "name": "向量计算工具",
+    "path": "/vector-calculator",
+    "description": "2D/3D 向量运算工具，支持加减、点乘、叉乘、模长、归一化、角度、距离、投影、Lerp 插值及可视化",
+    "category": "游戏开发",
+    "keywords": [
+      "向量",
+      "vector",
+      "点乘",
+      "叉乘",
+      "归一化",
+      "插值",
+      "lerp",
+      "投影",
+      "可视化"
+    ]
+  },
+  {
+    "name": "像素艺术",
+    "path": "/pixel-art-tool",
+    "description": "像素画绘制工具，支持画笔/橡皮/填充/吸管，含撤销重做与调色板预设",
+    "category": "游戏开发",
+    "keywords": [
+      "像素",
+      "pixel",
+      "艺术",
+      "绘制",
+      "画板",
+      "NES",
+      "GameBoy"
+    ]
+  },
+  {
+    "name": "像素艺术编辑",
+    "path": "/pixel-art-editor",
+    "description": "像素艺术绘制工具，支持网格绘制、调色板、导出",
+    "category": "游戏开发",
+    "keywords": [
+      "像素",
+      "pixel",
+      "艺术",
+      "绘制"
+    ]
+  },
+  {
+    "name": "颜色拾取工具",
+    "path": "/color-picker-game",
+    "description": "游戏开发专用颜色工具，支持 HEX/RGB/HSL/HSV 互转、调色板生成、WCAG 对比度检测及配置导出",
+    "category": "游戏开发",
+    "keywords": [
+      "颜色",
+      "color",
+      "拾取",
+      "调色板",
+      "WCAG",
+      "对比度",
+      "HEX",
+      "RGB",
+      "HSL",
+      "HSV"
+    ]
+  },
+  {
+    "name": "游戏配置生成",
+    "path": "/game-config-gen",
+    "description": "游戏配置生成工具，支持角色/物品/关卡模板，含 DPS/TTK 平衡性计算",
+    "category": "游戏开发",
+    "keywords": [
+      "配置",
+      "config",
+      "json",
+      "游戏",
+      "角色",
+      "平衡",
+      "DPS"
+    ]
+  },
+  {
+    "name": "游戏随机数",
+    "path": "/game-random-gen",
+    "description": "游戏随机数生成器，支持种子随机、加权随机、概率分布",
+    "category": "游戏开发",
+    "keywords": [
+      "随机数",
+      "random",
+      "种子",
+      "概率"
+    ]
+  },
+  {
+    "name": "游戏颜色拾取",
+    "path": "/game-color-picker",
+    "description": "游戏开发专用颜色拾取器，支持 HEX/RGB/HSL/HSV 互转及调色板生成",
+    "category": "游戏开发",
+    "keywords": [
+      "颜色",
+      "color",
+      "拾取",
+      "调色板"
+    ]
+  },
+  {
+    "name": "噪声生成",
+    "path": "/noise-generator",
+    "description": "Perlin/Simplex 噪声生成器，可调节频率振幅八度，支持一维二维可视化",
+    "category": "游戏开发",
+    "keywords": [
+      "噪声",
+      "noise",
+      "perlin",
+      "simplex",
+      "柏林",
+      "纹理"
+    ]
+  },
+  {
+    "name": "坐标转换",
+    "path": "/coord-converter",
+    "description": "游戏坐标系转换工具，支持屏幕/世界/笛卡尔/极坐标/等距/瓦片坐标互转，以及 2D/3D 变换矩阵计算",
+    "category": "游戏开发",
+    "keywords": [
+      "坐标",
+      "coordinate",
+      "转换",
+      "屏幕坐标",
+      "世界坐标",
+      "极坐标",
+      "等距",
+      "瓦片",
+      "tile",
+      "变换矩阵",
+      "rotation",
+      "scale"
+    ]
+  },
+  {
+    "name": "磁盘容量计算",
+    "path": "/disk-calculator",
+    "description": "磁盘容量与 RAID 计算器",
+    "category": "运维工具",
+    "keywords": [
+      "disk",
+      "raid",
+      "capacity",
+      "磁盘",
+      "容量"
+    ]
+  },
+  {
+    "name": "端口扫描",
+    "path": "/port-scanner",
+    "description": "扫描主机开放端口",
+    "category": "运维工具",
+    "keywords": [
+      "port",
+      "scan",
+      "扫描",
+      "端口",
+      "network"
+    ]
+  },
+  {
+    "name": "进程查询",
+    "path": "/process-lookup",
+    "description": "进程信息查询参考",
+    "category": "运维工具",
+    "keywords": [
+      "process",
+      "进程",
+      "查询",
+      "linux",
+      "windows"
+    ]
+  },
+  {
+    "name": "内存单位转换",
+    "path": "/memory-unit-converter",
+    "description": "存储/内存单位转换",
+    "category": "运维工具",
+    "keywords": [
+      "memory",
+      "unit",
+      "转换",
+      "内存",
+      "存储",
+      "byte"
+    ]
+  },
+  {
+    "name": "日志分析",
+    "path": "/log-analyzer",
+    "description": "分析服务器日志文件",
+    "category": "运维工具",
+    "keywords": [
+      "log",
+      "analyze",
+      "分析",
+      "日志",
+      "server"
+    ]
+  },
+  {
+    "name": "Cron 表达式生成器",
+    "path": "/cron-expr-gen",
+    "description": "可视化生成 5/6 段 Cron 表达式，支持字段编辑、快捷预设、自定义输入与下次执行时间预览",
+    "category": "运维工具",
+    "keywords": [
+      "cron",
+      "expression",
+      "表达式",
+      "定时",
+      "任务",
+      "crontab",
+      "schedule",
+      "秒",
+      "分钟",
+      "小时"
+    ]
+  }
+]

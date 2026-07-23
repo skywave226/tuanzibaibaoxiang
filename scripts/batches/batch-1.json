@@ -1,0 +1,290 @@
+[
+  {
+    "name": "密码强度检测",
+    "path": "/password-strength",
+    "description": "检测密码强度并给出建议",
+    "category": "安全工具",
+    "keywords": [
+      "密码",
+      "强度",
+      "检测",
+      "安全"
+    ]
+  },
+  {
+    "name": "AES 加密解密",
+    "path": "/aes-encrypt",
+    "description": "AES-128/192/256 加密解密",
+    "category": "安全工具",
+    "keywords": [
+      "AES",
+      "加密",
+      "解密",
+      "安全"
+    ]
+  },
+  {
+    "name": "Base32 编解码",
+    "path": "/base32-codec",
+    "description": "Base32 编码与解码（RFC 4648 标准）",
+    "category": "安全工具",
+    "keywords": [
+      "base32",
+      "encode",
+      "decode",
+      "编码",
+      "解码",
+      "rfc4648"
+    ]
+  },
+  {
+    "name": "RSA 加密解密",
+    "path": "/rsa-encrypt",
+    "description": "RSA 公钥加密、私钥解密",
+    "category": "安全工具",
+    "keywords": [
+      "RSA",
+      "加密",
+      "解密",
+      "公钥",
+      "私钥"
+    ]
+  },
+  {
+    "name": "表格数据处理",
+    "path": "/data-processor",
+    "description": "在线处理 CSV / Excel 数据，支持去重、拆分列、合并文件、筛选排序与格式转换",
+    "category": "办公工具",
+    "keywords": [
+      "csv",
+      "excel",
+      "数据处理",
+      "去重",
+      "合并",
+      "筛选",
+      "表格"
+    ]
+  },
+  {
+    "name": "Base64 编解码",
+    "path": "/base64-codec",
+    "description": "文本与 Base64 编码互转，支持 URL 安全 Base64、文件拖放转 Base64、图片预览与原文件下载",
+    "category": "编码转换",
+    "keywords": [
+      "base64",
+      "encode",
+      "decode",
+      "编码",
+      "解码",
+      "文件",
+      "图片",
+      "URL 安全"
+    ]
+  },
+  {
+    "name": "HTML 实体编解码",
+    "path": "/html-entity-codec",
+    "description": "HTML 实体编码与解码，支持 &amp; &lt; &gt; 等特殊字符",
+    "category": "编码转换",
+    "keywords": [
+      "html",
+      "entity",
+      "实体",
+      "编码",
+      "解码",
+      "escape",
+      "unescape"
+    ]
+  },
+  {
+    "name": "JSON 格式化",
+    "path": "/json-formatter",
+    "description": "格式化、压缩、校验 JSON 数据，支持 JSONPath 查询、Schema 校验与 CSV/TSV 导出",
+    "category": "编码转换",
+    "keywords": [
+      "json",
+      "format",
+      "validate",
+      "格式化",
+      "校验",
+      "jsonpath",
+      "schema",
+      "csv"
+    ]
+  },
+  {
+    "name": "Unicode 转换",
+    "path": "/unicode-converter",
+    "description": "Unicode 转义序列转换（\\\\uXXXX），支持中文与特殊字符",
+    "category": "编码转换",
+    "keywords": [
+      "unicode",
+      "转义",
+      "escape",
+      "unescape",
+      "中文",
+      "编码"
+    ]
+  },
+  {
+    "name": "URL 编解码",
+    "path": "/url-codec",
+    "description": "URL 编码与解码，支持 URL 参数解析、批量处理、自动判断编码方向",
+    "category": "编码转换",
+    "keywords": [
+      "url",
+      "encode",
+      "decode",
+      "编码",
+      "解码",
+      "百分比编码",
+      "参数解析",
+      "批量"
+    ]
+  },
+  {
+    "name": "百分比计算器",
+    "path": "/percentage-calculator",
+    "description": "百分比、增减比例、基数等多种百分比计算",
+    "category": "计算工具",
+    "keywords": [
+      "percentage",
+      "百分比",
+      "比例",
+      "增减",
+      "计算"
+    ]
+  },
+  {
+    "name": "进制转换",
+    "path": "/number-base-converter",
+    "description": "二进制、八进制、十进制、十六进制互转",
+    "category": "计算工具",
+    "keywords": [
+      "binary",
+      "octal",
+      "hex",
+      "进制",
+      "二进制",
+      "八进制",
+      "十六进制"
+    ]
+  },
+  {
+    "name": "科学计算器",
+    "path": "/scientific-calculator",
+    "description": "支持三角函数、对数、幂运算等科学计算功能",
+    "category": "计算工具",
+    "keywords": [
+      "calculator",
+      "科学",
+      "计算器",
+      "三角函数",
+      "对数",
+      "sin",
+      "cos",
+      "log"
+    ]
+  },
+  {
+    "name": "颜色转换",
+    "path": "/color-converter",
+    "description": "HEX、RGB、HSL、CMYK 颜色格式互转，支持 WCAG 对比度检查、配色方案、CSS 颜色名识别",
+    "category": "计算工具",
+    "keywords": [
+      "color",
+      "hex",
+      "rgb",
+      "hsl",
+      "cmyk",
+      "颜色",
+      "转换",
+      "对比度",
+      "配色"
+    ]
+  },
+  {
+    "name": "Hash 计算",
+    "path": "/hash-calculator",
+    "description": "计算文本与文件的 MD5、SHA-1、SHA-256、SHA-512 哈希值，支持 HMAC 与 Base64 输出",
+    "category": "计算工具",
+    "keywords": [
+      "hash",
+      "md5",
+      "sha",
+      "哈希",
+      "摘要",
+      "HMAC",
+      "文件",
+      "Base64",
+      "加密"
+    ]
+  },
+  {
+    "name": "成语词典",
+    "path": "/idiom-dictionary",
+    "description": "成语查询词典，支持释义、出处、例句",
+    "category": "教育学习",
+    "keywords": [
+      "成语",
+      "词典",
+      "idiom",
+      "查询"
+    ]
+  },
+  {
+    "name": "单位换算",
+    "path": "/unit-converter-edu",
+    "description": "多类别单位换算工具，支持长度、质量、温度、时间、面积、体积、速度、数据",
+    "category": "教育学习",
+    "keywords": [
+      "单位",
+      "换算",
+      "converter",
+      "长度",
+      "质量",
+      "温度"
+    ]
+  },
+  {
+    "name": "公式速查",
+    "path": "/formula-reference",
+    "description": "数学物理公式速查表，按分类浏览，支持搜索与变量说明",
+    "category": "教育学习",
+    "keywords": [
+      "公式",
+      "formula",
+      "数学",
+      "物理",
+      "速查"
+    ]
+  },
+  {
+    "name": "古诗词",
+    "path": "/poetry-collection",
+    "description": "古诗词鉴赏查询，支持按朝代、作者、主题浏览",
+    "category": "教育学习",
+    "keywords": [
+      "诗词",
+      "古诗",
+      "poetry",
+      "唐诗"
+    ]
+  },
+  {
+    "name": "记忆卡片",
+    "path": "/flashcard",
+    "description": "记忆卡片与单词本工具，支持卡片组管理、翻转动画、顺序/随机浏览、掌握度标记、复习模式与导入导出",
+    "category": "教育学习",
+    "keywords": [
+      "单词",
+      "卡片",
+      "flashcard",
+      "记忆",
+      "英语",
+      "单词本",
+      "记忆卡",
+      "背单词"
+    ]
+  }
+]

@@ -1,0 +1,267 @@
+[
+  {
+    "name": "历史年表",
+    "path": "/history-timeline",
+    "description": "中外历史年表，横向时间轴展示，支持中国/世界筛选与事件详情",
+    "category": "教育学习",
+    "keywords": [
+      "历史",
+      "年表",
+      "朝代",
+      "timeline",
+      "事件"
+    ]
+  },
+  {
+    "name": "拼音转换",
+    "path": "/pinyin-converter",
+    "description": "汉字转拼音工具，支持带声调、无声调、首字母模式",
+    "category": "教育学习",
+    "keywords": [
+      "拼音",
+      "pinyin",
+      "汉字",
+      "转换"
+    ]
+  },
+  {
+    "name": "数学练习",
+    "path": "/math-practice",
+    "description": "数学练习题生成器，支持加减乘除、难度分级、计时",
+    "category": "教育学习",
+    "keywords": [
+      "数学",
+      "练习",
+      "算术",
+      "题"
+    ]
+  },
+  {
+    "name": "英语语法",
+    "path": "/english-grammar",
+    "description": "英语语法参考工具，时态、句型、词性详解",
+    "category": "教育学习",
+    "keywords": [
+      "英语",
+      "语法",
+      "grammar",
+      "时态"
+    ]
+  },
+  {
+    "name": "英语语法",
+    "path": "/grammar-reference",
+    "description": "英语语法速查，含时态、句型、从句、虚拟语气等",
+    "category": "教育学习",
+    "keywords": [
+      "英语",
+      "语法",
+      "grammar",
+      "时态",
+      "句型"
+    ]
+  },
+  {
+    "name": "元素周期表",
+    "path": "/periodic-table",
+    "description": "化学元素周期表，118 种元素完整数据，点击查看详细信息",
+    "category": "教育学习",
+    "keywords": [
+      "元素",
+      "周期表",
+      "化学",
+      "periodic",
+      "原子"
+    ]
+  },
+  {
+    "name": "代码压缩",
+    "path": "/code-minifier",
+    "description": "HTML/CSS/JS 代码压缩和美化",
+    "category": "开发工具",
+    "keywords": [
+      "代码",
+      "压缩",
+      "HTML",
+      "CSS",
+      "JS"
+    ]
+  },
+  {
+    "name": "CSS 单位转换",
+    "path": "/css-unit",
+    "description": "px / rem / em / vw / vh 等 CSS 单位互转，可配置根字号",
+    "category": "开发工具",
+    "keywords": [
+      "css",
+      "unit",
+      "px",
+      "rem",
+      "em",
+      "vw",
+      "vh",
+      "单位",
+      "转换"
+    ]
+  },
+  {
+    "name": "JSON 表格编辑器",
+    "path": "/json-table-editor",
+    "description": "将 JSON 数组可视化为表格，支持单元格编辑、增删行列，并导出 JSON 或 CSV",
+    "category": "开发工具",
+    "keywords": [
+      "json",
+      "table",
+      "editor",
+      "表格",
+      "编辑",
+      "csv",
+      "数组"
+    ]
+  },
+  {
+    "name": "JSON 转 TS 类型",
+    "path": "/json-to-ts",
+    "description": "根据 JSON 数据自动生成 TypeScript 类型定义（interface）",
+    "category": "开发工具",
+    "keywords": [
+      "json",
+      "typescript",
+      "interface",
+      "类型",
+      "type",
+      "转换"
+    ]
+  },
+  {
+    "name": "JWT 解析",
+    "path": "/jwt-decoder",
+    "description": "解析 JSON Web Token，查看 header/payload/signature",
+    "category": "开发工具",
+    "keywords": [
+      "JWT",
+      "Token",
+      "解析",
+      "Web"
+    ]
+  },
+  {
+    "name": "SQL 格式化",
+    "path": "/sql-formatter",
+    "description": "SQL 语句美化和压缩",
+    "category": "开发工具",
+    "keywords": [
+      "SQL",
+      "格式化",
+      "美化",
+      "压缩"
+    ]
+  },
+  {
+    "name": "XML 格式化",
+    "path": "/xml-formatter",
+    "description": "XML 格式化、压缩、验证",
+    "category": "开发工具",
+    "keywords": [
+      "XML",
+      "格式化",
+      "压缩",
+      "验证"
+    ]
+  },
+  {
+    "name": "YAML ↔ JSON 转换",
+    "path": "/yaml-json",
+    "description": "YAML 和 JSON 格式互转",
+    "category": "开发工具",
+    "keywords": [
+      "YAML",
+      "JSON",
+      "转换",
+      "配置"
+    ]
+  },
+  {
+    "name": "节气查询",
+    "path": "/solar-term-query",
+    "description": "查询 24 节气日期、含义、习俗与养生建议",
+    "category": "日期时间",
+    "keywords": [
+      "节气",
+      "solar term",
+      "24节气",
+      "农历",
+      "传统文化",
+      "二十四节气"
+    ]
+  },
+  {
+    "name": "时间戳转换",
+    "path": "/timestamp-converter",
+    "description": "Unix 时间戳与日期时间互转，支持时区选择、多种格式模板、批量转换",
+    "category": "日期时间",
+    "keywords": [
+      "timestamp",
+      "unix",
+      "时间戳",
+      "日期",
+      "转换",
+      "时间",
+      "时区",
+      "批量"
+    ]
+  },
+  {
+    "name": "时区转换",
+    "path": "/timezone-converter",
+    "description": "全球时区时间对照与转换，含工作日换算",
+    "category": "日期时间",
+    "keywords": [
+      "timezone",
+      "时区",
+      "time",
+      "utc",
+      "转换",
+      "世界时间"
+    ]
+  },
+  {
+    "name": "调色板生成器",
+    "path": "/palette-generator",
+    "description": "生成互补色、类似色、三角配色等调色板，可导出 CSS 变量",
+    "category": "设计工具",
+    "keywords": [
+      "palette",
+      "调色板",
+      "配色",
+      "complementary",
+      "色彩",
+      "color"
+    ]
+  },
+  {
+    "name": "渐变生成器",
+    "path": "/gradient-generator",
+    "description": "生成 CSS 线性/径向渐变代码",
+    "category": "设计工具",
+    "keywords": [
+      "渐变",
+      "CSS",
+      "linear",
+      "radial"
+    ]
+  },
+  {
+    "name": "颜色选择器",
+    "path": "/color-picker",
+    "description": "可视化选择颜色，支持多种格式",
+    "category": "设计工具",
+    "keywords": [
+      "颜色",
+      "选择器",
+      "HEX",
+      "RGB",
+      "HSL"
+    ]
+  }
+]

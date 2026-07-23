@@ -1,0 +1,222 @@
+{
+  "/image-compress": {
+    "en": { "name": "Image Compress", "description": "Batch compress JPG/PNG/WebP images with format conversion and ZIP download.", "keywords": ["image", "compress", "JPG", "PNG", "WebP", "batch", "ZIP"] },
+    "es": { "name": "Compresor de Imágenes", "description": "Comprime imágenes JPG/PNG/WebP por lotes con conversión de formato y descarga ZIP.", "keywords": ["imagen", "comprimir", "JPG", "PNG", "WebP", "lote", "ZIP"] },
+    "fr": { "name": "Compression d'Images", "description": "Compression par lot d'images JPG/PNG/WebP avec conversion de format et téléchargement ZIP.", "keywords": ["image", "compression", "JPG", "PNG", "WebP", "lot", "ZIP"] },
+    "de": { "name": "Bildkomprimierung", "description": "JPG/PNG/WebP-Bilder stapelweise komprimieren mit Formatkonvertierung und ZIP-Download.", "keywords": ["Bild", "komprimieren", "JPG", "PNG", "WebP", "Stapel", "ZIP"] },
+    "ja": { "name": "画像圧縮", "description": "JPG/PNG/WebP画像を一括圧縮し、形式変換とZIPダウンロードに対応。", "keywords": ["画像", "圧縮", "JPG", "PNG", "WebP", "一括", "ZIP"] },
+    "it": { "name": "Compressione Immagini", "description": "Comprimi immagini JPG/PNG/WebP in batch con conversione formato e download ZIP.", "keywords": ["immagine", "compressione", "JPG", "PNG", "WebP", "batch", "ZIP"] },
+    "ko": { "name": "이미지 압축", "description": "JPG/PNG/WebP 이미지를 일괄 압축하고 형식 변환 및 ZIP 다운로드를 지원합니다.", "keywords": ["이미지", "압축", "JPG", "PNG", "WebP", "일괄", "ZIP"] },
+    "ru": { "name": "Сжатие Изображений", "description": "Пакетное сжатие изображений JPG/PNG/WebP с конвертацией форматов и ZIP-скачиванием.", "keywords": ["изображение", "сжатие", "JPG", "PNG", "WebP", "пакет", "ZIP"] },
+    "pt": { "name": "Compressão de Imagens", "description": "Compacte imagens JPG/PNG/WebP em lote com conversão de formato e download ZIP.", "keywords": ["imagem", "compactar", "JPG", "PNG", "WebP", "lote", "ZIP"] }
+  },
+  "/image-to-base64": {
+    "en": { "name": "Image to Base64", "description": "Convert images to Base64 encoding.", "keywords": ["image", "Base64", "convert", "encode"] },
+    "es": { "name": "Imagen a Base64", "description": "Convierte imágenes a codificación Base64.", "keywords": ["imagen", "Base64", "convertir", "codificar"] },
+    "fr": { "name": "Image vers Base64", "description": "Convertir des images en encodage Base64.", "keywords": ["image", "Base64", "convertir", "encoder"] },
+    "de": { "name": "Bild zu Base64", "description": "Bilder in Base64-Kodierung umwandeln.", "keywords": ["Bild", "Base64", "umwandeln", "kodieren"] },
+    "ja": { "name": "画像をBase64に変換", "description": "画像をBase64エンコードに変換します。", "keywords": ["画像", "Base64", "変換", "エンコード"] },
+    "it": { "name": "Immagine in Base64", "description": "Converti immagini in codifica Base64.", "keywords": ["immagine", "Base64", "convertire", "codifica"] },
+    "ko": { "name": "이미지를 Base64로 변환", "description": "이미지를 Base64 인코딩으로 변환합니다.", "keywords": ["이미지", "Base64", "변환", "인코딩"] },
+    "ru": { "name": "Изображение в Base64", "description": "Преобразование изображений в кодировку Base64.", "keywords": ["изображение", "Base64", "преобразовать", "кодирование"] },
+    "pt": { "name": "Imagem para Base64", "description": "Converter imagens para codificação Base64.", "keywords": ["imagem", "Base64", "converter", "codificar"] }
+  },
+  "/id-photo": {
+    "en": { "name": "ID Photo Background", "description": "One-click change ID photo background color with blue, white, red and common size cropping.", "keywords": ["ID photo", "background", "blue", "white", "red", "1-inch", "2-inch"] },
+    "es": { "name": "Fondo de Foto ID", "description": "Cambia el fondo de fotos de identificación con un clic: azul, blanco, rojo y recortes de tamaños comunes.", "keywords": ["foto ID", "fondo", "azul", "blanco", "rojo", "1 pulgada", "2 pulgadas"] },
+    "fr": { "name": "Fond de Photo d'Identité", "description": "Changez en un clic la couleur de fond des photos d'identité : bleu, blanc, rouge et recadrages aux tailles courantes.", "keywords": ["photo d'identité", "fond", "bleu", "blanc", "rouge", "1 pouce", "2 pouces"] },
+    "de": { "name": "Passbild-Hintergrund", "description": "Passbild-Hintergrundfarbe per Klick ändern: blau, weiß, rot und Zuschneiden gängiger Größen.", "keywords": ["Passbild", "Hintergrund", "blau", "weiß", "rot", "1 Zoll", "2 Zoll"] },
+    "ja": { "name": "証明写真の背景変更", "description": "証明写真の背景色をワンクリックで変更。青、白、赤の背景と一般的なサイズの切り抜きに対応。", "keywords": ["証明写真", "背景", "青", "白", "赤", "1インチ", "2インチ"] },
+    "it": { "name": "Sfondo Foto Tessera", "description": "Cambia lo sfondo delle foto tessera con un clic: blu, bianco, rosso e ritagli alle misure comuni.", "keywords": ["foto tessera", "sfondo", "blu", "bianco", "rosso", "1 pollice", "2 pollici"] },
+    "ko": { "name": "증명사진 배경 변경", "description": "증명사진 배경색을 원클릭으로 변경. 파랑, 흰색, 빨강 배경과 일반적인 사이즈 잘라내기를 지원합니다.", "keywords": ["증명사진", "배경", "파랑", "흰색", "빨강", "1인치", "2인치"] },
+    "ru": { "name": "Фон для Фото на Документы", "description": "Меняйте фон фотографий для документов в один клик: синий, белый, красный и обрезка по стандартным размерам.", "keywords": ["фото на документы", "фон", "синий", "белый", "красный", "1 дюйм", "2 дюйма"] },
+    "pt": { "name": "Fundo de Foto de Identidade", "description": "Mude a cor de fundo de fotos de identidade com um clique: azul, branco, vermelho e recortes em tamanhos comuns.", "keywords": ["foto de identidade", "fundo", "azul", "branco", "vermelho", "1 polegada", "2 polegadas"] }
+  },
+  "/port-lookup": {
+    "en": { "name": "Port Lookup", "description": "Query common port numbers and their services and usage.", "keywords": ["port", "port number", "tcp", "udp", "service"] },
+    "es": { "name": "Búsqueda de Puertos", "description": "Consulta números de puertos comunes y sus servicios y usos.", "keywords": ["puerto", "número de puerto", "tcp", "udp", "servicio"] },
+    "fr": { "name": "Recherche de Ports", "description": "Recherchez les numéros de ports courants et leurs services et usages.", "keywords": ["port", "numéro de port", "tcp", "udp", "service"] },
+    "de": { "name": "Port-Abfrage", "description": "Häufige Portnummern und deren Dienste und Verwendung abfragen.", "keywords": ["Port", "Portnummer", "tcp", "udp", "Dienst"] },
+    "ja": { "name": "ポート番号検索", "description": "よく使うポート番号とそれに対応するサービス・用途を検索。", "keywords": ["ポート", "ポート番号", "tcp", "udp", "サービス"] },
+    "it": { "name": "Ricerca Porte", "description": "Cerca numeri di porta comuni e i relativi servizi e usi.", "keywords": ["porta", "numero di porta", "tcp", "udp", "servizio"] },
+    "ko": { "name": "포트 조회", "description": "자주 사용하는 포트 번호와 해당 서비스 및 용도를 조회합니다.", "keywords": ["포트", "포트 번호", "tcp", "udp", "서비스"] },
+    "ru": { "name": "Поиск Портов", "description": "Поиск распространённых номеров портов и их сервисов и назначений.", "keywords": ["порт", "номер порта", "tcp", "udp", "сервис"] },
+    "pt": { "name": "Consulta de Portas", "description": "Consulte números de portas comuns e seus serviços e usos.", "keywords": ["porta", "número da porta", "tcp", "udp", "serviço"] }
+  },
+  "/network-speed": {
+    "en": { "name": "Network Latency Test", "description": "Test network latency to major websites.", "keywords": ["network", "latency", "ping", "speed", "test"] },
+    "es": { "name": "Test de Latencia de Red", "description": "Prueba la latencia de red a los principales sitios web.", "keywords": ["red", "latencia", "ping", "velocidad", "prueba"] },
+    "fr": { "name": "Test de Latence Réseau", "description": "Testez la latence réseau vers les principaux sites web.", "keywords": ["réseau", "latence", "ping", "vitesse", "test"] },
+    "de": { "name": "Netzwerk-Latenztest", "description": "Testen Sie die Netzwerklatenz zu großen Websites.", "keywords": ["Netzwerk", "Latenz", "ping", "Geschwindigkeit", "Test"] },
+    "ja": { "name": "ネットワーク遅延テスト", "description": "主要サイトへのネットワーク遅延をテストします。", "keywords": ["ネットワーク", "遅延", "ping", "速度", "テスト"] },
+    "it": { "name": "Test Latenza di Rete", "description": "Testa la latenza di rete verso i principali siti web.", "keywords": ["rete", "latenza", "ping", "velocità", "test"] },
+    "ko": { "name": "네트워크 지연 테스트", "description": "주요 사이트까지의 네트워크 지연을 테스트합니다.", "keywords": ["네트워크", "지연", "ping", "속도", "테스트"] },
+    "ru": { "name": "Тест Задержки Сети", "description": "Проверьте сетевую задержку до крупных сайтов.", "keywords": ["сеть", "задержка", "ping", "скорость", "тест"] },
+    "pt": { "name": "Teste de Latência de Rede", "description": "Teste a latência da rede para os principais sites.", "keywords": ["rede", "latência", "ping", "velocidade", "teste"] }
+  },
+  "/dns-query": {
+    "en": { "name": "DNS Query", "description": "Query domain DNS records supporting multiple record types.", "keywords": ["dns", "domain", "resolve", "A record", "CNAME", "MX", "TXT"] },
+    "es": { "name": "Consulta DNS", "description": "Consulta registros DNS de dominios con soporte para múltiples tipos de registros.", "keywords": ["dns", "dominio", "resolver", "A", "CNAME", "MX", "TXT"] },
+    "fr": { "name": "Requête DNS", "description": "Interrogez les enregistrements DNS d'un domaine en prenant en charge plusieurs types d'enregistrements.", "keywords": ["dns", "domaine", "résolution", "A", "CNAME", "MX", "TXT"] },
+    "de": { "name": "DNS-Abfrage", "description": "DNS-Einträge einer Domain abfragen mit Unterstützung mehrerer Record-Typen.", "keywords": ["dns", "Domain", "auflösen", "A-Record", "CNAME", "MX", "TXT"] },
+    "ja": { "name": "DNSクエリ", "description": "ドメインのDNSレコードを検索し、複数のレコードタイプに対応。", "keywords": ["dns", "ドメイン", "解決", "Aレコード", "CNAME", "MX", "TXT"] },
+    "it": { "name": "Query DNS", "description": "Interroga i record DNS di un dominio supportando più tipi di record.", "keywords": ["dns", "dominio", "risoluzione", "A", "CNAME", "MX", "TXT"] },
+    "ko": { "name": "DNS 조회", "description": "도메인의 DNS 레코드를 조회하고 여러 레코드 유형을 지원합니다.", "keywords": ["dns", "도메인", "해석", "A 레코드", "CNAME", "MX", "TXT"] },
+    "ru": { "name": "DNS-Запрос", "description": "Запрос DNS-записей домена с поддержкой нескольких типов записей.", "keywords": ["dns", "домен", "разрешение", "A-запись", "CNAME", "MX", "TXT"] },
+    "pt": { "name": "Consulta DNS", "description": "Consulte registros DNS de domínios com suporte a vários tipos de registros.", "keywords": ["dns", "domínio", "resolver", "A", "CNAME", "MX", "TXT"] }
+  },
+  "/http-request": {
+    "en": { "name": "HTTP Request Test", "description": "Send HTTP requests to test APIs with multi-method, custom headers, environment variables, history, and cURL import/export.", "keywords": ["http", "request", "api", "fetch", "postman", "curl", "test", "environment"] },
+    "es": { "name": "Prueba de Peticiones HTTP", "description": "Envía peticiones HTTP para probar APIs con múltiples métodos, cabeceras personalizadas, variables de entorno, historial e importación/exportación cURL.", "keywords": ["http", "request", "api", "fetch", "postman", "curl", "prueba", "entorno"] },
+    "fr": { "name": "Test de Requêtes HTTP", "description": "Envoyez des requêtes HTTP pour tester des API avec plusieurs méthodes, en-têtes personnalisés, variables d'environnement, historique et import/export cURL.", "keywords": ["http", "request", "api", "fetch", "postman", "curl", "test", "environnement"] },
+    "de": { "name": "HTTP-Request-Test", "description": "Senden Sie HTTP-Anfragen zum Testen von APIs mit mehreren Methoden, benutzerdefinierten Headern, Umgebungsvariablen, Verlauf und cURL-Import/Export.", "keywords": ["http", "request", "api", "fetch", "postman", "curl", "test", "umgebung"] },
+    "ja": { "name": "HTTPリクエストテスト", "description": "複数メソッド、カスタムヘッダー、環境変数、履歴、cURLのインポート/エクスポートに対応したHTTPリクエストでAPIをテスト。", "keywords": ["http", "request", "api", "fetch", "postman", "curl", "テスト", "環境変数"] },
+    "it": { "name": "Test Richieste HTTP", "description": "Invia richieste HTTP per testare API con multi-metodo, header personalizzati, variabili d'ambiente, cronologia e import/export cURL.", "keywords": ["http", "request", "api", "fetch", "postman", "curl", "test", "ambiente"] },
+    "ko": { "name": "HTTP 요청 테스트", "description": "다중 메서드, 사용자 정의 헤더, 환경 변수, 히스토리, cURL 가져오기/익스포트를 지원하는 HTTP 요청으로 API를 테스트합니다.", "keywords": ["http", "request", "api", "fetch", "postman", "curl", "테스트", "환경변수"] },
+    "ru": { "name": "Тест HTTP-Запросов", "description": "Отправляйте HTTP-запросы для тестирования API с несколькими методами, пользовательскими заголовками, переменными среды, историей и импортом/экспортом cURL.", "keywords": ["http", "request", "api", "fetch", "postman", "curl", "тест", "среда"] },
+    "pt": { "name": "Teste de Requisições HTTP", "description": "Envie requisições HTTP para testar APIs com vários métodos, cabeçalhos personalizados, variáveis de ambiente, histórico e importação/exportação cURL.", "keywords": ["http", "request", "api", "fetch", "postman", "curl", "teste", "ambiente"] }
+  },
+  "/http-status": {
+    "en": { "name": "HTTP Status Lookup", "description": "Query HTTP status code meanings and usage.", "keywords": ["http", "status", "status code", "404", "500", "200"] },
+    "es": { "name": "Consulta de Códigos HTTP", "description": "Consulta el significado y uso de los códigos de estado HTTP.", "keywords": ["http", "status", "código de estado", "404", "500", "200"] },
+    "fr": { "name": "Recherche de Codes HTTP", "description": "Recherchez la signification et l'usage des codes de statut HTTP.", "keywords": ["http", "status", "code de statut", "404", "500", "200"] },
+    "de": { "name": "HTTP-Status-Abfrage", "description": "Bedeutung und Verwendung von HTTP-Statuscodes abfragen.", "keywords": ["http", "status", "Statuscode", "404", "500", "200"] },
+    "ja": { "name": "HTTPステータスコード検索", "description": "HTTPステータスコードの意味と用途を検索。", "keywords": ["http", "status", "ステータスコード", "404", "500", "200"] },
+    "it": { "name": "Ricerca Stato HTTP", "description": "Cerca il significato e l'uso dei codici di stato HTTP.", "keywords": ["http", "status", "codice di stato", "404", "500", "200"] },
+    "ko": { "name": "HTTP 상태 코드 조회", "description": "HTTP 상태 코드의 의미와 용도를 조회합니다.", "keywords": ["http", "status", "상태 코드", "404", "500", "200"] },
+    "ru": { "name": "Поиск HTTP-Статусов", "description": "Узнайте значение и назначение кодов состояния HTTP.", "keywords": ["http", "status", "код состояния", "404", "500", "200"] },
+    "pt": { "name": "Consulta de Status HTTP", "description": "Consulte o significado e uso dos códigos de status HTTP.", "keywords": ["http", "status", "código de status", "404", "500", "200"] }
+  },
+  "/ip-query": {
+    "en": { "name": "IP Address Lookup", "description": "Query current public IP address and geolocation information.", "keywords": ["ip", "address", "lookup", "geolocation", "ISP", "network"] },
+    "es": { "name": "Consulta de Dirección IP", "description": "Consulta la dirección IP pública actual e información de geolocalización.", "keywords": ["ip", "dirección", "consulta", "geolocalización", "ISP", "red"] },
+    "fr": { "name": "Recherche d'Adresse IP", "description": "Recherchez l'adresse IP publique actuelle et les informations de géolocalisation.", "keywords": ["ip", "adresse", "recherche", "géolocalisation", "FAI", "réseau"] },
+    "de": { "name": "IP-Adressen-Abfrage", "description": "Aktuelle öffentliche IP-Adresse und Standortinformationen abfragen.", "keywords": ["ip", "Adresse", "Abfrage", "Standort", "ISP", "Netzwerk"] },
+    "ja": { "name": "IPアドレス検索", "description": "現在のグローバルIPアドレスと位置情報を検索。", "keywords": ["ip", "アドレス", "検索", "位置情報", "ISP", "ネットワーク"] },
+    "it": { "name": "Ricerca Indirizzo IP", "description": "Cerca l'indirizzo IP pubblico attuale e le informazioni di geolocalizzazione.", "keywords": ["ip", "indirizzo", "ricerca", "geolocalizzazione", "ISP", "rete"] },
+    "ko": { "name": "IP 주소 조회", "description": "현재 공인 IP 주소와 지리적 위치 정보를 조회합니다.", "keywords": ["ip", "주소", "조회", "지리정보", "ISP", "네트워크"] },
+    "ru": { "name": "Поиск IP-Адреса", "description": "Узнайте текущий публичный IP-адрес и данные геолокации.", "keywords": ["ip", "адрес", "поиск", "геолокация", "провайдер", "сеть"] },
+    "pt": { "name": "Consulta de Endereço IP", "description": "Consulte o endereço IP público atual e informações de geolocalização.", "keywords": ["ip", "endereço", "consulta", "geolocalização", "ISP", "rede"] }
+  },
+  "/subnet-calculator": {
+    "en": { "name": "IP Subnet Calculator", "description": "Calculate IP subnet info including network address, broadcast address, and usable hosts.", "keywords": ["ip", "subnet", "mask", "cidr", "network", "calculator"] },
+    "es": { "name": "Calculadora de Subredes IP", "description": "Calcula información de subredes IP incluyendo dirección de red, dirección de broadcast y hosts utilizables.", "keywords": ["ip", "subred", "máscara", "cidr", "red", "calculadora"] },
+    "fr": { "name": "Calculateur de Sous-réseau IP", "description": "Calculez les informations de sous-réseau IP y compris l'adresse réseau, l'adresse de diffusion et les hôtes utilisables.", "keywords": ["ip", "sous-réseau", "masque", "cidr", "réseau", "calculateur"] },
+    "de": { "name": "IP-Subnetzrechner", "description": "Berechnen Sie IP-Subnetzinformationen einschließlich Netzwerkadresse, Broadcast-Adresse und nutzbarer Hosts.", "keywords": ["ip", "Subnetz", "Maske", "cidr", "Netzwerk", "Rechner"] },
+    "ja": { "name": "IPサブネット計算機", "description": "ネットワークアドレス、ブロードキャストアドレス、使用可能ホスト数などのIPサブネット情報を計算。", "keywords": ["ip", "サブネット", "マスク", "cidr", "ネットワーク", "計算機"] },
+    "it": { "name": "Calcolatore di Sottoreti IP", "description": "Calcola informazioni sulle sottoreti IP inclusi indirizzo di rete, indirizzo broadcast e host utilizzabili.", "keywords": ["ip", "sottorete", "maschera", "cidr", "rete", "calcolatore"] },
+    "ko": { "name": "IP 서브넷 계산기", "description": "네트워크 주소, 브로드캐스트 주소, 사용 가능 호스트 등 IP 서브넷 정보를 계산합니다.", "keywords": ["ip", "서브넷", "마스크", "cidr", "네트워크", "계산기"] },
+    "ru": { "name": "Калькулятор IP-Подсетей", "description": "Рассчитывайте информацию об IP-подсетях, включая сетевой адрес, широковещательный адрес и доступные хосты.", "keywords": ["ip", "подсеть", "маска", "cidr", "сеть", "калькулятор"] },
+    "pt": { "name": "Calculadora de Sub-rede IP", "description": "Calcule informações de sub-rede IP incluindo endereço de rede, endereço de broadcast e hosts utilizáveis.", "keywords": ["ip", "sub-rede", "máscara", "cidr", "rede", "calculadora"] }
+  },
+  "/ua-parser": {
+    "en": { "name": "UserAgent Parser", "description": "Parse User-Agent strings to identify browser, OS, and device info.", "keywords": ["useragent", "ua", "browser", "os", "device", "parser"] },
+    "es": { "name": "Analizador de User-Agent", "description": "Analiza cadenas User-Agent para identificar navegador, sistema operativo y dispositivo.", "keywords": ["useragent", "ua", "navegador", "so", "dispositivo", "analizador"] },
+    "fr": { "name": "Analyseur User-Agent", "description": "Analysez les chaînes User-Agent pour identifier le navigateur, le système d'exploitation et l'appareil.", "keywords": ["useragent", "ua", "navigateur", "os", "appareil", "analyseur"] },
+    "de": { "name": "User-Agent-Parser", "description": "User-Agent-Strings analysieren, um Browser, Betriebssystem und Gerät zu erkennen.", "keywords": ["useragent", "ua", "Browser", "OS", "Gerät", "Parser"] },
+    "ja": { "name": "UserAgent解析ツール", "description": "User-Agent文字列を解析し、ブラウザ、OS、デバイス情報を識別。", "keywords": ["useragent", "ua", "ブラウザ", "OS", "デバイス", "パーサー"] },
+    "it": { "name": "Parser UserAgent", "description": "Analizza stringhe User-Agent per identificare browser, sistema operativo e dispositivo.", "keywords": ["useragent", "ua", "browser", "os", "dispositivo", "parser"] },
+    "ko": { "name": "UserAgent 파서", "description": "User-Agent 문자열을 분석해 브라우저, OS, 기기 정보를 식별합니다.", "keywords": ["useragent", "ua", "브라우저", "OS", "기기", "파서"] },
+    "ru": { "name": "Парсер User-Agent", "description": "Разбирайте строки User-Agent для определения браузера, ОС и устройства.", "keywords": ["useragent", "ua", "браузер", "ОС", "устройство", "парсер"] },
+    "pt": { "name": "Analisador de User-Agent", "description": "Analise strings User-Agent para identificar navegador, sistema operacional e dispositivo.", "keywords": ["useragent", "ua", "navegador", "so", "dispositivo", "analisador"] }
+  },
+  "/case-converter": {
+    "en": { "name": "Case Converter", "description": "Convert text case including camel, Pascal, snake, kebab, constant, path, dot, slug, and toggle case.", "keywords": ["case", "convert", "camel", "snake", "kebab", "slug", "Pascal", "constant"] },
+    "es": { "name": "Convertidor de Mayúsculas/Minúsculas", "description": "Convierte entre mayúsculas y minúsculas: camel, Pascal, snake, kebab, constante, ruta, punto, slug e inversión.", "keywords": ["mayúsculas", "convertir", "camel", "snake", "kebab", "slug", "Pascal", "constante"] },
+    "fr": { "name": "Convertisseur de Casse", "description": "Convertissez la casse du texte : camel, Pascal, snake, kebab, constante, chemin, point, slug et inversion.", "keywords": ["casse", "convertir", "camel", "snake", "kebab", "slug", "Pascal", "constante"] },
+    "de": { "name": "Groß-/Kleinschreibung-Wandler", "description": "Wandeln Sie die Schreibweise um: Camel, Pascal, Snake, Kebab, Konstante, Pfad, Punkt, Slug und Toggle.", "keywords": ["schreibweise", "umwandeln", "camel", "snake", "kebab", "slug", "Pascal", "konstante"] },
+    "ja": { "name": "文字列ケース変換", "description": "キャメル、パスカル、スネーク、ケバブ、定数、パス、ドット、スラッグ、トグルなどの文字列ケースを変換。", "keywords": ["ケース", "変換", "キャメル", "スネーク", "ケバブ", "スラッグ", "パスカル", "定数"] },
+    "it": { "name": "Convertitore di Caso", "description": "Converti il casing del testo: camel, Pascal, snake, kebab, costante, percorso, punto, slug e inversione.", "keywords": ["casing", "convertire", "camel", "snake", "kebab", "slug", "Pascal", "costante"] },
+    "ko": { "name": "대소문자 변환기", "description": "칼럘, 파스칼, 스네이크, 케밥, 상수, 경로, 점, 슬러그, 토글 등 문자열 케이스를 변환합니다.", "keywords": ["케이스", "변환", "칼럘", "스네이크", "케밥", "슬러그", "파스칼", "상수"] },
+    "ru": { "name": "Конвертер Регистра", "description": "Преобразуйте регистр текста: camel, Pascal, snake, kebab, constant, path, dot, slug и toggle.", "keywords": ["регистр", "преобразовать", "camel", "snake", "kebab", "slug", "Pascal", "константа"] },
+    "pt": { "name": "Conversor de Caso", "description": "Converta o casing do texto: camel, Pascal, snake, kebab, constante, caminho, ponto, slug e inversão.", "keywords": ["casing", "converter", "camel", "snake", "kebab", "slug", "Pascal", "constante"] }
+  },
+  "/traditional-simplified": {
+    "en": { "name": "Traditional/Simplified Chinese", "description": "Convert between Traditional and Simplified Chinese.", "keywords": ["traditional", "simplified", "chinese", "convert"] },
+    "es": { "name": "Chino Tradicional/Simplificado", "description": "Convierte entre chino tradicional y simplificado.", "keywords": ["tradicional", "simplificado", "chino", "convertir"] },
+    "fr": { "name": "Chinois Traditionnel/Simplifié", "description": "Convertissez entre chinois traditionnel et simplifié.", "keywords": ["traditionnel", "simplifié", "chinois", "convertir"] },
+    "de": { "name": "Traditionelles/Vereinfachtes Chinesisch", "description": "Zwischen traditionellem und vereinfachtem Chinesisch umwandeln.", "keywords": ["traditionell", "vereinfacht", "chinesisch", "umwandeln"] },
+    "ja": { "name": "繁体字/簡体字変換", "description": "繁体字中国語と簡体字中国語を相互変換。", "keywords": ["繁体字", "簡体字", "中国語", "変換"] },
+    "it": { "name": "Cinese Tradizionale/Semplificato", "description": "Converti tra cinese tradizionale e semplificato.", "keywords": ["tradizionale", "semplificato", "cinese", "convertire"] },
+    "ko": { "name": "번체/간체 중국어 변환", "description": "번체 중국어와 간체 중국어를 상호 변환합니다.", "keywords": ["번체", "간체", "중국어", "변환"] },
+    "ru": { "name": "Традиционный/Упрощённый Китайский", "description": "Преобразование между традиционным и упрощённым китайским.", "keywords": ["традиционный", "упрощённый", "китайский", "преобразовать"] },
+    "pt": { "name": "Chinês Tradicional/Simplificado", "description": "Converta entre chinês tradicional e simplificado.", "keywords": ["tradicional", "simplificado", "chinês", "converter"] }
+  },
+  "/money-cn": {
+    "en": { "name": "Amount to Chinese Uppercase", "description": "Convert numeric amounts to Chinese uppercase numerals.", "keywords": ["amount", "uppercase", "chinese", "numeral"] },
+    "es": { "name": "Números a Letras Chinos", "description": "Convierte cantidades numéricas a números en chino mayúscula.", "keywords": ["cantidad", "mayúscula", "chino", "numeral"] },
+    "fr": { "name": "Montant en Chinois Majuscule", "description": "Convertissez les montants numériques en chiffres chinois majuscules.", "keywords": ["montant", "majuscule", "chinois", "chiffre"] },
+    "de": { "name": "Betrag in Chinesischen Großbuchstaben", "description": "Konvertieren Sie Zahlenbeträge in chinesische Großziffern.", "keywords": ["betrag", "großbuchstaben", "chinesisch", "ziffer"] },
+    "ja": { "name": "漢字大写金額変換", "description": "数字の金額を漢字の大字（壱弐参）に変換。", "keywords": ["金額", "大字", "漢字", "数字"] },
+    "it": { "name": "Importo in Cinese Maiuscolo", "description": "Converti importi numerici in numeri cinesi maiuscoli.", "keywords": ["importo", "maiuscolo", "cinese", "numero"] },
+    "ko": { "name": "한자 대쓰기 금액 변환", "description": "숫자 금액을 한자 대쓰기 숫자로 변환합니다.", "keywords": ["금액", "대쓰기", "한자", "숫자"] },
+    "ru": { "name": "Сумма Прописью по-Китайски", "description": "Преобразование числовых сумм в китайские заглавные цифры.", "keywords": ["сумма", "пропись", "китайский", "цифра"] },
+    "pt": { "name": "Valor por Extenso em Chinês", "description": "Converta valores numéricos em numerais chineses maiúsculos.", "keywords": ["valor", "maiuscula", "chinês", "numeral"] }
+  },
+  "/morse-code": {
+    "en": { "name": "Morse Code", "description": "Morse Code encoder/decoder supporting Chinese, English, and audio playback.", "keywords": ["morse", "code", "encode", "decode", "telegraph"] },
+    "es": { "name": "Código Morse", "description": "Codificador/decodificador de código Morse que admite chino, inglés y reproducción de audio.", "keywords": ["morse", "código", "codificar", "decodificar", "telégrafo"] },
+    "fr": { "name": "Code Morse", "description": "Encodeur/décodeur Morse prenant en charge le chinois, l'anglais et la lecture audio.", "keywords": ["morse", "code", "encoder", "décoder", "télégraphe"] },
+    "de": { "name": "Morsecode", "description": "Morsecode-Encoder/Decoder mit Unterstützung für Chinesisch, Englisch und Audio-Wiedergabe.", "keywords": ["morse", "code", "kodieren", "dekodieren", "telegraf"] },
+    "ja": { "name": "モールス信号", "description": "中国語・英語・音声再生に対応したモールス符号のエンコード/デコード。", "keywords": ["モールス", "符号", "エンコード", "デコード", "電信"] },
+    "it": { "name": "Codice Morse", "description": "Codificatore/decodificatore Morse che supporta cinese, inglese e riproduzione audio.", "keywords": ["morse", "codice", "codifica", "decodifica", "telegrafo"] },
+    "ko": { "name": "모스 부호", "description": "중국어, 영어, 오디오 재생을 지원하는 모스 부호 인코딩/디코딩입니다.", "keywords": ["모스", "부호", "인코딩", "디코딩", "전신"] },
+    "ru": { "name": "Азбука Морзе", "description": "Кодер/декодер азбуки Морзе с поддержкой китайского, английского и аудиовоспроизведения.", "keywords": ["морзе", "код", "кодировать", "декодировать", "телеграф"] },
+    "pt": { "name": "Código Morse", "description": "Codificador/decodificador de código Morse com suporte a chinês, inglês e reprodução de áudio.", "keywords": ["morse", "código", "codificar", "decodificar", "telégrafo"] }
+  },
+  "/image-table-recognizer": {
+    "en": { "name": "Image Table Recognizer", "description": "Upload images to recognize table content and generate editable tables for export.", "keywords": ["image", "table", "OCR", "recognize", "Excel", "export"] },
+    "es": { "name": "Reconocedor de Tablas en Imágenes", "description": "Sube imágenes para reconocer el contenido de tablas y generar tablas editables para exportar.", "keywords": ["imagen", "tabla", "OCR", "reconocer", "Excel", "exportar"] },
+    "fr": { "name": "Reconnaissance de Tableaux d'Images", "description": "Téléchargez des images pour reconnaître le contenu des tableaux et générer des tableaux modifiables à exporter.", "keywords": ["image", "tableau", "OCR", "reconnaître", "Excel", "exporter"] },
+    "de": { "name": "Bild-zu-Tabelle-Erkennung", "description": "Laden Sie Bilder hoch, um Tabelleninhalte zu erkennen und bearbeitbare Tabellen zum Export zu generieren.", "keywords": ["Bild", "Tabelle", "OCR", "erkennen", "Excel", "exportieren"] },
+    "ja": { "name": "画像テーブル認識", "description": "画像をアップロードして表の内容を認識し、編集可能な表を生成してエクスポート。", "keywords": ["画像", "表", "OCR", "認識", "Excel", "エクスポート"] },
+    "it": { "name": "Riconoscimento Tabelle da Immagini", "description": "Carica immagini per riconoscere il contenuto delle tabelle e generare tabelle modificabili da esportare.", "keywords": ["immagine", "tabella", "OCR", "riconoscere", "Excel", "esportare"] },
+    "ko": { "name": "이미지 표 인식", "description": "이미지를 업로드해 표 내용을 인식하고 편집 가능한 표를 생성해 익스포트합니다.", "keywords": ["이미지", "표", "OCR", "인식", "Excel", "익스포트"] },
+    "ru": { "name": "Распознавание Таблиц на Изображениях", "description": "Загружайте изображения для распознавания содержимого таблиц и создания редактируемых таблиц для экспорта.", "keywords": ["изображение", "таблица", "OCR", "распознать", "Excel", "экспорт"] },
+    "pt": { "name": "Reconhecedor de Tabelas em Imagens", "description": "Faça upload de imagens para reconhecer o conteúdo de tabelas e gerar tabelas editáveis para exportação.", "keywords": ["imagem", "tabela", "OCR", "reconhecer", "Excel", "exportar"] }
+  },
+  "/text-diff": {
+    "en": { "name": "Text Diff", "description": "Compare two text passages and highlight additions, deletions, and modifications.", "keywords": ["diff", "compare", "text", "difference", "highlight"] },
+    "es": { "name": "Diferencias de Texto", "description": "Compara dos textos y resalta adiciones, eliminaciones y modificaciones.", "keywords": ["diff", "comparar", "texto", "diferencia", "resaltar"] },
+    "fr": { "name": "Diff de Texte", "description": "Comparez deux passages de texte et mettez en évidence les ajouts, suppressions et modifications.", "keywords": ["diff", "comparer", "texte", "différence", "surligner"] },
+    "de": { "name": "Text-Diff", "description": "Vergleichen Sie zwei Textabschnitte und heben Sie Hinzufügungen, Löschungen und Änderungen hervor.", "keywords": ["diff", "vergleichen", "Text", "Unterschied", "hervorheben"] },
+    "ja": { "name": "テキスト差分", "description": "2つのテキストを比較し、追加・削除・変更をハイライト表示。", "keywords": ["diff", "比較", "テキスト", "差分", "ハイライト"] },
+    "it": { "name": "Diff di Testo", "description": "Confronta due testi ed evidenzia aggiunte, eliminazioni e modifiche.", "keywords": ["diff", "confrontare", "testo", "differenza", "evidenziare"] },
+    "ko": { "name": "텍스트 비교", "description": "두 텍스트를 비교해 추가, 삭제, 수정 내용을 강조 표시합니다.", "keywords": ["diff", "비교", "텍스트", "차이", "강조"] },
+    "ru": { "name": "Сравнение Текстов", "description": "Сравните два фрагмента текста и выделите добавления, удаления и изменения.", "keywords": ["diff", "сравнить", "текст", "разница", "выделить"] },
+    "pt": { "name": "Diff de Texto", "description": "Compare dois textos e destaque adições, exclusões e modificações.", "keywords": ["diff", "comparar", "texto", "diferença", "destacar"] }
+  },
+  "/text-dedup-sort": {
+    "en": { "name": "Text Dedup & Sort", "description": "Remove duplicate lines and sort alphabetically or numerically.", "keywords": ["deduplicate", "sort", "duplicate", "line", "alphabetical", "numeric"] },
+    "es": { "name": "Eliminar Duplicados y Ordenar Texto", "description": "Elimina líneas duplicadas y ordena alfabética o numéricamente.", "keywords": ["duplicado", "ordenar", "línea", "alfabético", "numérico"] },
+    "fr": { "name": "Dédupliquer et Trier le Texte", "description": "Supprimez les lignes en double et triez par ordre alphabétique ou numérique.", "keywords": ["doublon", "trier", "ligne", "alphabétique", "numérique"] },
+    "de": { "name": "Text-Deduplizieren & Sortieren", "description": "Entfernen Sie doppelte Zeilen und sortieren Sie alphabetisch oder numerisch.", "keywords": ["duplikat", "sortieren", "zeile", "alphabetisch", "numerisch"] },
+    "ja": { "name": "テキストの重複削除と並べ替え", "description": "重複行を削除し、英数字順に並べ替えます。", "keywords": ["重複削除", "並べ替え", "重複行", "アルファベット", "数字"] },
+    "it": { "name": "Rimuovi Duplicati e Ordina Testo", "description": "Rimuovi righe duplicate e ordina alfabeticamente o numericamente.", "keywords": ["duplicato", "ordinare", "riga", "alfabetico", "numerico"] },
+    "ko": { "name": "텍스트 중복 제거 및 정렬", "description": "중복 줄을 제거하고 알파벳/숫자 순서로 정렬합니다.", "keywords": ["중복제거", "정렬", "중복", "줄", "알파벳", "숫자"] },
+    "ru": { "name": "Удаление Дубликатов и Сортировка Текста", "description": "Удаляйте повторяющиеся строки и сортируйте по алфавиту или числам.", "keywords": ["дубликат", "сортировка", "строка", "алфавит", "число"] },
+    "pt": { "name": "Remover Duplicados e Ordenar Texto", "description": "Remova linhas duplicadas e ordene alfabética ou numericamente.", "keywords": ["duplicado", "ordenar", "linha", "alfabético", "numérico"] }
+  },
+  "/text-to-speech": {
+    "en": { "name": "Text to Speech", "description": "Convert text to speech with multi-language support and speed adjustment.", "keywords": ["tts", "speech", "voice", "read aloud", "speechSynthesis"] },
+    "es": { "name": "Texto a Voz", "description": "Convierte texto a voz con soporte multilingüe y ajuste de velocidad.", "keywords": ["tts", "voz", "audio", "leer en voz alta", "speechSynthesis"] },
+    "fr": { "name": "Texte vers Voix", "description": "Convertissez du texte en parole avec prise en charge multilingue et réglage de la vitesse.", "keywords": ["tts", "voix", "audio", "lire à haute voix", "speechSynthesis"] },
+    "de": { "name": "Text-zu-Sprache", "description": "Wandeln Sie Text in Sprache um mit mehrsprachiger Unterstützung und Geschwindigkeitsanpassung.", "keywords": ["tts", "sprache", "audio", "laut vorlesen", "speechSynthesis"] },
+    "ja": { "name": "テキスト読み上げ", "description": "多言語対応と速度調整付きでテキストを音声に変換。", "keywords": ["tts", "音声", "読み上げ", "速度調整", "speechSynthesis"] },
+    "it": { "name": "Testo in Voce", "description": "Converti testo in voce con supporto multilingua e regolazione della velocità.", "keywords": ["tts", "voce", "audio", "lettura ad alta voce", "speechSynthesis"] },
+    "ko": { "name": "텍스트 음성 변환", "description": "다국어 지원과 속도 조절로 텍스트를 음성으로 변환합니다.", "keywords": ["tts", "음성", "낭독", "속도조절", "speechSynthesis"] },
+    "ru": { "name": "Текст в Речь", "description": "Преобразование текста в речь с поддержкой нескольких языков и настройкой скорости.", "keywords": ["tts", "речь", "голос", "вслух", "speechSynthesis"] },
+    "pt": { "name": "Texto para Fala", "description": "Converta texto em fala com suporte multilíngue e ajuste de velocidade.", "keywords": ["tts", "fala", "voz", "ler em voz alta", "speechSynthesis"] }
+  },
+  "/regex-tester": {
+    "en": { "name": "Regex Tester", "description": "Test regular expression matching, replacement, and parsing with a common regex library.", "keywords": ["regex", "regular expression", "match", "test", "replace", "explain"] },
+    "es": { "name": "Probador de Regex", "description": "Prueba coincidencias, reemplazos y análisis de expresiones regulares con una biblioteca común.", "keywords": ["regex", "expresión regular", "coincidir", "probar", "reemplazar", "explicar"] },
+    "fr": { "name": "Testeur de Regex", "description": "Testez les correspondances, remplacements et analyse d'expressions régulières avec une bibliothèque commune.", "keywords": ["regex", "expression régulière", "correspondance", "tester", "remplacer", "expliquer"] },
+    "de": { "name": "Regex-Tester", "description": "Testen Sie reguläre Ausdrücke: Matching, Ersetzen und Parsen mit einer gemeinsamen Regex-Bibliothek.", "keywords": ["regex", "regular expression", "übereinstimmung", "testen", "ersetzen", "erklären"] },
+    "ja": { "name": "正規表現テスター", "description": "よく使う正規表現ライブラリ付きでマッチ、置換、解析をテスト。", "keywords": ["regex", "正規表現", "マッチ", "テスト", "置換", "解説"] },
+    "it": { "name": "Tester di Regex", "description": "Testa corrispondenze, sostituzioni e analisi di espressioni regolari con una libreria comune.", "keywords": ["regex", "espressione regolare", "corrispondenza", "test", "sostituire", "spiegare"] },
+    "ko": { "name": "정규식 테스터", "description": "일반적인 정규식 라이브러리로 매칭, 치환, 해석을 테스트합니다.", "keywords": ["regex", "정규식", "매칭", "테스트", "치환", "해석"] },
+    "ru": { "name": "Тестер Регулярных Выражений", "description": "Тестируйте совпадения, замену и разбор регулярных выражений с библиотекой общих шаблонов.", "keywords": ["regex", "регулярное выражение", "совпадение", "тест", "замена", "объяснить"] },
+    "pt": { "name": "Testador de Regex", "description": "Teste correspondências, substituições e análise de expressões regulares com uma biblioteca comum.", "keywords": ["regex", "expressão regular", "corresponder", "testar", "substituir", "explicar"] }
+  }
+}

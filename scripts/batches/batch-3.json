@@ -1,0 +1,271 @@
+[
+  {
+    "name": "阴影生成器",
+    "path": "/shadow-generator",
+    "description": "生成 CSS box-shadow 代码",
+    "category": "设计工具",
+    "keywords": [
+      "阴影",
+      "CSS",
+      "box-shadow"
+    ]
+  },
+  {
+    "name": "Favicon 生成",
+    "path": "/favicon-generator",
+    "description": "用文字或 Emoji 生成多尺寸 Favicon 图标（PNG/ICO）",
+    "category": "设计工具",
+    "keywords": [
+      "favicon",
+      "图标",
+      "icon",
+      "emoji",
+      "网站图标"
+    ]
+  },
+  {
+    "name": "密码生成器",
+    "path": "/password-generator",
+    "description": "生成安全随机密码与易记口令短语，支持自定义字符集、排除易混淆字符、熵值评估",
+    "category": "生成器",
+    "keywords": [
+      "password",
+      "密码",
+      "生成",
+      "随机",
+      "安全",
+      "口令",
+      "passphrase",
+      "熵"
+    ]
+  },
+  {
+    "name": "Lorem Ipsum 生成器",
+    "path": "/lorem-ipsum",
+    "description": "生成占位文本（Lorem Ipsum），支持按段落/句子/单词生成",
+    "category": "生成器",
+    "keywords": [
+      "lorem",
+      "ipsum",
+      "占位",
+      "填充文本",
+      "dummy",
+      "placeholder"
+    ]
+  },
+  {
+    "name": "UUID 生成器",
+    "path": "/uuid-generator",
+    "description": "批量生成 UUID v1/v4，支持无横线、大写、URN、花括号等多种格式，可下载 TXT",
+    "category": "生成器",
+    "keywords": [
+      "uuid",
+      "guid",
+      "唯一标识",
+      "生成",
+      "随机",
+      "v1",
+      "v4",
+      "urn",
+      "批量"
+    ]
+  },
+  {
+    "name": "贷款计算器",
+    "path": "/loan-calculator",
+    "description": "等额本息与等额本金两种方式计算房贷还款明细",
+    "category": "生活计算",
+    "keywords": [
+      "loan",
+      "贷款",
+      "房贷",
+      "还款",
+      "利息",
+      "等额本息",
+      "等额本金"
+    ]
+  },
+  {
+    "name": "单位换算",
+    "path": "/unit-converter",
+    "description": "支持长度、重量、温度、面积、体积、速度、时间、数据、压强、能量等单位转换，含常用市制/英制单位",
+    "category": "生活计算",
+    "keywords": [
+      "单位",
+      "换算",
+      "长度",
+      "重量",
+      "温度",
+      "面积",
+      "体积",
+      "速度",
+      "时间",
+      "数据",
+      "压强",
+      "能量",
+      "市制",
+      "英制"
+    ]
+  },
+  {
+    "name": "个税计算器",
+    "path": "/tax-calculator",
+    "description": "基于 2024 个税税率表计算个人所得税，支持专项附加扣除",
+    "category": "生活计算",
+    "keywords": [
+      "tax",
+      "个税",
+      "所得税",
+      "工资",
+      "税率",
+      "扣除"
+    ]
+  },
+  {
+    "name": "年龄计算器",
+    "path": "/age-calculator",
+    "description": "根据生日计算精确年龄",
+    "category": "生活计算",
+    "keywords": [
+      "年龄",
+      "生日",
+      "计算",
+      "岁数"
+    ]
+  },
+  {
+    "name": "日期差计算",
+    "path": "/date-diff",
+    "description": "计算两个日期之间的天数、月数、年数",
+    "category": "生活计算",
+    "keywords": [
+      "日期",
+      "差",
+      "天数",
+      "月数",
+      "年数"
+    ]
+  },
+  {
+    "name": "BMI 计算器",
+    "path": "/bmi-calculator",
+    "description": "根据身高体重计算 BMI 指数",
+    "category": "生活计算",
+    "keywords": [
+      "BMI",
+      "体重",
+      "身高",
+      "健康"
+    ]
+  },
+  {
+    "name": "关系图",
+    "path": "/relation-graph-maker",
+    "description": "生成节点关系图（Mermaid graph）",
+    "category": "数据可视化",
+    "keywords": [
+      "relation",
+      "graph",
+      "关系图",
+      "节点",
+      "mermaid"
+    ]
+  },
+  {
+    "name": "流程图生成",
+    "path": "/flowchart-generator",
+    "description": "生成 Mermaid 流程图代码",
+    "category": "数据可视化",
+    "keywords": [
+      "flowchart",
+      "流程图",
+      "mermaid",
+      "图"
+    ]
+  },
+  {
+    "name": "热力图",
+    "path": "/heatmap-maker",
+    "description": "生成数据热力图",
+    "category": "数据可视化",
+    "keywords": [
+      "heatmap",
+      "热力图",
+      "数据",
+      "可视化"
+    ]
+  },
+  {
+    "name": "时间轴生成",
+    "path": "/timeline-generator",
+    "description": "生成时间轴可视化",
+    "category": "数据可视化",
+    "keywords": [
+      "timeline",
+      "时间轴",
+      "时间线"
+    ]
+  },
+  {
+    "name": "树状图绘制",
+    "path": "/tree-diagram-drawer",
+    "description": "绘制层级树状结构图",
+    "category": "数据可视化",
+    "keywords": [
+      "tree",
+      "diagram",
+      "树状图",
+      "层级"
+    ]
+  },
+  {
+    "name": "数据表格渲染",
+    "path": "/data-table-renderer",
+    "description": "将 CSV/JSON 数据渲染为表格",
+    "category": "数据可视化",
+    "keywords": [
+      "data",
+      "table",
+      "表格",
+      "渲染"
+    ]
+  },
+  {
+    "name": "思维导图",
+    "path": "/mind-map-maker",
+    "description": "生成思维导图（Mermaid mindmap）",
+    "category": "数据可视化",
+    "keywords": [
+      "mind",
+      "map",
+      "思维导图",
+      "mermaid"
+    ]
+  },
+  {
+    "name": "统计图表",
+    "path": "/stats-chart-maker",
+    "description": "生成柱状图/折线图/饼图统计图表",
+    "category": "数据可视化",
+    "keywords": [
+      "chart",
+      "统计",
+      "图表",
+      "bar",
+      "line",
+      "pie"
+    ]
+  },
+  {
+    "name": "CSV 图表生成",
+    "path": "/csv-chart-generator",
+    "description": "将 CSV 数据生成为图表",
+    "category": "数据可视化",
+    "keywords": [
+      "csv",
+      "chart",
+      "图表",
+      "可视化"
+    ]
+  }
+]

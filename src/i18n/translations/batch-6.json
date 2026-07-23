@@ -1,0 +1,942 @@
+{
+  "/word-counter": {
+    "en": {
+      "name": "Word Counter",
+      "description": "Count text characters, words, lines, paragraphs, Chinese characters, reading/speaking time, and show word frequency ranking.",
+      "keywords": ["word count", "character", "word", "line", "frequency", "reading time", "chinese"]
+    },
+    "es": {
+      "name": "Contador de palabras",
+      "description": "Cuenta caracteres, palabras, líneas, párrafos, caracteres chinos, tiempo de lectura/lectura en voz alta y muestra el ranking de frecuencia de palabras.",
+      "keywords": ["conteo palabras", "carácter", "palabra", "línea", "frecuencia", "tiempo lectura"]
+    },
+    "fr": {
+      "name": "Compteur de mots",
+      "description": "Compte les caractères, mots, lignes, paragraphes, caractères chinois, temps de lecture et affiche le classement de fréquence des mots.",
+      "keywords": ["compteur mots", "caractère", "mot", "ligne", "fréquence", "temps lecture"]
+    },
+    "de": {
+      "name": "Wörterzähler",
+      "description": "Zählt Zeichen, Wörter, Zeilen, Absätze, chinesische Zeichen, Lesezeit und zeigt die Worthäufigkeits-Rangliste.",
+      "keywords": ["wörter zählen", "zeichen", "wort", "zeile", "häufigkeit", "lesezeit"]
+    },
+    "ja": {
+      "name": "文字数カウンター",
+      "description": "文字数、単語数、行数、段落数、中国語文字、読書時間を集計し、頻出単語ランキングを表示します。",
+      "keywords": ["文字数", "単語数", "行数", "頻出", "読書時間"]
+    },
+    "it": {
+      "name": "Contatore di parole",
+      "description": "Conta caratteri, parole, righe, paragrafi, caratteri cinesi, tempo di lettura e mostra la classifica della frequenza delle parole.",
+      "keywords": ["conteggio parole", "carattere", "parola", "riga", "frequenza", "tempo lettura"]
+    },
+    "ko": {
+      "name": "글자 수 세기",
+      "description": "문자 수, 단어 수, 줄 수, 문단 수, 중국어 문자, 독서 시간을 집계하고 단어 빈도 순위를 보여줍니다.",
+      "keywords": ["글자 수", "단어 수", "줄 수", "빈도", "독서 시간"]
+    },
+    "ru": {
+      "name": "Счётчик слов",
+      "description": "Подсчитывает символы, слова, строки, абзацы, китайские иероглифы, время чтения и показывает рейтинг частотности слов.",
+      "keywords": ["подсчет слов", "символ", "слово", "строка", "частота", "время чтения"]
+    },
+    "pt": {
+      "name": "Contador de palavras",
+      "description": "Conta caracteres, palavras, linhas, parágrafos, caracteres chineses, tempo de leitura e exibe o ranking de frequência de palavras.",
+      "keywords": ["contagem palavras", "caractere", "palavra", "linha", "frequência", "tempo leitura"]
+    }
+  },
+  "/markdown-preview": {
+    "en": {
+      "name": "Markdown Preview",
+      "description": "Preview Markdown rendering in real time.",
+      "keywords": ["markdown", "md", "preview", "render", "document"]
+    },
+    "es": {
+      "name": "Vista previa Markdown",
+      "description": "Previsualiza la renderización de Markdown en tiempo real.",
+      "keywords": ["markdown", "md", "vista previa", "renderizado", "documento"]
+    },
+    "fr": {
+      "name": "Aperçu Markdown",
+      "description": "Prévisualise le rendu Markdown en temps réel.",
+      "keywords": ["markdown", "md", "aperçu", "rendu", "document"]
+    },
+    "de": {
+      "name": "Markdown-Vorschau",
+      "description": "Zeigt Markdown-Rendering in Echtzeit an.",
+      "keywords": ["markdown", "md", "vorschau", "rendering", "dokument"]
+    },
+    "ja": {
+      "name": "Markdown プレビュー",
+      "description": "Markdown のレンダリングをリアルタイムでプレビューします。",
+      "keywords": ["markdown", "md", "プレビュー", "レンダリング", "ドキュメント"]
+    },
+    "it": {
+      "name": "Anteprima Markdown",
+      "description": "Visualizza l'anteprima del rendering Markdown in tempo reale.",
+      "keywords": ["markdown", "md", "anteprima", "rendering", "documento"]
+    },
+    "ko": {
+      "name": "Markdown 미리보기",
+      "description": "Markdown 렌더링을 실시간으로 미리 봅니다.",
+      "keywords": ["markdown", "md", "미리보기", "렌더링", "문서"]
+    },
+    "ru": {
+      "name": "Предпросмотр Markdown",
+      "description": "Предварительный просмотр рендеринга Markdown в реальном времени.",
+      "keywords": ["markdown", "md", "предпросмотр", "рендеринг", "документ"]
+    },
+    "pt": {
+      "name": "Pré-visualização Markdown",
+      "description": "Pré-visualize a renderização do Markdown em tempo real.",
+      "keywords": ["markdown", "md", "pré-visualização", "renderização", "documento"]
+    }
+  },
+  "/doc-word-count": {
+    "en": {
+      "name": "Document Word Count",
+      "description": "Count words, lines and paragraphs in a document.",
+      "keywords": ["word", "count", "document", "paragraph", "line"]
+    },
+    "es": {
+      "name": "Contador de palabras de documento",
+      "description": "Cuenta palabras, líneas y párrafos de un documento.",
+      "keywords": ["word", "count", "documento", "párrafo", "línea"]
+    },
+    "fr": {
+      "name": "Compteur de mots de document",
+      "description": "Compte les mots, lignes et paragraphes d'un document.",
+      "keywords": ["word", "count", "document", "paragraphe", "ligne"]
+    },
+    "de": {
+      "name": "Dokumenten-Wörterzähler",
+      "description": "Zählt Wörter, Zeilen und Absätze in einem Dokument.",
+      "keywords": ["word", "count", "dokument", "absatz", "zeile"]
+    },
+    "ja": {
+      "name": "ドキュメント文字数カウント",
+      "description": "ドキュメントの文字数、行数、段落数をカウントします。",
+      "keywords": ["word", "count", "ドキュメント", "段落", "行"]
+    },
+    "it": {
+      "name": "Conteggio parole documento",
+      "description": "Conta parole, righe e paragrafi di un documento.",
+      "keywords": ["word", "count", "documento", "paragrafo", "riga"]
+    },
+    "ko": {
+      "name": "문서 글자 수 세기",
+      "description": "문서의 단어 수, 줄 수, 문단 수를 셉니다.",
+      "keywords": ["word", "count", "문서", "문단", "줄"]
+    },
+    "ru": {
+      "name": "Подсчёт слов в документе",
+      "description": "Подсчитывает слова, строки и абзацы в документе.",
+      "keywords": ["word", "count", "документ", "абзац", "строка"]
+    },
+    "pt": {
+      "name": "Contagem de palavras do documento",
+      "description": "Conta palavras, linhas e parágrafos de um documento.",
+      "keywords": ["word", "count", "documento", "parágrafo", "linha"]
+    }
+  },
+  "/csv-to-json": {
+    "en": {
+      "name": "CSV to JSON",
+      "description": "Convert CSV data into a JSON array.",
+      "keywords": ["csv", "json", "convert"]
+    },
+    "es": {
+      "name": "CSV a JSON",
+      "description": "Convierte datos CSV en un array JSON.",
+      "keywords": ["csv", "json", "convertir"]
+    },
+    "fr": {
+      "name": "CSV vers JSON",
+      "description": "Convertit des données CSV en tableau JSON.",
+      "keywords": ["csv", "json", "convertir"]
+    },
+    "de": {
+      "name": "CSV zu JSON",
+      "description": "Konvertiert CSV-Daten in ein JSON-Array.",
+      "keywords": ["csv", "json", "konvertieren"]
+    },
+    "ja": {
+      "name": "CSV から JSON",
+      "description": "CSV データを JSON 配列に変換します。",
+      "keywords": ["csv", "json", "変換"]
+    },
+    "it": {
+      "name": "CSV a JSON",
+      "description": "Converte dati CSV in un array JSON.",
+      "keywords": ["csv", "json", "convertire"]
+    },
+    "ko": {
+      "name": "CSV를 JSON으로",
+      "description": "CSV 데이터를 JSON 배열로 변환합니다.",
+      "keywords": ["csv", "json", "변환"]
+    },
+    "ru": {
+      "name": "CSV в JSON",
+      "description": "Преобразует CSV-данные в JSON-массив.",
+      "keywords": ["csv", "json", "конвертировать"]
+    },
+    "pt": {
+      "name": "CSV para JSON",
+      "description": "Converte dados CSV em um array JSON.",
+      "keywords": ["csv", "json", "converter"]
+    }
+  },
+  "/excel-to-csv": {
+    "en": {
+      "name": "Excel to CSV",
+      "description": "Convert Excel files to CSV format.",
+      "keywords": ["excel", "csv", "xlsx", "convert"]
+    },
+    "es": {
+      "name": "Excel a CSV",
+      "description": "Convierte archivos Excel a formato CSV.",
+      "keywords": ["excel", "csv", "xlsx", "convertir"]
+    },
+    "fr": {
+      "name": "Excel vers CSV",
+      "description": "Convertit des fichiers Excel au format CSV.",
+      "keywords": ["excel", "csv", "xlsx", "convertir"]
+    },
+    "de": {
+      "name": "Excel zu CSV",
+      "description": "Konvertiert Excel-Dateien in das CSV-Format.",
+      "keywords": ["excel", "csv", "xlsx", "konvertieren"]
+    },
+    "ja": {
+      "name": "Excel から CSV",
+      "description": "Excel ファイルを CSV 形式に変換します。",
+      "keywords": ["excel", "csv", "xlsx", "変換"]
+    },
+    "it": {
+      "name": "Excel a CSV",
+      "description": "Converte file Excel in formato CSV.",
+      "keywords": ["excel", "csv", "xlsx", "convertire"]
+    },
+    "ko": {
+      "name": "Excel을 CSV로",
+      "description": "Excel 파일을 CSV 형식으로 변환합니다.",
+      "keywords": ["excel", "csv", "xlsx", "변환"]
+    },
+    "ru": {
+      "name": "Excel в CSV",
+      "description": "Преобразует файлы Excel в формат CSV.",
+      "keywords": ["excel", "csv", "xlsx", "конвертировать"]
+    },
+    "pt": {
+      "name": "Excel para CSV",
+      "description": "Converte arquivos Excel para o formato CSV.",
+      "keywords": ["excel", "csv", "xlsx", "converter"]
+    }
+  },
+  "/markdown-to-pdf": {
+    "en": {
+      "name": "Markdown to PDF",
+      "description": "Convert Markdown to PDF document.",
+      "keywords": ["markdown", "pdf", "convert"]
+    },
+    "es": {
+      "name": "Markdown a PDF",
+      "description": "Convierte Markdown a documento PDF.",
+      "keywords": ["markdown", "pdf", "convertir"]
+    },
+    "fr": {
+      "name": "Markdown vers PDF",
+      "description": "Convertit Markdown en document PDF.",
+      "keywords": ["markdown", "pdf", "convertir"]
+    },
+    "de": {
+      "name": "Markdown zu PDF",
+      "description": "Konvertiert Markdown in ein PDF-Dokument.",
+      "keywords": ["markdown", "pdf", "konvertieren"]
+    },
+    "ja": {
+      "name": "Markdown から PDF",
+      "description": "Markdown を PDF ドキュメントに変換します。",
+      "keywords": ["markdown", "pdf", "変換"]
+    },
+    "it": {
+      "name": "Markdown a PDF",
+      "description": "Converte Markdown in documento PDF.",
+      "keywords": ["markdown", "pdf", "convertire"]
+    },
+    "ko": {
+      "name": "Markdown을 PDF로",
+      "description": "Markdown을 PDF 문서로 변환합니다.",
+      "keywords": ["markdown", "pdf", "변환"]
+    },
+    "ru": {
+      "name": "Markdown в PDF",
+      "description": "Преобразует Markdown в PDF-документ.",
+      "keywords": ["markdown", "pdf", "конвертировать"]
+    },
+    "pt": {
+      "name": "Markdown para PDF",
+      "description": "Converte Markdown para documento PDF.",
+      "keywords": ["markdown", "pdf", "converter"]
+    }
+  },
+  "/markdown-to-word": {
+    "en": {
+      "name": "Markdown to Word",
+      "description": "Convert Markdown to Word document (.doc).",
+      "keywords": ["markdown", "word", "doc", "convert"]
+    },
+    "es": {
+      "name": "Markdown a Word",
+      "description": "Convierte Markdown a documento Word (.doc).",
+      "keywords": ["markdown", "word", "doc", "convertir"]
+    },
+    "fr": {
+      "name": "Markdown vers Word",
+      "description": "Convertit Markdown en document Word (.doc).",
+      "keywords": ["markdown", "word", "doc", "convertir"]
+    },
+    "de": {
+      "name": "Markdown zu Word",
+      "description": "Konvertiert Markdown in ein Word-Dokument (.doc).",
+      "keywords": ["markdown", "word", "doc", "konvertieren"]
+    },
+    "ja": {
+      "name": "Markdown から Word",
+      "description": "Markdown を Word ドキュメント (.doc) に変換します。",
+      "keywords": ["markdown", "word", "doc", "変換"]
+    },
+    "it": {
+      "name": "Markdown a Word",
+      "description": "Converte Markdown in documento Word (.doc).",
+      "keywords": ["markdown", "word", "doc", "convertire"]
+    },
+    "ko": {
+      "name": "Markdown을 Word로",
+      "description": "Markdown을 Word 문서(.doc)로 변환합니다.",
+      "keywords": ["markdown", "word", "doc", "변환"]
+    },
+    "ru": {
+      "name": "Markdown в Word",
+      "description": "Преобразует Markdown в документ Word (.doc).",
+      "keywords": ["markdown", "word", "doc", "конвертировать"]
+    },
+    "pt": {
+      "name": "Markdown para Word",
+      "description": "Converte Markdown para documento Word (.doc).",
+      "keywords": ["markdown", "word", "doc", "converter"]
+    }
+  },
+  "/pdf-toolbox": {
+    "en": {
+      "name": "PDF Toolbox",
+      "description": "Merge, split, rotate, compress and extract text from PDFs.",
+      "keywords": ["pdf", "merge", "split", "rotate", "compress", "extract text"]
+    },
+    "es": {
+      "name": "Caja de herramientas PDF",
+      "description": "Une, divide, rota, comprime y extrae texto de PDFs.",
+      "keywords": ["pdf", "unir", "dividir", "rotar", "comprimir", "extraer texto"]
+    },
+    "fr": {
+      "name": "Boîte à outils PDF",
+      "description": "Fusionne, divise, pivote, compresse et extrait le texte des PDF.",
+      "keywords": ["pdf", "fusionner", "diviser", "pivoter", "compresser", "extraire texte"]
+    },
+    "de": {
+      "name": "PDF-Toolbox",
+      "description": "Fügt PDFs zusammen, teilt, dreht, komprimiert und extrahiert Text.",
+      "keywords": ["pdf", "zusammenführen", "teilen", "drehen", "komprimieren", "text extrahieren"]
+    },
+    "ja": {
+      "name": "PDF ツールボックス",
+      "description": "PDF の結合、分割、回転、圧縮、テキスト抽出を行います。",
+      "keywords": ["pdf", "結合", "分割", "回転", "圧縮", "テキスト抽出"]
+    },
+    "it": {
+      "name": "Toolbox PDF",
+      "description": "Unisce, divide, ruota, comprime ed estrae testo dai PDF.",
+      "keywords": ["pdf", "unire", "dividere", "ruotare", "comprimere", "estrarre testo"]
+    },
+    "ko": {
+      "name": "PDF 도구 상자",
+      "description": "PDF 병합, 분할, 회전, 압축, 텍스트 추출 기능을 제공합니다.",
+      "keywords": ["pdf", "병합", "분할", "회전", "압축", "텍스트 추출"]
+    },
+    "ru": {
+      "name": "Набор инструментов PDF",
+      "description": "Объединяет, разделяет, поворачивает, сжимает PDF и извлекает текст.",
+      "keywords": ["pdf", "объединить", "разделить", "повернуть", "сжать", "извлечь текст"]
+    },
+    "pt": {
+      "name": "Caixa de ferramentas PDF",
+      "description": "Mescla, divide, gira, comprime e extrai texto de PDFs.",
+      "keywords": ["pdf", "mesclar", "dividir", "girar", "comprimir", "extrair texto"]
+    }
+  },
+  "/txt-to-epub": {
+    "en": {
+      "name": "TXT to EPUB",
+      "description": "Convert plain text files to EPUB e-books.",
+      "keywords": ["txt", "epub", "ebook", "convert"]
+    },
+    "es": {
+      "name": "TXT a EPUB",
+      "description": "Convierte archivos de texto plano a libros electrónicos EPUB.",
+      "keywords": ["txt", "epub", "ebook", "convertir"]
+    },
+    "fr": {
+      "name": "TXT vers EPUB",
+      "description": "Convertit des fichiers texte en e-books EPUB.",
+      "keywords": ["txt", "epub", "livre numérique", "convertir"]
+    },
+    "de": {
+      "name": "TXT zu EPUB",
+      "description": "Konvertiert reine Textdateien in EPUB-E-Books.",
+      "keywords": ["txt", "epub", "ebook", "konvertieren"]
+    },
+    "ja": {
+      "name": "TXT から EPUB",
+      "description": "テキストファイルを EPUB 電子書籍に変換します。",
+      "keywords": ["txt", "epub", "電子書籍", "変換"]
+    },
+    "it": {
+      "name": "TXT a EPUB",
+      "description": "Converte file di testo in e-book EPUB.",
+      "keywords": ["txt", "epub", "ebook", "convertire"]
+    },
+    "ko": {
+      "name": "TXT를 EPUB으로",
+      "description": "일반 텍스트 파일을 EPUB 전자책으로 변환합니다.",
+      "keywords": ["txt", "epub", "전자책", "변환"]
+    },
+    "ru": {
+      "name": "TXT в EPUB",
+      "description": "Преобразует текстовые файлы в электронные книги EPUB.",
+      "keywords": ["txt", "epub", "электронная книга", "конвертировать"]
+    },
+    "pt": {
+      "name": "TXT para EPUB",
+      "description": "Converte arquivos de texto simples em e-books EPUB.",
+      "keywords": ["txt", "epub", "ebook", "converter"]
+    }
+  },
+  "/word-to-markdown": {
+    "en": {
+      "name": "Word to Markdown",
+      "description": "Convert Word documents to Markdown.",
+      "keywords": ["word", "markdown", "docx", "convert"]
+    },
+    "es": {
+      "name": "Word a Markdown",
+      "description": "Convierte documentos Word a Markdown.",
+      "keywords": ["word", "markdown", "docx", "convertir"]
+    },
+    "fr": {
+      "name": "Word vers Markdown",
+      "description": "Convertit des documents Word en Markdown.",
+      "keywords": ["word", "markdown", "docx", "convertir"]
+    },
+    "de": {
+      "name": "Word zu Markdown",
+      "description": "Konvertiert Word-Dokumente in Markdown.",
+      "keywords": ["word", "markdown", "docx", "konvertieren"]
+    },
+    "ja": {
+      "name": "Word から Markdown",
+      "description": "Word ドキュメントを Markdown に変換します。",
+      "keywords": ["word", "markdown", "docx", "変換"]
+    },
+    "it": {
+      "name": "Word a Markdown",
+      "description": "Converte documenti Word in Markdown.",
+      "keywords": ["word", "markdown", "docx", "convertire"]
+    },
+    "ko": {
+      "name": "Word를 Markdown으로",
+      "description": "Word 문서를 Markdown으로 변환합니다.",
+      "keywords": ["word", "markdown", "docx", "변환"]
+    },
+    "ru": {
+      "name": "Word в Markdown",
+      "description": "Преобразует документы Word в Markdown.",
+      "keywords": ["word", "markdown", "docx", "конвертировать"]
+    },
+    "pt": {
+      "name": "Word para Markdown",
+      "description": "Converte documentos Word para Markdown.",
+      "keywords": ["word", "markdown", "docx", "converter"]
+    }
+  },
+  "/pdf-converter": {
+    "en": {
+      "name": "PDF Converter",
+      "description": "Convert PDFs to Word, Excel, OCR text or images, with page preview and batch export.",
+      "keywords": ["pdf", "word", "docx", "excel", "xlsx", "ocr", "convert", "image"]
+    },
+    "es": {
+      "name": "Convertidor de PDF",
+      "description": "Convierte PDFs a Word, Excel, texto OCR o imágenes, con vista previa de páginas y exportación por lotes.",
+      "keywords": ["pdf", "word", "docx", "excel", "xlsx", "ocr", "convertir", "imagen"]
+    },
+    "fr": {
+      "name": "Convertisseur PDF",
+      "description": "Convertit des PDFs en Word, Excel, texte OCR ou images, avec aperçu des pages et export par lots.",
+      "keywords": ["pdf", "word", "docx", "excel", "xlsx", "ocr", "convertir", "image"]
+    },
+    "de": {
+      "name": "PDF-Konverter",
+      "description": "Konvertiert PDFs in Word, Excel, OCR-Text oder Bilder, mit Seitenvorschau und Batch-Export.",
+      "keywords": ["pdf", "word", "docx", "excel", "xlsx", "ocr", "konvertieren", "bild"]
+    },
+    "ja": {
+      "name": "PDF コンバーター",
+      "description": "PDF を Word、Excel、OCR テキスト、画像に変換し、ページプレビューと一括エクスポートに対応します。",
+      "keywords": ["pdf", "word", "docx", "excel", "xlsx", "ocr", "変換", "画像"]
+    },
+    "it": {
+      "name": "Convertitore PDF",
+      "description": "Converte PDF in Word, Excel, testo OCR o immagini, con anteprima pagina ed esportazione batch.",
+      "keywords": ["pdf", "word", "docx", "excel", "xlsx", "ocr", "convertire", "immagine"]
+    },
+    "ko": {
+      "name": "PDF 변환기",
+      "description": "PDF를 Word, Excel, OCR 텍스트 또는 이미지로 변환하고 페이지 미리보기와 일괄 내보내기를 지원합니다.",
+      "keywords": ["pdf", "word", "docx", "excel", "xlsx", "ocr", "변환", "이미지"]
+    },
+    "ru": {
+      "name": "Конвертер PDF",
+      "description": "Преобразует PDF в Word, Excel, OCR-текст или изображения, с предпросмотром страниц и пакетным экспортом.",
+      "keywords": ["pdf", "word", "docx", "excel", "xlsx", "ocr", "конвертировать", "изображение"]
+    },
+    "pt": {
+      "name": "Conversor de PDF",
+      "description": "Converte PDFs para Word, Excel, texto OCR ou imagens, com visualização de páginas e exportação em lote.",
+      "keywords": ["pdf", "word", "docx", "excel", "xlsx", "ocr", "converter", "imagem"]
+    }
+  },
+  "/waveform-generator": {
+    "en": {
+      "name": "Waveform Generator",
+      "description": "Generate audio waveform images.",
+      "keywords": ["waveform", "audio", "image", "generate"]
+    },
+    "es": {
+      "name": "Generador de forma de onda",
+      "description": "Genera imágenes de forma de onda de audio.",
+      "keywords": ["waveform", "audio", "imagen", "generar"]
+    },
+    "fr": {
+      "name": "Générateur de forme d'onde",
+      "description": "Génère des images de forme d'onde audio.",
+      "keywords": ["waveform", "audio", "image", "générer"]
+    },
+    "de": {
+      "name": "Wellenformgenerator",
+      "description": "Erzeugt Audio-Wellenformbilder.",
+      "keywords": ["waveform", "audio", "bild", "erzeugen"]
+    },
+    "ja": {
+      "name": "波形図生成",
+      "description": "音声の波形画像を生成します。",
+      "keywords": ["waveform", "audio", "画像", "生成"]
+    },
+    "it": {
+      "name": "Generatore di forma d'onda",
+      "description": "Genera immagini di forma d'onda audio.",
+      "keywords": ["waveform", "audio", "immagine", "generare"]
+    },
+    "ko": {
+      "name": "파형 생성기",
+      "description": "오디오 파형 이미지를 생성합니다.",
+      "keywords": ["waveform", "audio", "이미지", "생성"]
+    },
+    "ru": {
+      "name": "Генератор волновой формы",
+      "description": "Создаёт изображения звуковой волновой формы.",
+      "keywords": ["waveform", "audio", "изображение", "генерировать"]
+    },
+    "pt": {
+      "name": "Gerador de forma de onda",
+      "description": "Gera imagens de forma de onda de áudio.",
+      "keywords": ["waveform", "audio", "imagem", "gerar"]
+    }
+  },
+  "/video-screenshot": {
+    "en": {
+      "name": "Video Screenshot",
+      "description": "Capture frame images from videos.",
+      "keywords": ["video", "screenshot", "frame", "capture"]
+    },
+    "es": {
+      "name": "Captura de video",
+      "description": "Captura imágenes de fotogramas de videos.",
+      "keywords": ["video", "captura", "fotograma", "imagen"]
+    },
+    "fr": {
+      "name": "Capture vidéo",
+      "description": "Capture des images de frames à partir de vidéos.",
+      "keywords": ["vidéo", "capture", "frame", "image"]
+    },
+    "de": {
+      "name": "Video-Screenshot",
+      "description": "Erfasst Einzelbilder aus Videos.",
+      "keywords": ["video", "screenshot", "frame", "erfassen"]
+    },
+    "ja": {
+      "name": "動画スクリーンショット",
+      "description": "動画からフレーム画像をキャプチャします。",
+      "keywords": ["video", "screenshot", "フレーム", "キャプチャ"]
+    },
+    "it": {
+      "name": "Screenshot video",
+      "description": "Cattura immagini di frame dai video.",
+      "keywords": ["video", "screenshot", "frame", "catturare"]
+    },
+    "ko": {
+      "name": "동영상 스크린샷",
+      "description": "동영상에서 프레임 이미지를 캡처합니다.",
+      "keywords": ["video", "screenshot", "프레임", "캡처"]
+    },
+    "ru": {
+      "name": "Скриншот видео",
+      "description": "Захватывает кадры из видео.",
+      "keywords": ["video", "скриншот", "кадр", "захват", "изображение"]
+    },
+    "pt": {
+      "name": "Captura de vídeo",
+      "description": "Captura imagens de quadros de vídeos.",
+      "keywords": ["video", "screenshot", "quadro", "capturar"]
+    }
+  },
+  "/video-info-extract": {
+    "en": {
+      "name": "Video Info Extractor",
+      "description": "Extract video metadata information.",
+      "keywords": ["video", "info", "metadata", "extract"]
+    },
+    "es": {
+      "name": "Extractor de información de video",
+      "description": "Extrae información de metadatos de videos.",
+      "keywords": ["video", "info", "metadatos", "extraer"]
+    },
+    "fr": {
+      "name": "Extracteur d'infos vidéo",
+      "description": "Extrait les métadonnées des vidéos.",
+      "keywords": ["vidéo", "info", "métadonnées", "extraire"]
+    },
+    "de": {
+      "name": "Video-Info-Extraktor",
+      "description": "Extrahiert Video-Metadaten.",
+      "keywords": ["video", "info", "metadaten", "extrahieren"]
+    },
+    "ja": {
+      "name": "動画情報抽出",
+      "description": "動画のメタデータ情報を抽出します。",
+      "keywords": ["video", "info", "メタデータ", "抽出"]
+    },
+    "it": {
+      "name": "Estrattore info video",
+      "description": "Estrae le informazioni sui metadati dei video.",
+      "keywords": ["video", "info", "metadata", "estrarre"]
+    },
+    "ko": {
+      "name": "동영상 정보 추출",
+      "description": "동영상 메타데이터 정보를 추출합니다.",
+      "keywords": ["video", "info", "메타데이터", "추출"]
+    },
+    "ru": {
+      "name": "Извлечение информации о видео",
+      "description": "Извлекает метаданные видео.",
+      "keywords": ["video", "info", "метаданные", "извлечение"]
+    },
+    "pt": {
+      "name": "Extrator de informações de vídeo",
+      "description": "Extrai informações de metadados de vídeos.",
+      "keywords": ["video", "info", "metadados", "extrair"]
+    }
+  },
+  "/video-to-gif": {
+    "en": {
+      "name": "Video to GIF",
+      "description": "Convert video clips to animated GIFs.",
+      "keywords": ["video", "gif", "convert", "animation"]
+    },
+    "es": {
+      "name": "Video a GIF",
+      "description": "Convierte clips de video a GIFs animados.",
+      "keywords": ["video", "gif", "convertir", "animación"]
+    },
+    "fr": {
+      "name": "Vidéo vers GIF",
+      "description": "Convertit des extraits vidéo en GIF animés.",
+      "keywords": ["vidéo", "gif", "convertir", "animation"]
+    },
+    "de": {
+      "name": "Video zu GIF",
+      "description": "Konvertiert Videoclips in animierte GIFs.",
+      "keywords": ["video", "gif", "konvertieren", "animation"]
+    },
+    "ja": {
+      "name": "動画から GIF",
+      "description": "動画クリップをアニメーション GIF に変換します。",
+      "keywords": ["video", "gif", "変換", "アニメーション"]
+    },
+    "it": {
+      "name": "Video a GIF",
+      "description": "Converte clip video in GIF animate.",
+      "keywords": ["video", "gif", "convertire", "animazione"]
+    },
+    "ko": {
+      "name": "동영상을 GIF로",
+      "description": "동영상 클립을 애니메이션 GIF로 변환합니다.",
+      "keywords": ["video", "gif", "변환", "애니메이션"]
+    },
+    "ru": {
+      "name": "Видео в GIF",
+      "description": "Преобразует видеоклипы в анимированные GIF.",
+      "keywords": ["video", "gif", "конвертировать", "анимация"]
+    },
+    "pt": {
+      "name": "Vídeo para GIF",
+      "description": "Converte clipes de vídeo em GIFs animados.",
+      "keywords": ["video", "gif", "converter", "animação"]
+    }
+  },
+  "/audio-speed-changer": {
+    "en": {
+      "name": "Audio Speed Changer",
+      "description": "Change audio playback speed.",
+      "keywords": ["audio", "speed", "playback", "change"]
+    },
+    "es": {
+      "name": "Cambiador de velocidad de audio",
+      "description": "Cambia la velocidad de reproducción del audio.",
+      "keywords": ["audio", "velocidad", "reproducción", "cambiar"]
+    },
+    "fr": {
+      "name": "Changeur de vitesse audio",
+      "description": "Modifie la vitesse de lecture audio.",
+      "keywords": ["audio", "vitesse", "lecture", "modifier"]
+    },
+    "de": {
+      "name": "Audio-Tempo-Änderer",
+      "description": "Ändert die Audiowiedergabegeschwindigkeit.",
+      "keywords": ["audio", "tempo", "wiedergabe", "ändern"]
+    },
+    "ja": {
+      "name": "オーディオ速度変更",
+      "description": "音声の再生速度を変更します。",
+      "keywords": ["audio", "速度", "再生", "変更"]
+    },
+    "it": {
+      "name": "Modifica velocità audio",
+      "description": "Cambia la velocità di riproduzione dell'audio.",
+      "keywords": ["audio", "velocità", "riproduzione", "cambiare"]
+    },
+    "ko": {
+      "name": "오디오 속도 변경",
+      "description": "오디오 재생 속도를 변경합니다.",
+      "keywords": ["audio", "속도", "재생", "변경"]
+    },
+    "ru": {
+      "name": "Изменение скорости аудио",
+      "description": "Изменяет скорость воспроизведения аудио.",
+      "keywords": ["audio", "скорость", "воспроизведение", "изменить"]
+    },
+    "pt": {
+      "name": "Alterador de velocidade de áudio",
+      "description": "Altera a velocidade de reprodução do áudio.",
+      "keywords": ["audio", "velocidade", "reprodução", "alterar"]
+    }
+  },
+  "/audio-converter": {
+    "en": {
+      "name": "Audio Converter",
+      "description": "Convert audio file formats.",
+      "keywords": ["audio", "convert", "mp3", "wav", "format"]
+    },
+    "es": {
+      "name": "Convertidor de audio",
+      "description": "Convierte formatos de archivos de audio.",
+      "keywords": ["audio", "convertir", "mp3", "wav", "formato"]
+    },
+    "fr": {
+      "name": "Convertisseur audio",
+      "description": "Convertit les formats de fichiers audio.",
+      "keywords": ["audio", "convertir", "mp3", "wav", "format"]
+    },
+    "de": {
+      "name": "Audio-Konverter",
+      "description": "Konvertiert Audio-Dateiformate.",
+      "keywords": ["audio", "konvertieren", "mp3", "wav", "format"]
+    },
+    "ja": {
+      "name": "音声形式変換",
+      "description": "音声ファイルの形式を変換します。",
+      "keywords": ["audio", "変換", "mp3", "wav", "形式"]
+    },
+    "it": {
+      "name": "Convertitore audio",
+      "description": "Converte i formati dei file audio.",
+      "keywords": ["audio", "convertire", "mp3", "wav", "formato"]
+    },
+    "ko": {
+      "name": "오디오 변환기",
+      "description": "오디오 파일 형식을 변환합니다.",
+      "keywords": ["audio", "변환", "mp3", "wav", "형식"]
+    },
+    "ru": {
+      "name": "Конвертер аудио",
+      "description": "Преобразует форматы аудиофайлов.",
+      "keywords": ["audio", "конвертировать", "mp3", "wav", "формат"]
+    },
+    "pt": {
+      "name": "Conversor de áudio",
+      "description": "Converte formatos de arquivo de áudio.",
+      "keywords": ["audio", "converter", "mp3", "wav", "formato"]
+    }
+  },
+  "/audio-trimmer": {
+    "en": {
+      "name": "Audio Trimmer",
+      "description": "Trim audio clips.",
+      "keywords": ["audio", "trim", "clip", "cut"]
+    },
+    "es": {
+      "name": "Recortador de audio",
+      "description": "Recorta clips de audio.",
+      "keywords": ["audio", "recortar", "clip", "corte"]
+    },
+    "fr": {
+      "name": "Rogneur audio",
+      "description": "Découpe des extraits audio.",
+      "keywords": ["audio", "rogner", "extrait", "découper"]
+    },
+    "de": {
+      "name": "Audio-Trimmer",
+      "description": "Schneidet Audio-Clips zu.",
+      "keywords": ["audio", "trimmen", "clip", "schneiden"]
+    },
+    "ja": {
+      "name": "音声トリミング",
+      "description": "音声クリップをトリミングします。",
+      "keywords": ["audio", "トリミング", "クリップ", "カット"]
+    },
+    "it": {
+      "name": "Taglierino audio",
+      "description": "Taglia clip audio.",
+      "keywords": ["audio", "tagliare", "clip", "ritaglio"]
+    },
+    "ko": {
+      "name": "오디오 자르기",
+      "description": "오디오 클립을 자릅니다.",
+      "keywords": ["audio", "자르기", "클립", "잘라내기"]
+    },
+    "ru": {
+      "name": "Обрезка аудио",
+      "description": "Обрезает аудиоклипы.",
+      "keywords": ["audio", "обрезать", "клип", "нарезка"]
+    },
+    "pt": {
+      "name": "Cortador de áudio",
+      "description": "Corta clipes de áudio.",
+      "keywords": ["audio", "cortar", "clipe", "corte"]
+    }
+  },
+  "/audio-noise-reduction": {
+    "en": {
+      "name": "Audio Noise Reduction",
+      "description": "Simple audio noise reduction processing.",
+      "keywords": ["audio", "noise", "reduction", "denoise"]
+    },
+    "es": {
+      "name": "Reducción de ruido de audio",
+      "description": "Procesamiento simple de reducción de ruido de audio.",
+      "keywords": ["audio", "ruido", "reducción", "eliminar ruido"]
+    },
+    "fr": {
+      "name": "Réduction de bruit audio",
+      "description": "Traitement simple de réduction du bruit audio.",
+      "keywords": ["audio", "bruit", "réduction", "débruiter"]
+    },
+    "de": {
+      "name": "Audio-Rauschunterdrückung",
+      "description": "Einfache Rauschunterdrückung für Audio.",
+      "keywords": ["audio", "rauschen", "unterdrückung", "entrauschen"]
+    },
+    "ja": {
+      "name": "音声ノイズ低減",
+      "description": "簡単な音声ノイズ低減処理を行います。",
+      "keywords": ["audio", "ノイズ", "低減", "除去"]
+    },
+    "it": {
+      "name": "Riduzione rumore audio",
+      "description": "Semplice elaborazione di riduzione del rumore audio.",
+      "keywords": ["audio", "rumore", "riduzione", "rimuovere rumore"]
+    },
+    "ko": {
+      "name": "오디오 노이즈 감소",
+      "description": "간단한 오디오 노이즈 감소 처리를 수행합니다.",
+      "keywords": ["audio", "노이즈", "감소", "제거"]
+    },
+    "ru": {
+      "name": "Шумоподавление аудио",
+      "description": "Простая обработка шумоподавления аудио.",
+      "keywords": ["audio", "шум", "подавление", "устранение шума"]
+    },
+    "pt": {
+      "name": "Redução de ruído de áudio",
+      "description": "Processamento simples de redução de ruído de áudio.",
+      "keywords": ["audio", "ruído", "redução", "remover ruído"]
+    }
+  },
+  "/audio-visualizer": {
+    "en": {
+      "name": "Audio Visualizer",
+      "description": "Audio spectrum visualization.",
+      "keywords": ["audio", "visualizer", "spectrum", "waveform"]
+    },
+    "es": {
+      "name": "Visualizador de audio",
+      "description": "Visualización del espectro de audio.",
+      "keywords": ["audio", "visualizador", "espectro", "forma de onda"]
+    },
+    "fr": {
+      "name": "Visualiseur audio",
+      "description": "Visualisation du spectre audio.",
+      "keywords": ["audio", "visualiseur", "spectre", "forme d'onde"]
+    },
+    "de": {
+      "name": "Audio-Visualisierer",
+      "description": "Visualisierung des Audiospektrums.",
+      "keywords": ["audio", "visualisierer", "spektrum", "wellenform"]
+    },
+    "ja": {
+      "name": "オーディオビジュアライザー",
+      "description": "音声のスペクトラムを可視化します。",
+      "keywords": ["audio", "visualizer", "スペクトル", "波形"]
+    },
+    "it": {
+      "name": "Visualizzatore audio",
+      "description": "Visualizzazione dello spettro audio.",
+      "keywords": ["audio", "visualizzatore", "spettro", "forma d'onda"]
+    },
+    "ko": {
+      "name": "오디오 비주얼라이저",
+      "description": "오디오 스펙트럼을 시각화합니다.",
+      "keywords": ["audio", "visualizer", "스펙트럼", "파형"]
+    },
+    "ru": {
+      "name": "Визуализатор аудио",
+      "description": "Визуализация аудиоспектра.",
+      "keywords": ["audio", "визуализатор", "спектр", "волна"]
+    },
+    "pt": {
+      "name": "Visualizador de áudio",
+      "description": "Visualização do espectro de áudio.",
+      "keywords": ["audio", "visualizador", "espectro", "forma de onda"]
+    }
+  }
+}

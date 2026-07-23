@@ -1,0 +1,222 @@
+{
+  "/shadow-generator": {
+    "en": { "name": "Shadow Generator", "description": "Generate CSS box-shadow code.", "keywords": ["shadow", "CSS", "box-shadow", "generator", "design"] },
+    "es": { "name": "Generador de Sombras", "description": "Genera código CSS box-shadow.", "keywords": ["sombra", "CSS", "box-shadow", "generador", "diseño"] },
+    "fr": { "name": "Générateur d'Ombres", "description": "Génère du code CSS box-shadow.", "keywords": ["ombre", "CSS", "box-shadow", "générateur", "design"] },
+    "de": { "name": "Schattengenerator", "description": "Erzeugt CSS box-shadow Code.", "keywords": ["schatten", "CSS", "box-shadow", "generator", "design"] },
+    "ja": { "name": "シャドウジェネレーター", "description": "CSS box-shadow コードを生成します。", "keywords": ["シャドウ", "CSS", "box-shadow", "ジェネレーター", "デザイン"] },
+    "it": { "name": "Generatore di Ombre", "description": "Genera codice CSS box-shadow.", "keywords": ["ombra", "CSS", "box-shadow", "generatore", "design"] },
+    "ko": { "name": "그림자 생성기", "description": "CSS box-shadow 코드를 생성합니다.", "keywords": ["그림자", "CSS", "box-shadow", "생성기", "디자인"] },
+    "ru": { "name": "Генератор Теней", "description": "Генерирует код CSS box-shadow.", "keywords": ["тень", "CSS", "box-shadow", "генератор", "дизайн"] },
+    "pt": { "name": "Gerador de Sombras", "description": "Gera código CSS box-shadow.", "keywords": ["sombra", "CSS", "box-shadow", "gerador", "design"] }
+  },
+  "/favicon-generator": {
+    "en": { "name": "Favicon Generator", "description": "Generate multi-size favicon icons (PNG/ICO) from text or emoji.", "keywords": ["favicon", "icon", "emoji", "website icon"] },
+    "es": { "name": "Generador de Favicon", "description": "Genera iconos favicon multi-tamaño (PNG/ICO) desde texto o emoji.", "keywords": ["favicon", "icono", "emoji", "icono web"] },
+    "fr": { "name": "Générateur de Favicon", "description": "Génère des icônes favicon multi-tailles (PNG/ICO) à partir de texte ou d'emoji.", "keywords": ["favicon", "icône", "emoji", "icône de site"] },
+    "de": { "name": "Favicon-Generator", "description": "Erzeugt mehrschichtige Favicon-Symbole (PNG/ICO) aus Text oder Emoji.", "keywords": ["favicon", "icon", "emoji", "website-icon"] },
+    "ja": { "name": "Favicon ジェネレーター", "description": "テキストまたは絵文字から多サイズの Favicon アイコン（PNG/ICO）を生成します。", "keywords": ["favicon", "アイコン", "emoji", "サイトアイコン"] },
+    "it": { "name": "Generatore di Favicon", "description": "Genera icone favicon multi-dimensione (PNG/ICO) da testo o emoji.", "keywords": ["favicon", "icona", "emoji", "icona sito"] },
+    "ko": { "name": "Favicon 생성", "description": "텍스트 또는 이모지로 여러 크기의 Favicon 아이콘(PNG/ICO)을 생성합니다.", "keywords": ["favicon", "아이콘", "emoji", "웹사이트 아이콘"] },
+    "ru": { "name": "Генератор Favicon", "description": "Создает иконки favicon разных размеров (PNG/ICO) из текста или эмодзи.", "keywords": ["favicon", "иконка", "emoji", "иконка сайта"] },
+    "pt": { "name": "Gerador de Favicon", "description": "Gera ícones favicon de vários tamanhos (PNG/ICO) a partir de texto ou emoji.", "keywords": ["favicon", "ícone", "emoji", "ícone do site"] }
+  },
+  "/password-generator": {
+    "en": { "name": "Password Generator", "description": "Generate secure random passwords and memorable passphrases with custom character sets, ambiguous character exclusion, and entropy evaluation.", "keywords": ["password", "generate", "random", "secure", "passphrase", "entropy"] },
+    "es": { "name": "Generador de Contraseñas", "description": "Genera contraseñas aleatorias seguras y frases de contraseña memorables con conjuntos de caracteres personalizados, exclusión de caracteres confusos y evaluación de entropía.", "keywords": ["password", "contraseña", "generar", "aleatorio", "seguro", "passphrase", "entropía"] },
+    "fr": { "name": "Générateur de Mots de Passe", "description": "Génère des mots de passe aléatoires sécurisés et des phrases de passe mémorables avec jeux de caractères personnalisés, exclusion des caractères ambigus et évaluation de l'entropie.", "keywords": ["password", "mot de passe", "générer", "aléatoire", "sécurisé", "passphrase", "entropie"] },
+    "de": { "name": "Passwortgenerator", "description": "Erzeugt sichere Zufallspasswörter und merkbare Passphrasen mit benutzerdefinierten Zeichensätzen, Ausschluss verwechselbarer Zeichen und Entropiebewertung.", "keywords": ["password", "passwort", "generator", "zufällig", "sicher", "passphrase", "entropie"] },
+    "ja": { "name": "パスワードジェネレーター", "description": "カスタム文字セット、紛らわしい文字の除外、エントロピー評価を備えた安全なランダムパスワードと覚えやすいパスフレーズを生成します。", "keywords": ["password", "パスワード", "生成", "ランダム", "安全", "passphrase", "エントロピー"] },
+    "it": { "name": "Generatore di Password", "description": "Genera password casuali sicure e passphrase memorabili con set di caratteri personalizzati, esclusione di caratteri ambigui e valutazione dell'entropia.", "keywords": ["password", "genera", "casuale", "sicuro", "passphrase", "entropia"] },
+    "ko": { "name": "비밀번호 생성기", "description": "사용자 정의 문자 집합, 혼동하기 쉬운 문자 제외, 엔트로피 평가를 지원하는 안전한 임의 비밀번호와 기억하기 쉬운 암호 구문을 생성합니다.", "keywords": ["password", "비밀번호", "생성", "무작위", "안전", "passphrase", "엔트로피"] },
+    "ru": { "name": "Генератор Паролей", "description": "Генерирует безопасные случайные пароли и запоминающиеся парольные фразы с настраиваемыми наборами символов, исключением похожих символов и оценкой энтропии.", "keywords": ["password", "пароль", "генерация", "случайный", "безопасность", "passphrase", "энтропия"] },
+    "pt": { "name": "Gerador de Senhas", "description": "Gera senhas aleatórias seguras e frases-senha memoráveis com conjuntos de caracteres personalizados, exclusão de caracteres ambíguos e avaliação de entropia.", "keywords": ["password", "senha", "gerar", "aleatório", "seguro", "passphrase", "entropia"] }
+  },
+  "/lorem-ipsum": {
+    "en": { "name": "Lorem Ipsum Generator", "description": "Generate placeholder text (Lorem Ipsum) by paragraphs, sentences, or words.", "keywords": ["lorem", "ipsum", "placeholder", "dummy", "filler"] },
+    "es": { "name": "Generador Lorem Ipsum", "description": "Genera texto de relleno (Lorem Ipsum) por párrafos, oraciones o palabras.", "keywords": ["lorem", "ipsum", "placeholder", "dummy", "texto de relleno"] },
+    "fr": { "name": "Générateur Lorem Ipsum", "description": "Génère du texte d'espace réservé (Lorem Ipsum) par paragraphes, phrases ou mots.", "keywords": ["lorem", "ipsum", "placeholder", "dummy", "texte de remplissage"] },
+    "de": { "name": "Lorem Ipsum Generator", "description": "Erzeugt Platzhaltertext (Lorem Ipsum) nach Absätzen, Sätzen oder Wörtern.", "keywords": ["lorem", "ipsum", "placeholder", "dummy", "fülltext"] },
+    "ja": { "name": "Lorem Ipsum ジェネレーター", "description": "段落、文、単語単位でプレースホルダーテキスト（Lorem Ipsum）を生成します。", "keywords": ["lorem", "ipsum", "プレースホルダー", "dummy", "埋め字"] },
+    "it": { "name": "Generatore Lorem Ipsum", "description": "Genera testo segnaposto (Lorem Ipsum) per paragrafi, frasi o parole.", "keywords": ["lorem", "ipsum", "placeholder", "dummy", "testo riempitivo"] },
+    "ko": { "name": "Lorem Ipsum 생성기", "description": "문단, 문장, 단어 단위로 더미 텍스트(Lorem Ipsum)를 생성합니다.", "keywords": ["lorem", "ipsum", "placeholder", "dummy", "채움 텍스트"] },
+    "ru": { "name": "Генератор Lorem Ipsum", "description": "Генерирует текст-заполнитель (Lorem Ipsum) по абзацам, предложениям или словам.", "keywords": ["lorem", "ipsum", "placeholder", "dummy", "заполнитель"] },
+    "pt": { "name": "Gerador Lorem Ipsum", "description": "Gera texto de espaço reservado (Lorem Ipsum) por parágrafos, frases ou palavras.", "keywords": ["lorem", "ipsum", "placeholder", "dummy", "texto de preenchimento"] }
+  },
+  "/uuid-generator": {
+    "en": { "name": "UUID Generator", "description": "Batch generate UUID v1/v4 in multiple formats including no-hyphen, uppercase, URN, braced, and downloadable TXT.", "keywords": ["uuid", "guid", "unique identifier", "generate", "v1", "v4", "urn", "batch"] },
+    "es": { "name": "Generador de UUID", "description": "Genera UUID v1/v4 en lote con múltiples formatos sin guiones, mayúsculas, URN, entre llaves y descargable en TXT.", "keywords": ["uuid", "guid", "identificador único", "generar", "v1", "v4", "urn", "lote"] },
+    "fr": { "name": "Générateur d'UUID", "description": "Génère des UUID v1/v4 en lot avec plusieurs formats sans tirets, majuscules, URN, entre accolades, téléchargeable en TXT.", "keywords": ["uuid", "guid", "identifiant unique", "générer", "v1", "v4", "urn", "lot"] },
+    "de": { "name": "UUID-Generator", "description": "Erzeugt UUID v1/v4 im Stapel mit mehreren Formaten ohne Bindestriche, Großbuchstaben, URN, geschweifte Klammern, als TXT herunterladbar.", "keywords": ["uuid", "guid", "eindeutige Kennung", "generator", "v1", "v4", "urn", "stapel"] },
+    "ja": { "name": "UUID ジェネレーター", "description": "ハイフンなし、大文字、URN、中括弧など複数形式で UUID v1/v4 を一括生成し、TXT ダウンロードに対応します。", "keywords": ["uuid", "guid", "一意識別子", "生成", "v1", "v4", "urn", "一括"] },
+    "it": { "name": "Generatore UUID", "description": "Genera UUID v1/v4 in batch con più formati senza trattini, maiuscolo, URN, tra parentesi graffe, scaricabile TXT.", "keywords": ["uuid", "guid", "identificatore univoco", "genera", "v1", "v4", "urn", "batch"] },
+    "ko": { "name": "UUID 생성기", "description": "하이픈 없음, 대문자, URN, 중괄호 등 다양한 형식으로 UUID v1/v4를 일괄 생성하고 TXT 다운로드를 지원합니다.", "keywords": ["uuid", "guid", "고유 식별자", "생성", "v1", "v4", "urn", "일괄"] },
+    "ru": { "name": "Генератор UUID", "description": "Пакетная генерация UUID v1/v4 в различных форматах: без дефисов, заглавными буквами, URN, в фигурных скобках, с возможностью скачать TXT.", "keywords": ["uuid", "guid", "уникальный идентификатор", "генерация", "v1", "v4", "urn", "пакет"] },
+    "pt": { "name": "Gerador de UUID", "description": "Gera UUID v1/v4 em lote com vários formatos sem hífens, maiúsculas, URN, entre chaves, disponível para download em TXT.", "keywords": ["uuid", "guid", "identificador único", "gerar", "v1", "v4", "urn", "lote"] }
+  },
+  "/loan-calculator": {
+    "en": { "name": "Loan Calculator", "description": "Calculate mortgage repayment details for equal principal-plus-interest and equal principal repayment methods.", "keywords": ["loan", "mortgage", "repayment", "interest", "equal principal", "equal installment"] },
+    "es": { "name": "Calculadora de Préstamos", "description": "Calcula los detalles de pago de una hipoteca para los métodos de cuota fija y amortización constante.", "keywords": ["loan", "préstamo", "hipoteca", "pago", "interés", "cuota fija", "amortización constante"] },
+    "fr": { "name": "Calculateur de Prêt", "description": "Calcule les détails de remboursement d'hypothèque pour les méthodes d'amortissement constant et de capital constant.", "keywords": ["loan", "prêt", "hypothèque", "remboursement", "intérêt", "amortissement constant", "capital constant"] },
+    "de": { "name": "Kreditrechner", "description": "Berechnet Hypothekenrückzahlungsdetails für Annuitäten- und Tilgungsdarlehen.", "keywords": ["loan", "kredit", "hypothek", "rückzahlung", "zinsen", "annuität", "tilgung"] },
+    "ja": { "name": "ローン計算機", "description": "元利均等返済と元金均等返済の両方で住宅ローン返済明細を計算します。", "keywords": ["loan", "ローン", "住宅ローン", "返済", "利息", "元利均等", "元金均等"] },
+    "it": { "name": "Calcolatore di Prestiti", "description": "Calcola i dettagli di rimborso del mutuo per metodi a rata costante e ad ammortamento costante.", "keywords": ["loan", "prestito", "mutuo", "rimborso", "interesse", "rata costante", "ammortamento costante"] },
+    "ko": { "name": "대출 계산기", "description": "원리금균등상환과 원금균등상환 두 방식으로 주택담보증권 상환 내역을 계산합니다.", "keywords": ["loan", "대출", "주택담대출", "상환", "이자", "원리금균등", "원금균등"] },
+    "ru": { "name": "Кредитный Калькулятор", "description": "Рассчитывает детали погашения ипотеки для аннуитетных и дифференцированных платежей.", "keywords": ["loan", "кредит", "ипотека", "погашение", "проценты", "аннуитет", "дифференцированный"] },
+    "pt": { "name": "Calculadora de Empréstimo", "description": "Calcula detalhes de pagamento de hipoteca para métodos de prestação fixa e amortização constante.", "keywords": ["loan", "empréstimo", "hipoteca", "pagamento", "juros", "prestação fixa", "amortização constante"] }
+  },
+  "/unit-converter": {
+    "en": { "name": "Unit Converter", "description": "Convert length, weight, temperature, area, volume, speed, time, data, pressure, and energy units, including common Chinese and imperial units.", "keywords": ["unit", "converter", "length", "weight", "temperature", "area", "volume", "speed"] },
+    "es": { "name": "Conversor de Unidades", "description": "Convierte unidades de longitud, peso, temperatura, área, volumen, velocidad, tiempo, datos, presión y energía, incluyendo unidades chinas e imperiales comunes.", "keywords": ["unidad", "conversor", "longitud", "peso", "temperatura", "área", "volumen", "velocidad"] },
+    "fr": { "name": "Convertisseur d'Unités", "description": "Convertit les unités de longueur, poids, température, surface, volume, vitesse, temps, données, pression, énergie, incluant les unités chinoises et impériales courantes.", "keywords": ["unité", "convertisseur", "longueur", "poids", "température", "surface", "volume", "vitesse"] },
+    "de": { "name": "Einheitenumrechner", "description": "Rechnet Längen-, Gewichts-, Temperatur-, Flächen-, Volumen-, Geschwindigkeits-, Zeit-, Daten-, Druck- und Energieeinheiten um, einschließlich gängiger chinesischer und imperischer Einheiten.", "keywords": ["einheit", "umrechner", "länge", "gewicht", "temperatur", "fläche", "volumen", "geschwindigkeit"] },
+    "ja": { "name": "単位換算", "description": "長さ、重さ、温度、面積、体積、速度、時間、データ、圧力、エネルギーなどの単位を変換します。常用の中国市制・英制単位も含みます。", "keywords": ["単位", "換算", "長さ", "重さ", "温度", "面積", "体積", "速度"] },
+    "it": { "name": "Convertitore di Unità", "description": "Converte unità di lunghezza, peso, temperatura, area, volume, velocità, tempo, dati, pressione, energia, incluse unità cinesi e imperiali comuni.", "keywords": ["unità", "convertitore", "lunghezza", "peso", "temperatura", "area", "volume", "velocità"] },
+    "ko": { "name": "단위 변환", "description": "길이, 무게, 온도, 면적, 부피, 속도, 시간, 데이터, 압력, 에너지 등의 단위를 변환합니다. 흔한 시제와 영제 단위를 포함합니다.", "keywords": ["단위", "변환", "길이", "무게", "온도", "면적", "부피", "속도"] },
+    "ru": { "name": "Конвертер Единиц", "description": "Переводит единицы длины, веса, температуры, площади, объема, скорости, времени, данных, давления, энергии, включая распространенные китайские и имперские единицы.", "keywords": ["единица", "конвертер", "длина", "вес", "температура", "площадь", "объем", "скорость"] },
+    "pt": { "name": "Conversor de Unidades", "description": "Converte unidades de comprimento, peso, temperatura, área, volume, velocidade, tempo, dados, pressão, energia, incluindo unidades chinesas e imperiais comuns.", "keywords": ["unidade", "conversor", "comprimento", "peso", "temperatura", "área", "volume", "velocidade"] }
+  },
+  "/tax-calculator": {
+    "en": { "name": "Tax Calculator", "description": "Calculate personal income tax based on the 2024 tax rate table, supporting special additional deductions.", "keywords": ["tax", "income tax", "salary", "tax rate", "deduction"] },
+    "es": { "name": "Calculadora de Impuestos", "description": "Calcula el impuesto sobre la renta personal basado en la tabla de tasas de 2024, admitiendo deducciones adicionales especiales.", "keywords": ["tax", "impuesto", "renta", "salario", "tasa", "deducción"] },
+    "fr": { "name": "Calculateur d'Impôts", "description": "Calcule l'impôt sur le revenu basé sur le barème 2024, prenant en charge les déductions spéciales additionnelles.", "keywords": ["tax", "impôt", "revenu", "salaire", "taux", "déduction"] },
+    "de": { "name": "Steuerrechner", "description": "Berechnet die Einkommensteuer basierend auf der Steuertabelle 2024 und unterstützt zusätzliche Sonderabzüge.", "keywords": ["tax", "steuer", "einkommensteuer", "gehalt", "steuersatz", "abzug"] },
+    "ja": { "name": "個人所得税計算機", "description": "2024 年税率表に基づいて個人所得税を計算します。専項付加控除に対応します。", "keywords": ["tax", "個人所得税", "所得税", "給与", "税率", "控除"] },
+    "it": { "name": "Calcolatore Fiscale", "description": "Calcola l'imposta sul reddito personale basato sulla tabella delle aliquote 2024, supportando detrazioni speciali aggiuntive.", "keywords": ["tax", "imposta", "reddito", "stipendio", "aliquota", "detrazione"] },
+    "ko": { "name": "소득세 계산기", "description": "2024년 세율표를 기준으로 개인 소득세를 계산합니다. 특별추가공제를 지원합니다.", "keywords": ["tax", "소득세", "개인소득세", "급여", "세율", "공제"] },
+    "ru": { "name": "Налоговый Калькулятор", "description": "Рассчитывает подоходный налог на основе налоговой таблицы 2024 года с поддержкой специальных дополнительных вычетов.", "keywords": ["tax", "налог", "подоходный", "зарплата", "ставка", "вычет"] },
+    "pt": { "name": "Calculadora de Imposto", "description": "Calcula o imposto de renda pessoal com base na tabela de alíquotas de 2024, com suporte a deduções especiais adicionais.", "keywords": ["tax", "imposto", "renda", "salário", "alíquota", "dedução"] }
+  },
+  "/age-calculator": {
+    "en": { "name": "Age Calculator", "description": "Calculate exact age based on birthday.", "keywords": ["age", "birthday", "calculate", "years"] },
+    "es": { "name": "Calculadora de Edad", "description": "Calcula la edad exacta según la fecha de nacimiento.", "keywords": ["edad", "cumpleaños", "calcular", "años"] },
+    "fr": { "name": "Calculateur d'Âge", "description": "Calcule l'âge exact à partir de la date de naissance.", "keywords": ["âge", "anniversaire", "calculer", "années"] },
+    "de": { "name": "Altersrechner", "description": "Berechnet das genaue Alter basierend auf dem Geburtstag.", "keywords": ["alter", "geburtstag", "berechnen", "jahre"] },
+    "ja": { "name": "年齢計算機", "description": "誕生日から正確な年齢を計算します。", "keywords": ["年齢", "誕生日", "計算", "歳"] },
+    "it": { "name": "Calcolatore di Età", "description": "Calcola l'età esatta in base alla data di nascita.", "keywords": ["età", "compleanno", "calcola", "anni"] },
+    "ko": { "name": "나이 계산기", "description": "생일을 기준으로 정확한 나이를 계산합니다.", "keywords": ["나이", "생일", "계산", "세"] },
+    "ru": { "name": "Калькулятор Возраста", "description": "Рассчитывает точный возраст по дате рождения.", "keywords": ["возраст", "день рождения", "расчет", "лет"] },
+    "pt": { "name": "Calculadora de Idade", "description": "Calcula a idade exata com base na data de nascimento.", "keywords": ["idade", "aniversário", "calcular", "anos"] }
+  },
+  "/date-diff": {
+    "en": { "name": "Date Difference", "description": "Calculate days, months, and years between two dates.", "keywords": ["date", "difference", "days", "months", "years"] },
+    "es": { "name": "Diferencia de Fechas", "description": "Calcula días, meses y años entre dos fechas.", "keywords": ["fecha", "diferencia", "días", "meses", "años"] },
+    "fr": { "name": "Différence de Dates", "description": "Calcule les jours, mois et années entre deux dates.", "keywords": ["date", "différence", "jours", "mois", "années"] },
+    "de": { "name": "Datumsdifferenz", "description": "Berechnet Tage, Monate und Jahre zwischen zwei Daten.", "keywords": ["datum", "differenz", "tage", "monate", "jahre"] },
+    "ja": { "name": "日数差計算", "description": "2 つの日付間の日数、月数、年数を計算します。", "keywords": ["日付", "差", "日数", "月数", "年数"] },
+    "it": { "name": "Differenza Date", "description": "Calcola giorni, mesi e anni tra due date.", "keywords": ["data", "differenza", "giorni", "mesi", "anni"] },
+    "ko": { "name": "날짜 차이 계산", "description": "두 날짜 사이의 일수, 개월 수, 연수를 계산합니다.", "keywords": ["날짜", "차이", "일수", "개월", "연수"] },
+    "ru": { "name": "Разница Дат", "description": "Рассчитывает дни, месяцы и годы между двумя датами.", "keywords": ["дата", "разница", "дни", "месяцы", "годы"] },
+    "pt": { "name": "Diferença de Datas", "description": "Calcula dias, meses e anos entre duas datas.", "keywords": ["data", "diferença", "dias", "meses", "anos"] }
+  },
+  "/bmi-calculator": {
+    "en": { "name": "BMI Calculator", "description": "Calculate BMI index based on height and weight.", "keywords": ["BMI", "weight", "height", "health"] },
+    "es": { "name": "Calculadora de IMC", "description": "Calcula el índice de masa corporal según altura y peso.", "keywords": ["BMI", "peso", "altura", "salud"] },
+    "fr": { "name": "Calculateur d'IMC", "description": "Calcule l'indice de masse corporelle selon la taille et le poids.", "keywords": ["BMI", "poids", "taille", "santé"] },
+    "de": { "name": "BMI-Rechner", "description": "Berechnet den BMI-Index basierend auf Größe und Gewicht.", "keywords": ["BMI", "gewicht", "größe", "gesundheit"] },
+    "ja": { "name": "BMI 計算機", "description": "身長と体重から BMI 指数を計算します。", "keywords": ["BMI", "体重", "身長", "健康"] },
+    "it": { "name": "Calcolatore BMI", "description": "Calcola l'indice di massa corporea in base ad altezza e peso.", "keywords": ["BMI", "peso", "altezza", "salute"] },
+    "ko": { "name": "BMI 계산기", "description": "키와 몸무게를 기준으로 BMI 지수를 계산합니다.", "keywords": ["BMI", "몸무게", "키", "건강"] },
+    "ru": { "name": "Калькулятор ИМТ", "description": "Рассчитывает индекс массы тела по росту и весу.", "keywords": ["BMI", "вес", "рост", "здоровье"] },
+    "pt": { "name": "Calculadora de IMC", "description": "Calcula o índice de massa corporal com base na altura e peso.", "keywords": ["BMI", "peso", "altura", "saúde"] }
+  },
+  "/relation-graph-maker": {
+    "en": { "name": "Relation Graph", "description": "Generate node relation graphs (Mermaid graph).", "keywords": ["relation", "graph", "node", "mermaid"] },
+    "es": { "name": "Gráfico de Relaciones", "description": "Genera gráficos de relación de nodos (Mermaid graph).", "keywords": ["relación", "graph", "nodo", "mermaid"] },
+    "fr": { "name": "Graphique de Relations", "description": "Génère des graphiques de relations entre nœuds (Mermaid graph).", "keywords": ["relation", "graphique", "nœud", "mermaid"] },
+    "de": { "name": "Beziehungsdiagramm", "description": "Erzeugt Knotenbeziehungsdiagramme (Mermaid graph).", "keywords": ["relation", "graph", "knoten", "mermaid"] },
+    "ja": { "name": "関係図", "description": "ノード関係図（Mermaid graph）を生成します。", "keywords": ["relation", "graph", "ノード", "mermaid"] },
+    "it": { "name": "Grafico delle Relazioni", "description": "Genera grafici di relazione tra nodi (Mermaid graph).", "keywords": ["relazione", "grafico", "nodo", "mermaid"] },
+    "ko": { "name": "관계도", "description": "노드 관계도(Mermaid graph)를 생성합니다.", "keywords": ["relation", "graph", "노드", "mermaid"] },
+    "ru": { "name": "Граф Связей", "description": "Генерирует графы связей узлов (Mermaid graph).", "keywords": ["relation", "graph", "узел", "mermaid"] },
+    "pt": { "name": "Gráfico de Relações", "description": "Gera gráficos de relação de nós (Mermaid graph).", "keywords": ["relation", "graph", "nó", "mermaid"] }
+  },
+  "/flowchart-generator": {
+    "en": { "name": "Flowchart Generator", "description": "Generate Mermaid flowchart code.", "keywords": ["flowchart", "mermaid", "diagram", "generator"] },
+    "es": { "name": "Generador de Diagramas de Flujo", "description": "Genera código de diagrama de flujo Mermaid.", "keywords": ["flowchart", "diagrama de flujo", "mermaid", "generador"] },
+    "fr": { "name": "Générateur de Diagrammes de Flux", "description": "Génère du code de diagramme de flux Mermaid.", "keywords": ["flowchart", "diagramme de flux", "mermaid", "générateur"] },
+    "de": { "name": "Flussdiagramm-Generator", "description": "Erzeugt Mermaid-Flussdiagramm-Code.", "keywords": ["flowchart", "flussdiagramm", "mermaid", "generator"] },
+    "ja": { "name": "フローチャート生成", "description": "Mermaid フローチャートコードを生成します。", "keywords": ["flowchart", "フローチャート", "mermaid", "ジェネレーター"] },
+    "it": { "name": "Generatore di Diagrammi di Flusso", "description": "Genera codice diagramma di flusso Mermaid.", "keywords": ["flowchart", "diagramma di flusso", "mermaid", "generatore"] },
+    "ko": { "name": "순서도 생성", "description": "Mermaid 순서도 코드를 생성합니다.", "keywords": ["flowchart", "순서도", "mermaid", "생성기"] },
+    "ru": { "name": "Генератор Блок-Схем", "description": "Генерирует код блок-схем Mermaid.", "keywords": ["flowchart", "блок-схема", "mermaid", "генератор"] },
+    "pt": { "name": "Gerador de Fluxogramas", "description": "Gera código de fluxograma Mermaid.", "keywords": ["flowchart", "fluxograma", "mermaid", "gerador"] }
+  },
+  "/heatmap-maker": {
+    "en": { "name": "Heatmap Maker", "description": "Generate data heatmaps.", "keywords": ["heatmap", "data", "visualization", "generator"] },
+    "es": { "name": "Generador de Mapas de Calor", "description": "Genera mapas de calor de datos.", "keywords": ["heatmap", "datos", "visualización", "generador"] },
+    "fr": { "name": "Générateur de Cartes de Chaleur", "description": "Génère des cartes de chaleur de données.", "keywords": ["heatmap", "données", "visualisation", "générateur"] },
+    "de": { "name": "Heatmap-Ersteller", "description": "Erzeugt Daten-Heatmaps.", "keywords": ["heatmap", "daten", "visualisierung", "generator"] },
+    "ja": { "name": "ヒートマップ", "description": "データヒートマップを生成します。", "keywords": ["heatmap", "データ", "可視化", "ジェネレーター"] },
+    "it": { "name": "Generatore di Heatmap", "description": "Genera heatmap di dati.", "keywords": ["heatmap", "dati", "visualizzazione", "generatore"] },
+    "ko": { "name": "히트맵", "description": "데이터 히트맵을 생성합니다.", "keywords": ["heatmap", "데이터", "시각화", "생성기"] },
+    "ru": { "name": "Создатель Тепловых Карт", "description": "Создает тепловые карты данных.", "keywords": ["heatmap", "данные", "визуализация", "генератор"] },
+    "pt": { "name": "Gerador de Mapas de Calor", "description": "Gera mapas de calor de dados.", "keywords": ["heatmap", "dados", "visualização", "gerador"] }
+  },
+  "/timeline-generator": {
+    "en": { "name": "Timeline Generator", "description": "Generate timeline visualizations.", "keywords": ["timeline", "chronology", "events", "generator"] },
+    "es": { "name": "Generador de Líneas de Tiempo", "description": "Genera visualizaciones de líneas de tiempo.", "keywords": ["timeline", "cronología", "eventos", "generador"] },
+    "fr": { "name": "Générateur de Frises Chronologiques", "description": "Génère des visualisations de frises chronologiques.", "keywords": ["timeline", "chronologie", "événements", "générateur"] },
+    "de": { "name": "Zeitleisten-Generator", "description": "Erzeugt Zeitleisten-Visualisierungen.", "keywords": ["timeline", "zeitleiste", "ereignisse", "generator"] },
+    "ja": { "name": "タイムライン生成", "description": "タイムラインビジュアライゼーションを生成します。", "keywords": ["timeline", "タイムライン", "年表", "ジェネレーター"] },
+    "it": { "name": "Generatore di Linee Temporali", "description": "Genera visualizzazioni di linee temporali.", "keywords": ["timeline", "cronologia", "eventi", "generatore"] },
+    "ko": { "name": "타임라인 생성", "description": "타임라인 시각화를 생성합니다.", "keywords": ["timeline", "타임라인", "연표", "생성기"] },
+    "ru": { "name": "Генератор Временных Шкал", "description": "Создает визуализации временных шкал.", "keywords": ["timeline", "временная шкала", "события", "генератор"] },
+    "pt": { "name": "Gerador de Linhas do Tempo", "description": "Gera visualizações de linhas do tempo.", "keywords": ["timeline", "linha do tempo", "eventos", "gerador"] }
+  },
+  "/tree-diagram-drawer": {
+    "en": { "name": "Tree Diagram Drawer", "description": "Draw hierarchical tree structure diagrams.", "keywords": ["tree", "diagram", "hierarchy", "structure"] },
+    "es": { "name": "Dibujador de Diagramas de Árbol", "description": "Dibuja diagramas de estructura jerárquica en árbol.", "keywords": ["tree", "diagrama", "árbol", "jerarquía"] },
+    "fr": { "name": "Dessinateur d'Arborescences", "description": "Dessine des diagrammes de structure hiérarchique en arbre.", "keywords": ["tree", "diagramme", "arbre", "hiérarchie"] },
+    "de": { "name": "Baumdiagramm-Zeichner", "description": "Zeichnet hierarchische Baumstrukturdiagramme.", "keywords": ["tree", "diagramm", "baum", "hierarchie"] },
+    "ja": { "name": "樹形図描画", "description": "階層的な樹形構造図を描画します。", "keywords": ["tree", "diagram", "樹形図", "階層"] },
+    "it": { "name": "Disegnatore di Diagrammi ad Albero", "description": "Disegna diagrammi di struttura gerarchica ad albero.", "keywords": ["tree", "diagram", "albero", "gerarchia"] },
+    "ko": { "name": "트리 다이어그램 그리기", "description": "계층적 트리 구조 다이어그램을 그립니다.", "keywords": ["tree", "diagram", "트리", "계층"] },
+    "ru": { "name": "Рисовальщик Деревьев", "description": "Рисует иерархические древовидные структуры.", "keywords": ["tree", "diagram", "дерево", "иерархия"] },
+    "pt": { "name": "Desenhador de Diagramas de Árvore", "description": "Desenha diagramas de estrutura hierárquica em árvore.", "keywords": ["tree", "diagram", "árvore", "hierarquia"] }
+  },
+  "/data-table-renderer": {
+    "en": { "name": "Data Table Renderer", "description": "Render CSV/JSON data as tables.", "keywords": ["data", "table", "csv", "json", "render"] },
+    "es": { "name": "Renderizador de Tablas de Datos", "description": "Renderiza datos CSV/JSON como tablas.", "keywords": ["data", "tabla", "csv", "json", "renderizar"] },
+    "fr": { "name": "Moteur de Rendu de Tableaux de Données", "description": "Rend les données CSV/JSON sous forme de tableaux.", "keywords": ["data", "tableau", "csv", "json", "rendu"] },
+    "de": { "name": "Datentabellen-Renderer", "description": "Rendert CSV/JSON-Daten als Tabellen.", "keywords": ["data", "tabelle", "csv", "json", "rendern"] },
+    "ja": { "name": "データテーブルレンダリング", "description": "CSV/JSON データをテーブルとしてレンダリングします。", "keywords": ["data", "テーブル", "csv", "json", "レンダリング"] },
+    "it": { "name": "Renderer di Tabelle Dati", "description": "Renderizza dati CSV/JSON come tabelle.", "keywords": ["data", "tabella", "csv", "json", "rendering"] },
+    "ko": { "name": "데이터 테이블 렌더링", "description": "CSV/JSON 데이터를 테이블로 렌더링합니다.", "keywords": ["data", "테이블", "csv", "json", "렌더링"] },
+    "ru": { "name": "Рендерер Таблиц Данных", "description": "Отображает данные CSV/JSON в виде таблиц.", "keywords": ["data", "таблица", "csv", "json", "рендеринг"] },
+    "pt": { "name": "Renderizador de Tabelas de Dados", "description": "Renderiza dados CSV/JSON como tabelas.", "keywords": ["data", "tabela", "csv", "json", "renderização"] }
+  },
+  "/mind-map-maker": {
+    "en": { "name": "Mind Map Maker", "description": "Generate mind maps (Mermaid mindmap).", "keywords": ["mind map", "mermaid", "brainstorming", "generator"] },
+    "es": { "name": "Generador de Mapas Mentales", "description": "Genera mapas mentales (Mermaid mindmap).", "keywords": ["mind map", "mermaid", "lluvia de ideas", "generador"] },
+    "fr": { "name": "Générateur de Cartes Heuristiques", "description": "Génère des cartes heuristiques (Mermaid mindmap).", "keywords": ["mind map", "mermaid", "brainstorming", "générateur"] },
+    "de": { "name": "Mindmap-Ersteller", "description": "Erzeugt Mindmaps (Mermaid mindmap).", "keywords": ["mind map", "mermaid", "brainstorming", "generator"] },
+    "ja": { "name": "マインドマップ", "description": "マインドマップ（Mermaid mindmap）を生成します。", "keywords": ["mind map", "mermaid", "発想", "ジェネレーター"] },
+    "it": { "name": "Generatore di Mappe Mentali", "description": "Genera mappe mentali (Mermaid mindmap).", "keywords": ["mind map", "mermaid", "brainstorming", "generatore"] },
+    "ko": { "name": "마인드맵", "description": "마인드맵(Mermaid mindmap)을 생성합니다.", "keywords": ["mind map", "mermaid", "브레인스토밍", "생성기"] },
+    "ru": { "name": "Создатель Карт Памяти", "description": "Создает карты памяти (Mermaid mindmap).", "keywords": ["mind map", "mermaid", "мозговой штурм", "генератор"] },
+    "pt": { "name": "Gerador de Mapas Mentais", "description": "Gera mapas mentais (Mermaid mindmap).", "keywords": ["mind map", "mermaid", "brainstorming", "gerador"] }
+  },
+  "/stats-chart-maker": {
+    "en": { "name": "Stats Chart Maker", "description": "Generate bar, line, and pie statistical charts.", "keywords": ["chart", "statistics", "bar", "line", "pie"] },
+    "es": { "name": "Generador de Gráficos Estadísticos", "description": "Genera gráficos estadísticos de barras, líneas y pastel.", "keywords": ["chart", "estadísticas", "bar", "line", "pie"] },
+    "fr": { "name": "Générateur de Graphiques Statistiques", "description": "Génère des graphiques statistiques en barres, lignes et camembert.", "keywords": ["chart", "statistiques", "bar", "line", "pie"] },
+    "de": { "name": "Statistikdiagramm-Ersteller", "description": "Erzeugt Balken-, Linien- und Kreisdiagramme.", "keywords": ["chart", "statistik", "bar", "line", "pie"] },
+    "ja": { "name": "統計グラフ", "description": "棒グラフ、折れ線グラフ、円グラフの統計グラフを生成します。", "keywords": ["chart", "統計", "グラフ", "bar", "line", "pie"] },
+    "it": { "name": "Generatore di Grafici Statistici", "description": "Genera grafici statistici a barre, linee e torta.", "keywords": ["chart", "statistiche", "bar", "line", "pie"] },
+    "ko": { "name": "통계 차트", "description": "막대, 선, 원형 통계 차트를 생성합니다.", "keywords": ["chart", "통계", "차트", "bar", "line", "pie"] },
+    "ru": { "name": "Создатель Статистических Диаграмм", "description": "Создает столбчатые, линейные и круговые статистические диаграммы.", "keywords": ["chart", "статистика", "bar", "line", "pie"] },
+    "pt": { "name": "Gerador de Gráficos Estatísticos", "description": "Gera gráficos estatísticos de barras, linhas e pizza.", "keywords": ["chart", "estatísticas", "bar", "line", "pie"] }
+  },
+  "/csv-chart-generator": {
+    "en": { "name": "CSV Chart Generator", "description": "Generate charts from CSV data.", "keywords": ["csv", "chart", "data", "visualization"] },
+    "es": { "name": "Generador de Gráficos CSV", "description": "Genera gráficos a partir de datos CSV.", "keywords": ["csv", "chart", "datos", "visualización"] },
+    "fr": { "name": "Générateur de Graphiques CSV", "description": "Génère des graphiques à partir de données CSV.", "keywords": ["csv", "chart", "données", "visualisation"] },
+    "de": { "name": "CSV-Diagramm-Generator", "description": "Erzeugt Diagramme aus CSV-Daten.", "keywords": ["csv", "chart", "daten", "visualisierung"] },
+    "ja": { "name": "CSV グラフ生成", "description": "CSV データからグラフを生成します。", "keywords": ["csv", "chart", "データ", "可視化"] },
+    "it": { "name": "Generatore di Grafici CSV", "description": "Genera grafici da dati CSV.", "keywords": ["csv", "chart", "dati", "visualizzazione"] },
+    "ko": { "name": "CSV 차트 생성", "description": "CSV 데이터로 차트를 생성합니다.", "keywords": ["csv", "chart", "데이터", "시각화"] },
+    "ru": { "name": "Генератор Диаграмм из CSV", "description": "Создает диаграммы из данных CSV.", "keywords": ["csv", "chart", "данные", "визуализация"] },
+    "pt": { "name": "Gerador de Gráficos CSV", "description": "Gera gráficos a partir de dados CSV.", "keywords": ["csv", "chart", "dados", "visualização"] }
+  }
+}

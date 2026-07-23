@@ -1,0 +1,162 @@
+[
+  {
+    "name": "GraphQL 查询测试",
+    "path": "/graphql-tester",
+    "description": "发送 GraphQL 查询请求，支持变量、请求头编辑与历史记录",
+    "category": "API 测试",
+    "keywords": [
+      "graphql",
+      "api",
+      "query",
+      "测试"
+    ]
+  },
+  {
+    "name": "gRPC 服务查询",
+    "path": "/grpc-reflector",
+    "description": "gRPC 服务说明、protobuf 基础知识、.proto 语法速查与 grpcurl 命令生成器",
+    "category": "API 测试",
+    "keywords": [
+      "grpc",
+      "protobuf",
+      "rpc",
+      "服务"
+    ]
+  },
+  {
+    "name": "HMAC 签名",
+    "path": "/hmac-signer",
+    "description": "使用 Web Crypto API 计算 HMAC 签名，支持 SHA256/384/512/MD5",
+    "category": "API 测试",
+    "keywords": [
+      "hmac",
+      "signature",
+      "签名",
+      "sha256"
+    ]
+  },
+  {
+    "name": "JWT 调试",
+    "path": "/jwt-debugger",
+    "description": "解码 JWT Token，查看 Header/Payload/Signature，检查过期时间与 alg:none 风险",
+    "category": "API 测试",
+    "keywords": [
+      "jwt",
+      "token",
+      "json web token",
+      "调试"
+    ]
+  },
+  {
+    "name": "Mock 服务器",
+    "path": "/mock-server",
+    "description": "定义 Mock 路由并生成配置 JSON，支持本地模拟请求与下载",
+    "category": "API 测试",
+    "keywords": [
+      "mock",
+      "server",
+      "api",
+      "模拟"
+    ]
+  },
+  {
+    "name": "OpenAPI 校验",
+    "path": "/openapi-validator",
+    "description": "校验 OpenAPI/Swagger 文档结构，列出 API 端点与必需字段检查",
+    "category": "API 测试",
+    "keywords": [
+      "openapi",
+      "swagger",
+      "api",
+      "校验"
+    ]
+  },
+  {
+    "name": "SSE 测试",
+    "path": "/sse-tester",
+    "description": "连接 SSE 服务端，实时接收 Server-Sent Events 消息流",
+    "category": "API 测试",
+    "keywords": [
+      "sse",
+      "server sent events",
+      "eventsource",
+      "流"
+    ]
+  },
+  {
+    "name": "Webhook 测试",
+    "path": "/webhook-tester",
+    "description": "向 Webhook URL 发送请求，测试回调接口（支持自定义方法与请求体）",
+    "category": "API 测试",
+    "keywords": [
+      "webhook",
+      "callback",
+      "测试",
+      "请求"
+    ]
+  },
+  {
+    "name": "WebSocket 测试",
+    "path": "/websocket-tester",
+    "description": "连接 WebSocket 服务，收发消息并记录通信日志",
+    "category": "API 测试",
+    "keywords": [
+      "websocket",
+      "ws",
+      "socket",
+      "测试"
+    ]
+  },
+  {
+    "name": "关键词密度分析",
+    "path": "/keyword-density",
+    "description": "分析文本关键词密度与频率，支持中英文分词与停用词过滤",
+    "category": "SEO 工具",
+    "keywords": [
+      "keyword",
+      "density",
+      "seo",
+      "关键词",
+      "密度",
+      "词频",
+      "分析"
+    ]
+  },
+  {
+    "name": "Meta 标签生成",
+    "path": "/meta-tag-generator",
+    "description": "生成 HTML meta 标签（OG/Twitter）",
+    "category": "SEO 工具",
+    "keywords": [
+      "Meta",
+      "标签",
+      "OG",
+      "Twitter",
+      "SEO"
+    ]
+  },
+  {
+    "name": "Robots.txt 生成",
+    "path": "/robots-generator",
+    "description": "可视化生成 robots.txt 文件",
+    "category": "SEO 工具",
+    "keywords": [
+      "Robots",
+      "txt",
+      "爬虫",
+      "SEO"
+    ]
+  },
+  {
+    "name": "Sitemap 生成",
+    "path": "/sitemap-generator",
+    "description": "生成 XML sitemap",
+    "category": "SEO 工具",
+    "keywords": [
+      "Sitemap",
+      "XML",
+      "站点地图",
+      "SEO"
+    ]
+  }
+]

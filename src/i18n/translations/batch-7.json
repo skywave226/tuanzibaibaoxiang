@@ -1,0 +1,222 @@
+{
+  "/tts-audio-synth": {
+    "en": { "name": "TTS Audio Synthesis", "description": "Convert text to speech and export audio.", "keywords": ["tts", "speech", "voice", "synthesis", "audio"] },
+    "es": { "name": "Síntesis de Audio TTS", "description": "Convierte texto en voz y exporta audio.", "keywords": ["tts", "speech", "voz", "síntesis", "audio"] },
+    "fr": { "name": "Synthèse Audio TTS", "description": "Convertit du texte en parole et exporte l'audio.", "keywords": ["tts", "speech", "voix", "synthèse", "audio"] },
+    "de": { "name": "TTS-Audiosynthese", "description": "Text in Sprache umwandeln und Audio exportieren.", "keywords": ["tts", "speech", "Stimme", "Synthese", "Audio"] },
+    "ja": { "name": "TTS音声合成", "description": "テキストを音声に変換してオーディオをエクスポートします。", "keywords": ["tts", "speech", "音声", "合成", "オーディオ"] },
+    "it": { "name": "Sintesi Audio TTS", "description": "Converte il testo in voce ed esporta l'audio.", "keywords": ["tts", "speech", "voce", "sintesi", "audio"] },
+    "ko": { "name": "TTS 오디오 합성", "description": "텍스트를 음성으로 변환하고 오디오를 내보냅니다.", "keywords": ["tts", "speech", "음성", "합성", "오디오"] },
+    "ru": { "name": "TTS Синтез Аудио", "description": "Преобразует текст в речь и экспортирует аудио.", "keywords": ["tts", "speech", "голос", "синтез", "аудио"] },
+    "pt": { "name": "Síntese de Áudio TTS", "description": "Converte texto em voz e exporta áudio.", "keywords": ["tts", "speech", "voz", "síntese", "áudio"] }
+  },
+  "/map-generator": {
+    "en": { "name": "Map Generator", "description": "Procedural map generator supporting cave, maze, and BSP room generation with 2D array export.", "keywords": ["map", "generation", "cave", "maze", "BSP", "random", "2D"] },
+    "es": { "name": "Generador de Mapas", "description": "Herramienta de generación procedural de mapas que soporta cuevas, laberintos y habitaciones BSP, exportando arrays 2D.", "keywords": ["map", "generación", "cueva", "laberinto", "BSP", "aleatorio", "2D"] },
+    "fr": { "name": "Générateur de Cartes", "description": "Outil de génération procédurale de cartes prenant en charge grottes, labyrinthes et salles BSP, avec export de tableaux 2D.", "keywords": ["map", "génération", "grotte", "labyrinthe", "BSP", "aléatoire", "2D"] },
+    "de": { "name": "Karten Generator", "description": "Prozedurales Karten-Generierungstool mit Unterstützung für Höhlen, Labyrinthe und BSP-Räume sowie Export von 2D-Arrays.", "keywords": ["map", "Generierung", "Höhle", "Labyrinth", "BSP", "zufällig", "2D"] },
+    "ja": { "name": "マップ生成", "description": "洞窟、迷路、BSP部屋の生成に対応し、2次元配列をエクスポートできる手続き型マップ生成ツールです。", "keywords": ["map", "生成", "洞窟", "迷路", "BSP", "ランダム", "2D"] },
+    "it": { "name": "Generatore di Mappe", "description": "Strumento di generazione procedurale di mappe che supporta grotte, labirinti e stanze BSP ed esporta array 2D.", "keywords": ["map", "generazione", "grotta", "labirinto", "BSP", "casuale", "2D"] },
+    "ko": { "name": "맵 생성기", "description": "동굴, 미로, BSP 방 생성을 지원하고 2D 배열로 내보내는 절차적 맵 생성 도구입니다.", "keywords": ["map", "생성", "동굴", "미로", "BSP", "무작위", "2D"] },
+    "ru": { "name": "Генератор Карт", "description": "Инструмент процедурной генерации карт с поддержкой пещер, лабиринтов и комнат BSP, экспортирующий двумерные массивы.", "keywords": ["map", "генерация", "пещера", "лабиринт", "BSP", "случайный", "2D"] },
+    "pt": { "name": "Gerador de Mapas", "description": "Ferramenta de geração procedural de mapas que suporta cavernas, labirintos e salas BSP, exportando arrays 2D.", "keywords": ["map", "geração", "caverna", "labirinto", "BSP", "aleatório", "2D"] }
+  },
+  "/sprite-slicer": {
+    "en": { "name": "Sprite Slicer", "description": "Sprite sheet slicing tool supporting upload, grid splitting, frame preview, manual region adjustment, and exporting single or all frames.", "keywords": ["sprite", "slice", "frame", "animation", "tile", "export", "toDataURL"] },
+    "es": { "name": "Cortador de Sprites", "description": "Herramienta para cortar hojas de sprites que permite subir imágenes, dividir en cuadrícula, previsualizar fotogramas, ajustar regiones manualmente y exportar fotogramas individuales o todos.", "keywords": ["sprite", "cortar", "frame", "animación", "tile", "exportar", "toDataURL"] },
+    "fr": { "name": "Découpeur de Sprites", "description": "Outil de découpe de feuilles de sprites prenant en charge le téléchargement, la division en grille, l'aperçu des frames, l'ajustement manuel des régions et l'export de frames individuelles ou de toutes les frames.", "keywords": ["sprite", "découper", "frame", "animation", "tile", "exporter", "toDataURL"] },
+    "de": { "name": "Sprite-Slicer", "description": "Sprite-Sheet-Slicing-Tool mit Upload, Gitteraufteilung, Frame-Vorschau, manueller Bereichsanpassung und Export einzelner oder aller Frames.", "keywords": ["sprite", "slicen", "frame", "animation", "tile", "exportieren", "toDataURL"] },
+    "ja": { "name": "スプライトスライサー", "description": "スプライトシートのアップロード、グリッド分割、フレームプレビュー、手動領域調整、単一または全フレームのエクスポートに対応するスプライトスライサーです。", "keywords": ["sprite", "スライス", "フレーム", "アニメーション", "tile", "エクスポート", "toDataURL"] },
+    "it": { "name": "Taglierino di Sprite", "description": "Strumento di slicing per sprite sheet che supporta caricamento, divisione a griglia, anteprima fotogrammi, regolazione manuale delle aree ed esportazione di singoli o tutti i fotogrammi.", "keywords": ["sprite", "taglio", "frame", "animazione", "tile", "esporta", "toDataURL"] },
+    "ko": { "name": "스프라이트 슬라이서", "description": "스프라이트 시트 업로드, 그리드 분할, 프레임 미리보기, 수동 영역 조정, 단일 또는 전체 프레임 내보내기를 지원하는 스프라이트 슬라이서입니다.", "keywords": ["sprite", "슬라이스", "프레임", "애니메이션", "tile", "내보내기", "toDataURL"] },
+    "ru": { "name": "Нарезка Спрайтов", "description": "Инструмент нарезки спрайтовых листов с поддержкой загрузки, разбиения по сетке, предпросмотра кадров, ручной настройки областей и экспорта отдельных или всех кадров.", "keywords": ["sprite", "нарезка", "frame", "анимация", "tile", "экспорт", "toDataURL"] },
+    "pt": { "name": "Fatiador de Sprites", "description": "Ferramenta de fatiamento de sprite sheets que suporta upload, divisão em grade, pré-visualização de frames, ajuste manual de regiões e exportação de frames individuais ou todos.", "keywords": ["sprite", "fatiar", "frame", "animação", "tile", "exportar", "toDataURL"] }
+  },
+  "/collision-detector": {
+    "en": { "name": "Collision Detector", "description": "2D collision detection visualizer supporting AABB, circle, rectangle-circle, point-shape, and line segment collision tests with algorithm formulas.", "keywords": ["collision", "detection", "AABB", "circle", "rectangle", "visualization", "algorithm"] },
+    "es": { "name": "Detector de Colisiones", "description": "Visualizador de detección de colisiones 2D que soporta AABB, círculos, rectángulo-círculo, punto-forma y detección de colisiones de segmentos de línea con fórmulas de algoritmos.", "keywords": ["colisión", "detección", "AABB", "círculo", "rectángulo", "visualización", "algoritmo"] },
+    "fr": { "name": "Détecteur de Collisions", "description": "Visualiseur de détection de collisions 2D prenant en charge AABB, cercles, rectangle-cercle, point-forme et collisions de segments de ligne avec formules d'algorithmes.", "keywords": ["collision", "détection", "AABB", "cercle", "rectangle", "visualisation", "algorithme"] },
+    "de": { "name": "Kollisionsdetektor", "description": "2D-Kollisionserkennungs-Visualisierer mit Unterstützung für AABB, Kreise, Rechteck-Kreis, Punkt-Form und Liniensegment-Kollisionstests mit Algorithmusformeln.", "keywords": ["Kollision", "Erkennung", "AABB", "Kreis", "Rechteck", "Visualisierung", "Algorithmus"] },
+    "ja": { "name": "衝突検出ツール", "description": "AABB、円、矩形と円、点と図形、線分の衝突検出とアルゴリズム数式に対応する2D衝突検出可視化ツールです。", "keywords": ["衝突", "検出", "AABB", "円", "矩形", "可視化", "アルゴリズム"] },
+    "it": { "name": "Rilevatore di Collisioni", "description": "Visualizzatore di rilevamento collisioni 2D che supporta AABB, cerchio, rettangolo-cerchio, punto-forma e collisioni tra segmenti di linea con formule algoritmiche.", "keywords": ["collisione", "rilevamento", "AABB", "cerchio", "rettangolo", "visualizzazione", "algoritmo"] },
+    "ko": { "name": "충돌 감지 도구", "description": "AABB, 원, 사각형-원, 점-도형, 선분 충돌 감지 및 알고리즘 공식을 지원하는 2D 충돌 감지 시각화 도구입니다.", "keywords": ["충돌", "감지", "AABB", "원", "사각형", "시각화", "알고리즘"] },
+    "ru": { "name": "Детектор Столкновений", "description": "Визуализатор 2D обнаружения столкновений с поддержкой AABB, окружностей, прямоугольник-окружность, точка-фигура и отрезков, а также формул алгоритмов.", "keywords": ["столкновение", "обнаружение", "AABB", "окружность", "прямоугольник", "визуализация", "алгоритм"] },
+    "pt": { "name": "Detector de Colisões", "description": "Visualizador de detecção de colisões 2D que suporta AABB, círculo, retângulo-círculo, ponto-forma e detecção de colisão de segmentos de linha com fórmulas de algoritmos.", "keywords": ["colisão", "detecção", "AABB", "círculo", "retângulo", "visualização", "algoritmo"] }
+  },
+  "/random-generator": {
+    "en": { "name": "Random Number Generator", "description": "Random number generator for multiple distributions including uniform, normal, and exponential, with statistical histogram.", "keywords": ["random", "distribution", "uniform", "normal", "exponential", "seed"] },
+    "es": { "name": "Generador de Números Aleatorios", "description": "Generador de números aleatorios con múltiples distribuciones que soporta uniforme, normal y exponencial, incluyendo histograma estadístico.", "keywords": ["aleatorio", "distribución", "uniforme", "normal", "exponencial", "semilla"] },
+    "fr": { "name": "Générateur de Nombres Aléatoires", "description": "Générateur de nombres aléatoires pour plusieurs distributions incluant uniforme, normale et exponentielle, avec histogramme statistique.", "keywords": ["aléatoire", "distribution", "uniforme", "normale", "exponentielle", "graine"] },
+    "de": { "name": "Zufallszahlengenerator", "description": "Zufallszahlengenerator für mehrere Verteilungen wie Gleich-, Normal- und Exponentialverteilung mit statistischem Histogramm.", "keywords": ["zufällig", "Verteilung", "gleichverteilt", "normal", "exponentiell", "Seed"] },
+    "ja": { "name": "乱数生成器", "description": "一様分布、正規分布、指数分布に対応し、統計ヒストグラム付きの乱数生成器です。", "keywords": ["ランダム", "分布", "一様", "正規", "指数", "シード"] },
+    "it": { "name": "Generatore di Numeri Casuali", "description": "Generatore di numeri casuali per più distribuzioni, tra cui uniforme, normale ed esponenziale, con istogramma statistico.", "keywords": ["casuale", "distribuzione", "uniforme", "normale", "esponenziale", "seme"] },
+    "ko": { "name": "난수 생성기", "description": "균등 분포, 정규 분포, 지수 분포를 지원하며 통계 히스토그램을 포함하는 난수 생성기입니다.", "keywords": ["난수", "분포", "균등", "정규", "지수", "시드"] },
+    "ru": { "name": "Генератор Случайных Чисел", "description": "Генератор случайных чисел для нескольких распределений, включая равномерное, нормальное и экспоненциальное, со статистической гистограммой.", "keywords": ["случайный", "распределение", "равномерное", "нормальное", "экспоненциальное", "seed"] },
+    "pt": { "name": "Gerador de Números Aleatórios", "description": "Gerador de números aleatórios para várias distribuições, incluindo uniforme, normal e exponencial, com histograma estatístico.", "keywords": ["aleatório", "distribuição", "uniforme", "normal", "exponencial", "semente"] }
+  },
+  "/vector-calculator": {
+    "en": { "name": "Vector Calculator", "description": "2D/3D vector calculation tool supporting addition/subtraction, dot and cross products, magnitude, normalization, angle, distance, projection, Lerp interpolation, and visualization.", "keywords": ["vector", "dot product", "cross product", "normalization", "interpolation", "lerp", "projection", "visualization"] },
+    "es": { "name": "Calculadora de Vectores", "description": "Herramienta de cálculo vectorial 2D/3D que soporta suma/resta, producto punto y cruz, magnitud, normalización, ángulo, distancia, proyección, interpolación Lerp y visualización.", "keywords": ["vector", "producto punto", "producto cruz", "normalización", "interpolación", "lerp", "proyección", "visualización"] },
+    "fr": { "name": "Calculateur de Vecteurs", "description": "Outil de calcul vectoriel 2D/3D prenant en charge addition/soustraction, produit scalaire et vectoriel, norme, normalisation, angle, distance, projection, interpolation Lerp et visualisation.", "keywords": ["vector", "produit scalaire", "produit vectoriel", "normalisation", "interpolation", "lerp", "projection", "visualisation"] },
+    "de": { "name": "Vektorrechner", "description": "2D/3D-Vektorberechnungstool mit Unterstützung von Addition/Subtraktion, Punkt- und Kreuzprodukt, Betrag, Normalisierung, Winkel, Abstand, Projektion, Lerp-Interpolation und Visualisierung.", "keywords": ["vector", "Skalarprodukt", "Kreuzprodukt", "Normalisierung", "Interpolation", "lerp", "Projektion", "Visualisierung"] },
+    "ja": { "name": "ベクトル計算ツール", "description": "加減算、点乗、外積、大きさ、正規化、角度、距離、投影、Lerp補間、可視化に対応する2D/3Dベクトル演算ツールです。", "keywords": ["vector", "ドット積", "クロス積", "正規化", "補間", "lerp", "投影", "可視化"] },
+    "it": { "name": "Calcolatore di Vettori", "description": "Strumento di calcolo vettoriale 2D/3D che supporta addizione/sottrazione, prodotto scalare e vettoriale, magnitudo, normalizzazione, angolo, distanza, proiezione, interpolazione Lerp e visualizzazione.", "keywords": ["vector", "prodotto scalare", "prodotto vettoriale", "normalizzazione", "interpolazione", "lerp", "proiezione", "visualizzazione"] },
+    "ko": { "name": "벡터 계산 도구", "description": "2D/3D 벡터 연산 도구로 덧셈/뺄셈, 내적, 외적, 크기, 정규화, 각도, 거리, 투영, Lerp 보간 및 시각화를 지원합니다.", "keywords": ["vector", "내적", "외적", "정규화", "보간", "lerp", "투영", "시각화"] },
+    "ru": { "name": "Калькулятор Векторов", "description": "Инструмент векторных вычислений 2D/3D с поддержкой сложения/вычитания, скалярного и векторного произведений, длины, нормализации, угла, расстояния, проекции, интерполяции Lerp и визуализации.", "keywords": ["vector", "скалярное произведение", "векторное произведение", "нормализация", "интерполяция", "lerp", "проекция", "визуализация"] },
+    "pt": { "name": "Calculadora de Vetores", "description": "Ferramenta de cálculo vetorial 2D/3D que suporta adição/subtração, produto escalar e vetorial, magnitude, normalização, ângulo, distância, projeção, interpolação Lerp e visualização.", "keywords": ["vector", "produto escalar", "produto vetorial", "normalização", "interpolação", "lerp", "projeção", "visualização"] }
+  },
+  "/pixel-art-tool": {
+    "en": { "name": "Pixel Art", "description": "Pixel art drawing tool with brush, eraser, fill, and eyedropper, plus undo/redo and palette presets.", "keywords": ["pixel", "art", "draw", "canvas", "NES", "GameBoy"] },
+    "es": { "name": "Arte de Píxeles", "description": "Herramienta de dibujo de pixel art con pincel, goma de borrar, relleno y cuentagotas, además de deshacer/rehacer y preajustes de paleta.", "keywords": ["pixel", "arte", "dibujar", "lienzo", "NES", "GameBoy"] },
+    "fr": { "name": "Pixel Art", "description": "Outil de dessin pixel art avec pinceau, gomme, remplissage et pipette, plus annuler/rétablir et préréglages de palette.", "keywords": ["pixel", "art", "dessiner", "toile", "NES", "GameBoy"] },
+    "de": { "name": "Pixel Art", "description": "Pixel-Art-Zeichentool mit Pinsel, Radiergummi, Füllung und Pipette sowie Rückgängig/Wiederholen und Palettenvoreinstellungen.", "keywords": ["pixel", "Kunst", "zeichnen", "Leinwand", "NES", "GameBoy"] },
+    "ja": { "name": "ピクセルアート", "description": "ブラシ、消しゴム、塗りつぶし、スポイト、取り消し/やり直し、パレットプリセットを備えたピクセルアート描画ツールです。", "keywords": ["pixel", "アート", "描画", "キャンバス", "NES", "GameBoy"] },
+    "it": { "name": "Pixel Art", "description": "Strumento di disegno pixel art con pennello, gomma, riempimento e contagocce, più annulla/ripristina e preset di tavolozza.", "keywords": ["pixel", "arte", "disegno", "tela", "NES", "GameBoy"] },
+    "ko": { "name": "픽셀 아트", "description": "브러시, 지우개, 채우기, 스포이트, 실행 취소/다시 실행 및 팔레트 프리셋이 포함된 픽셀 아트 그리기 도구입니다.", "keywords": ["pixel", "아트", "그리기", "캔버스", "NES", "GameBoy"] },
+    "ru": { "name": "Пиксель Арт", "description": "Инструмент рисования пиксель-арта с кистью, ластиком, заливкой и пипеткой, а также отменой/повтором и предустановками палитры.", "keywords": ["pixel", "арт", "рисование", "холст", "NES", "GameBoy"] },
+    "pt": { "name": "Pixel Art", "description": "Ferramenta de desenho pixel art com pincel, borracha, preenchimento e conta-gotas, além de desfazer/refazer e predefinições de paleta.", "keywords": ["pixel", "arte", "desenhar", "tela", "NES", "GameBoy"] }
+  },
+  "/pixel-art-editor": {
+    "en": { "name": "Pixel Art Editor", "description": "Pixel art drawing tool supporting grid drawing, palettes, and export.", "keywords": ["pixel", "art", "draw", "grid"] },
+    "es": { "name": "Editor de Pixel Art", "description": "Herramienta de dibujo de pixel art que soporta dibujo en cuadrícula, paletas y exportación.", "keywords": ["pixel", "arte", "dibujar", "cuadrícula"] },
+    "fr": { "name": "Éditeur de Pixel Art", "description": "Outil de dessin pixel art prenant en charge le dessin sur grille, les palettes et l'export.", "keywords": ["pixel", "art", "dessiner", "grille"] },
+    "de": { "name": "Pixel-Art-Editor", "description": "Pixel-Art-Zeichentool mit Unterstützung für Gitterzeichnung, Paletten und Export.", "keywords": ["pixel", "Kunst", "zeichnen", "Gitter"] },
+    "ja": { "name": "ピクセルアートエディタ", "description": "グリッド描画、パレット、エクスポートに対応するピクセルアート描画ツールです。", "keywords": ["pixel", "アート", "描画", "グリッド"] },
+    "it": { "name": "Editor di Pixel Art", "description": "Strumento di disegno pixel art che supporta disegno a griglia, tavolozze ed esportazione.", "keywords": ["pixel", "arte", "disegno", "griglia"] },
+    "ko": { "name": "픽셀 아트 편집기", "description": "그리드 그리기, 팔레트, 내보내기를 지원하는 픽셀 아트 그리기 도구입니다.", "keywords": ["pixel", "아트", "그리기", "그리드"] },
+    "ru": { "name": "Редактор Пиксель Арт", "description": "Инструмент рисования пиксель-арта с поддержкой сетки, палитр и экспорта.", "keywords": ["pixel", "арт", "рисование", "сетка"] },
+    "pt": { "name": "Editor de Pixel Art", "description": "Ferramenta de desenho pixel art que suporta desenho em grade, paletas e exportação.", "keywords": ["pixel", "arte", "desenhar", "grade"] }
+  },
+  "/color-picker-game": {
+    "en": { "name": "Color Picker", "description": "Game development color tool supporting HEX/RGB/HSL/HSV conversion, palette generation, WCAG contrast checking, and config export.", "keywords": ["color", "picker", "palette", "contrast", "WCAG", "HEX", "RGB", "HSL/HSV"] },
+    "es": { "name": "Selector de Color", "description": "Herramienta de color para desarrollo de juegos que soporta conversión HEX/RGB/HSL/HSV, generación de paletas, verificación de contraste WCAG y exportación de configuración.", "keywords": ["color", "selector", "paleta", "contraste", "WCAG", "HEX", "RGB", "HSL/HSV"] },
+    "fr": { "name": "Sélecteur de Couleur", "description": "Outil de couleur pour le développement de jeux prenant en charge la conversion HEX/RGB/HSL/HSV, la génération de palettes, la vérification du contraste WCAG et l'export de configuration.", "keywords": ["couleur", "sélecteur", "palette", "contraste", "WCAG", "HEX", "RGB", "HSL/HSV"] },
+    "de": { "name": "Farbwähler", "description": "Farbtool für die Spieleentwicklung mit Unterstützung für HEX/RGB/HSL/HSV-Umrechnung, Palettengenerierung, WCAG-Kontrastprüfung und Konfigurationsexport.", "keywords": ["farbe", "picker", "palette", "kontrast", "WCAG", "HEX", "RGB", "HSL/HSV"] },
+    "ja": { "name": "カラーピッカー", "description": "HEX/RGB/HSL/HSVの相互変換、パレット生成、WCAGコントラスト検査、設定エクスポートに対応するゲーム開発向けカラーツールです。", "keywords": ["color", "ピッカー", "パレット", "コントラスト", "WCAG", "HEX", "RGB", "HSL/HSV"] },
+    "it": { "name": "Selettore Colore", "description": "Strumento colore per lo sviluppo di giochi che supporta conversione HEX/RGB/HSL/HSV, generazione di tavolozze, controllo contrasto WCAG ed esportazione configurazione.", "keywords": ["colore", "selettore", "tavolozza", "contrasto", "WCAG", "HEX", "RGB", "HSL/HSV"] },
+    "ko": { "name": "색상 선택기", "description": "HEX/RGB/HSL/HSV 변환, 팔레트 생성, WCAG 대비 검사, 구성 내보내기를 지원하는 게임 개발용 색상 도구입니다.", "keywords": ["color", "선택기", "팔레트", "대비", "WCAG", "HEX", "RGB", "HSL/HSV"] },
+    "ru": { "name": "Выбор Цвета", "description": "Цветовой инструмент для разработки игр с поддержкой преобразования HEX/RGB/HSL/HSV, генерации палитр, проверки контраста WCAG и экспорта конфигурации.", "keywords": ["color", "пипетка", "палитра", "контраст", "WCAG", "HEX", "RGB", "HSL/HSV"] },
+    "pt": { "name": "Seletor de Cor", "description": "Ferramenta de cor para desenvolvimento de jogos que suporta conversão HEX/RGB/HSL/HSV, geração de paletas, verificação de contraste WCAG e exportação de configuração.", "keywords": ["cor", "seletor", "paleta", "contraste", "WCAG", "HEX", "RGB", "HSL/HSV"] }
+  },
+  "/game-config-gen": {
+    "en": { "name": "Game Config Generator", "description": "Game config generator supporting character/item/level templates with DPS/TTK balance calculations.", "keywords": ["config", "json", "game", "character", "item", "level", "DPS"] },
+    "es": { "name": "Generador de Configuración de Juego", "description": "Generador de configuración de juego que soporta plantillas de personajes, objetos y niveles, incluyendo cálculos de equilibrio DPS/TTK.", "keywords": ["config", "json", "juego", "personaje", "objeto", "nivel", "DPS"] },
+    "fr": { "name": "Générateur de Configuration de Jeu", "description": "Générateur de configuration de jeu prenant en charge les modèles de personnages, objets et niveaux avec calculs d'équilibre DPS/TTK.", "keywords": ["config", "json", "jeu", "personnage", "objet", "niveau", "DPS"] },
+    "de": { "name": "Spiel-Konfigurationsgenerator", "description": "Spiel-Konfigurationsgenerator mit Unterstützung von Charakter-/Item-/Level-Vorlagen und DPS/TTK-Balanceberechnungen.", "keywords": ["config", "json", "spiel", "charakter", "item", "level", "DPS"] },
+    "ja": { "name": "ゲーム設定生成", "description": "キャラクター/アイテム/ステージテンプレートに対応し、DPS/TTKバランス計算を含むゲーム設定生成ツールです。", "keywords": ["config", "json", "game", "キャラクター", "アイテム", "レベル", "DPS"] },
+    "it": { "name": "Generatore Configurazione Gioco", "description": "Generatore di configurazione di gioco che supporta template di personaggi, oggetti e livelli con calcoli di bilanciamento DPS/TTK.", "keywords": ["config", "json", "gioco", "personaggio", "oggetto", "livello", "DPS"] },
+    "ko": { "name": "게임 설정 생성기", "description": "캐릭터/아이템/레벨 템플릿을 지원하고 DPS/TTK 밸런스 계산을 포함하는 게임 설정 생성기입니다.", "keywords": ["config", "json", "game", "캐릭터", "아이템", "레벨", "DPS"] },
+    "ru": { "name": "Генератор Игровой Конфигурации", "description": "Генератор игровой конфигурации с поддержкой шаблонов персонажей/предметов/уровней и расчётами баланса DPS/TTK.", "keywords": ["config", "json", "игра", "персонаж", "предмет", "уровень", "DPS"] },
+    "pt": { "name": "Gerador de Configuração de Jogo", "description": "Gerador de configuração de jogo que suporta modelos de personagens, itens e níveis, com cálculos de equilíbrio DPS/TTK.", "keywords": ["config", "json", "jogo", "personagem", "item", "nível", "DPS"] }
+  },
+  "/game-random-gen": {
+    "en": { "name": "Game Random Generator", "description": "Game random number generator supporting seeded random, weighted random, and probability distribution.", "keywords": ["random", "seed", "probability", "distribution"] },
+    "es": { "name": "Generador Aleatorio de Juego", "description": "Generador de números aleatorios para juegos que soporta aleatoriedad con semilla, aleatoriedad ponderada y distribución de probabilidad.", "keywords": ["aleatorio", "semilla", "probabilidad", "distribución"] },
+    "fr": { "name": "Générateur Aléatoire de Jeu", "description": "Générateur de nombres aléatoires pour jeux prenant en charge l'aléatoire avec graine, l'aléatoire pondéré et la distribution de probabilité.", "keywords": ["aléatoire", "graine", "probabilité", "distribution"] },
+    "de": { "name": "Spiel-Zufallsgenerator", "description": "Spiel-Zufallszahlengenerator mit Unterstützung für seed-basierte Zufallswerte, gewichtete Zufallswerte und Wahrscheinlichkeitsverteilung.", "keywords": ["zufall", "seed", "wahrscheinlichkeit", "verteilung"] },
+    "ja": { "name": "ゲーム乱数生成器", "description": "シード乱数、重み付け乱数、確率分布に対応するゲーム乱数生成器です。", "keywords": ["random", "シード", "確率", "分布"] },
+    "it": { "name": "Generatore Casuale di Gioco", "description": "Generatore di numeri casuali per giochi che supporta random con seme, random ponderato e distribuzione di probabilità.", "keywords": ["casuale", "seme", "probabilità", "distribuzione"] },
+    "ko": { "name": "게임 난수 생성기", "description": "시드 난수, 가중 난수, 확률 분포를 지원하는 게임 난수 생성기입니다.", "keywords": ["random", "시드", "확률", "분포"] },
+    "ru": { "name": "Генератор Случайных Чисел для Игр", "description": "Генератор случайных чисел для игр с поддержкой случайных значений по сиду, взвешенных случайных значений и распределения вероятностей.", "keywords": ["random", "seed", "вероятность", "распределение"] },
+    "pt": { "name": "Gerador Aleatório de Jogo", "description": "Gerador de números aleatórios para jogos que suporta aleatoriedade com semente, aleatoriedade ponderada e distribuição de probabilidade.", "keywords": ["aleatório", "semente", "probabilidade", "distribuição"] }
+  },
+  "/game-color-picker": {
+    "en": { "name": "Game Color Picker", "description": "Game development color picker supporting HEX/RGB/HSL/HSV conversion and palette generation.", "keywords": ["color", "picker", "palette", "converter"] },
+    "es": { "name": "Selector de Color para Juegos", "description": "Selector de color para desarrollo de juegos que soporta conversión HEX/RGB/HSL/HSV y generación de paletas.", "keywords": ["color", "selector", "paleta", "conversor"] },
+    "fr": { "name": "Sélecteur de Couleur de Jeu", "description": "Sélecteur de couleur pour le développement de jeux prenant en charge la conversion HEX/RGB/HSL/HSV et la génération de palettes.", "keywords": ["couleur", "sélecteur", "palette", "convertisseur"] },
+    "de": { "name": "Spiel-Farbwähler", "description": "Farbwähler für die Spieleentwicklung mit Unterstützung für HEX/RGB/HSL/HSV-Umrechnung und Palettengenerierung.", "keywords": ["farbe", "picker", "palette", "konverter"] },
+    "ja": { "name": "ゲームカラーピッカー", "description": "HEX/RGB/HSL/HSVの相互変換とパレット生成に対応するゲーム開発向けカラーピッカーです。", "keywords": ["color", "ピッカー", "パレット", "コンバーター"] },
+    "it": { "name": "Selettore Colore di Gioco", "description": "Selettore colore per lo sviluppo di giochi che supporta conversione HEX/RGB/HSL/HSV e generazione di tavolozze.", "keywords": ["colore", "selettore", "tavolozza", "convertitore"] },
+    "ko": { "name": "게임 색상 선택기", "description": "HEX/RGB/HSL/HSV 변환과 팔레트 생성을 지원하는 게임 개발용 색상 선택기입니다.", "keywords": ["color", "선택기", "팔레트", "변환기"] },
+    "ru": { "name": "Игровая Пипетка Цвета", "description": "Пипетка цвета для разработки игр с поддержкой преобразования HEX/RGB/HSL/HSV и генерации палитр.", "keywords": ["color", "пипетка", "палитра", "конвертер"] },
+    "pt": { "name": "Seletor de Cor para Jogos", "description": "Seletor de cor para desenvolvimento de jogos que suporta conversão HEX/RGB/HSL/HSV e geração de paletas.", "keywords": ["cor", "seletor", "paleta", "conversor"] }
+  },
+  "/noise-generator": {
+    "en": { "name": "Noise Generator", "description": "Perlin/Simplex noise generator with adjustable frequency, amplitude, and octaves, supporting 1D/2D visualization.", "keywords": ["noise", "perlin", "simplex", "texture", "frequency", "octave"] },
+    "es": { "name": "Generador de Ruido", "description": "Generador de ruido Perlin/Simplex con frecuencia, amplitud y octavas ajustables, que soporta visualización 1D/2D.", "keywords": ["ruido", "perlin", "simplex", "textura", "frecuencia", "octava"] },
+    "fr": { "name": "Générateur de Bruit", "description": "Générateur de bruit Perlin/Simplex avec fréquence, amplitude et octaves réglables, prenant en charge la visualisation 1D/2D.", "keywords": ["bruit", "perlin", "simplex", "texture", "fréquence", "octave"] },
+    "de": { "name": "Noise-Generator", "description": "Perlin/Simplex-Noise-Generator mit einstellbarer Frequenz, Amplitude und Oktaven, unterstützt 1D/2D-Visualisierung.", "keywords": ["noise", "perlin", "simplex", "textur", "frequenz", "oktave"] },
+    "ja": { "name": "ノイズ生成器", "description": "周波数、振幅、オクターブを調整でき、1D/2Dの可視化に対応するPerlin/Simplexノイズ生成器です。", "keywords": ["noise", "perlin", "simplex", "テクスチャ", "周波数", "オクターブ"] },
+    "it": { "name": "Generatore di Rumore", "description": "Generatore di rumore Perlin/Simplex con frequenza, ampiezza e ottave regolabili, che supporta la visualizzazione 1D/2D.", "keywords": ["rumore", "perlin", "simplex", "texture", "frequenza", "ottava"] },
+    "ko": { "name": "노이즈 생성기", "description": "주파수, 진폭, 옥타브를 조절할 수 있고 1D/2D 시각화를 지원하는 Perlin/Simplex 노이즈 생성기입니다.", "keywords": ["noise", "perlin", "simplex", "텍스처", "주파수", "옥타브"] },
+    "ru": { "name": "Генератор Шума", "description": "Генератор шума Перлина/Симплекса с регулируемой частотой, амплитудой и октавами, поддерживающий 1D/2D визуализацию.", "keywords": ["noise", "perlin", "simplex", "текстура", "частота", "октава"] },
+    "pt": { "name": "Gerador de Ruído", "description": "Gerador de ruído Perlin/Simplex com frequência, amplitude e oitavas ajustáveis, suportando visualização 1D/2D.", "keywords": ["ruído", "perlin", "simplex", "textura", "frequência", "oitava"] }
+  },
+  "/coord-converter": {
+    "en": { "name": "Coordinate Converter", "description": "Game coordinate system converter supporting screen/world/Cartesian/polar/isometric/tile coordinate conversion and 2D/3D transformation matrix calculations.", "keywords": ["coordinate", "conversion", "screen", "world", "polar", "isometric", "tile", "transform"] },
+    "es": { "name": "Conversor de Coordenadas", "description": "Conversor de sistemas de coordenadas para juegos que soporta conversión entre coordenadas de pantalla, mundo, cartesianas, polares, isométricas y de mosaico, así como cálculos de matrices de transformación 2D/3D.", "keywords": ["coordenada", "conversión", "pantalla", "mundo", "polar", "isométrico", "tile", "transformación"] },
+    "fr": { "name": "Convertisseur de Coordonnées", "description": "Convertisseur de systèmes de coordonnées de jeu prenant en charge la conversion entre coordonnées écran, monde, cartésiennes, polaires, isométriques et tuiles, ainsi que les calculs de matrices de transformation 2D/3D.", "keywords": ["coordonnée", "conversion", "écran", "monde", "polaire", "isométrique", "tile", "transformation"] },
+    "de": { "name": "Koordinatenkonverter", "description": "Spiel-Koordinatensystem-Konverter mit Unterstützung für Bildschirm-/Welt-/Kartesische-/Polare-/Isometrische-/Tile-Koordinaten sowie 2D/3D-Transformationsmatrixberechnungen.", "keywords": ["koordinate", "umrechnung", "bildschirm", "welt", "polar", "isometrisch", "tile", "transformation"] },
+    "ja": { "name": "座標変換ツール", "description": "スクリーン/ワールド/直交/極/等角/タイル座標の相互変換と2D/3D変換行列計算に対応するゲーム座標系変換ツールです。", "keywords": ["coordinate", "変換", "スクリーン", "ワールド", "極座標", "等角", "tile", "変換行列"] },
+    "it": { "name": "Convertitore di Coordinate", "description": "Convertitore di sistemi di coordinate di gioco che supporta conversioni tra coordinate schermo, mondo, cartesiane, polari, isometriche e tile, nonché calcoli di matrici di trasformazione 2D/3D.", "keywords": ["coordinata", "conversione", "schermo", "mondo", "polare", "isometrico", "tile", "trasformazione"] },
+    "ko": { "name": "좌표 변환기", "description": "화면/월드/데카르트/극/등축/타일 좌표 변환 및 2D/3D 변환 행렬 계산을 지원하는 게임 좌표계 변환 도구입니다.", "keywords": ["coordinate", "변환", "화면", "월드", "극좌표", "등축", "tile", "변환"] },
+    "ru": { "name": "Конвертер Координат", "description": "Конвертер игровых координатных систем с поддержкой преобразований экранных/мировых/декартовых/полярных/изометрических/тайловых координат и расчётов матриц преобразований 2D/3D.", "keywords": ["coordinate", "преобразование", "экран", "мир", "полярная", "изометрическая", "tile", "трансформация"] },
+    "pt": { "name": "Conversor de Coordenadas", "description": "Conversor de sistemas de coordenadas para jogos que suporta conversão entre coordenadas de tela, mundo, cartesianas, polares, isométricas e tile, além de cálculos de matrizes de transformação 2D/3D.", "keywords": ["coordenada", "conversão", "tela", "mundo", "polar", "isométrico", "tile", "transformação"] }
+  },
+  "/disk-calculator": {
+    "en": { "name": "Disk Capacity Calculator", "description": "Disk capacity and RAID calculator.", "keywords": ["disk", "raid", "capacity", "storage", "calculator"] },
+    "es": { "name": "Calculadora de Capacidad de Disco", "description": "Calculadora de capacidad de disco y RAID.", "keywords": ["disco", "raid", "capacidad", "almacenamiento", "calculadora"] },
+    "fr": { "name": "Calculateur de Capacité Disque", "description": "Calculateur de capacité disque et RAID.", "keywords": ["disque", "raid", "capacité", "stockage", "calculateur"] },
+    "de": { "name": "Festplattenkapazitätsrechner", "description": "Rechner für Festplattenkapazität und RAID.", "keywords": ["disk", "raid", "kapazität", "speicher", "rechner"] },
+    "ja": { "name": "ディスク容量計算", "description": "ディスク容量とRAIDの計算ツールです。", "keywords": ["disk", "raid", "容量", "ストレージ", "計算"] },
+    "it": { "name": "Calcolatore Capacità Disco", "description": "Calcolatore di capacità disco e RAID.", "keywords": ["disco", "raid", "capacità", "archiviazione", "calcolatore"] },
+    "ko": { "name": "디스크 용량 계산기", "description": "디스크 용량과 RAID 계산기입니다.", "keywords": ["disk", "raid", "용량", "스토리지", "계산기"] },
+    "ru": { "name": "Калькулятор Ёмкости Диска", "description": "Калькулятор ёмкости диска и RAID.", "keywords": ["disk", "raid", "ёмкость", "хранилище", "калькулятор"] },
+    "pt": { "name": "Calculadora de Capacidade de Disco", "description": "Calculadora de capacidade de disco e RAID.", "keywords": ["disco", "raid", "capacidade", "armazenamento", "calculadora"] }
+  },
+  "/port-scanner": {
+    "en": { "name": "Port Scanner", "description": "Scan open ports on a host.", "keywords": ["port", "scan", "network", "host"] },
+    "es": { "name": "Escáner de Puertos", "description": "Escanea los puertos abiertos de un host.", "keywords": ["puerto", "escaneo", "red", "host"] },
+    "fr": { "name": "Scanner de Ports", "description": "Analyse les ports ouverts d'un hôte.", "keywords": ["port", "scan", "réseau", "hôte"] },
+    "de": { "name": "Portscanner", "description": "Offene Ports eines Hosts scannen.", "keywords": ["port", "scan", "netzwerk", "host"] },
+    "ja": { "name": "ポートスキャナー", "description": "ホストの開放ポートをスキャンします。", "keywords": ["port", "scan", "network", "ホスト"] },
+    "it": { "name": "Scanner di Porte", "description": "Scansiona le porte aperte di un host.", "keywords": ["porta", "scansione", "rete", "host"] },
+    "ko": { "name": "포트 스캐너", "description": "호스트의 열린 포트를 스캔합니다.", "keywords": ["port", "scan", "network", "호스트"] },
+    "ru": { "name": "Сканер Портов", "description": "Сканирует открытые порты хоста.", "keywords": ["port", "scan", "network", "хост"] },
+    "pt": { "name": "Scanner de Portas", "description": "Escaneia as portas abertas de um host.", "keywords": ["porta", "scan", "rede", "host"] }
+  },
+  "/process-lookup": {
+    "en": { "name": "Process Lookup", "description": "Process information lookup reference.", "keywords": ["process", "lookup", "linux", "windows"] },
+    "es": { "name": "Búsqueda de Procesos", "description": "Referencia de consulta de información de procesos.", "keywords": ["proceso", "búsqueda", "linux", "windows"] },
+    "fr": { "name": "Recherche de Processus", "description": "Référence de recherche d'informations sur les processus.", "keywords": ["processus", "recherche", "linux", "windows"] },
+    "de": { "name": "Prozess-Lookup", "description": "Nachschlagereferenz für Prozessinformationen.", "keywords": ["prozess", "lookup", "linux", "windows"] },
+    "ja": { "name": "プロセス照会", "description": "プロセス情報照会の参考ツールです。", "keywords": ["process", "照会", "linux", "windows"] },
+    "it": { "name": "Ricerca Processi", "description": "Riferimento per la ricerca delle informazioni sui processi.", "keywords": ["processo", "ricerca", "linux", "windows"] },
+    "ko": { "name": "프로세스 조회", "description": "프로세스 정보 조회 참조 도구입니다.", "keywords": ["process", "조회", "linux", "windows"] },
+    "ru": { "name": "Поиск Процессов", "description": "Справочник по поиску информации о процессах.", "keywords": ["process", "поиск", "linux", "windows"] },
+    "pt": { "name": "Pesquisa de Processos", "description": "Referência de consulta de informações de processos.", "keywords": ["processo", "pesquisa", "linux", "windows"] }
+  },
+  "/memory-unit-converter": {
+    "en": { "name": "Memory Unit Converter", "description": "Storage and memory unit converter.", "keywords": ["memory", "unit", "storage", "byte", "converter"] },
+    "es": { "name": "Conversor de Unidades de Memoria", "description": "Conversor de unidades de almacenamiento y memoria.", "keywords": ["memoria", "unidad", "almacenamiento", "byte", "conversor"] },
+    "fr": { "name": "Convertisseur d'Unités de Mémoire", "description": "Convertisseur d'unités de stockage et de mémoire.", "keywords": ["mémoire", "unité", "stockage", "octet", "convertisseur"] },
+    "de": { "name": "Speichereinheiten-Umrechner", "description": "Umrechner für Speicher- und Arbeitsspeichereinheiten.", "keywords": ["memory", "einheit", "speicher", "byte", "umrechner"] },
+    "ja": { "name": "メモリ単位変換", "description": "ストレージ/メモリの単位変換ツールです。", "keywords": ["memory", "単位", "ストレージ", "byte", "変換"] },
+    "it": { "name": "Convertitore Unità di Memoria", "description": "Convertitore di unità di archiviazione e memoria.", "keywords": ["memoria", "unità", "archiviazione", "byte", "convertitore"] },
+    "ko": { "name": "메모리 단위 변환기", "description": "스토리지/메모리 단위 변환기입니다.", "keywords": ["memory", "단위", "스토리지", "byte", "변환기"] },
+    "ru": { "name": "Конвертер Единиц Памяти", "description": "Конвертер единиц хранения и памяти.", "keywords": ["memory", "единица", "хранилище", "байт", "конвертер"] },
+    "pt": { "name": "Conversor de Unidades de Memória", "description": "Conversor de unidades de armazenamento e memória.", "keywords": ["memória", "unidade", "armazenamento", "byte", "conversor"] }
+  },
+  "/log-analyzer": {
+    "en": { "name": "Log Analyzer", "description": "Analyze server log files.", "keywords": ["log", "analyze", "server"] },
+    "es": { "name": "Analizador de Registros", "description": "Analiza archivos de registro del servidor.", "keywords": ["log", "analizar", "servidor"] },
+    "fr": { "name": "Analyseur de Journaux", "description": "Analyse les fichiers journaux du serveur.", "keywords": ["log", "analyser", "serveur"] },
+    "de": { "name": "Log-Analysator", "description": "Server-Logdateien analysieren.", "keywords": ["log", "analysieren", "server"] },
+    "ja": { "name": "ログ分析", "description": "サーバーのログファイルを分析します。", "keywords": ["log", "分析", "サーバー"] },
+    "it": { "name": "Analizzatore di Log", "description": "Analizza i file di log del server.", "keywords": ["log", "analizzare", "server"] },
+    "ko": { "name": "로그 분석기", "description": "서버 로그 파일을 분석합니다.", "keywords": ["log", "분석", "서버"] },
+    "ru": { "name": "Анализатор Логов", "description": "Анализирует файлы журналов сервера.", "keywords": ["log", "анализ", "сервер"] },
+    "pt": { "name": "Analisador de Logs", "description": "Analisa arquivos de log do servidor.", "keywords": ["log", "analisar", "servidor"] }
+  },
+  "/cron-expr-gen": {
+    "en": { "name": "Cron Expression Generator", "description": "Visually generate 5/6-field Cron expressions with field editing, quick presets, custom input, and next execution time preview.", "keywords": ["cron", "expression", "schedule", "crontab", "timer", "task", "second", "minute"] },
+    "es": { "name": "Generador de Expresiones Cron", "description": "Genera visualmente expresiones Cron de 5/6 campos con edición de campos, preajustes rápidos, entrada personalizada y vista previa de la próxima ejecución.", "keywords": ["cron", "expresión", "schedule", "crontab", "temporizador", "tarea", "segundo", "minuto"] },
+    "fr": { "name": "Générateur d'Expressions Cron", "description": "Génère visuellement des expressions Cron à 5/6 champs avec édition de champs, préréglages rapides, saisie personnalisée et aperçu de la prochaine exécution.", "keywords": ["cron", "expression", "schedule", "crontab", "minuteur", "tâche", "seconde", "minute"] },
+    "de": { "name": "Cron-Ausdruck-Generator", "description": "Cron-Ausdrücke mit 5/6 Feldern visuell generieren, mit Feldbearbeitung, schnellen Voreinstellungen, benutzerdefinierter Eingabe und Vorschau der nächsten Ausführung.", "keywords": ["cron", "expression", "schedule", "crontab", "timer", "aufgabe", "sekunde", "minute"] },
+    "ja": { "name": "Cron式ジェネレーター", "description": "5/6フィールドのCron式を視覚的に生成し、フィールド編集、クイックプリセット、カスタム入力、次回実行時間のプレビューに対応します。", "keywords": ["cron", "expression", "schedule", "crontab", "タイマー", "タスク", "秒", "分"] },
+    "it": { "name": "Generatore di Espressioni Cron", "description": "Genera visivamente espressioni Cron a 5/6 campi con modifica dei campi, preset rapidi, input personalizzato e anteprima del prossimo orario di esecuzione.", "keywords": ["cron", "espressione", "schedule", "crontab", "timer", "compito", "secondo", "minuto"] },
+    "ko": { "name": "Cron 표현식 생성기", "description": "5/6 필드 Cron 표현식을 시각적으로 생성하고 필드 편집, 빠른 프리셋, 사용자 지정 입력, 다음 실행 시간 미리보기를 지원합니다.", "keywords": ["cron", "expression", "schedule", "crontab", "타이머", "작업", "초", "분"] },
+    "ru": { "name": "Генератор Выражений Cron", "description": "Визуально генерирует выражения Cron с 5/6 полями, поддерживая редактирование полей, быстрые пресеты, произвольный ввод и предпросмотр времени следующего выполнения.", "keywords": ["cron", "expression", "schedule", "crontab", "таймер", "задача", "секунда", "минута"] },
+    "pt": { "name": "Gerador de Expressões Cron", "description": "Gera visualmente expressões Cron de 5/6 campos com edição de campos, predefinições rápidas, entrada personalizada e visualização da próxima execução.", "keywords": ["cron", "expressão", "schedule", "crontab", "temporizador", "tarefa", "segundo", "minuto"] }
+  }
+}

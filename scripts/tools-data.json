@@ -1,0 +1,2360 @@
+[
+  {
+    "name": "密码强度检测",
+    "path": "/password-strength",
+    "description": "检测密码强度并给出建议",
+    "category": "安全工具",
+    "keywords": [
+      "密码",
+      "强度",
+      "检测",
+      "安全"
+    ]
+  },
+  {
+    "name": "AES 加密解密",
+    "path": "/aes-encrypt",
+    "description": "AES-128/192/256 加密解密",
+    "category": "安全工具",
+    "keywords": [
+      "AES",
+      "加密",
+      "解密",
+      "安全"
+    ]
+  },
+  {
+    "name": "Base32 编解码",
+    "path": "/base32-codec",
+    "description": "Base32 编码与解码（RFC 4648 标准）",
+    "category": "安全工具",
+    "keywords": [
+      "base32",
+      "encode",
+      "decode",
+      "编码",
+      "解码",
+      "rfc4648"
+    ]
+  },
+  {
+    "name": "RSA 加密解密",
+    "path": "/rsa-encrypt",
+    "description": "RSA 公钥加密、私钥解密",
+    "category": "安全工具",
+    "keywords": [
+      "RSA",
+      "加密",
+      "解密",
+      "公钥",
+      "私钥"
+    ]
+  },
+  {
+    "name": "表格数据处理",
+    "path": "/data-processor",
+    "description": "在线处理 CSV / Excel 数据，支持去重、拆分列、合并文件、筛选排序与格式转换",
+    "category": "办公工具",
+    "keywords": [
+      "csv",
+      "excel",
+      "数据处理",
+      "去重",
+      "合并",
+      "筛选",
+      "表格"
+    ]
+  },
+  {
+    "name": "Base64 编解码",
+    "path": "/base64-codec",
+    "description": "文本与 Base64 编码互转，支持 URL 安全 Base64、文件拖放转 Base64、图片预览与原文件下载",
+    "category": "编码转换",
+    "keywords": [
+      "base64",
+      "encode",
+      "decode",
+      "编码",
+      "解码",
+      "文件",
+      "图片",
+      "URL 安全"
+    ]
+  },
+  {
+    "name": "HTML 实体编解码",
+    "path": "/html-entity-codec",
+    "description": "HTML 实体编码与解码，支持 &amp; &lt; &gt; 等特殊字符",
+    "category": "编码转换",
+    "keywords": [
+      "html",
+      "entity",
+      "实体",
+      "编码",
+      "解码",
+      "escape",
+      "unescape"
+    ]
+  },
+  {
+    "name": "JSON 格式化",
+    "path": "/json-formatter",
+    "description": "格式化、压缩、校验 JSON 数据，支持 JSONPath 查询、Schema 校验与 CSV/TSV 导出",
+    "category": "编码转换",
+    "keywords": [
+      "json",
+      "format",
+      "validate",
+      "格式化",
+      "校验",
+      "jsonpath",
+      "schema",
+      "csv"
+    ]
+  },
+  {
+    "name": "Unicode 转换",
+    "path": "/unicode-converter",
+    "description": "Unicode 转义序列转换（\\\\uXXXX），支持中文与特殊字符",
+    "category": "编码转换",
+    "keywords": [
+      "unicode",
+      "转义",
+      "escape",
+      "unescape",
+      "中文",
+      "编码"
+    ]
+  },
+  {
+    "name": "URL 编解码",
+    "path": "/url-codec",
+    "description": "URL 编码与解码，支持 URL 参数解析、批量处理、自动判断编码方向",
+    "category": "编码转换",
+    "keywords": [
+      "url",
+      "encode",
+      "decode",
+      "编码",
+      "解码",
+      "百分比编码",
+      "参数解析",
+      "批量"
+    ]
+  },
+  {
+    "name": "百分比计算器",
+    "path": "/percentage-calculator",
+    "description": "百分比、增减比例、基数等多种百分比计算",
+    "category": "计算工具",
+    "keywords": [
+      "percentage",
+      "百分比",
+      "比例",
+      "增减",
+      "计算"
+    ]
+  },
+  {
+    "name": "进制转换",
+    "path": "/number-base-converter",
+    "description": "二进制、八进制、十进制、十六进制互转",
+    "category": "计算工具",
+    "keywords": [
+      "binary",
+      "octal",
+      "hex",
+      "进制",
+      "二进制",
+      "八进制",
+      "十六进制"
+    ]
+  },
+  {
+    "name": "科学计算器",
+    "path": "/scientific-calculator",
+    "description": "支持三角函数、对数、幂运算等科学计算功能",
+    "category": "计算工具",
+    "keywords": [
+      "calculator",
+      "科学",
+      "计算器",
+      "三角函数",
+      "对数",
+      "sin",
+      "cos",
+      "log"
+    ]
+  },
+  {
+    "name": "颜色转换",
+    "path": "/color-converter",
+    "description": "HEX、RGB、HSL、CMYK 颜色格式互转，支持 WCAG 对比度检查、配色方案、CSS 颜色名识别",
+    "category": "计算工具",
+    "keywords": [
+      "color",
+      "hex",
+      "rgb",
+      "hsl",
+      "cmyk",
+      "颜色",
+      "转换",
+      "对比度",
+      "配色"
+    ]
+  },
+  {
+    "name": "Hash 计算",
+    "path": "/hash-calculator",
+    "description": "计算文本与文件的 MD5、SHA-1、SHA-256、SHA-512 哈希值，支持 HMAC 与 Base64 输出",
+    "category": "计算工具",
+    "keywords": [
+      "hash",
+      "md5",
+      "sha",
+      "哈希",
+      "摘要",
+      "HMAC",
+      "文件",
+      "Base64",
+      "加密"
+    ]
+  },
+  {
+    "name": "成语词典",
+    "path": "/idiom-dictionary",
+    "description": "成语查询词典，支持释义、出处、例句",
+    "category": "教育学习",
+    "keywords": [
+      "成语",
+      "词典",
+      "idiom",
+      "查询"
+    ]
+  },
+  {
+    "name": "单位换算",
+    "path": "/unit-converter-edu",
+    "description": "多类别单位换算工具，支持长度、质量、温度、时间、面积、体积、速度、数据",
+    "category": "教育学习",
+    "keywords": [
+      "单位",
+      "换算",
+      "converter",
+      "长度",
+      "质量",
+      "温度"
+    ]
+  },
+  {
+    "name": "公式速查",
+    "path": "/formula-reference",
+    "description": "数学物理公式速查表，按分类浏览，支持搜索与变量说明",
+    "category": "教育学习",
+    "keywords": [
+      "公式",
+      "formula",
+      "数学",
+      "物理",
+      "速查"
+    ]
+  },
+  {
+    "name": "古诗词",
+    "path": "/poetry-collection",
+    "description": "古诗词鉴赏查询，支持按朝代、作者、主题浏览",
+    "category": "教育学习",
+    "keywords": [
+      "诗词",
+      "古诗",
+      "poetry",
+      "唐诗"
+    ]
+  },
+  {
+    "name": "记忆卡片",
+    "path": "/flashcard",
+    "description": "记忆卡片与单词本工具，支持卡片组管理、翻转动画、顺序/随机浏览、掌握度标记、复习模式与导入导出",
+    "category": "教育学习",
+    "keywords": [
+      "单词",
+      "卡片",
+      "flashcard",
+      "记忆",
+      "英语",
+      "单词本",
+      "记忆卡",
+      "背单词"
+    ]
+  },
+  {
+    "name": "历史年表",
+    "path": "/history-timeline",
+    "description": "中外历史年表，横向时间轴展示，支持中国/世界筛选与事件详情",
+    "category": "教育学习",
+    "keywords": [
+      "历史",
+      "年表",
+      "朝代",
+      "timeline",
+      "事件"
+    ]
+  },
+  {
+    "name": "拼音转换",
+    "path": "/pinyin-converter",
+    "description": "汉字转拼音工具，支持带声调、无声调、首字母模式",
+    "category": "教育学习",
+    "keywords": [
+      "拼音",
+      "pinyin",
+      "汉字",
+      "转换"
+    ]
+  },
+  {
+    "name": "数学练习",
+    "path": "/math-practice",
+    "description": "数学练习题生成器，支持加减乘除、难度分级、计时",
+    "category": "教育学习",
+    "keywords": [
+      "数学",
+      "练习",
+      "算术",
+      "题"
+    ]
+  },
+  {
+    "name": "英语语法",
+    "path": "/english-grammar",
+    "description": "英语语法参考工具，时态、句型、词性详解",
+    "category": "教育学习",
+    "keywords": [
+      "英语",
+      "语法",
+      "grammar",
+      "时态"
+    ]
+  },
+  {
+    "name": "英语语法",
+    "path": "/grammar-reference",
+    "description": "英语语法速查，含时态、句型、从句、虚拟语气等",
+    "category": "教育学习",
+    "keywords": [
+      "英语",
+      "语法",
+      "grammar",
+      "时态",
+      "句型"
+    ]
+  },
+  {
+    "name": "元素周期表",
+    "path": "/periodic-table",
+    "description": "化学元素周期表，118 种元素完整数据，点击查看详细信息",
+    "category": "教育学习",
+    "keywords": [
+      "元素",
+      "周期表",
+      "化学",
+      "periodic",
+      "原子"
+    ]
+  },
+  {
+    "name": "代码压缩",
+    "path": "/code-minifier",
+    "description": "HTML/CSS/JS 代码压缩和美化",
+    "category": "开发工具",
+    "keywords": [
+      "代码",
+      "压缩",
+      "HTML",
+      "CSS",
+      "JS"
+    ]
+  },
+  {
+    "name": "CSS 单位转换",
+    "path": "/css-unit",
+    "description": "px / rem / em / vw / vh 等 CSS 单位互转，可配置根字号",
+    "category": "开发工具",
+    "keywords": [
+      "css",
+      "unit",
+      "px",
+      "rem",
+      "em",
+      "vw",
+      "vh",
+      "单位",
+      "转换"
+    ]
+  },
+  {
+    "name": "JSON 表格编辑器",
+    "path": "/json-table-editor",
+    "description": "将 JSON 数组可视化为表格，支持单元格编辑、增删行列，并导出 JSON 或 CSV",
+    "category": "开发工具",
+    "keywords": [
+      "json",
+      "table",
+      "editor",
+      "表格",
+      "编辑",
+      "csv",
+      "数组"
+    ]
+  },
+  {
+    "name": "JSON 转 TS 类型",
+    "path": "/json-to-ts",
+    "description": "根据 JSON 数据自动生成 TypeScript 类型定义（interface）",
+    "category": "开发工具",
+    "keywords": [
+      "json",
+      "typescript",
+      "interface",
+      "类型",
+      "type",
+      "转换"
+    ]
+  },
+  {
+    "name": "JWT 解析",
+    "path": "/jwt-decoder",
+    "description": "解析 JSON Web Token，查看 header/payload/signature",
+    "category": "开发工具",
+    "keywords": [
+      "JWT",
+      "Token",
+      "解析",
+      "Web"
+    ]
+  },
+  {
+    "name": "SQL 格式化",
+    "path": "/sql-formatter",
+    "description": "SQL 语句美化和压缩",
+    "category": "开发工具",
+    "keywords": [
+      "SQL",
+      "格式化",
+      "美化",
+      "压缩"
+    ]
+  },
+  {
+    "name": "XML 格式化",
+    "path": "/xml-formatter",
+    "description": "XML 格式化、压缩、验证",
+    "category": "开发工具",
+    "keywords": [
+      "XML",
+      "格式化",
+      "压缩",
+      "验证"
+    ]
+  },
+  {
+    "name": "YAML ↔ JSON 转换",
+    "path": "/yaml-json",
+    "description": "YAML 和 JSON 格式互转",
+    "category": "开发工具",
+    "keywords": [
+      "YAML",
+      "JSON",
+      "转换",
+      "配置"
+    ]
+  },
+  {
+    "name": "节气查询",
+    "path": "/solar-term-query",
+    "description": "查询 24 节气日期、含义、习俗与养生建议",
+    "category": "日期时间",
+    "keywords": [
+      "节气",
+      "solar term",
+      "24节气",
+      "农历",
+      "传统文化",
+      "二十四节气"
+    ]
+  },
+  {
+    "name": "时间戳转换",
+    "path": "/timestamp-converter",
+    "description": "Unix 时间戳与日期时间互转，支持时区选择、多种格式模板、批量转换",
+    "category": "日期时间",
+    "keywords": [
+      "timestamp",
+      "unix",
+      "时间戳",
+      "日期",
+      "转换",
+      "时间",
+      "时区",
+      "批量"
+    ]
+  },
+  {
+    "name": "时区转换",
+    "path": "/timezone-converter",
+    "description": "全球时区时间对照与转换，含工作日换算",
+    "category": "日期时间",
+    "keywords": [
+      "timezone",
+      "时区",
+      "time",
+      "utc",
+      "转换",
+      "世界时间"
+    ]
+  },
+  {
+    "name": "调色板生成器",
+    "path": "/palette-generator",
+    "description": "生成互补色、类似色、三角配色等调色板，可导出 CSS 变量",
+    "category": "设计工具",
+    "keywords": [
+      "palette",
+      "调色板",
+      "配色",
+      "complementary",
+      "色彩",
+      "color"
+    ]
+  },
+  {
+    "name": "渐变生成器",
+    "path": "/gradient-generator",
+    "description": "生成 CSS 线性/径向渐变代码",
+    "category": "设计工具",
+    "keywords": [
+      "渐变",
+      "CSS",
+      "linear",
+      "radial"
+    ]
+  },
+  {
+    "name": "颜色选择器",
+    "path": "/color-picker",
+    "description": "可视化选择颜色，支持多种格式",
+    "category": "设计工具",
+    "keywords": [
+      "颜色",
+      "选择器",
+      "HEX",
+      "RGB",
+      "HSL"
+    ]
+  },
+  {
+    "name": "阴影生成器",
+    "path": "/shadow-generator",
+    "description": "生成 CSS box-shadow 代码",
+    "category": "设计工具",
+    "keywords": [
+      "阴影",
+      "CSS",
+      "box-shadow"
+    ]
+  },
+  {
+    "name": "Favicon 生成",
+    "path": "/favicon-generator",
+    "description": "用文字或 Emoji 生成多尺寸 Favicon 图标（PNG/ICO）",
+    "category": "设计工具",
+    "keywords": [
+      "favicon",
+      "图标",
+      "icon",
+      "emoji",
+      "网站图标"
+    ]
+  },
+  {
+    "name": "密码生成器",
+    "path": "/password-generator",
+    "description": "生成安全随机密码与易记口令短语，支持自定义字符集、排除易混淆字符、熵值评估",
+    "category": "生成器",
+    "keywords": [
+      "password",
+      "密码",
+      "生成",
+      "随机",
+      "安全",
+      "口令",
+      "passphrase",
+      "熵"
+    ]
+  },
+  {
+    "name": "Lorem Ipsum 生成器",
+    "path": "/lorem-ipsum",
+    "description": "生成占位文本（Lorem Ipsum），支持按段落/句子/单词生成",
+    "category": "生成器",
+    "keywords": [
+      "lorem",
+      "ipsum",
+      "占位",
+      "填充文本",
+      "dummy",
+      "placeholder"
+    ]
+  },
+  {
+    "name": "UUID 生成器",
+    "path": "/uuid-generator",
+    "description": "批量生成 UUID v1/v4，支持无横线、大写、URN、花括号等多种格式，可下载 TXT",
+    "category": "生成器",
+    "keywords": [
+      "uuid",
+      "guid",
+      "唯一标识",
+      "生成",
+      "随机",
+      "v1",
+      "v4",
+      "urn",
+      "批量"
+    ]
+  },
+  {
+    "name": "贷款计算器",
+    "path": "/loan-calculator",
+    "description": "等额本息与等额本金两种方式计算房贷还款明细",
+    "category": "生活计算",
+    "keywords": [
+      "loan",
+      "贷款",
+      "房贷",
+      "还款",
+      "利息",
+      "等额本息",
+      "等额本金"
+    ]
+  },
+  {
+    "name": "单位换算",
+    "path": "/unit-converter",
+    "description": "支持长度、重量、温度、面积、体积、速度、时间、数据、压强、能量等单位转换，含常用市制/英制单位",
+    "category": "生活计算",
+    "keywords": [
+      "单位",
+      "换算",
+      "长度",
+      "重量",
+      "温度",
+      "面积",
+      "体积",
+      "速度",
+      "时间",
+      "数据",
+      "压强",
+      "能量",
+      "市制",
+      "英制"
+    ]
+  },
+  {
+    "name": "个税计算器",
+    "path": "/tax-calculator",
+    "description": "基于 2024 个税税率表计算个人所得税，支持专项附加扣除",
+    "category": "生活计算",
+    "keywords": [
+      "tax",
+      "个税",
+      "所得税",
+      "工资",
+      "税率",
+      "扣除"
+    ]
+  },
+  {
+    "name": "年龄计算器",
+    "path": "/age-calculator",
+    "description": "根据生日计算精确年龄",
+    "category": "生活计算",
+    "keywords": [
+      "年龄",
+      "生日",
+      "计算",
+      "岁数"
+    ]
+  },
+  {
+    "name": "日期差计算",
+    "path": "/date-diff",
+    "description": "计算两个日期之间的天数、月数、年数",
+    "category": "生活计算",
+    "keywords": [
+      "日期",
+      "差",
+      "天数",
+      "月数",
+      "年数"
+    ]
+  },
+  {
+    "name": "BMI 计算器",
+    "path": "/bmi-calculator",
+    "description": "根据身高体重计算 BMI 指数",
+    "category": "生活计算",
+    "keywords": [
+      "BMI",
+      "体重",
+      "身高",
+      "健康"
+    ]
+  },
+  {
+    "name": "关系图",
+    "path": "/relation-graph-maker",
+    "description": "生成节点关系图（Mermaid graph）",
+    "category": "数据可视化",
+    "keywords": [
+      "relation",
+      "graph",
+      "关系图",
+      "节点",
+      "mermaid"
+    ]
+  },
+  {
+    "name": "流程图生成",
+    "path": "/flowchart-generator",
+    "description": "生成 Mermaid 流程图代码",
+    "category": "数据可视化",
+    "keywords": [
+      "flowchart",
+      "流程图",
+      "mermaid",
+      "图"
+    ]
+  },
+  {
+    "name": "热力图",
+    "path": "/heatmap-maker",
+    "description": "生成数据热力图",
+    "category": "数据可视化",
+    "keywords": [
+      "heatmap",
+      "热力图",
+      "数据",
+      "可视化"
+    ]
+  },
+  {
+    "name": "时间轴生成",
+    "path": "/timeline-generator",
+    "description": "生成时间轴可视化",
+    "category": "数据可视化",
+    "keywords": [
+      "timeline",
+      "时间轴",
+      "时间线"
+    ]
+  },
+  {
+    "name": "树状图绘制",
+    "path": "/tree-diagram-drawer",
+    "description": "绘制层级树状结构图",
+    "category": "数据可视化",
+    "keywords": [
+      "tree",
+      "diagram",
+      "树状图",
+      "层级"
+    ]
+  },
+  {
+    "name": "数据表格渲染",
+    "path": "/data-table-renderer",
+    "description": "将 CSV/JSON 数据渲染为表格",
+    "category": "数据可视化",
+    "keywords": [
+      "data",
+      "table",
+      "表格",
+      "渲染"
+    ]
+  },
+  {
+    "name": "思维导图",
+    "path": "/mind-map-maker",
+    "description": "生成思维导图（Mermaid mindmap）",
+    "category": "数据可视化",
+    "keywords": [
+      "mind",
+      "map",
+      "思维导图",
+      "mermaid"
+    ]
+  },
+  {
+    "name": "统计图表",
+    "path": "/stats-chart-maker",
+    "description": "生成柱状图/折线图/饼图统计图表",
+    "category": "数据可视化",
+    "keywords": [
+      "chart",
+      "统计",
+      "图表",
+      "bar",
+      "line",
+      "pie"
+    ]
+  },
+  {
+    "name": "CSV 图表生成",
+    "path": "/csv-chart-generator",
+    "description": "将 CSV 数据生成为图表",
+    "category": "数据可视化",
+    "keywords": [
+      "csv",
+      "chart",
+      "图表",
+      "可视化"
+    ]
+  },
+  {
+    "name": "JSON 树视图",
+    "path": "/json-tree-viewer",
+    "description": "将 JSON 数据以可折叠树形结构展示",
+    "category": "数据可视化",
+    "keywords": [
+      "json",
+      "tree",
+      "树",
+      "视图",
+      "查看"
+    ]
+  },
+  {
+    "name": "表结构生成",
+    "path": "/table-schema-gen",
+    "description": "可视化设计数据库表结构并生成 DDL",
+    "category": "数据库工具",
+    "keywords": [
+      "table",
+      "schema",
+      "表结构",
+      "ddl",
+      "设计"
+    ]
+  },
+  {
+    "name": "连接串解析",
+    "path": "/connection-string-parser",
+    "description": "解析数据库连接字符串（MySQL/PostgreSQL/MongoDB 等）",
+    "category": "数据库工具",
+    "keywords": [
+      "connection",
+      "string",
+      "连接串",
+      "url",
+      "数据库"
+    ]
+  },
+  {
+    "name": "索引优化建议",
+    "path": "/index-optimizer",
+    "description": "分析 SQL 查询并给出索引优化建议",
+    "category": "数据库工具",
+    "keywords": [
+      "index",
+      "索引",
+      "优化",
+      "查询",
+      "性能"
+    ]
+  },
+  {
+    "name": "ER 图生成",
+    "path": "/er-diagram-gen",
+    "description": "根据表结构生成 ER 实体关系图（Mermaid）",
+    "category": "数据库工具",
+    "keywords": [
+      "er",
+      "diagram",
+      "实体关系图",
+      "mermaid",
+      "设计"
+    ]
+  },
+  {
+    "name": "MongoDB 查询构建",
+    "path": "/mongo-query-builder",
+    "description": "可视化构建 MongoDB 查询语句",
+    "category": "数据库工具",
+    "keywords": [
+      "mongodb",
+      "query",
+      "nosql",
+      "查询",
+      "构建"
+    ]
+  },
+  {
+    "name": "Redis 命令查询",
+    "path": "/redis-command-ref",
+    "description": "Redis 命令速查手册与示例",
+    "category": "数据库工具",
+    "keywords": [
+      "redis",
+      "command",
+      "命令",
+      "缓存",
+      "nosql"
+    ]
+  },
+  {
+    "name": "SQL 格式化",
+    "path": "/sql-formatter",
+    "description": "SQL 语句格式化与美化，支持多种方言",
+    "category": "数据库工具",
+    "keywords": [
+      "sql",
+      "format",
+      "格式化",
+      "美化",
+      "mysql",
+      "postgres"
+    ]
+  },
+  {
+    "name": "SQL 注入检测",
+    "path": "/sql-injection-check",
+    "description": "检测 SQL 语句中的注入风险",
+    "category": "数据库工具",
+    "keywords": [
+      "sql",
+      "injection",
+      "注入",
+      "安全",
+      "检测"
+    ]
+  },
+  {
+    "name": "SQL 转 MongoDB",
+    "path": "/sql-to-mongo",
+    "description": "将 SQL 查询语句转换为 MongoDB 查询语法",
+    "category": "数据库工具",
+    "keywords": [
+      "sql",
+      "mongodb",
+      "转换",
+      "nosql"
+    ]
+  },
+  {
+    "name": "SQL 转实体",
+    "path": "/sql-to-entity",
+    "description": "将 SQL 建表语句转换为 TypeScript 实体类",
+    "category": "数据库工具",
+    "keywords": [
+      "sql",
+      "entity",
+      "实体",
+      "typescript",
+      "建表",
+      "ddl"
+    ]
+  },
+  {
+    "name": "二维码美化",
+    "path": "/qrcode-beautifier",
+    "description": "生成高颜值二维码，支持圆点、圆角、渐变、Logo 叠加与多种 eye 样式，可导出 PNG / SVG",
+    "category": "图片工具",
+    "keywords": [
+      "二维码",
+      "QR",
+      "美化",
+      "渐变",
+      "Logo",
+      "圆角",
+      "SVG",
+      "PNG",
+      "导出"
+    ]
+  },
+  {
+    "name": "二维码生成器",
+    "path": "/qrcode-generator",
+    "description": "生成二维码，支持自定义颜色、纠错等级、中心 Logo、批量生成、PNG/SVG 导出与历史记录",
+    "category": "图片工具",
+    "keywords": [
+      "二维码",
+      "QR",
+      "生成",
+      "Logo",
+      "批量",
+      "SVG",
+      "导出",
+      "历史"
+    ]
+  },
+  {
+    "name": "二维码识别",
+    "path": "/qrcode-reader",
+    "description": "从图片中识别二维码内容",
+    "category": "图片工具",
+    "keywords": [
+      "二维码",
+      "QR",
+      "识别",
+      "扫描"
+    ]
+  },
+  {
+    "name": "图片裁剪",
+    "path": "/image-crop",
+    "description": "裁剪图片尺寸和区域",
+    "category": "图片工具",
+    "keywords": [
+      "图片",
+      "裁剪",
+      "剪切",
+      "尺寸"
+    ]
+  },
+  {
+    "name": "图片格式转换",
+    "path": "/image-format",
+    "description": "JPG/PNG/WebP/GIF 互转",
+    "category": "图片工具",
+    "keywords": [
+      "图片",
+      "格式",
+      "转换",
+      "JPG",
+      "PNG"
+    ]
+  },
+  {
+    "name": "图片拼接",
+    "path": "/image-merge",
+    "description": "多张图片横向或竖向拼接，可调整间距与背景色",
+    "category": "图片工具",
+    "keywords": [
+      "merge",
+      "拼接",
+      "合并",
+      "横向",
+      "竖向",
+      "图片"
+    ]
+  },
+  {
+    "name": "图片去背景",
+    "path": "/bg-remover",
+    "description": "移除图片背景或替换为指定颜色，适合纯色背景照片快速抠图",
+    "category": "图片工具",
+    "keywords": [
+      "背景",
+      "去背景",
+      "抠图",
+      "透明",
+      "图片处理",
+      "remove background"
+    ]
+  },
+  {
+    "name": "图片去水印",
+    "path": "/watermark-remover",
+    "description": "用图片局部区域覆盖水印，适合去除纯色或简单背景上的水印",
+    "category": "图片工具",
+    "keywords": [
+      "watermark",
+      "remove",
+      "图片",
+      "水印",
+      "去除",
+      "修复",
+      "image"
+    ]
+  },
+  {
+    "name": "图片水印",
+    "path": "/image-watermark",
+    "description": "为图片添加文字或图片水印，可调整位置、透明度与大小",
+    "category": "图片工具",
+    "keywords": [
+      "watermark",
+      "水印",
+      "图片",
+      "版权",
+      "保护"
+    ]
+  },
+  {
+    "name": "图片压缩",
+    "path": "/image-compress",
+    "description": "批量压缩 JPG/PNG/WebP 图片，支持格式转换与 ZIP 打包下载",
+    "category": "图片工具",
+    "keywords": [
+      "图片",
+      "压缩",
+      "JPG",
+      "PNG",
+      "WebP",
+      "批量",
+      "ZIP"
+    ]
+  },
+  {
+    "name": "图片转 Base64",
+    "path": "/image-to-base64",
+    "description": "图片转 Base64 编码",
+    "category": "图片工具",
+    "keywords": [
+      "图片",
+      "Base64",
+      "转换",
+      "编码"
+    ]
+  },
+  {
+    "name": "证件照换底色",
+    "path": "/id-photo",
+    "description": "上传照片一键更换证件照背景色，支持蓝底、白底、红底及常用尺寸裁剪",
+    "category": "图片工具",
+    "keywords": [
+      "证件照",
+      "换底色",
+      "蓝底",
+      "白底",
+      "红底",
+      "一寸照",
+      "二寸照"
+    ]
+  },
+  {
+    "name": "端口查询",
+    "path": "/port-lookup",
+    "description": "查询常用端口号及其对应的服务和用途",
+    "category": "网络工具",
+    "keywords": [
+      "port",
+      "端口",
+      "tcp",
+      "udp",
+      "服务"
+    ]
+  },
+  {
+    "name": "网络延迟测试",
+    "path": "/network-speed",
+    "description": "测试到各大网站的网络延迟",
+    "category": "网络工具",
+    "keywords": [
+      "网络",
+      "延迟",
+      "ping",
+      "速度",
+      "测试"
+    ]
+  },
+  {
+    "name": "DNS 查询",
+    "path": "/dns-query",
+    "description": "查询域名 DNS 解析记录，支持多种记录类型",
+    "category": "网络工具",
+    "keywords": [
+      "dns",
+      "域名",
+      "解析",
+      "A记录",
+      "CNAME",
+      "MX",
+      "TXT"
+    ]
+  },
+  {
+    "name": "HTTP 请求测试",
+    "path": "/http-request",
+    "description": "发送 HTTP 请求测试 API，支持多方法、自定义请求头、环境变量、请求历史、cURL 导入导出",
+    "category": "网络工具",
+    "keywords": [
+      "http",
+      "request",
+      "api",
+      "fetch",
+      "postman",
+      "接口",
+      "测试",
+      "curl",
+      "环境变量",
+      "历史"
+    ]
+  },
+  {
+    "name": "HTTP 状态码查询",
+    "path": "/http-status",
+    "description": "查询 HTTP 状态码的含义和用途",
+    "category": "网络工具",
+    "keywords": [
+      "http",
+      "status",
+      "状态码",
+      "404",
+      "500",
+      "200"
+    ]
+  },
+  {
+    "name": "IP 地址查询",
+    "path": "/ip-query",
+    "description": "查询当前公网 IP 地址及地理位置信息",
+    "category": "网络工具",
+    "keywords": [
+      "ip",
+      "地址",
+      "查询",
+      "地理位置",
+      "运营商",
+      "网络"
+    ]
+  },
+  {
+    "name": "IP 子网计算器",
+    "path": "/subnet-calculator",
+    "description": "计算 IP 子网信息，包括网络地址、广播地址、可用主机数等",
+    "category": "网络工具",
+    "keywords": [
+      "ip",
+      "subnet",
+      "子网",
+      "掩码",
+      "cidr",
+      "网络"
+    ]
+  },
+  {
+    "name": "UserAgent 解析",
+    "path": "/ua-parser",
+    "description": "解析 User-Agent 字符串，识别浏览器、操作系统与设备信息",
+    "category": "网络工具",
+    "keywords": [
+      "useragent",
+      "ua",
+      "browser",
+      "os",
+      "浏览器",
+      "设备",
+      "解析"
+    ]
+  },
+  {
+    "name": "大小写转换",
+    "path": "/case-converter",
+    "description": "英文大小写转换，支持驼峰、帕斯卡、蛇形、短横线、常量、路径、点分隔、URL Slug、反转大小写等",
+    "category": "文本处理",
+    "keywords": [
+      "大小写",
+      "转换",
+      "大写",
+      "小写",
+      "驼峰",
+      "蛇形",
+      "kebab",
+      "slug",
+      "常量命名",
+      "反转大小写"
+    ]
+  },
+  {
+    "name": "繁简转换",
+    "path": "/traditional-simplified",
+    "description": "繁体中文和简体中文互转",
+    "category": "文本处理",
+    "keywords": [
+      "繁体",
+      "简体",
+      "中文",
+      "转换"
+    ]
+  },
+  {
+    "name": "金额大写转换",
+    "path": "/money-cn",
+    "description": "数字金额转中文大写（壹贰叁）",
+    "category": "文本处理",
+    "keywords": [
+      "金额",
+      "大写",
+      "中文",
+      "壹贰叁"
+    ]
+  },
+  {
+    "name": "摩斯密码",
+    "path": "/morse-code",
+    "description": "摩斯密码（Morse Code）编解码，支持中英文与音频播放",
+    "category": "文本处理",
+    "keywords": [
+      "morse",
+      "摩斯",
+      "电码",
+      "编码",
+      "解码",
+      "telegraph"
+    ]
+  },
+  {
+    "name": "图片表格识别",
+    "path": "/image-table-recognizer",
+    "description": "上传图片识别表格内容，自动生成可编辑表格并导出",
+    "category": "文本处理",
+    "keywords": [
+      "图片",
+      "表格",
+      "OCR",
+      "识别",
+      "Excel",
+      "转换"
+    ]
+  },
+  {
+    "name": "文本对比",
+    "path": "/text-diff",
+    "description": "对比两段文本的差异，高亮显示新增、删除和修改的内容",
+    "category": "文本处理",
+    "keywords": [
+      "diff",
+      "compare",
+      "对比",
+      "比较",
+      "差异"
+    ]
+  },
+  {
+    "name": "文本去重排序",
+    "path": "/text-dedup-sort",
+    "description": "去除重复行、按字母/数字排序",
+    "category": "文本处理",
+    "keywords": [
+      "去重",
+      "排序",
+      "重复",
+      "排序"
+    ]
+  },
+  {
+    "name": "文本转语音",
+    "path": "/text-to-speech",
+    "description": "将文本转换为语音播放，支持多语言与语速调节",
+    "category": "文本处理",
+    "keywords": [
+      "tts",
+      "speech",
+      "语音",
+      "朗读",
+      "speechSynthesis"
+    ]
+  },
+  {
+    "name": "正则测试器",
+    "path": "/regex-tester",
+    "description": "正则表达式匹配、替换测试与表达式解析，含常用正则库",
+    "category": "文本处理",
+    "keywords": [
+      "regex",
+      "regular expression",
+      "正则",
+      "匹配",
+      "测试",
+      "替换",
+      "解释"
+    ]
+  },
+  {
+    "name": "字数统计",
+    "path": "/word-counter",
+    "description": "统计文本字符数、单词数、行数、段落数、中文字符、阅读/朗读时间，并展示词频排行",
+    "category": "文本处理",
+    "keywords": [
+      "字数",
+      "统计",
+      "字符",
+      "单词",
+      "行数",
+      "词频",
+      "阅读时间",
+      "中文字符"
+    ]
+  },
+  {
+    "name": "Markdown 预览",
+    "path": "/markdown-preview",
+    "description": "实时预览 Markdown 渲染效果",
+    "category": "文本处理",
+    "keywords": [
+      "markdown",
+      "md",
+      "预览",
+      "渲染",
+      "文档"
+    ]
+  },
+  {
+    "name": "文档字数统计",
+    "path": "/doc-word-count",
+    "description": "统计文档字数、行数、段落数",
+    "category": "文档处理",
+    "keywords": [
+      "word",
+      "count",
+      "字数",
+      "统计",
+      "文档"
+    ]
+  },
+  {
+    "name": "CSV 转 JSON",
+    "path": "/csv-to-json",
+    "description": "将 CSV 数据转换为 JSON 数组",
+    "category": "文档处理",
+    "keywords": [
+      "csv",
+      "json",
+      "转换"
+    ]
+  },
+  {
+    "name": "Excel 转 CSV",
+    "path": "/excel-to-csv",
+    "description": "将 Excel 文件转换为 CSV 格式",
+    "category": "文档处理",
+    "keywords": [
+      "excel",
+      "csv",
+      "xlsx",
+      "转换"
+    ]
+  },
+  {
+    "name": "Markdown 转 PDF",
+    "path": "/markdown-to-pdf",
+    "description": "将 Markdown 转换为 PDF 文档",
+    "category": "文档处理",
+    "keywords": [
+      "markdown",
+      "pdf",
+      "转换"
+    ]
+  },
+  {
+    "name": "Markdown 转 Word",
+    "path": "/markdown-to-word",
+    "description": "将 Markdown 转换为 Word 文档（.doc）",
+    "category": "文档处理",
+    "keywords": [
+      "markdown",
+      "word",
+      "doc",
+      "转换"
+    ]
+  },
+  {
+    "name": "PDF 工具箱",
+    "path": "/pdf-toolbox",
+    "description": "PDF 合并、拆分、旋转、压缩、提取文本多功能工具箱",
+    "category": "文档处理",
+    "keywords": [
+      "pdf",
+      "合并",
+      "拆分",
+      "旋转",
+      "压缩",
+      "提取文本",
+      "工具箱"
+    ]
+  },
+  {
+    "name": "TXT 转 EPUB",
+    "path": "/txt-to-epub",
+    "description": "将纯文本文件转换为 EPUB 电子书",
+    "category": "文档处理",
+    "keywords": [
+      "txt",
+      "epub",
+      "电子书",
+      "转换"
+    ]
+  },
+  {
+    "name": "Word 转 Markdown",
+    "path": "/word-to-markdown",
+    "description": "将 Word 文档转换为 Markdown",
+    "category": "文档处理",
+    "keywords": [
+      "word",
+      "markdown",
+      "docx",
+      "转换"
+    ]
+  },
+  {
+    "name": "PDF 转换器",
+    "path": "/pdf-converter",
+    "description": "将 PDF 转换为 Word、Excel、OCR 文本或图片，支持页面预览与批量导出",
+    "category": "文档工具",
+    "keywords": [
+      "pdf",
+      "word",
+      "docx",
+      "excel",
+      "xlsx",
+      "ocr",
+      "转换",
+      "提取",
+      "图片",
+      "text",
+      "文档"
+    ]
+  },
+  {
+    "name": "波形图生成",
+    "path": "/waveform-generator",
+    "description": "生成音频波形图",
+    "category": "音视频处理",
+    "keywords": [
+      "waveform",
+      "波形图",
+      "音频",
+      "audio"
+    ]
+  },
+  {
+    "name": "视频截图",
+    "path": "/video-screenshot",
+    "description": "从视频中截取画面图片",
+    "category": "音视频处理",
+    "keywords": [
+      "video",
+      "screenshot",
+      "视频",
+      "截图",
+      "帧"
+    ]
+  },
+  {
+    "name": "视频信息提取",
+    "path": "/video-info-extract",
+    "description": "提取视频元数据信息",
+    "category": "音视频处理",
+    "keywords": [
+      "video",
+      "info",
+      "metadata",
+      "视频",
+      "信息"
+    ]
+  },
+  {
+    "name": "视频转 GIF",
+    "path": "/video-to-gif",
+    "description": "将视频片段转换为 GIF 动图",
+    "category": "音视频处理",
+    "keywords": [
+      "video",
+      "gif",
+      "转换",
+      "动图"
+    ]
+  },
+  {
+    "name": "音频变速",
+    "path": "/audio-speed-changer",
+    "description": "改变音频播放速度",
+    "category": "音视频处理",
+    "keywords": [
+      "audio",
+      "speed",
+      "变速",
+      "音频"
+    ]
+  },
+  {
+    "name": "音频格式转换",
+    "path": "/audio-converter",
+    "description": "音频文件格式转换",
+    "category": "音视频处理",
+    "keywords": [
+      "audio",
+      "convert",
+      "音频",
+      "转换",
+      "mp3",
+      "wav"
+    ]
+  },
+  {
+    "name": "音频剪辑",
+    "path": "/audio-trimmer",
+    "description": "剪辑音频片段",
+    "category": "音视频处理",
+    "keywords": [
+      "audio",
+      "trim",
+      "clip",
+      "剪辑",
+      "音频"
+    ]
+  },
+  {
+    "name": "音频降噪",
+    "path": "/audio-noise-reduction",
+    "description": "简单音频降噪处理",
+    "category": "音视频处理",
+    "keywords": [
+      "audio",
+      "noise",
+      "reduction",
+      "降噪",
+      "音频"
+    ]
+  },
+  {
+    "name": "音频可视化",
+    "path": "/audio-visualizer",
+    "description": "音频频谱可视化",
+    "category": "音视频处理",
+    "keywords": [
+      "audio",
+      "visualizer",
+      "可视化",
+      "频谱",
+      "波形"
+    ]
+  },
+  {
+    "name": "TTS 音频合成",
+    "path": "/tts-audio-synth",
+    "description": "文本转语音并导出音频",
+    "category": "音视频处理",
+    "keywords": [
+      "tts",
+      "speech",
+      "语音",
+      "合成",
+      "音频"
+    ]
+  },
+  {
+    "name": "地图生成",
+    "path": "/map-generator",
+    "description": "程序化地图生成工具，支持洞穴、迷宫、BSP 房间生成，可导出二维数组",
+    "category": "游戏开发",
+    "keywords": [
+      "地图",
+      "map",
+      "生成",
+      "洞穴",
+      "迷宫",
+      "BSP",
+      "随机"
+    ]
+  },
+  {
+    "name": "精灵图切片工具",
+    "path": "/sprite-slicer",
+    "description": "精灵图切片工具，支持上传精灵图、网格切分、帧预览、手动调整切片区域及导出单帧或全部帧",
+    "category": "游戏开发",
+    "keywords": [
+      "精灵图",
+      "sprite",
+      "切片",
+      "帧",
+      "动画",
+      "tile",
+      "导出",
+      "toDataURL"
+    ]
+  },
+  {
+    "name": "碰撞检测工具",
+    "path": "/collision-detector",
+    "description": "2D 碰撞检测可视化工具，支持 AABB、圆形、矩形圆形、点与图形、线段碰撞检测及算法公式",
+    "category": "游戏开发",
+    "keywords": [
+      "碰撞",
+      "collision",
+      "检测",
+      "AABB",
+      "圆形",
+      "矩形",
+      "可视化",
+      "算法"
+    ]
+  },
+  {
+    "name": "随机数生成",
+    "path": "/random-generator",
+    "description": "多种分布随机数生成器，支持均匀/正态/指数分布，含统计直方图",
+    "category": "游戏开发",
+    "keywords": [
+      "随机",
+      "random",
+      "分布",
+      "正态",
+      "指数",
+      "种子"
+    ]
+  },
+  {
+    "name": "向量计算工具",
+    "path": "/vector-calculator",
+    "description": "2D/3D 向量运算工具，支持加减、点乘、叉乘、模长、归一化、角度、距离、投影、Lerp 插值及可视化",
+    "category": "游戏开发",
+    "keywords": [
+      "向量",
+      "vector",
+      "点乘",
+      "叉乘",
+      "归一化",
+      "插值",
+      "lerp",
+      "投影",
+      "可视化"
+    ]
+  },
+  {
+    "name": "像素艺术",
+    "path": "/pixel-art-tool",
+    "description": "像素画绘制工具，支持画笔/橡皮/填充/吸管，含撤销重做与调色板预设",
+    "category": "游戏开发",
+    "keywords": [
+      "像素",
+      "pixel",
+      "艺术",
+      "绘制",
+      "画板",
+      "NES",
+      "GameBoy"
+    ]
+  },
+  {
+    "name": "像素艺术编辑",
+    "path": "/pixel-art-editor",
+    "description": "像素艺术绘制工具，支持网格绘制、调色板、导出",
+    "category": "游戏开发",
+    "keywords": [
+      "像素",
+      "pixel",
+      "艺术",
+      "绘制"
+    ]
+  },
+  {
+    "name": "颜色拾取工具",
+    "path": "/color-picker-game",
+    "description": "游戏开发专用颜色工具，支持 HEX/RGB/HSL/HSV 互转、调色板生成、WCAG 对比度检测及配置导出",
+    "category": "游戏开发",
+    "keywords": [
+      "颜色",
+      "color",
+      "拾取",
+      "调色板",
+      "WCAG",
+      "对比度",
+      "HEX",
+      "RGB",
+      "HSL",
+      "HSV"
+    ]
+  },
+  {
+    "name": "游戏配置生成",
+    "path": "/game-config-gen",
+    "description": "游戏配置生成工具，支持角色/物品/关卡模板，含 DPS/TTK 平衡性计算",
+    "category": "游戏开发",
+    "keywords": [
+      "配置",
+      "config",
+      "json",
+      "游戏",
+      "角色",
+      "平衡",
+      "DPS"
+    ]
+  },
+  {
+    "name": "游戏随机数",
+    "path": "/game-random-gen",
+    "description": "游戏随机数生成器，支持种子随机、加权随机、概率分布",
+    "category": "游戏开发",
+    "keywords": [
+      "随机数",
+      "random",
+      "种子",
+      "概率"
+    ]
+  },
+  {
+    "name": "游戏颜色拾取",
+    "path": "/game-color-picker",
+    "description": "游戏开发专用颜色拾取器，支持 HEX/RGB/HSL/HSV 互转及调色板生成",
+    "category": "游戏开发",
+    "keywords": [
+      "颜色",
+      "color",
+      "拾取",
+      "调色板"
+    ]
+  },
+  {
+    "name": "噪声生成",
+    "path": "/noise-generator",
+    "description": "Perlin/Simplex 噪声生成器，可调节频率振幅八度，支持一维二维可视化",
+    "category": "游戏开发",
+    "keywords": [
+      "噪声",
+      "noise",
+      "perlin",
+      "simplex",
+      "柏林",
+      "纹理"
+    ]
+  },
+  {
+    "name": "坐标转换",
+    "path": "/coord-converter",
+    "description": "游戏坐标系转换工具，支持屏幕/世界/笛卡尔/极坐标/等距/瓦片坐标互转，以及 2D/3D 变换矩阵计算",
+    "category": "游戏开发",
+    "keywords": [
+      "坐标",
+      "coordinate",
+      "转换",
+      "屏幕坐标",
+      "世界坐标",
+      "极坐标",
+      "等距",
+      "瓦片",
+      "tile",
+      "变换矩阵",
+      "rotation",
+      "scale"
+    ]
+  },
+  {
+    "name": "磁盘容量计算",
+    "path": "/disk-calculator",
+    "description": "磁盘容量与 RAID 计算器",
+    "category": "运维工具",
+    "keywords": [
+      "disk",
+      "raid",
+      "capacity",
+      "磁盘",
+      "容量"
+    ]
+  },
+  {
+    "name": "端口扫描",
+    "path": "/port-scanner",
+    "description": "扫描主机开放端口",
+    "category": "运维工具",
+    "keywords": [
+      "port",
+      "scan",
+      "扫描",
+      "端口",
+      "network"
+    ]
+  },
+  {
+    "name": "进程查询",
+    "path": "/process-lookup",
+    "description": "进程信息查询参考",
+    "category": "运维工具",
+    "keywords": [
+      "process",
+      "进程",
+      "查询",
+      "linux",
+      "windows"
+    ]
+  },
+  {
+    "name": "内存单位转换",
+    "path": "/memory-unit-converter",
+    "description": "存储/内存单位转换",
+    "category": "运维工具",
+    "keywords": [
+      "memory",
+      "unit",
+      "转换",
+      "内存",
+      "存储",
+      "byte"
+    ]
+  },
+  {
+    "name": "日志分析",
+    "path": "/log-analyzer",
+    "description": "分析服务器日志文件",
+    "category": "运维工具",
+    "keywords": [
+      "log",
+      "analyze",
+      "分析",
+      "日志",
+      "server"
+    ]
+  },
+  {
+    "name": "Cron 表达式生成器",
+    "path": "/cron-expr-gen",
+    "description": "可视化生成 5/6 段 Cron 表达式，支持字段编辑、快捷预设、自定义输入与下次执行时间预览",
+    "category": "运维工具",
+    "keywords": [
+      "cron",
+      "expression",
+      "表达式",
+      "定时",
+      "任务",
+      "crontab",
+      "schedule",
+      "秒",
+      "分钟",
+      "小时"
+    ]
+  },
+  {
+    "name": "Docker Compose 生成",
+    "path": "/docker-compose-gen",
+    "description": "生成 docker-compose.yml",
+    "category": "运维工具",
+    "keywords": [
+      "docker",
+      "compose",
+      "yaml",
+      "容器",
+      "生成"
+    ]
+  },
+  {
+    "name": "Nginx 配置生成",
+    "path": "/nginx-config-gen",
+    "description": "生成 Nginx 配置文件",
+    "category": "运维工具",
+    "keywords": [
+      "nginx",
+      "config",
+      "配置",
+      "生成",
+      "server"
+    ]
+  },
+  {
+    "name": "SSH 密钥生成",
+    "path": "/ssh-keygen",
+    "description": "生成 SSH 密钥对（浏览器内）",
+    "category": "运维工具",
+    "keywords": [
+      "ssh",
+      "key",
+      "密钥",
+      "rsa",
+      "ed25519"
+    ]
+  },
+  {
+    "name": "SSL 证书解析",
+    "path": "/ssl-cert-parser",
+    "description": "解析 X.509 SSL 证书",
+    "category": "运维工具",
+    "keywords": [
+      "ssl",
+      "certificate",
+      "cert",
+      "证书",
+      "x509",
+      "解析"
+    ]
+  },
+  {
+    "name": "访问统计",
+    "path": "/site-stats",
+    "description": "查看本站访问数据，支持时间范围筛选、趋势图、热门排行与 CSV 导出",
+    "category": "站长工具",
+    "keywords": [
+      "统计",
+      "访问",
+      "排行",
+      "数据",
+      "analytics",
+      "趋势图",
+      "CSV",
+      "时间范围"
+    ]
+  },
+  {
+    "name": "关键词挖掘",
+    "path": "/keyword-miner",
+    "description": "基于种子词生成长尾关键词组合，并分析文本关键词密度与搜索意图",
+    "category": "站长工具",
+    "keywords": [
+      "关键词",
+      "seo",
+      "长尾词",
+      "搜索",
+      "关键词密度",
+      "挖掘"
+    ]
+  },
+  {
+    "name": "翻译对比",
+    "path": "/translation-compare",
+    "description": "多引擎翻译结果对比（链接生成）",
+    "category": "AI 辅助",
+    "keywords": [
+      "translation",
+      "translate",
+      "翻译",
+      "对比"
+    ]
+  },
+  {
+    "name": "关键词提取",
+    "path": "/keyword-extractor",
+    "description": "从文本中提取关键词",
+    "category": "AI 辅助",
+    "keywords": [
+      "keyword",
+      "extract",
+      "关键词",
+      "提取",
+      "text"
+    ]
+  },
+  {
+    "name": "情感分析",
+    "path": "/sentiment-analyzer",
+    "description": "分析文本的情感倾向",
+    "category": "AI 辅助",
+    "keywords": [
+      "sentiment",
+      "情感",
+      "分析",
+      "情绪"
+    ]
+  },
+  {
+    "name": "提示词模板",
+    "path": "/prompt-templates",
+    "description": "AI 提示词模板库",
+    "category": "AI 辅助",
+    "keywords": [
+      "prompt",
+      "template",
+      "提示词",
+      "模板",
+      "ai"
+    ]
+  },
+  {
+    "name": "文本分类",
+    "path": "/text-classifier",
+    "description": "基于规则的文本分类",
+    "category": "AI 辅助",
+    "keywords": [
+      "text",
+      "classify",
+      "分类",
+      "文本"
+    ]
+  },
+  {
+    "name": "文本摘要",
+    "path": "/text-summarizer",
+    "description": "自动提取文本摘要",
+    "category": "AI 辅助",
+    "keywords": [
+      "summary",
+      "summarize",
+      "摘要",
+      "总结",
+      "文本"
+    ]
+  },
+  {
+    "name": "语法检查",
+    "path": "/grammar-checker",
+    "description": "英文语法基础检查",
+    "category": "AI 辅助",
+    "keywords": [
+      "grammar",
+      "check",
+      "语法",
+      "检查",
+      "英文"
+    ]
+  },
+  {
+    "name": "AI 配置生成",
+    "path": "/ai-config-generator",
+    "description": "生成 AI 模型配置文件",
+    "category": "AI 辅助",
+    "keywords": [
+      "ai",
+      "config",
+      "配置",
+      "生成",
+      "模型"
+    ]
+  },
+  {
+    "name": "Markdown 润色",
+    "path": "/markdown-polisher",
+    "description": "Markdown 文档格式润色",
+    "category": "AI 辅助",
+    "keywords": [
+      "markdown",
+      "polish",
+      "润色",
+      "格式",
+      "文档"
+    ]
+  },
+  {
+    "name": "Token 计数器",
+    "path": "/token-counter",
+    "description": "估算文本的 Token 数量",
+    "category": "AI 辅助",
+    "keywords": [
+      "token",
+      "count",
+      "计数",
+      "ai",
+      "llm"
+    ]
+  },
+  {
+    "name": "中英文翻译",
+    "path": "/translator",
+    "description": "调用 OpenAI 兼容接口进行中英文互译，支持自定义接口配置",
+    "category": "AI 工具",
+    "keywords": [
+      "translate",
+      "translation",
+      "中文",
+      "英文",
+      "翻译",
+      "中英文",
+      "ai",
+      "deepl"
+    ]
+  },
+  {
+    "name": "AI 图片生成",
+    "path": "/ai-image-generator",
+    "description": "调用 OpenAI 兼容接口根据提示词生成图片，支持自定义模型和尺寸",
+    "category": "AI 工具",
+    "keywords": [
+      "ai",
+      "image",
+      "picture",
+      "generate",
+      "绘画",
+      "图片生成",
+      "文生图",
+      "dall-e",
+      "stability"
+    ]
+  },
+  {
+    "name": "AI 写作助手",
+    "path": "/ai-writer",
+    "description": "基于 OpenAI 兼容接口的 AI 写作、改写、标题生成与文案润色工具",
+    "category": "AI 工具",
+    "keywords": [
+      "ai",
+      "写作",
+      "改写",
+      "润色",
+      "标题",
+      "openai",
+      "gpt",
+      "文案"
+    ]
+  },
+  {
+    "name": "API 密钥生成",
+    "path": "/api-key-generator",
+    "description": "批量生成随机 API 密钥，支持自定义前缀、长度与编码格式",
+    "category": "API 测试",
+    "keywords": [
+      "api",
+      "key",
+      "secret",
+      "密钥"
+    ]
+  },
+  {
+    "name": "GraphQL 查询测试",
+    "path": "/graphql-tester",
+    "description": "发送 GraphQL 查询请求，支持变量、请求头编辑与历史记录",
+    "category": "API 测试",
+    "keywords": [
+      "graphql",
+      "api",
+      "query",
+      "测试"
+    ]
+  },
+  {
+    "name": "gRPC 服务查询",
+    "path": "/grpc-reflector",
+    "description": "gRPC 服务说明、protobuf 基础知识、.proto 语法速查与 grpcurl 命令生成器",
+    "category": "API 测试",
+    "keywords": [
+      "grpc",
+      "protobuf",
+      "rpc",
+      "服务"
+    ]
+  },
+  {
+    "name": "HMAC 签名",
+    "path": "/hmac-signer",
+    "description": "使用 Web Crypto API 计算 HMAC 签名，支持 SHA256/384/512/MD5",
+    "category": "API 测试",
+    "keywords": [
+      "hmac",
+      "signature",
+      "签名",
+      "sha256"
+    ]
+  },
+  {
+    "name": "JWT 调试",
+    "path": "/jwt-debugger",
+    "description": "解码 JWT Token，查看 Header/Payload/Signature，检查过期时间与 alg:none 风险",
+    "category": "API 测试",
+    "keywords": [
+      "jwt",
+      "token",
+      "json web token",
+      "调试"
+    ]
+  },
+  {
+    "name": "Mock 服务器",
+    "path": "/mock-server",
+    "description": "定义 Mock 路由并生成配置 JSON，支持本地模拟请求与下载",
+    "category": "API 测试",
+    "keywords": [
+      "mock",
+      "server",
+      "api",
+      "模拟"
+    ]
+  },
+  {
+    "name": "OpenAPI 校验",
+    "path": "/openapi-validator",
+    "description": "校验 OpenAPI/Swagger 文档结构，列出 API 端点与必需字段检查",
+    "category": "API 测试",
+    "keywords": [
+      "openapi",
+      "swagger",
+      "api",
+      "校验"
+    ]
+  },
+  {
+    "name": "SSE 测试",
+    "path": "/sse-tester",
+    "description": "连接 SSE 服务端，实时接收 Server-Sent Events 消息流",
+    "category": "API 测试",
+    "keywords": [
+      "sse",
+      "server sent events",
+      "eventsource",
+      "流"
+    ]
+  },
+  {
+    "name": "Webhook 测试",
+    "path": "/webhook-tester",
+    "description": "向 Webhook URL 发送请求，测试回调接口（支持自定义方法与请求体）",
+    "category": "API 测试",
+    "keywords": [
+      "webhook",
+      "callback",
+      "测试",
+      "请求"
+    ]
+  },
+  {
+    "name": "WebSocket 测试",
+    "path": "/websocket-tester",
+    "description": "连接 WebSocket 服务，收发消息并记录通信日志",
+    "category": "API 测试",
+    "keywords": [
+      "websocket",
+      "ws",
+      "socket",
+      "测试"
+    ]
+  },
+  {
+    "name": "关键词密度分析",
+    "path": "/keyword-density",
+    "description": "分析文本关键词密度与频率，支持中英文分词与停用词过滤",
+    "category": "SEO 工具",
+    "keywords": [
+      "keyword",
+      "density",
+      "seo",
+      "关键词",
+      "密度",
+      "词频",
+      "分析"
+    ]
+  },
+  {
+    "name": "Meta 标签生成",
+    "path": "/meta-tag-generator",
+    "description": "生成 HTML meta 标签（OG/Twitter）",
+    "category": "SEO 工具",
+    "keywords": [
+      "Meta",
+      "标签",
+      "OG",
+      "Twitter",
+      "SEO"
+    ]
+  },
+  {
+    "name": "Robots.txt 生成",
+    "path": "/robots-generator",
+    "description": "可视化生成 robots.txt 文件",
+    "category": "SEO 工具",
+    "keywords": [
+      "Robots",
+      "txt",
+      "爬虫",
+      "SEO"
+    ]
+  },
+  {
+    "name": "Sitemap 生成",
+    "path": "/sitemap-generator",
+    "description": "生成 XML sitemap",
+    "category": "SEO 工具",
+    "keywords": [
+      "Sitemap",
+      "XML",
+      "站点地图",
+      "SEO"
+    ]
+  }
+]

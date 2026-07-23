@@ -65,12 +65,16 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { NTag, NEmpty } from 'naive-ui'
-import { tools } from '@/tools/registry'
+import { getLocalizedTools } from '@/tools/registry'
 import { getCategoryStyle, getCategoryIcon } from '@/composables/useCategoryStyle'
+import type { SupportedLocale } from '@/i18n'
 
 const route = useRoute()
-const { t } = useI18n()
+const { t, locale } = useI18n()
 const baseUrl = import.meta.env.BASE_URL
+
+const currentLocale = computed<SupportedLocale>(() => locale.value as SupportedLocale)
+const localizedTools = computed(() => getLocalizedTools(currentLocale.value))
 
 function translateCategory(category: string) {
   return t(`categories.${category}`, category)
@@ -94,7 +98,7 @@ const headerSubtitle = computed(() => {
 })
 
 const displayTools = computed(() => {
-  let list = tools
+  let list = localizedTools.value
 
   // 分类筛选
   if (activeCategory.value !== '__all__') {

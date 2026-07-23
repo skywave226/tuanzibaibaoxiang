@@ -1,0 +1,613 @@
+{
+  "/graphql-tester": {
+    "en": {
+      "name": "GraphQL Query Tester",
+      "description": "Send GraphQL query requests with variables, header editing, and history.",
+      "keywords": ["graphql", "api", "query", "test"]
+    },
+    "es": {
+      "name": "Probador de Consulta GraphQL",
+      "description": "Envía consultas GraphQL con variables, edición de cabeceras e historial.",
+      "keywords": ["graphql", "api", "query", "prueba"]
+    },
+    "fr": {
+      "name": "Testeur de Requête GraphQL",
+      "description": "Envoyez des requêtes GraphQL avec variables, édition d'en-têtes et historique.",
+      "keywords": ["graphql", "api", "query", "test"]
+    },
+    "de": {
+      "name": "GraphQL-Abfragetest",
+      "description": "Sendet GraphQL-Abfragen mit Variablen, Header-Bearbeitung und Verlauf.",
+      "keywords": ["graphql", "api", "query", "test"]
+    },
+    "ja": {
+      "name": "GraphQL クエリテスト",
+      "description": "変数、ヘッダー編集、履歴に対応した GraphQL クエリを送信。",
+      "keywords": ["graphql", "api", "query", "テスト"]
+    },
+    "it": {
+      "name": "Test Query GraphQL",
+      "description": "Invia query GraphQL con variabili, modifica header e cronologia.",
+      "keywords": ["graphql", "api", "query", "test"]
+    },
+    "ko": {
+      "name": "GraphQL 쿼리 테스트",
+      "description": "변수, 헤더 편집 및 기록을 지원하는 GraphQL 쿼리를 전송합니다.",
+      "keywords": ["graphql", "api", "query", "테스트"]
+    },
+    "ru": {
+      "name": "Тест GraphQL-запросов",
+      "description": "Отправка GraphQL-запросов с переменными, редактированием заголовков и историей.",
+      "keywords": ["graphql", "api", "query", "тест"]
+    },
+    "pt": {
+      "name": "Teste de Consulta GraphQL",
+      "description": "Envie consultas GraphQL com variáveis, edição de cabeçalhos e histórico.",
+      "keywords": ["graphql", "api", "query", "teste"]
+    }
+  },
+  "/grpc-reflector": {
+    "en": {
+      "name": "gRPC Service Query",
+      "description": "gRPC service descriptions, protobuf basics, .proto syntax cheat sheet, and grpcurl command generator.",
+      "keywords": ["grpc", "protobuf", "rpc", "service"]
+    },
+    "es": {
+      "name": "Consulta de Servicios gRPC",
+      "description": "Descripciones de servicios gRPC, fundamentos de protobuf, chuleta de sintaxis .proto y generador de comandos grpcurl.",
+      "keywords": ["grpc", "protobuf", "rpc", "servicio"]
+    },
+    "fr": {
+      "name": "Requête de Service gRPC",
+      "description": "Descriptions de services gRPC, bases de protobuf, antisèche de syntaxe .proto et générateur de commandes grpcurl.",
+      "keywords": ["grpc", "protobuf", "rpc", "service"]
+    },
+    "de": {
+      "name": "gRPC-Dienstabfrage",
+      "description": "gRPC-Dienstbeschreibungen, protobuf-Grundlagen, .proto-Syntax-Spickzettel und grpcurl-Befehlsgenerator.",
+      "keywords": ["grpc", "protobuf", "rpc", "dienst"]
+    },
+    "ja": {
+      "name": "gRPC サービス照会",
+      "description": "gRPC サービスの説明、protobuf の基礎、.proto 構文早見表、grpcurl コマンドを生成。",
+      "keywords": ["grpc", "protobuf", "rpc", "サービス"]
+    },
+    "it": {
+      "name": "Query Servizio gRPC",
+      "description": "Descrizioni servizi gRPC, nozioni base protobuf, guida sintassi .proto e generatore comandi grpcurl.",
+      "keywords": ["grpc", "protobuf", "rpc", "servizio"]
+    },
+    "ko": {
+      "name": "gRPC 서비스 조회",
+      "description": "gRPC 서비스 설명, protobuf 기초, .proto 구문 요약, grpcurl 명령어를 생성합니다.",
+      "keywords": ["grpc", "protobuf", "rpc", "서비스"]
+    },
+    "ru": {
+      "name": "Запрос gRPC-сервисов",
+      "description": "Описания gRPC-сервисов, основы protobuf, шпаргалка по синтаксису .proto и генератор команд grpcurl.",
+      "keywords": ["grpc", "protobuf", "rpc", "сервис"]
+    },
+    "pt": {
+      "name": "Consulta de Serviço gRPC",
+      "description": "Descrições de serviços gRPC, noções básicas de protobuf, cola de sintaxe .proto e gerador de comandos grpcurl.",
+      "keywords": ["grpc", "protobuf", "rpc", "serviço"]
+    }
+  },
+  "/hmac-signer": {
+    "en": {
+      "name": "HMAC Signer",
+      "description": "Compute HMAC signatures using the Web Crypto API, supporting SHA256/384/512/MD5.",
+      "keywords": ["hmac", "signature", "sign", "sha256"]
+    },
+    "es": {
+      "name": "Firmador HMAC",
+      "description": "Calcula firmas HMAC con la Web Crypto API, compatible con SHA256/384/512/MD5.",
+      "keywords": ["hmac", "signature", "firma", "sha256"]
+    },
+    "fr": {
+      "name": "Signataire HMAC",
+      "description": "Calcule les signatures HMAC via Web Crypto API, prend en charge SHA256/384/512/MD5.",
+      "keywords": ["hmac", "signature", "signer", "sha256"]
+    },
+    "de": {
+      "name": "HMAC-Signer",
+      "description": "Berechnet HMAC-Signaturen mit der Web Crypto API, unterstützt SHA256/384/512/MD5.",
+      "keywords": ["hmac", "signature", "signieren", "sha256"]
+    },
+    "ja": {
+      "name": "HMAC 署名",
+      "description": "Web Crypto API を使って HMAC 署名を計算。SHA256/384/512/MD5 に対応。",
+      "keywords": ["hmac", "signature", "署名", "sha256"]
+    },
+    "it": {
+      "name": "Firmatario HMAC",
+      "description": "Calcola firme HMAC tramite Web Crypto API, supporta SHA256/384/512/MD5.",
+      "keywords": ["hmac", "signature", "firma", "sha256"]
+    },
+    "ko": {
+      "name": "HMAC 서명",
+      "description": "Web Crypto API를 사용해 HMAC 서명을 계산합니다. SHA256/384/512/MD5를 지원합니다.",
+      "keywords": ["hmac", "signature", "서명", "sha256"]
+    },
+    "ru": {
+      "name": "Подпись HMAC",
+      "description": "Вычисляет подписи HMAC с помощью Web Crypto API, поддерживает SHA256/384/512/MD5.",
+      "keywords": ["hmac", "signature", "подпись", "sha256"]
+    },
+    "pt": {
+      "name": "Assinador HMAC",
+      "description": "Calcula assinaturas HMAC com a Web Crypto API, compatível com SHA256/384/512/MD5.",
+      "keywords": ["hmac", "signature", "assinatura", "sha256"]
+    }
+  },
+  "/jwt-debugger": {
+    "en": {
+      "name": "JWT Debugger",
+      "description": "Decode JWT tokens to view Header/Payload/Signature, check expiration and alg:none risks.",
+      "keywords": ["jwt", "token", "json web token", "debug"]
+    },
+    "es": {
+      "name": "Depurador JWT",
+      "description": "Decodifica tokens JWT para ver Header/Payload/Signature y verificar expiración y riesgos de alg:none.",
+      "keywords": ["jwt", "token", "json web token", "depurar"]
+    },
+    "fr": {
+      "name": "Débogueur JWT",
+      "description": "Décode les tokens JWT pour afficher Header/Payload/Signature, vérifier l'expiration et les risques alg:none.",
+      "keywords": ["jwt", "token", "json web token", "déboguer"]
+    },
+    "de": {
+      "name": "JWT-Debugger",
+      "description": "Dekodiert JWT-Tokens, zeigt Header/Payload/Signature, prüft Ablauf und alg:none-Risiken.",
+      "keywords": ["jwt", "token", "json web token", "debuggen"]
+    },
+    "ja": {
+      "name": "JWT デバッガー",
+      "description": "JWT トークンをデコードし、Header/Payload/Signature を表示、有効期限と alg:none リスクを確認。",
+      "keywords": ["jwt", "token", "json web token", "デバッグ"]
+    },
+    "it": {
+      "name": "Debugger JWT",
+      "description": "Decodifica token JWT per visualizzare Header/Payload/Signature e verificare scadenza e rischi alg:none.",
+      "keywords": ["jwt", "token", "json web token", "debug"]
+    },
+    "ko": {
+      "name": "JWT 디버거",
+      "description": "JWT 토큰을 디코딩해 Header/Payload/Signature를 보고 만료 및 alg:none 위험을 확인합니다.",
+      "keywords": ["jwt", "token", "json web token", "디버그"]
+    },
+    "ru": {
+      "name": "Отладчик JWT",
+      "description": "Декодирует JWT-токены для просмотра Header/Payload/Signature, проверяет срок действия и риски alg:none.",
+      "keywords": ["jwt", "token", "json web token", "отладка"]
+    },
+    "pt": {
+      "name": "Depurador JWT",
+      "description": "Decodifica tokens JWT para visualizar Header/Payload/Signature e verificar expiração e riscos de alg:none.",
+      "keywords": ["jwt", "token", "json web token", "depurar"]
+    }
+  },
+  "/mock-server": {
+    "en": {
+      "name": "Mock Server",
+      "description": "Define mock routes and generate config JSON, supporting local simulated requests and download.",
+      "keywords": ["mock", "server", "api", "simulate"]
+    },
+    "es": {
+      "name": "Servidor Mock",
+      "description": "Define rutas mock y genera JSON de configuración, compatible con solicitudes simuladas locales y descarga.",
+      "keywords": ["mock", "server", "api", "simular"]
+    },
+    "fr": {
+      "name": "Serveur Mock",
+      "description": "Définit des routes mock et génère un JSON de configuration, prend en charge les requêtes simulées locales et le téléchargement.",
+      "keywords": ["mock", "server", "api", "simuler"]
+    },
+    "de": {
+      "name": "Mock-Server",
+      "description": "Definiert Mock-Routen und generiert Konfigurations-JSON, unterstützt lokale simulierte Anfragen und Download.",
+      "keywords": ["mock", "server", "api", "simulieren"]
+    },
+    "ja": {
+      "name": "Mock サーバー",
+      "description": "Mock ルートを定義し設定 JSON を生成。ローカルでの模擬リクエストとダウンロードに対応。",
+      "keywords": ["mock", "server", "api", "シミュレート"]
+    },
+    "it": {
+      "name": "Server Mock",
+      "description": "Definisce route mock e genera JSON di configurazione, supporta richieste simulate locali e download.",
+      "keywords": ["mock", "server", "api", "simulare"]
+    },
+    "ko": {
+      "name": "Mock 서버",
+      "description": "Mock 경로를 정의하고 설정 JSON을 생성합니다. 로컬 시뮬레이션 요청 및 다운로드를 지원합니다.",
+      "keywords": ["mock", "server", "api", "시뮬레이션"]
+    },
+    "ru": {
+      "name": "Mock-сервер",
+      "description": "Определяет маршруты mock и генерирует конфигурационный JSON, поддерживает локальные имитационные запросы и скачивание.",
+      "keywords": ["mock", "server", "api", "имитация"]
+    },
+    "pt": {
+      "name": "Servidor Mock",
+      "description": "Define rotas mock e gera JSON de configuração, compatível com requisições simuladas locais e download.",
+      "keywords": ["mock", "server", "api", "simular"]
+    }
+  },
+  "/openapi-validator": {
+    "en": {
+      "name": "OpenAPI Validator",
+      "description": "Validate OpenAPI/Swagger document structure, list API endpoints, and check required fields.",
+      "keywords": ["openapi", "swagger", "api", "validate"]
+    },
+    "es": {
+      "name": "Validador OpenAPI",
+      "description": "Valida la estructura de documentos OpenAPI/Swagger, lista endpoints de API y verifica campos obligatorios.",
+      "keywords": ["openapi", "swagger", "api", "validar"]
+    },
+    "fr": {
+      "name": "Validateur OpenAPI",
+      "description": "Valide la structure des documents OpenAPI/Swagger, liste les points de terminaison d'API et vérifie les champs requis.",
+      "keywords": ["openapi", "swagger", "api", "valider"]
+    },
+    "de": {
+      "name": "OpenAPI-Validator",
+      "description": "Validiert die Struktur von OpenAPI/Swagger-Dokumenten, listet API-Endpunkte auf und prüft Pflichtfelder.",
+      "keywords": ["openapi", "swagger", "api", "validieren"]
+    },
+    "ja": {
+      "name": "OpenAPI 検証",
+      "description": "OpenAPI/Swagger ドキュメント構造を検証し、API エンドポイントを一覧表示、必須フィールドを確認。",
+      "keywords": ["openapi", "swagger", "api", "検証"]
+    },
+    "it": {
+      "name": "Validatore OpenAPI",
+      "description": "Valida la struttura di documenti OpenAPI/Swagger, elenca gli endpoint API e verifica i campi obbligatori.",
+      "keywords": ["openapi", "swagger", "api", "validare"]
+    },
+    "ko": {
+      "name": "OpenAPI 검증기",
+      "description": "OpenAPI/Swagger 문서 구조를 검증하고, API 엔드포인트를 나열하며 필수 필드를 확인합니다.",
+      "keywords": ["openapi", "swagger", "api", "검증"]
+    },
+    "ru": {
+      "name": "Валидатор OpenAPI",
+      "description": "Проверяет структуру документов OpenAPI/Swagger, перечисляет конечные точки API и проверяет обязательные поля.",
+      "keywords": ["openapi", "swagger", "api", "валидация"]
+    },
+    "pt": {
+      "name": "Validador OpenAPI",
+      "description": "Valida a estrutura de documentos OpenAPI/Swagger, lista endpoints de API e verifica campos obrigatórios.",
+      "keywords": ["openapi", "swagger", "api", "validar"]
+    }
+  },
+  "/sse-tester": {
+    "en": {
+      "name": "SSE Tester",
+      "description": "Connect to an SSE server and receive Server-Sent Events message streams in real time.",
+      "keywords": ["sse", "server sent events", "eventsource", "stream"]
+    },
+    "es": {
+      "name": "Probador SSE",
+      "description": "Conecta a un servidor SSE y recibe flujos de mensajes Server-Sent Events en tiempo real.",
+      "keywords": ["sse", "server sent events", "eventsource", "flujo"]
+    },
+    "fr": {
+      "name": "Testeur SSE",
+      "description": "Se connecte à un serveur SSE et reçoit les flux de messages Server-Sent Events en temps réel.",
+      "keywords": ["sse", "server sent events", "eventsource", "flux"]
+    },
+    "de": {
+      "name": "SSE-Tester",
+      "description": "Verbindet sich mit einem SSE-Server und empfängt Server-Sent Events-Nachrichtenströme in Echtzeit.",
+      "keywords": ["sse", "server sent events", "eventsource", "stream"]
+    },
+    "ja": {
+      "name": "SSE テスト",
+      "description": "SSE サーバーに接続し、Server-Sent Events のメッセージストリームをリアルタイムで受信。",
+      "keywords": ["sse", "server sent events", "eventsource", "ストリーム"]
+    },
+    "it": {
+      "name": "Tester SSE",
+      "description": "Si connette a un server SSE e riceve flussi di messaggi Server-Sent Events in tempo reale.",
+      "keywords": ["sse", "server sent events", "eventsource", "stream"]
+    },
+    "ko": {
+      "name": "SSE 테스트기",
+      "description": "SSE 서버에 연결해 Server-Sent Events 메시지 스트림을 실시간으로 수신합니다.",
+      "keywords": ["sse", "server sent events", "eventsource", "스트림"]
+    },
+    "ru": {
+      "name": "Тестер SSE",
+      "description": "Подключается к SSE-серверу и получает потоки сообщений Server-Sent Events в реальном времени.",
+      "keywords": ["sse", "server sent events", "eventsource", "поток"]
+    },
+    "pt": {
+      "name": "Testador SSE",
+      "description": "Conecta-se a um servidor SSE e recebe fluxos de mensagens Server-Sent Events em tempo real.",
+      "keywords": ["sse", "server sent events", "eventsource", "fluxo"]
+    }
+  },
+  "/webhook-tester": {
+    "en": {
+      "name": "Webhook Tester",
+      "description": "Send requests to a Webhook URL to test callback endpoints, supporting custom methods and request bodies.",
+      "keywords": ["webhook", "callback", "test", "request"]
+    },
+    "es": {
+      "name": "Probador Webhook",
+      "description": "Envía solicitudes a una URL de Webhook para probar endpoints de callback, compatible con métodos personalizados y cuerpos de solicitud.",
+      "keywords": ["webhook", "callback", "prueba", "solicitud"]
+    },
+    "fr": {
+      "name": "Testeur Webhook",
+      "description": "Envoie des requêtes vers une URL Webhook pour tester les points de retour, prend en charge les méthodes personnalisées et les corps de requête.",
+      "keywords": ["webhook", "callback", "test", "requête"]
+    },
+    "de": {
+      "name": "Webhook-Tester",
+      "description": "Sendet Anfragen an eine Webhook-URL, um Callback-Endpunkte zu testen, unterstützt benutzerdefinierte Methoden und Anfragekörper.",
+      "keywords": ["webhook", "callback", "test", "anfrage"]
+    },
+    "ja": {
+      "name": "Webhook テスト",
+      "description": "Webhook URL にリクエストを送信してコールバックエンドポイントをテスト。カスタムメソッドとリクエストボディに対応。",
+      "keywords": ["webhook", "callback", "テスト", "リクエスト"]
+    },
+    "it": {
+      "name": "Tester Webhook",
+      "description": "Invia richieste a un URL Webhook per testare endpoint di callback, supporta metodi personalizzati e body della richiesta.",
+      "keywords": ["webhook", "callback", "test", "richiesta"]
+    },
+    "ko": {
+      "name": "Webhook 테스터",
+      "description": "Webhook URL로 요청을 보내 콜백 엔드포인트를 테스트합니다. 커스텀 메서드 및 요청 본문을 지원합니다.",
+      "keywords": ["webhook", "callback", "테스트", "요청"]
+    },
+    "ru": {
+      "name": "Тестер Webhook",
+      "description": "Отправляет запросы на URL Webhook для тестирования callback-ендпоинтов, поддерживает пользовательские методы и тела запросов.",
+      "keywords": ["webhook", "callback", "тест", "запрос"]
+    },
+    "pt": {
+      "name": "Testador Webhook",
+      "description": "Envie requisições para uma URL Webhook para testar endpoints de callback, compatível com métodos personalizados e corpos de requisição.",
+      "keywords": ["webhook", "callback", "teste", "requisição"]
+    }
+  },
+  "/websocket-tester": {
+    "en": {
+      "name": "WebSocket Tester",
+      "description": "Connect to a WebSocket service, send and receive messages, and log communications.",
+      "keywords": ["websocket", "ws", "socket", "test"]
+    },
+    "es": {
+      "name": "Probador WebSocket",
+      "description": "Conecta a un servicio WebSocket, envía y recibe mensajes y registra las comunicaciones.",
+      "keywords": ["websocket", "ws", "socket", "prueba"]
+    },
+    "fr": {
+      "name": "Testeur WebSocket",
+      "description": "Se connecte à un service WebSocket, envoie et reçoit des messages et journalise les communications.",
+      "keywords": ["websocket", "ws", "socket", "test"]
+    },
+    "de": {
+      "name": "WebSocket-Tester",
+      "description": "Verbindet sich mit einem WebSocket-Dienst, sendet und empfängt Nachrichten und protokolliert die Kommunikation.",
+      "keywords": ["websocket", "ws", "socket", "test"]
+    },
+    "ja": {
+      "name": "WebSocket テスト",
+      "description": "WebSocket サービスに接続し、メッセージを送受信して通信ログを記録。",
+      "keywords": ["websocket", "ws", "socket", "テスト"]
+    },
+    "it": {
+      "name": "Tester WebSocket",
+      "description": "Si connette a un servizio WebSocket, invia e riceve messaggi e registra le comunicazioni.",
+      "keywords": ["websocket", "ws", "socket", "test"]
+    },
+    "ko": {
+      "name": "WebSocket 테스터",
+      "description": "WebSocket 서비스에 연결해 메시지를 주고받고 통신 로그를 기록합니다.",
+      "keywords": ["websocket", "ws", "socket", "테스트"]
+    },
+    "ru": {
+      "name": "Тестер WebSocket",
+      "description": "Подключается к WebSocket-сервису, отправляет и получает сообщения и ведёт журнал обмена данными.",
+      "keywords": ["websocket", "ws", "socket", "тест"]
+    },
+    "pt": {
+      "name": "Testador WebSocket",
+      "description": "Conecta-se a um serviço WebSocket, envia e recebe mensagens e registra as comunicações.",
+      "keywords": ["websocket", "ws", "socket", "teste"]
+    }
+  },
+  "/keyword-density": {
+    "en": {
+      "name": "Keyword Density Analysis",
+      "description": "Analyze text keyword density and frequency, supporting Chinese and English word segmentation with stopword filtering.",
+      "keywords": ["keyword", "density", "seo", "frequency", "analysis"]
+    },
+    "es": {
+      "name": "Análisis de Densidad de Palabras Clave",
+      "description": "Analiza la densidad y frecuencia de palabras clave en textos, compatible con segmentación de palabras en chino e inglés y filtrado de stopwords.",
+      "keywords": ["keyword", "density", "seo", "frecuencia", "análisis"]
+    },
+    "fr": {
+      "name": "Analyse de Densité de Mots-clés",
+      "description": "Analyse la densité et la fréquence des mots-clés dans un texte, prend en charge la segmentation des mots en chinois et en anglais et le filtrage des mots vides.",
+      "keywords": ["keyword", "density", "seo", "fréquence", "analyse"]
+    },
+    "de": {
+      "name": "Keyword-Dichte-Analyse",
+      "description": "Analysiert Keyword-Dichte und -Häufigkeit im Text, unterstützt chinesische und englische Wortsegmentierung sowie Stoppwortfilterung.",
+      "keywords": ["keyword", "density", "seo", "häufigkeit", "analyse"]
+    },
+    "ja": {
+      "name": "キーワード密度分析",
+      "description": "テキストのキーワード密度と出現頻度を分析。中国語と英語の分詞とストップワード除去に対応。",
+      "keywords": ["keyword", "density", "seo", "頻度", "分析"]
+    },
+    "it": {
+      "name": "Analisi Densità Keyword",
+      "description": "Analizza densità e frequenza delle keyword nel testo, supporta segmentazione parole cinese e inglese e filtraggio stopword.",
+      "keywords": ["keyword", "density", "seo", "frequenza", "analisi"]
+    },
+    "ko": {
+      "name": "키워드 밀도 분석",
+      "description": "텍스트의 키워드 밀도와 빈도를 분석합니다. 중국어 및 영어 단어 분절과 불용어 필터링을 지원합니다.",
+      "keywords": ["keyword", "density", "seo", "빈도", "분석"]
+    },
+    "ru": {
+      "name": "Анализ Плотности Ключевых Слов",
+      "description": "Анализирует плотность и частоту ключевых слов в тексте, поддерживает сегментацию слов на китайском и английском и фильтрацию стоп-слов.",
+      "keywords": ["keyword", "density", "seo", "частота", "анализ"]
+    },
+    "pt": {
+      "name": "Análise de Densidade de Palavras-chave",
+      "description": "Analisa a densidade e frequência de palavras-chave no texto, compatível com segmentação de palavras em chinês e inglês e filtragem de stopwords.",
+      "keywords": ["keyword", "density", "seo", "frequência", "análise"]
+    }
+  },
+  "/meta-tag-generator": {
+    "en": {
+      "name": "Meta Tag Generator",
+      "description": "Generate HTML meta tags (OG/Twitter).",
+      "keywords": ["Meta", "tag", "OG", "Twitter", "SEO"]
+    },
+    "es": {
+      "name": "Generador de Etiquetas Meta",
+      "description": "Genera etiquetas HTML meta (OG/Twitter).",
+      "keywords": ["Meta", "etiqueta", "OG", "Twitter", "SEO"]
+    },
+    "fr": {
+      "name": "Générateur de Balises Meta",
+      "description": "Génère des balises HTML meta (OG/Twitter).",
+      "keywords": ["Meta", "balise", "OG", "Twitter", "SEO"]
+    },
+    "de": {
+      "name": "Meta-Tag-Generator",
+      "description": "Generiert HTML-Meta-Tags (OG/Twitter).",
+      "keywords": ["Meta", "tag", "OG", "Twitter", "SEO"]
+    },
+    "ja": {
+      "name": "Meta タグ生成",
+      "description": "HTML meta タグ（OG/Twitter）を生成。",
+      "keywords": ["Meta", "タグ", "OG", "Twitter", "SEO"]
+    },
+    "it": {
+      "name": "Generatore Meta Tag",
+      "description": "Genera tag meta HTML (OG/Twitter).",
+      "keywords": ["Meta", "tag", "OG", "Twitter", "SEO"]
+    },
+    "ko": {
+      "name": "Meta 태그 생성기",
+      "description": "HTML meta 태그(OG/Twitter)를 생성합니다.",
+      "keywords": ["Meta", "태그", "OG", "Twitter", "SEO"]
+    },
+    "ru": {
+      "name": "Генератор Мета-тегов",
+      "description": "Генерирует HTML-метатеги (OG/Twitter).",
+      "keywords": ["Meta", "тег", "OG", "Twitter", "SEO"]
+    },
+    "pt": {
+      "name": "Gerador de Meta Tags",
+      "description": "Gera meta tags HTML (OG/Twitter).",
+      "keywords": ["Meta", "tag", "OG", "Twitter", "SEO"]
+    }
+  },
+  "/robots-generator": {
+    "en": {
+      "name": "Robots.txt Generator",
+      "description": "Visually generate robots.txt files.",
+      "keywords": ["Robots", "txt", "crawler", "SEO"]
+    },
+    "es": {
+      "name": "Generador de Robots.txt",
+      "description": "Genera archivos robots.txt de forma visual.",
+      "keywords": ["Robots", "txt", "rastreador", "SEO"]
+    },
+    "fr": {
+      "name": "Générateur Robots.txt",
+      "description": "Génère des fichiers robots.txt de manière visuelle.",
+      "keywords": ["Robots", "txt", "crawler", "SEO"]
+    },
+    "de": {
+      "name": "Robots.txt-Generator",
+      "description": "Generiert robots.txt-Dateien visuell.",
+      "keywords": ["Robots", "txt", "crawler", "SEO"]
+    },
+    "ja": {
+      "name": "Robots.txt 生成",
+      "description": "robots.txt ファイルをビジュアルに生成。",
+      "keywords": ["Robots", "txt", "クローラー", "SEO"]
+    },
+    "it": {
+      "name": "Generatore Robots.txt",
+      "description": "Genera file robots.txt in modo visuale.",
+      "keywords": ["Robots", "txt", "crawler", "SEO"]
+    },
+    "ko": {
+      "name": "Robots.txt 생성기",
+      "description": "robots.txt 파일을 시각적으로 생성합니다.",
+      "keywords": ["Robots", "txt", "크롤러", "SEO"]
+    },
+    "ru": {
+      "name": "Генератор Robots.txt",
+      "description": "Визуально генерирует файлы robots.txt.",
+      "keywords": ["Robots", "txt", "краулер", "SEO"]
+    },
+    "pt": {
+      "name": "Gerador de Robots.txt",
+      "description": "Gera arquivos robots.txt de forma visual.",
+      "keywords": ["Robots", "txt", "rastreador", "SEO"]
+    }
+  },
+  "/sitemap-generator": {
+    "en": {
+      "name": "Sitemap Generator",
+      "description": "Generate XML sitemaps.",
+      "keywords": ["Sitemap", "XML", "site map", "SEO"]
+    },
+    "es": {
+      "name": "Generador de Sitemap",
+      "description": "Genera sitemaps XML.",
+      "keywords": ["Sitemap", "XML", "mapa del sitio", "SEO"]
+    },
+    "fr": {
+      "name": "Générateur de Sitemap",
+      "description": "Génère des sitemaps XML.",
+      "keywords": ["Sitemap", "XML", "plan du site", "SEO"]
+    },
+    "de": {
+      "name": "Sitemap-Generator",
+      "description": "Generiert XML-Sitemaps.",
+      "keywords": ["Sitemap", "XML", "Seitenverzeichnis", "SEO"]
+    },
+    "ja": {
+      "name": "Sitemap 生成",
+      "description": "XML sitemap を生成。",
+      "keywords": ["Sitemap", "XML", "サイトマップ", "SEO"]
+    },
+    "it": {
+      "name": "Generatore Sitemap",
+      "description": "Genera sitemap XML.",
+      "keywords": ["Sitemap", "XML", "mappa del sito", "SEO"]
+    },
+    "ko": {
+      "name": "Sitemap 생성기",
+      "description": "XML sitemap을 생성합니다.",
+      "keywords": ["Sitemap", "XML", "사이트맵", "SEO"]
+    },
+    "ru": {
+      "name": "Генератор Sitemap",
+      "description": "Генерирует XML-карты сайта.",
+      "keywords": ["Sitemap", "XML", "карта сайта", "SEO"]
+    },
+    "pt": {
+      "name": "Gerador de Sitemap",
+      "description": "Gera sitemaps XML.",
+      "keywords": ["Sitemap", "XML", "mapa do site", "SEO"]
+    }
+  }
+}

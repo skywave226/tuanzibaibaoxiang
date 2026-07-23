@@ -3,7 +3,7 @@
     <div class="tool-header" v-if="meta">
       <n-breadcrumb>
         <n-breadcrumb-item>
-          <router-link to="/">首页</router-link>
+          <router-link to="/">{{ t('nav.home') }}</router-link>
         </n-breadcrumb-item>
         <n-breadcrumb-item>{{ meta.name }}</n-breadcrumb-item>
       </n-breadcrumb>
@@ -19,12 +19,19 @@
 <script setup lang="ts">
 import { computed, defineAsyncComponent, shallowRef, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import { NBreadcrumb, NBreadcrumbItem } from 'naive-ui'
-import { getToolByPath } from '@/tools/registry'
+import { getToolByPath, localizeTool } from '@/tools/registry'
+import type { SupportedLocale } from '@/i18n'
 
 const route = useRoute()
+const { locale, t } = useI18n()
 
-const meta = computed(() => getToolByPath(route.path as string))
+const meta = computed(() => {
+  const tool = getToolByPath(route.path as string)
+  if (!tool) return undefined
+  return localizeTool(tool, locale.value as SupportedLocale)
+})
 
 const toolComponent = shallowRef<any>(null)
 

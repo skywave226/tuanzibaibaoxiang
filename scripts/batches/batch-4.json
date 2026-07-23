@@ -1,0 +1,272 @@
+[
+  {
+    "name": "JSON 树视图",
+    "path": "/json-tree-viewer",
+    "description": "将 JSON 数据以可折叠树形结构展示",
+    "category": "数据可视化",
+    "keywords": [
+      "json",
+      "tree",
+      "树",
+      "视图",
+      "查看"
+    ]
+  },
+  {
+    "name": "表结构生成",
+    "path": "/table-schema-gen",
+    "description": "可视化设计数据库表结构并生成 DDL",
+    "category": "数据库工具",
+    "keywords": [
+      "table",
+      "schema",
+      "表结构",
+      "ddl",
+      "设计"
+    ]
+  },
+  {
+    "name": "连接串解析",
+    "path": "/connection-string-parser",
+    "description": "解析数据库连接字符串（MySQL/PostgreSQL/MongoDB 等）",
+    "category": "数据库工具",
+    "keywords": [
+      "connection",
+      "string",
+      "连接串",
+      "url",
+      "数据库"
+    ]
+  },
+  {
+    "name": "索引优化建议",
+    "path": "/index-optimizer",
+    "description": "分析 SQL 查询并给出索引优化建议",
+    "category": "数据库工具",
+    "keywords": [
+      "index",
+      "索引",
+      "优化",
+      "查询",
+      "性能"
+    ]
+  },
+  {
+    "name": "ER 图生成",
+    "path": "/er-diagram-gen",
+    "description": "根据表结构生成 ER 实体关系图（Mermaid）",
+    "category": "数据库工具",
+    "keywords": [
+      "er",
+      "diagram",
+      "实体关系图",
+      "mermaid",
+      "设计"
+    ]
+  },
+  {
+    "name": "MongoDB 查询构建",
+    "path": "/mongo-query-builder",
+    "description": "可视化构建 MongoDB 查询语句",
+    "category": "数据库工具",
+    "keywords": [
+      "mongodb",
+      "query",
+      "nosql",
+      "查询",
+      "构建"
+    ]
+  },
+  {
+    "name": "Redis 命令查询",
+    "path": "/redis-command-ref",
+    "description": "Redis 命令速查手册与示例",
+    "category": "数据库工具",
+    "keywords": [
+      "redis",
+      "command",
+      "命令",
+      "缓存",
+      "nosql"
+    ]
+  },
+  {
+    "name": "SQL 格式化",
+    "path": "/sql-formatter",
+    "description": "SQL 语句格式化与美化，支持多种方言",
+    "category": "数据库工具",
+    "keywords": [
+      "sql",
+      "format",
+      "格式化",
+      "美化",
+      "mysql",
+      "postgres"
+    ]
+  },
+  {
+    "name": "SQL 注入检测",
+    "path": "/sql-injection-check",
+    "description": "检测 SQL 语句中的注入风险",
+    "category": "数据库工具",
+    "keywords": [
+      "sql",
+      "injection",
+      "注入",
+      "安全",
+      "检测"
+    ]
+  },
+  {
+    "name": "SQL 转 MongoDB",
+    "path": "/sql-to-mongo",
+    "description": "将 SQL 查询语句转换为 MongoDB 查询语法",
+    "category": "数据库工具",
+    "keywords": [
+      "sql",
+      "mongodb",
+      "转换",
+      "nosql"
+    ]
+  },
+  {
+    "name": "SQL 转实体",
+    "path": "/sql-to-entity",
+    "description": "将 SQL 建表语句转换为 TypeScript 实体类",
+    "category": "数据库工具",
+    "keywords": [
+      "sql",
+      "entity",
+      "实体",
+      "typescript",
+      "建表",
+      "ddl"
+    ]
+  },
+  {
+    "name": "二维码美化",
+    "path": "/qrcode-beautifier",
+    "description": "生成高颜值二维码，支持圆点、圆角、渐变、Logo 叠加与多种 eye 样式，可导出 PNG / SVG",
+    "category": "图片工具",
+    "keywords": [
+      "二维码",
+      "QR",
+      "美化",
+      "渐变",
+      "Logo",
+      "圆角",
+      "SVG",
+      "PNG",
+      "导出"
+    ]
+  },
+  {
+    "name": "二维码生成器",
+    "path": "/qrcode-generator",
+    "description": "生成二维码，支持自定义颜色、纠错等级、中心 Logo、批量生成、PNG/SVG 导出与历史记录",
+    "category": "图片工具",
+    "keywords": [
+      "二维码",
+      "QR",
+      "生成",
+      "Logo",
+      "批量",
+      "SVG",
+      "导出",
+      "历史"
+    ]
+  },
+  {
+    "name": "二维码识别",
+    "path": "/qrcode-reader",
+    "description": "从图片中识别二维码内容",
+    "category": "图片工具",
+    "keywords": [
+      "二维码",
+      "QR",
+      "识别",
+      "扫描"
+    ]
+  },
+  {
+    "name": "图片裁剪",
+    "path": "/image-crop",
+    "description": "裁剪图片尺寸和区域",
+    "category": "图片工具",
+    "keywords": [
+      "图片",
+      "裁剪",
+      "剪切",
+      "尺寸"
+    ]
+  },
+  {
+    "name": "图片格式转换",
+    "path": "/image-format",
+    "description": "JPG/PNG/WebP/GIF 互转",
+    "category": "图片工具",
+    "keywords": [
+      "图片",
+      "格式",
+      "转换",
+      "JPG",
+      "PNG"
+    ]
+  },
+  {
+    "name": "图片拼接",
+    "path": "/image-merge",
+    "description": "多张图片横向或竖向拼接，可调整间距与背景色",
+    "category": "图片工具",
+    "keywords": [
+      "merge",
+      "拼接",
+      "合并",
+      "横向",
+      "竖向",
+      "图片"
+    ]
+  },
+  {
+    "name": "图片去背景",
+    "path": "/bg-remover",
+    "description": "移除图片背景或替换为指定颜色，适合纯色背景照片快速抠图",
+    "category": "图片工具",
+    "keywords": [
+      "背景",
+      "去背景",
+      "抠图",
+      "透明",
+      "图片处理",
+      "remove background"
+    ]
+  },
+  {
+    "name": "图片去水印",
+    "path": "/watermark-remover",
+    "description": "用图片局部区域覆盖水印，适合去除纯色或简单背景上的水印",
+    "category": "图片工具",
+    "keywords": [
+      "watermark",
+      "remove",
+      "图片",
+      "水印",
+      "去除",
+      "修复",
+      "image"
+    ]
+  },
+  {
+    "name": "图片水印",
+    "path": "/image-watermark",
+    "description": "为图片添加文字或图片水印，可调整位置、透明度与大小",
+    "category": "图片工具",
+    "keywords": [
+      "watermark",
+      "水印",
+      "图片",
+      "版权",
+      "保护"
+    ]
+  }
+]

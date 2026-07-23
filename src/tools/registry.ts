@@ -1,4 +1,6 @@
 import type { ToolMeta } from '@/types/tool'
+import type { SupportedLocale } from '@/i18n'
+import toolTranslations from '@/i18n/toolTranslations.json'
 
 const toolModules = import.meta.glob('./**/index.vue')
 const metaModules = import.meta.glob('./**/meta.ts', { eager: true })
@@ -33,4 +35,23 @@ export function searchTools(query: string): ToolMeta[] {
     t.description.toLowerCase().includes(q) ||
     t.keywords.some(k => k.toLowerCase().includes(q))
   )
+}
+
+/** 获取单个工具的本地化元数据 */
+export function localizeTool(tool: ToolMeta, locale: SupportedLocale): ToolMeta {
+  if (locale === 'zh-CN') return tool
+  const tr = (toolTranslations as Record<string, Partial<Record<SupportedLocale, { name?: string; description?: string; keywords?: string[] }>>>)[tool.path]?.[locale]
+  if (!tr) return tool
+  return {
+    ...tool,
+    name: tr.name || tool.name,
+    description: tr.description || tool.description,
+    keywords: tr.keywords?.length ? tr.keywords : tool.keywords,
+  }
+}
+
+/** 获取指定语言的全部工具列表 */
+export function getLocalizedTools(locale: SupportedLocale): ToolMeta[] {
+  if (locale === 'zh-CN') return tools
+  return tools.map(t => localizeTool(t, locale))
 }
