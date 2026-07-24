@@ -50,8 +50,32 @@ watch(
 </script>
 
 <style scoped>
+.tool-view {
+  max-width: 100%;
+  min-width: 0;
+}
+
 .tool-header a {
   text-decoration: none;
   color: inherit;
+}
+
+.tool-header h2 {
+  word-break: break-word;
+}
+
+.tool-content {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+@media (max-width: 640px) {
+  .tool-header h2 {
+    font-size: 1.125rem;
+  }
+
+  .tool-header p {
+    font-size: 0.8125rem;
+  }
 }
 </style>

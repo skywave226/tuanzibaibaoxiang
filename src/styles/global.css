@@ -86,3 +86,41 @@ body {
 .dark .section-header .section-title {
   color: #f1f5f9;
 }
+
+/* 移动端响应式兜底：工具内容区常见布局 */
+@media (max-width: 768px) {
+  .tool-content .toolbar,
+  .tool-content .actions,
+  .tool-content .config-section,
+  .tool-content .config-row {
+    flex-wrap: wrap !important;
+  }
+
+  .tool-content .editor-grid,
+  .tool-content .input-grid,
+  .tool-content .editor-area {
+    grid-template-columns: 1fr !important;
+  }
+
+  .tool-content .card {
+    padding: 16px;
+  }
+
+  .tool-content table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* 小屏进一步压缩 */
+@media (max-width: 480px) {
+  .tool-content .card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .tool-content .pane-label {
+    font-size: 12px;
+  }
+}
