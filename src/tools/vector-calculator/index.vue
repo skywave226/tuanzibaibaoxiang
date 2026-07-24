@@ -159,11 +159,12 @@
 
 <script setup lang="ts">
 import { ref, reactive, computed, onMounted, onUnmounted, watch } from 'vue'
-import { NRadioGroup, NRadioButton, NInputNumber, NButton, NSlider, useMessage } from 'naive-ui'
+import { NRadioGroup, NRadioButton, NInputNumber, NButton, NSlider } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 interface Vec3 { x: number; y: number; z: number }
 
-const message = useMessage()
+const { copy } = useCopy()
 
 const dim = ref<2 | 3>(2)
 const precision = ref(3)
@@ -260,11 +261,6 @@ function addVector() {
 
 function removeVector(idx: number) {
   extraVectors.value.splice(idx, 1)
-}
-
-function copy(text: string) {
-  navigator.clipboard.writeText(text)
-  message.success('已复制：' + text)
 }
 
 // ---------- Canvas 可视化 ----------

@@ -51,9 +51,10 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { NInput, NButton, NAlert, NTabs, NTabPane, NSpace, useMessage } from 'naive-ui'
+import { NInput, NButton, NAlert, NTabs, NTabPane, NSpace } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy: copyText } = useCopy()
 type Format = 'yaml' | 'json' | 'toml'
 
 const inputFormat = ref<Format>('yaml')
@@ -131,11 +132,6 @@ function convert(mode: string) {
   } catch (e: unknown) {
     error.value = e instanceof Error ? e.message : String(e)
   }
-}
-
-function copyText(text: string) {
-  navigator.clipboard.writeText(text)
-  message.success('已复制')
 }
 
 function clearInput() {

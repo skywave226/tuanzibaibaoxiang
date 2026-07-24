@@ -148,6 +148,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NButton, NInput, NInputNumber, NSelect, NSwitch, NAlert, NTag, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 interface MockRoute {
   method: string
@@ -172,6 +173,7 @@ interface RequestLog {
 }
 
 const message = useMessage()
+const { copy: copyText } = useCopy('配置已复制到剪贴板')
 
 const running = ref(false)
 const baseUrl = ref('http://localhost:3000')
@@ -332,13 +334,8 @@ function downloadConfig() {
 }
 
 // 复制配置 JSON
-async function copyConfig() {
-  try {
-    await navigator.clipboard.writeText(JSON.stringify(buildConfig(), null, 2))
-    message.success('配置已复制到剪贴板')
-  } catch {
-    message.error('复制失败')
-  }
+function copyConfig() {
+  copyText(JSON.stringify(buildConfig(), null, 2))
 }
 
 // 触发文件选择

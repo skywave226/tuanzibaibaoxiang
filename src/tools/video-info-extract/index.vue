@@ -158,6 +158,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NUpload, NButton, NSpace, NAlert, NDescriptions, NDescriptionsItem } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 import type { UploadCustomRequestOptions } from 'naive-ui'
 
 const videoEl = ref<HTMLVideoElement | null>(null)
@@ -172,6 +173,7 @@ const videoHeight = ref(0)
 const infoLoaded = ref(false)
 const statusMsg = ref('')
 const statusType = ref<'info' | 'success' | 'warning' | 'error'>('info')
+const { copy: copyText } = useCopy('信息已复制到剪贴板')
 const assumedFps = ref(30)
 
 // 时长格式化
@@ -345,11 +347,11 @@ async function copyInfo() {
     `像素总数: ${totalPixels.value} (≈ ${megapixels.value} MP)`,
   ]
   const text = lines.join('\n')
-  try {
-    await navigator.clipboard.writeText(text)
+  const ok = await copyText(text)
+  if (ok) {
     statusMsg.value = '信息已复制到剪贴板'
     statusType.value = 'success'
-  } catch {
+  } else {
     statusMsg.value = '复制失败，请手动选择文本'
     statusType.value = 'warning'
   }

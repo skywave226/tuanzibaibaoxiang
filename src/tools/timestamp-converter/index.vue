@@ -84,10 +84,11 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, computed } from 'vue'
-import { NInput, NButton, NDatePicker, NDataTable, NTabs, NTabPane, NRadioGroup, NRadioButton, NSelect, NTag, useMessage } from 'naive-ui'
+import { NInput, NButton, NDatePicker, NDataTable, NTabs, NTabPane, NRadioGroup, NRadioButton, NSelect, NTag } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 import type { DataTableColumns } from 'naive-ui'
 
-const message = useMessage()
+const { copy: copyText } = useCopy()
 const activeTab = ref('single')
 const currentTime = ref('')
 const currentTimestamp = ref(0)
@@ -163,13 +164,11 @@ function updateCurrentTime() {
 }
 
 function copyCurrentMs() {
-  navigator.clipboard.writeText(String(Date.now()))
-  message.success('已复制毫秒时间戳')
+  copyText(String(Date.now()))
 }
 
 function copyCurrentS() {
-  navigator.clipboard.writeText(String(Math.floor(Date.now() / 1000)))
-  message.success('已复制秒时间戳')
+  copyText(String(Math.floor(Date.now() / 1000)))
 }
 
 function tsToDate() {

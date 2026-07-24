@@ -96,8 +96,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NInput, NSelect, NButton, NTag, NAlert, NEmpty, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const msg = useMessage()
+const { copy: copyText } = useCopy('已复制')
 
 const message = ref('Hello, World!')
 const secret = ref('my-secret-key')
@@ -340,14 +342,8 @@ async function compute() {
   }
 }
 
-async function copyResult() {
-  if (!signature.value) return
-  try {
-    await navigator.clipboard.writeText(signature.value)
-    msg.success('已复制')
-  } catch {
-    msg.error('复制失败')
-  }
+function copyResult() {
+  copyText(signature.value)
 }
 
 function clear() {

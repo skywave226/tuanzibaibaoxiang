@@ -54,9 +54,10 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import { NInput, NButton, NCard, NRadioGroup, NRadioButton, useMessage } from 'naive-ui'
+import { NInput, NButton, NCard, NRadioGroup, NRadioButton } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy: copyText } = useCopy('已复制 Markdown')
 const markdown = ref('')
 const previewMode = ref<'split' | 'edit' | 'preview'>('split')
 const toc = ref<{ id: string; text: string; level: number }[]>([])
@@ -121,8 +122,7 @@ function scrollToHeading(id: string) {
 }
 
 function copyMarkdown() {
-  navigator.clipboard.writeText(markdown.value)
-  message.success('已复制 Markdown')
+  copyText(markdown.value)
 }
 
 function downloadHtml() {

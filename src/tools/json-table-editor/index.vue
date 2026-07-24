@@ -77,9 +77,10 @@
 
 <script setup lang="ts">
 import { ref, watch } from 'vue'
-import { NInput, NButton, NAlert, NEmpty, NSpace, useMessage } from 'naive-ui'
+import { NInput, NButton, NAlert, NEmpty, NSpace } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy: copyText } = useCopy('已复制 JSON')
 const jsonText = ref('')
 const columns = ref<string[]>([])
 const rows = ref<Record<string, string>[]>([])
@@ -256,8 +257,7 @@ function downloadBlob(blob: Blob, filename: string) {
 }
 
 function copyJson() {
-  navigator.clipboard.writeText(jsonText.value)
-  message.success('已复制 JSON')
+  copyText(jsonText.value)
 }
 
 function clearAll() {

@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="shadow-generator">
     <n-space vertical>
       <div class="controls">
@@ -48,7 +48,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NSpace, NSlider, NInputNumber, NInput, NButton, NCheckbox } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
+const { copy } = useCopy()
 const offsetX = ref(5)
 const offsetY = ref(5)
 const blur = ref(10)
@@ -67,9 +69,6 @@ const shadow = computed(() => {
   return `${insetStr}${offsetX.value}px ${offsetY.value}px ${blur.value}px ${spread.value}px ${rgba}`
 })
 
-function copy(text: string) {
-  navigator.clipboard.writeText(text)
-}
 </script>
 
 <style scoped>

@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="color-picker">
     <div class="picker-area">
       <input type="color" v-model="color" class="color-input" />
@@ -24,7 +24,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NSpace, NInput, NButton } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
+const { copy } = useCopy()
 const color = ref('#1890ff')
 
 const rgb = computed(() => {
@@ -55,9 +57,6 @@ const hsl = computed(() => {
   return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`
 })
 
-function copy(text: string) {
-  navigator.clipboard.writeText(text)
-}
 </script>
 
 <style scoped>

@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="rsa-encrypt">
     <n-alert type="info" class="mb-4">
       RSA 非对称加密：公钥加密，私钥解密。点击"生成密钥对"创建新密钥。
@@ -47,7 +47,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NAlert, NSpace, NButton, NTabs, NTabPane, NInput } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
+const { copy } = useCopy()
 const generating = ref(false)
 const publicKey = ref('')
 const privateKey = ref('')
@@ -112,9 +114,6 @@ async function decrypt() {
   }
 }
 
-function copy(text: string) {
-  navigator.clipboard.writeText(text)
-}
 </script>
 
 <style scoped>

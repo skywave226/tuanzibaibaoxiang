@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="meta-tag-generator">
     <n-form label-placement="left" label-width="120">
       <n-form-item label="页面标题">
@@ -34,7 +34,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NForm, NFormItem, NInput, NButton, NSelect } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
+const { copy } = useCopy()
 const title = ref('')
 const description = ref('')
 const keywords = ref('')
@@ -94,9 +96,6 @@ function escapeHtml(str: string): string {
   return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
 
-function copy(text: string) {
-  navigator.clipboard.writeText(text)
-}
 </script>
 
 <style scoped>

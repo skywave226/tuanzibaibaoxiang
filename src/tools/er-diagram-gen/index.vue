@@ -134,6 +134,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NButton, NInput, NSelect, NCheckbox, NTag, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 // 字段数据结构
 interface Field {
@@ -162,6 +163,7 @@ interface Relationship {
 }
 
 const message = useMessage()
+const { copy: copyCodeText } = useCopy('Mermaid 代码已复制到剪贴板')
 const tables = ref<Table[]>([])
 const relationships = ref<Relationship[]>([])
 
@@ -325,8 +327,7 @@ function copyCode(): void {
     message.warning('暂无可复制的内容，请先添加表')
     return
   }
-  navigator.clipboard.writeText(mermaidCode.value)
-  message.success('Mermaid 代码已复制到剪贴板')
+  copyCodeText(mermaidCode.value)
 }
 
 // ===== 加载示例 =====

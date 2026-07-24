@@ -118,8 +118,10 @@
 import { ref } from 'vue'
 import { NButton, NSpace, NInput, NAlert, NRadioGroup, NRadioButton, NTabs, NTabPane, NDataTable, NEmpty, useMessage } from 'naive-ui'
 import type { DataTableColumns } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy } = useCopy()
 const activeTab = ref('codec')
 const text = ref('')
 const result = ref('')
@@ -210,12 +212,6 @@ function clearAll() {
   text.value = ''
   result.value = ''
   errorMsg.value = ''
-}
-
-function copy(content: string) {
-  if (!content) return
-  navigator.clipboard.writeText(content)
-  message.success('已复制')
 }
 
 function parseUrl() {

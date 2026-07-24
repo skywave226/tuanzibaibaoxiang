@@ -58,8 +58,10 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { NInput, NButton, NCheckbox, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy: copyText } = useCopy('已复制到剪贴板')
 
 // 润色选项
 const options = ref({
@@ -298,13 +300,8 @@ function clearAll() {
 }
 
 // 复制结果
-async function copyResult() {
-  try {
-    await navigator.clipboard.writeText(output.value)
-    message.success('已复制到剪贴板')
-  } catch {
-    message.error('复制失败')
-  }
+function copyResult() {
+  copyText(output.value)
 }
 </script>
 

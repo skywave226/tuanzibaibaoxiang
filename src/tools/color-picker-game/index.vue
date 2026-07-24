@@ -157,8 +157,10 @@
 <script setup lang="ts">
 import { ref, reactive, computed, onMounted, watch } from 'vue'
 import { NInput, NButton, NSlider, NInputNumber, NRadioGroup, NRadioButton, NTag, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy } = useCopy()
 
 const canvasRef = ref<HTMLCanvasElement | null>(null)
 const canvasW = 240
@@ -461,11 +463,6 @@ function useCurrentAsBg() {
 function selectColor(c: { r: number; g: number; b: number }) {
   rgb.r = c.r; rgb.g = c.g; rgb.b = c.b
   syncFromRgb()
-}
-
-function copy(text: string) {
-  navigator.clipboard.writeText(text)
-  message.success('已复制：' + text)
 }
 
 // 监听变化同步与重绘

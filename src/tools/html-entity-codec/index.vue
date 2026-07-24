@@ -67,9 +67,10 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { NButton, NSpace, NInput, NAlert, NCard, NRadioGroup, NRadioButton, useMessage } from 'naive-ui'
+import { NButton, NSpace, NInput, NAlert, NCard, NRadioGroup, NRadioButton } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy: copyText } = useCopy()
 const text = ref('')
 const result = ref('')
 const errorMsg = ref('')
@@ -191,11 +192,6 @@ function clearAll() {
   text.value = ''
   result.value = ''
   errorMsg.value = ''
-}
-
-function copyText(value: string) {
-  navigator.clipboard.writeText(value)
-  message.success('已复制')
 }
 
 function insertEntity(char: string) {

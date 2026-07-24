@@ -118,9 +118,10 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { NColorPicker, NInput, NTag, NButton, useMessage } from 'naive-ui'
+import { NColorPicker, NInput, NTag, NButton } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy } = useCopy()
 const hexColor = ref('#3b82f6')
 const hexInput = ref('#3b82f6')
 const rgbInput = ref('rgb(59, 130, 246)')
@@ -375,11 +376,6 @@ function fromHslInput() {
 function applyPreset(hex: string) {
   hexColor.value = hex
   fromHex(hex)
-}
-
-function copy(text: string) {
-  navigator.clipboard.writeText(text)
-  message.success('已复制')
 }
 
 function findClosestColorName(hex: string): string {

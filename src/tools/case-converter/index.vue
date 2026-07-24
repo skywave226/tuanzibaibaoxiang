@@ -32,9 +32,10 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { NInput, NButton, NStatistic, useMessage } from 'naive-ui'
+import { NInput, NButton, NStatistic } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy } = useCopy()
 const input = ref('')
 const output = ref('')
 
@@ -141,8 +142,7 @@ function alternatingCase() {
 }
 
 function copyOutput() {
-  navigator.clipboard.writeText(output.value)
-  message.success('已复制')
+  copy(output.value)
 }
 
 function clearAll() {

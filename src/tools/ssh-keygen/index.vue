@@ -103,8 +103,11 @@ import { ref, computed } from 'vue'
 import {
   NAlert, NSelect, NInput, NButton, NTag, NEmpty, NSpace, useMessage,
 } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy: copyPublicText } = useCopy('公钥已复制')
+const { copy: copyPrivateText } = useCopy('私钥已复制')
 
 // 算法类型
 type AlgoType = 'rsa' | 'ecdsa' | 'ed25519'
@@ -431,25 +434,13 @@ async function generate(): Promise<void> {
 }
 
 // 复制公钥
-async function copyPublic(): Promise<void> {
-  if (!publicKey.value) return
-  try {
-    await navigator.clipboard.writeText(publicKey.value)
-    message.success('公钥已复制')
-  } catch {
-    message.error('复制失败')
-  }
+function copyPublic(): void {
+  copyPublicText(publicKey.value)
 }
 
 // 复制私钥
-async function copyPrivate(): Promise<void> {
-  if (!privateKey.value) return
-  try {
-    await navigator.clipboard.writeText(privateKey.value)
-    message.success('私钥已复制')
-  } catch {
-    message.error('复制失败')
-  }
+function copyPrivate(): void {
+  copyPrivateText(privateKey.value)
 }
 
 // 下载私钥

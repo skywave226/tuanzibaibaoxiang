@@ -117,11 +117,13 @@ import {
   NAlert,
   NTag,
   NSpace,
+  useMessage,
 } from 'naive-ui'
-import { useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 import type { UploadFileInfo } from 'naive-ui'
 
 const message = useMessage()
+const { copy: copyText } = useCopy('已复制到剪贴板')
 
 // xlsx 库引用
 let xlsxLib: any = null
@@ -261,10 +263,8 @@ function generateCsv() {
 watch([delimiter, lineEnding], generateCsv)
 
 // 复制 CSV
-async function copyCsv() {
-  if (!csvOutput.value) return
-  await navigator.clipboard.writeText(csvOutput.value)
-  message.success('已复制到剪贴板')
+function copyCsv() {
+  copyText(csvOutput.value)
 }
 
 // 下载 CSV 文件

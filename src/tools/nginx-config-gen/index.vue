@@ -111,8 +111,10 @@ import {
   NAlert, NForm, NFormItem, NInput, NInputNumber, NRadioGroup, NRadioButton,
   NButton, NSwitch, NTag, NEmpty, NDivider, NSpace, useMessage,
 } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy: copyText } = useCopy('已复制到剪贴板')
 
 // 配置模板类型
 type TemplateType = 'static' | 'proxy' | 'https' | 'php'
@@ -319,14 +321,8 @@ function generate(): void {
 }
 
 // 复制配置
-async function copyConfig(): Promise<void> {
-  if (!config.value) return
-  try {
-    await navigator.clipboard.writeText(config.value)
-    message.success('已复制到剪贴板')
-  } catch {
-    message.error('复制失败，请手动复制')
-  }
+function copyConfig(): void {
+  copyText(config.value)
 }
 
 // 下载配置文件

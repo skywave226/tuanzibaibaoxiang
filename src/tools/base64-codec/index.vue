@@ -80,8 +80,10 @@
 import { ref, computed } from 'vue'
 import { NButton, NSpace, NInput, NTabs, NTabPane, NUpload, NAlert, NText, useMessage } from 'naive-ui'
 import type { UploadCustomRequestOptions } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy } = useCopy()
 const mode = ref('text')
 const text = ref('')
 const base64 = ref('')
@@ -150,12 +152,6 @@ function clearAll() {
   text.value = ''
   base64.value = ''
   errorMsg.value = ''
-}
-
-function copy(content: string) {
-  if (!content) return
-  navigator.clipboard.writeText(content)
-  message.success('已复制')
 }
 
 function handleFileUpload({ file }: UploadCustomRequestOptions) {

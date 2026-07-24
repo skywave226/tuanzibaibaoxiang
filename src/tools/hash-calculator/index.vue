@@ -67,10 +67,11 @@
 
 <script setup lang="ts">
 import { ref, reactive, computed } from 'vue'
-import { NInput, NButton, NTag, NAlert, NTabs, NTabPane, NUpload, NText, NCheckbox, useMessage } from 'naive-ui'
+import { NInput, NButton, NTag, NAlert, NTabs, NTabPane, NUpload, NText, NCheckbox } from 'naive-ui'
 import type { UploadCustomRequestOptions } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy } = useCopy()
 const mode = ref('text')
 const input = ref('')
 const hmacKey = ref('')
@@ -181,8 +182,7 @@ function arrayBufferToBase64(buffer: ArrayBuffer): string {
 function copyHash(algo: string) {
   const hash = hashes[algo]
   if (hash && hash !== '等待计算...' && hash !== '计算中...' && hash !== '计算失败') {
-    navigator.clipboard.writeText(hash)
-    message.success('已复制')
+    copy(hash)
   }
 }
 

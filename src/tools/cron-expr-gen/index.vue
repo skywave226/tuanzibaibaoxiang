@@ -149,8 +149,10 @@ import {
   NAlert, NButton, NTabs, NTabPane, NTag, NEmpty, NCheckbox,
   NRadioGroup, NRadio, NRadioButton, NInputNumber, NInput, useMessage,
 } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy } = useCopy()
 
 // 字段配置类型
 type FieldMode = 'every' | 'step' | 'specific' | 'range' | 'none'
@@ -780,21 +782,11 @@ function exprToField(expr: string, range: { min: number; max: number }): FieldVa
 
 // ============ 复制 ============
 async function copyExpr(): Promise<void> {
-  try {
-    await navigator.clipboard.writeText(displayExpression.value)
-    message.success('表达式已复制')
-  } catch {
-    message.error('复制失败')
-  }
+  copy(displayExpression.value)
 }
 
 async function copyDesc(): Promise<void> {
-  try {
-    await navigator.clipboard.writeText(description.value)
-    message.success('说明已复制')
-  } catch {
-    message.error('复制失败')
-  }
+  copy(description.value)
 }
 </script>
 

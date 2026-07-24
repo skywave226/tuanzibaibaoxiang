@@ -116,8 +116,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NButton, NInput, NSelect, NTag, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy } = useCopy()
 
 // 语言定义
 interface LangOption {
@@ -299,23 +301,7 @@ function openAll() {
 
 // 复制链接
 async function copyUrl(url: string) {
-  try {
-    await navigator.clipboard.writeText(url)
-    message.success('链接已复制')
-  } catch {
-    // 降级方案
-    const textarea = document.createElement('textarea')
-    textarea.value = url
-    document.body.appendChild(textarea)
-    textarea.select()
-    try {
-      document.execCommand('copy')
-      message.success('链接已复制')
-    } catch {
-      message.error('复制失败，请手动复制')
-    }
-    document.body.removeChild(textarea)
-  }
+  await copy(url)
 }
 
 // 格式化时间

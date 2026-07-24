@@ -87,9 +87,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NButton, NSpace, NInputNumber, NRadioGroup, NRadioButton, NCheckbox, NEmpty, NAlert } from 'naive-ui'
-import { useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy: copyText } = useCopy()
 type GenType = 'paragraphs' | 'sentences' | 'words' | 'characters'
 type Language = 'latin' | 'chinese' | 'english'
 
@@ -277,8 +277,7 @@ function escapeHtml(text: string): string {
 }
 
 function copy() {
-  navigator.clipboard.writeText(result.value)
-  message.success('已复制到剪贴板')
+  copyText(result.value)
 }
 
 function downloadTxt() {

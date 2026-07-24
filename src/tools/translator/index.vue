@@ -71,6 +71,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { NAlert, NCollapse, NCollapseItem, NInput, NButton, NRadioGroup, NRadioButton, NSpace, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 interface Config {
   baseURL: string
@@ -80,6 +81,7 @@ interface Config {
 
 const CONFIG_KEY = 'translator_config'
 const message = useMessage()
+const { copy: copyText } = useCopy()
 
 const config = ref<Config>({
   baseURL: 'https://api.openai.com/v1',
@@ -159,11 +161,7 @@ async function translate() {
 }
 
 function copy() {
-  navigator.clipboard.writeText(outputText.value).then(() => {
-    message.success('已复制')
-  }).catch(() => {
-    message.error('复制失败')
-  })
+  copyText(outputText.value)
 }
 
 function useAsInput() {

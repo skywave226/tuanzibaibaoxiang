@@ -59,7 +59,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NTabs, NTabPane, NInput, NButton, NCheckbox, NTag, NSpace, NDataTable } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 import type { DataTableColumns } from 'naive-ui'
+
+const { copy: copyText } = useCopy('已复制')
 
 const activeTab = ref('generator')
 const seed = ref('')
@@ -111,7 +114,7 @@ function generateKeywords() {
 }
 
 function copyAll() {
-  navigator.clipboard.writeText(generated.value.join('\n'))
+  copyText(generated.value.join('\n'))
 }
 
 function downloadTxt() {

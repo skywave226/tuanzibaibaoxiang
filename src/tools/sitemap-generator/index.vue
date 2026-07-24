@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="sitemap-generator">
     <n-form label-placement="left" label-width="120">
       <n-form-item label="网站域名">
@@ -29,7 +29,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NForm, NFormItem, NInput, NButton, NDynamicInput, NSelect, NSlider } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
+const { copy } = useCopy()
 const baseUrl = ref('')
 const pages = ref<string[]>(['/'])
 const changeFreq = ref('weekly')
@@ -74,9 +76,6 @@ ${urls}
 </urlset>`
 }
 
-function copy(text: string) {
-  navigator.clipboard.writeText(text)
-}
 </script>
 
 <style scoped>

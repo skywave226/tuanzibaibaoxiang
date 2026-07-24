@@ -147,6 +147,7 @@ import {
   NTabs, NTabPane, NInput, NButton, NSpace, NTag, NAlert,
   NDataTable, NForm, NFormItem, NSelect, useMessage,
 } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 // 解析结果数据结构
 interface ParseResult {
@@ -160,6 +161,7 @@ interface ParseResult {
 }
 
 const message = useMessage()
+const { copy } = useCopy()
 
 // ===== 解析模式 =====
 const inputStr = ref('')
@@ -386,8 +388,7 @@ function copyBuild(): void {
     message.warning('请先生成连接串')
     return
   }
-  navigator.clipboard.writeText(buildOutput.value)
-  message.success('已复制到剪贴板')
+  copy(buildOutput.value)
 }
 
 function clearBuild(): void {

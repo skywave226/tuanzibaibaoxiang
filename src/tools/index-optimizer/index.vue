@@ -113,9 +113,11 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NInput, NButton, NTag, NList, NListItem, NEmpty, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 // 消息提示
 const message = useMessage()
+const { copy: copyText } = useCopy('已复制到剪贴板')
 
 // 优先级类型
 type Level = 'high' | 'medium' | 'low'
@@ -584,14 +586,8 @@ function generateIndexStatements(
 }
 
 // 复制 CREATE INDEX 语句
-async function copyIndexStatements() {
-  if (indexStatements.value.length === 0) return
-  try {
-    await navigator.clipboard.writeText(indexStatements.value.join('\n\n'))
-    message.success('已复制到剪贴板')
-  } catch {
-    message.error('复制失败，请手动复制')
-  }
+function copyIndexStatements() {
+  copyText(indexStatements.value.join('\n\n'))
 }
 
 // 清空

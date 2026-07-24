@@ -62,8 +62,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NInputNumber, NSelect, NInput, NCheckbox, NButton, NTag, NEmpty, NAlert, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy } = useCopy()
 
 const length = ref(32)
 const count = ref(5)
@@ -186,21 +188,11 @@ function generate() {
 }
 
 async function copyOne(key: string) {
-  try {
-    await navigator.clipboard.writeText(key)
-    message.success('已复制')
-  } catch {
-    message.error('复制失败')
-  }
+  copy(key)
 }
 
 async function copyAll() {
-  try {
-    await navigator.clipboard.writeText(keys.value.join('\n'))
-    message.success('已复制全部')
-  } catch {
-    message.error('复制失败')
-  }
+  copy(keys.value.join('\n'))
 }
 
 function downloadKeys() {

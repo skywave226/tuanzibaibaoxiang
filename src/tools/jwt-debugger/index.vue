@@ -137,9 +137,10 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { NInput, NButton, NCard, NTag, NAlert, NEmpty, NSpace, useMessage } from 'naive-ui'
+import { NInput, NButton, NCard, NTag, NAlert, NEmpty, NSpace } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy: copyText } = useCopy()
 
 const token = ref('')
 
@@ -302,15 +303,6 @@ function loadSample() {
   token.value = `${enc(header)}.${enc(payload)}.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c`
 }
 
-// 复制文本
-async function copyText(text: string) {
-  try {
-    await navigator.clipboard.writeText(text)
-    message.success('已复制')
-  } catch {
-    message.error('复制失败，请手动复制')
-  }
-}
 </script>
 
 <style scoped>

@@ -17,10 +17,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NUpload, NButton, NInput } from 'naive-ui'
-import { useMessage } from 'naive-ui'
 import type { UploadFileInfo } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy: copyText } = useCopy()
 const preview = ref('')
 const base64 = ref('')
 
@@ -37,8 +37,7 @@ const handleUpload = (data: { file: Required<UploadFileInfo>; fileList: Required
 }
 
 const copy = () => {
-  navigator.clipboard.writeText(base64.value)
-  message.success('已复制到剪贴板')
+  copyText(base64.value)
 }
 </script>
 

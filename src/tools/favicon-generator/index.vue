@@ -108,6 +108,7 @@
 <script setup lang="ts">
 import { ref, watch, onMounted, nextTick } from 'vue'
 import { NInput, NRadioGroup, NRadioButton, NSlider, NButton, NAlert } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const contentType = ref<'text' | 'emoji'>('text')
 const content = ref('A')
@@ -116,6 +117,7 @@ const fgColor = ref('#ffffff')
 const radius = ref(20)
 const fontScale = ref(0.6)
 const copiedMsg = ref('')
+const { copy: copyText } = useCopy('HTML 代码已复制')
 
 const sizes = [16, 32, 48, 64, 128]
 const exportSizes = [16, 32, 48, 64, 128, 180, 192, 256]
@@ -256,7 +258,7 @@ function downloadAll() {
 }
 
 function copyHtml() {
-  navigator.clipboard.writeText(htmlCode.value)
+  copyText(htmlCode.value)
   copiedMsg.value = 'HTML 代码已复制'
   setTimeout(() => { copiedMsg.value = '' }, 2000)
 }

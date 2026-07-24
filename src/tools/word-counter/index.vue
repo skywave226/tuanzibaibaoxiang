@@ -40,8 +40,10 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
 import { NInput, NStatistic, NButton, NCard, NRadioGroup, NRadioButton, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy } = useCopy()
 const text = ref('')
 const countMode = ref<'all' | 'visible'>('all')
 
@@ -114,8 +116,7 @@ const topWords = computed(() => wordFreq.value.slice(0, 20))
 const maxFreq = computed(() => topWords.value.length ? topWords.value[0].count : 1)
 
 function copyText() {
-  navigator.clipboard.writeText(text.value)
-  message.success('已复制')
+  copy(text.value)
 }
 
 function clearText() {

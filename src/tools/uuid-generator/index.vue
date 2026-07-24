@@ -46,9 +46,10 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import { NInputNumber, NSelect, NButton, NEmpty, useMessage } from 'naive-ui'
+import { NInputNumber, NSelect, NButton, NEmpty } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy: copyText } = useCopy()
 const count = ref(5)
 const format = ref('standard')
 const version = ref('v4')
@@ -159,13 +160,11 @@ function setNil() {
 }
 
 function copyOne(uuid: string) {
-  navigator.clipboard.writeText(uuid)
-  message.success('已复制')
+  copyText(uuid)
 }
 
 function copyAll() {
-  navigator.clipboard.writeText(uuids.value.join('\n'))
-  message.success('已复制全部')
+  copyText(uuids.value.join('\n'))
 }
 
 function downloadTxt() {

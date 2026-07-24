@@ -76,8 +76,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NButton, NInput, NRadioGroup, NRadioButton, NTag, NCollapse, NCollapseItem, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy: copyCodeText } = useCopy('Mermaid 代码已复制到剪贴板')
 const inputMode = ref<'mermaid' | 'indent'>('indent')
 const rawInput = ref<string>('')
 
@@ -160,8 +162,7 @@ function copyCode(): void {
     message.warning('暂无可复制的内容')
     return
   }
-  navigator.clipboard.writeText(mermaidCode.value)
-  message.success('Mermaid 代码已复制到剪贴板')
+  copyCodeText(mermaidCode.value)
 }
 
 // 在 Mermaid Live Editor 中打开

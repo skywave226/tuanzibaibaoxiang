@@ -20,10 +20,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NUpload, NButton, NInput, NAlert } from 'naive-ui'
-import { useMessage } from 'naive-ui'
 import type { UploadFileInfo } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy: copyText } = useCopy()
 const preview = ref('')
 const result = ref<string | null>(null)
 const error = ref('')
@@ -60,8 +60,7 @@ const handleUpload = async (data: { file: Required<UploadFileInfo>; fileList: Re
 
 const copy = () => {
   if (result.value) {
-    navigator.clipboard.writeText(result.value)
-    message.success('已复制到剪贴板')
+    copyText(result.value)
   }
 }
 </script>

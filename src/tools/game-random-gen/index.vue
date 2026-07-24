@@ -120,8 +120,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NButton, NInput, NInputNumber, NSelect, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy } = useCopy()
 
 const engine = ref<'lcg' | 'mulberry32'>('mulberry32')
 const engineOptions = [
@@ -313,11 +315,7 @@ function copyResult(text: string): void {
     message.warning('暂无内容可复制')
     return
   }
-  navigator.clipboard.writeText(text).then(() => {
-    message.success('已复制到剪贴板')
-  }).catch(() => {
-    message.error('复制失败')
-  })
+  copy(text)
 }
 </script>
 

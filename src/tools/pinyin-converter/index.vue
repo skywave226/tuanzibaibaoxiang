@@ -64,12 +64,13 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { NCard, NInput, NRadioGroup, NRadioButton, NButton, NTag, useMessage } from 'naive-ui'
+import { NCard, NInput, NRadioGroup, NRadioButton, NButton, NTag } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 type Mode = 'tone' | 'normal' | 'initial'
 
 const mode = ref<Mode>('tone')
-const message = useMessage()
+const { copy: copyText } = useCopy('已复制到剪贴板')
 
 // ===== 拼音数据：按读音（带声调）分组，值为该读音下的常用汉字 =====
 // 一个汉字可能出现在多个读音组中（多音字）
@@ -1800,12 +1801,7 @@ const stats = computed(() => {
 })
 
 function copyResult() {
-  if (!outputText.value) return
-  navigator.clipboard.writeText(outputText.value).then(() => {
-    message.success('已复制到剪贴板')
-  }).catch(() => {
-    message.error('复制失败')
-  })
+  copyText(outputText.value)
 }
 
 function clearAll() {

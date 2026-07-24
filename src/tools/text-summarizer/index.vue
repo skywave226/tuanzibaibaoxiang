@@ -90,8 +90,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NInput, NButton, NRadioGroup, NRadioButton, NSlider, NInputNumber, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy: copyText } = useCopy('已复制到剪贴板')
 
 const inputText = ref('')
 const summaryMode = ref<'ratio' | 'count'>('ratio')
@@ -341,13 +343,8 @@ function clearAll() {
 }
 
 // 复制摘要
-async function copySummary() {
-  try {
-    await navigator.clipboard.writeText(summaryResult.value)
-    message.success('已复制到剪贴板')
-  } catch {
-    message.error('复制失败')
-  }
+function copySummary() {
+  copyText(summaryResult.value)
 }
 </script>
 

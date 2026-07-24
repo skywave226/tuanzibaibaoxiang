@@ -73,9 +73,10 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { NButton, NSpace, NInput, NSelect, NAlert, useMessage } from 'naive-ui'
+import { NButton, NSpace, NInput, NSelect, NAlert } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy: copyText } = useCopy()
 const input = ref('')
 const output = ref('')
 const errorMsg = ref('')
@@ -635,11 +636,7 @@ function loadExample() {
 
 function copy() {
   if (!output.value) return
-  navigator.clipboard.writeText(output.value).then(() => {
-    message.success('已复制到剪贴板')
-  }).catch(() => {
-    message.error('复制失败，请手动复制')
-  })
+  copyText(output.value)
 }
 
 function clear() {

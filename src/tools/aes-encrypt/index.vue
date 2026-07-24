@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="aes-encrypt">
     <n-tabs type="segment" animated>
       <n-tab-pane name="encrypt" tab="加密">
@@ -31,7 +31,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NTabs, NTabPane, NSpace, NInput, NButton, NSelect, NAlert } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
+const { copy } = useCopy()
 const plainText = ref('')
 const secretKey = ref('')
 const mode = ref('aes-256-gcm')
@@ -113,9 +115,7 @@ async function decrypt() {
   }
 }
 
-function copy(text: string) {
-  navigator.clipboard.writeText(text)
-}
+
 </script>
 
 <style scoped>

@@ -179,8 +179,10 @@ import { ref } from 'vue'
 import {
   NAlert, NInput, NInputNumber, NSelect, NButton, NTag, NEmpty, NSpace, useMessage,
 } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy: copyText } = useCopy('已复制到剪贴板')
 
 // 端口映射结构
 interface PortMapping {
@@ -399,14 +401,8 @@ function generate(): void {
 }
 
 // 复制
-async function copyYaml(): Promise<void> {
-  if (!yaml.value) return
-  try {
-    await navigator.clipboard.writeText(yaml.value)
-    message.success('已复制到剪贴板')
-  } catch {
-    message.error('复制失败')
-  }
+function copyYaml(): void {
+  copyText(yaml.value)
 }
 
 // 下载

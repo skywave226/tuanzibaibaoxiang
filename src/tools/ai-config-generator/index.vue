@@ -140,10 +140,10 @@ import {
   NTabs,
   NTabPane,
   NButton,
-  useMessage,
 } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy } = useCopy()
 
 // 提供商定义
 interface ProviderOption {
@@ -551,26 +551,6 @@ const curlCommand = computed(() => {
   ].join('\n')
 })
 
-// 复制内容
-async function copy(content: string) {
-  try {
-    await navigator.clipboard.writeText(content)
-    message.success('已复制到剪贴板')
-  } catch {
-    // 降级方案
-    const textarea = document.createElement('textarea')
-    textarea.value = content
-    document.body.appendChild(textarea)
-    textarea.select()
-    try {
-      document.execCommand('copy')
-      message.success('已复制到剪贴板')
-    } catch {
-      message.error('复制失败，请手动复制')
-    }
-    document.body.removeChild(textarea)
-  }
-}
 </script>
 
 <style scoped>

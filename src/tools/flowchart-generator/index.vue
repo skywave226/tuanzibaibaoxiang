@@ -120,8 +120,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NButton, NSpace, NInput, NTag, NCollapse, NCollapseItem, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy: copyCodeText } = useCopy('Mermaid 代码已复制到剪贴板')
 const input = ref('')
 
 // 生成的 Mermaid 代码（去除空行与首尾空白）
@@ -194,8 +196,7 @@ function copyCode(): void {
     message.warning('暂无可复制的内容')
     return
   }
-  navigator.clipboard.writeText(code.value)
-  message.success('Mermaid 代码已复制到剪贴板')
+  copyCodeText(code.value)
 }
 
 // 打开 Mermaid Live Editor（自动带入代码）

@@ -107,8 +107,10 @@ import { ref, computed, onUnmounted, nextTick } from 'vue'
 import {
   NInput, NButton, NCard, NTag, NAlert, NEmpty, NSelect, useMessage,
 } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy: copyText } = useCopy('已复制日志')
 
 interface SseMessage {
   id: number
@@ -287,16 +289,11 @@ function clearLogs() {
 }
 
 // 复制日志
-async function copyLogs() {
+function copyLogs() {
   const text = filteredMessages.value
     .map(m => `[${m.time}] ${m.type}: ${m.data}`)
     .join('\n')
-  try {
-    await navigator.clipboard.writeText(text)
-    message.success('已复制日志')
-  } catch {
-    message.error('复制失败，请手动复制')
-  }
+  copyText(text)
 }
 
 // 组件卸载时清理

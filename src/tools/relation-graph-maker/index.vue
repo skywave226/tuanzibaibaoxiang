@@ -93,8 +93,10 @@ class A,B redNode</pre>
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NButton, NInput, NTag, NCollapse, NCollapseItem, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy: copyCodeText } = useCopy('Mermaid 代码已复制到剪贴板')
 const rawInput = ref<string>('')
 
 // 最终的 Mermaid 代码
@@ -151,8 +153,7 @@ function copyCode(): void {
     message.warning('暂无可复制的内容')
     return
   }
-  navigator.clipboard.writeText(mermaidCode.value)
-  message.success('Mermaid 代码已复制到剪贴板')
+  copyCodeText(mermaidCode.value)
 }
 
 // 在 Mermaid Live Editor 中打开

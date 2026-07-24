@@ -87,10 +87,10 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { NInput, NTag, NEmpty, NButton, useMessage } from 'naive-ui'
+import { NInput, NTag, NEmpty, NButton } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-// 消息提示
-const message = useMessage()
+const { copy } = useCopy()
 
 // 命令结构定义
 interface RedisCommand {
@@ -272,12 +272,7 @@ function categoryTagType(key: string): 'default' | 'primary' | 'info' | 'success
 
 // 复制示例
 async function copyExample(text: string) {
-  try {
-    await navigator.clipboard.writeText(text)
-    message.success('已复制示例')
-  } catch {
-    message.error('复制失败，请手动复制')
-  }
+  await copy(text)
 }
 </script>
 

@@ -199,10 +199,10 @@ import {
   NButton,
   NRadioGroup,
   NRadioButton,
-  useMessage,
 } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy } = useCopy()
 const activeTab = ref('systems')
 
 // ===== 坐标系互转 =====
@@ -413,8 +413,7 @@ function clearInput() {
 
 function copyOutput() {
   const text = toReadout.value
-  navigator.clipboard.writeText(text)
-  message.success('已复制：' + text)
+  copy(text)
 }
 
 watch([fromSystem], () => {
@@ -565,8 +564,7 @@ function copyMatrixOutput() {
   const text = dim.value === 2
     ? `(${formatNum(matrixOutput.value.x)}, ${formatNum(matrixOutput.value.y)})`
     : `(${formatNum(matrixOutput.value.x)}, ${formatNum(matrixOutput.value.y)}, ${formatNum(matrixOutput.value.z)})`
-  navigator.clipboard.writeText(text)
-  message.success('已复制：' + text)
+  copy(text)
 }
 </script>
 

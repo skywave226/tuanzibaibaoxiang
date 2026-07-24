@@ -84,7 +84,9 @@
 import { ref, computed } from 'vue'
 import { NInputNumber, NSelect, NSpace, NDataTable, NAlert } from 'naive-ui'
 import type { DataTableColumns } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
+const { copy: doCopy } = useCopy()
 const rootFontSize = ref(16)
 const viewportWidth = ref(1920)
 const viewportHeight = ref(1080)
@@ -177,7 +179,7 @@ function formatNumber(n: number): string {
 
 function copy(unit: string, value: number) {
   const text = `${formatNumber(value)}${unit}`
-  navigator.clipboard.writeText(text)
+  doCopy(text)
   copiedValue.value = text
   setTimeout(() => { copiedValue.value = '' }, 2000)
 }

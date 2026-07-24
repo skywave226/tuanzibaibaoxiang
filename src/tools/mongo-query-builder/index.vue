@@ -85,9 +85,11 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import { NInput, NSelect, NButton, NTag, NEmpty, NRadioGroup, NRadioButton, NSwitch, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 // 消息提示
 const message = useMessage()
+const { copy: copyText } = useCopy('已复制到剪贴板')
 
 // 条件结构定义
 interface Condition {
@@ -256,13 +258,8 @@ function loadSample() {
 }
 
 // 复制 JSON
-async function copyJson() {
-  try {
-    await navigator.clipboard.writeText(jsonText.value)
-    message.success('已复制到剪贴板')
-  } catch {
-    message.error('复制失败，请手动复制')
-  }
+function copyJson() {
+  copyText(jsonText.value)
 }
 
 // 应用 JSON 回填到构建器

@@ -151,6 +151,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useCopy } from '@/composables/useCopy'
 import {
   NTabs,
   NTabPane,
@@ -186,6 +187,7 @@ const compressQuality = ref(80)
 const processing = ref(false)
 const statusMsg = ref('')
 const statusType = ref<'info' | 'success' | 'warning' | 'error'>('info')
+const { copy: copyText } = useCopy('已复制到剪贴板')
 
 const rotateOptions = [
   { label: '90°', value: 90 },
@@ -468,7 +470,7 @@ async function handleExtractUpload({ file }: { file: UploadFileInfo }) {
 
 async function copyExtracted() {
   if (!extractedText.value) return
-  await navigator.clipboard.writeText(extractedText.value)
+  await copyText(extractedText.value)
   statusMsg.value = '已复制到剪贴板'
   statusType.value = 'success'
 }

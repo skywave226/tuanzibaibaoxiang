@@ -134,6 +134,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
 import { NButton, NInput, NSelect, NCheckbox, NSpace, NAlert, NTabs, NTabPane, NTag, NDataTable, NEmpty, NModal } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 import type { DataTableColumns } from 'naive-ui'
 
 interface HeaderItem {
@@ -189,6 +190,7 @@ const responseSize = ref('')
 const showCurlImport = ref(false)
 const curlImportText = ref('')
 const curlImportError = ref('')
+const { copy: copyText } = useCopy('cURL 命令已复制到剪贴板')
 
 const methodOptions = [
   { label: 'GET', value: 'GET' },
@@ -451,8 +453,7 @@ function exportCurl() {
 
   parts.push(`'${applyEnvVars(url.value.trim())}'`)
   const cmd = parts.join(' ')
-  navigator.clipboard.writeText(cmd)
-  alert('cURL 命令已复制到剪贴板')
+  copyText(cmd)
 }
 
 // cURL 导入

@@ -66,6 +66,7 @@
 <script setup lang="ts">
 import { ref, defineComponent, h, VNode } from 'vue'
 import { NButton, NSpace, NInput, NTag, NEmpty, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 // 树节点数据结构
 interface TreeNode {
@@ -76,6 +77,7 @@ interface TreeNode {
 }
 
 const message = useMessage()
+const { copy } = useCopy()
 const input = ref('')
 const errorMsg = ref('')
 const rootNodes = ref<TreeNode[]>([])
@@ -159,8 +161,7 @@ function handleCopyPath(path: string): void {
   const formatted = path
     .replace(/^root(\{\}|\[\])?/, '')
     .replace(/^\./, '')
-  navigator.clipboard.writeText(formatted || path)
-  message.success(`已复制路径：${formatted || path}`)
+  copy(formatted || path)
 }
 
 // 切换节点展开状态

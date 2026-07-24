@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="robots-generator">
     <n-form label-placement="left" label-width="150">
       <n-form-item label="User-agent">
@@ -31,7 +31,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NForm, NFormItem, NInput, NInputNumber, NButton, NDynamicInput } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
+const { copy } = useCopy()
 const userAgent = ref('*')
 const allowPaths = ref<string[]>(['/'])
 const disallowPaths = ref<string[]>([])
@@ -68,9 +70,6 @@ function generate() {
   output.value = lines.join('\n')
 }
 
-function copy(text: string) {
-  navigator.clipboard.writeText(text)
-}
 </script>
 
 <style scoped>

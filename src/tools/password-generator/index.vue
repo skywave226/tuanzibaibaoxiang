@@ -102,8 +102,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NInputNumber, NCheckbox, NButton, NTag, NEmpty, NTabs, NTabPane, NInput, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy: copyText } = useCopy()
 const mode = ref<'random' | 'passphrase'>('random')
 const length = ref(16)
 const count = ref(5)
@@ -271,13 +273,11 @@ function getStrengthLabel(pwd: string): string {
 }
 
 function copyOne(pwd: string) {
-  navigator.clipboard.writeText(pwd)
-  message.success('已复制')
+  copyText(pwd)
 }
 
 function copyAll() {
-  navigator.clipboard.writeText(passwords.value.join('\n'))
-  message.success('已复制全部')
+  copyText(passwords.value.join('\n'))
 }
 
 function clearAll() {

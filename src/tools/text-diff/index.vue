@@ -104,9 +104,10 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { NInput, NButton, NEmpty, NAlert, NRadioGroup, NRadioButton, NCheckbox, useMessage } from 'naive-ui'
+import { NInput, NButton, NEmpty, NAlert, NRadioGroup, NRadioButton, NCheckbox } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy: copyText } = useCopy('已复制')
 const text1 = ref('')
 const text2 = ref('')
 const viewMode = ref<'split' | 'unified'>('unified')
@@ -318,8 +319,7 @@ function exportPatch() {
 
 function copyResult() {
   const text = diffResult.value.map(l => `${l.prefix}${l.content}`).join('\n')
-  navigator.clipboard.writeText(text)
-  message.success('已复制')
+  copyText(text)
 }
 
 function loadExample() {

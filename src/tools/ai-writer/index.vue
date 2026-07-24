@@ -80,6 +80,9 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { NAlert, NCollapse, NCollapseItem, NInput, NButton, NRadioGroup, NRadioButton, NSelect, NSpace } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
+
+const { copy: copyText } = useCopy()
 
 interface Config {
   baseURL: string
@@ -205,7 +208,7 @@ async function generate() {
 }
 
 function copy() {
-  navigator.clipboard.writeText(outputText.value)
+  copyText(outputText.value)
 }
 
 function useAsInput() {

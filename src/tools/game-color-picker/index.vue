@@ -90,8 +90,10 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { NInput, NButton, NSelect, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy: copyText } = useCopy()
 
 const size = 240
 const svCanvasRef = ref<HTMLCanvasElement | null>(null)
@@ -407,8 +409,7 @@ function applyHex() {
 }
 
 function copy(text: string) {
-  navigator.clipboard.writeText(text)
-  message.success('已复制：' + text)
+  copyText(text)
 }
 </script>
 

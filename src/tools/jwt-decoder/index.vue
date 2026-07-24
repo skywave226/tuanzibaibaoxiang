@@ -73,8 +73,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NInput, NButton, NAlert, NSpace, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy } = useCopy()
 const token = ref('')
 const secret = ref('')
 const error = ref('')
@@ -233,10 +235,6 @@ function clear() {
   verifyResult.value = null
 }
 
-function copy(text: string) {
-  navigator.clipboard.writeText(text)
-  message.success('已复制')
-}
 </script>
 
 <style scoped>

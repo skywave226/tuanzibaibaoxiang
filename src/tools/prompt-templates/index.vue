@@ -142,8 +142,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NInput, NButton, NTag, NEmpty, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy: copyText } = useCopy('已复制到剪贴板')
 
 // 模板接口定义
 interface PromptTemplate {
@@ -602,13 +604,8 @@ function selectTemplate(tpl: PromptTemplate) {
 }
 
 // 复制内容
-async function copyContent() {
-  try {
-    await navigator.clipboard.writeText(editContent.value)
-    message.success('已复制到剪贴板')
-  } catch {
-    message.error('复制失败，请手动复制')
-  }
+function copyContent() {
+  copyText(editContent.value)
 }
 
 // 恢复原始内容

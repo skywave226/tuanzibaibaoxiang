@@ -124,11 +124,13 @@ import {
   NAlert,
   NTag,
   NSpace,
+  useMessage,
 } from 'naive-ui'
-import { useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 import type { UploadFileInfo } from 'naive-ui'
 
 const message = useMessage()
+const { copy: copyText } = useCopy('已复制到剪贴板')
 
 // CSV 输入内容
 const csvInput = ref('')
@@ -354,10 +356,8 @@ function clearAll() {
 }
 
 // 复制 JSON
-async function copyJson() {
-  if (!jsonOutput.value) return
-  await navigator.clipboard.writeText(jsonOutput.value)
-  message.success('已复制到剪贴板')
+function copyJson() {
+  copyText(jsonOutput.value)
 }
 </script>
 

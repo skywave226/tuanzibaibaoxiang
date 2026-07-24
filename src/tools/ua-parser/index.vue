@@ -141,7 +141,10 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { NButton, NSpace, NInput, NEmpty, NTag, NDataTable } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 import type { DataTableColumns } from 'naive-ui'
+
+const { copy: copyText } = useCopy('已复制')
 
 interface ParseResult {
   browser: { name: string; version: string }
@@ -407,7 +410,7 @@ function clear() {
 
 function copyDetails() {
   const text = details.value.map(d => `${d.category} / ${d.field}: ${d.value}`).join('\n')
-  navigator.clipboard.writeText(text)
+  copyText(text)
 }
 </script>
 

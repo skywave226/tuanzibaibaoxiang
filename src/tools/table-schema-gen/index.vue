@@ -83,6 +83,7 @@ import {
   NEmpty,
 } from 'naive-ui'
 import type { DataTableColumns, SelectOption } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 // 字段定义
 interface Field {
@@ -103,6 +104,7 @@ const tableName = ref('users')
 const dialect = ref<Dialect>('mysql')
 const fields = ref<Field[]>([])
 const copied = ref(false)
+const { copy: copyText } = useCopy('已复制')
 
 // 自增 id
 let nextId = 1
@@ -426,22 +428,8 @@ const generatedSql = computed(() => {
 async function copySql() {
   const sql = generatedSql.value
   if (!sql) return
-  try {
-    await navigator.clipboard.writeText(sql)
-    copied.value = true
-    setTimeout(() => {
-      copied.value = false
-    }, 1500)
-  } catch {
-    // 剪贴板不可用时回退方案
-    const textarea = document.createElement('textarea')
-    textarea.value = sql
-    textarea.style.position = 'fixed'
-    textarea.style.opacity = '0'
-    document.body.appendChild(textarea)
-    textarea.select()
-    document.execCommand('copy')
-    document.body.removeChild(textarea)
+  const ok = await copyText(sql)
+  if (ok) {
     copied.value = true
     setTimeout(() => {
       copied.value = false

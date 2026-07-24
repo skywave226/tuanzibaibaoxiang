@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <div class="gradient-generator">
     <n-space vertical>
       <n-radio-group v-model:value="type">
@@ -36,6 +36,9 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NSpace, NRadioGroup, NRadioButton, NInputNumber, NInput, NButton } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
+
+const { copy } = useCopy()
 
 interface ColorStop {
   color: string
@@ -74,9 +77,6 @@ function removeStop(index: number) {
   stops.value.splice(index, 1)
 }
 
-function copy(text: string) {
-  navigator.clipboard.writeText(text)
-}
 </script>
 
 <style scoped>

@@ -76,10 +76,12 @@
 <script setup lang="ts">
 import { ref, computed, nextTick } from 'vue'
 import { NCard, NRadioGroup, NRadioButton, NInputNumber, NButton, NInput, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 type Dist = 'uniform' | 'normal' | 'exponential'
 
 const message = useMessage()
+const { copy } = useCopy()
 const dist = ref<Dist>('uniform')
 const uniformMin = ref(0)
 const uniformMax = ref(100)
@@ -199,9 +201,7 @@ function drawHistogram(): void {
 
 function copyResults(): void {
   const text = results.value.map(v => Number.isInteger(v) ? v : v.toFixed(4)).join('\n')
-  navigator.clipboard.writeText(text).then(() => {
-    message.success('已复制到剪贴板')
-  }).catch(() => message.error('复制失败'))
+  copy(text)
 }
 </script>
 

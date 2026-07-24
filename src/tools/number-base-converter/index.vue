@@ -49,10 +49,11 @@
 
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
-import { NInput, NRadioGroup, NRadioButton, NTag, NButton, NDataTable, useMessage } from 'naive-ui'
+import { NInput, NRadioGroup, NRadioButton, NTag, NButton, NDataTable } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 import type { DataTableColumns } from 'naive-ui'
 
-const message = useMessage()
+const { copy: copyText } = useCopy('已复制')
 const input = ref('')
 const fromBase = ref(10)
 const errorMsg = ref('')
@@ -93,10 +94,7 @@ function convert() {
 }
 
 function copy(text: string) {
-  if (text) {
-    navigator.clipboard.writeText(text)
-    message.success('已复制')
-  }
+  copyText(text)
 }
 
 const columns: DataTableColumns = [

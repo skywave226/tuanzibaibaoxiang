@@ -103,10 +103,10 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { NInput, NButton, NAlert, useMessage } from 'naive-ui'
+import { NInput, NButton, NAlert } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-// 消息提示
-const message = useMessage()
+const { copy: copyText } = useCopy()
 
 const sqlInput = ref('')
 const converted = ref(false)
@@ -698,17 +698,6 @@ function convert() {
   } catch (e: unknown) {
     const msg = e instanceof Error ? e.message : String(e)
     errorMsg.value = '转换失败：' + msg + '。请检查 SQL 语法是否正确，本工具支持常见 SELECT 查询。'
-  }
-}
-
-// 复制文本到剪贴板
-async function copyText(text: string) {
-  if (!text) return
-  try {
-    await navigator.clipboard.writeText(text)
-    message.success('已复制到剪贴板')
-  } catch {
-    message.error('复制失败，请手动复制')
   }
 }
 

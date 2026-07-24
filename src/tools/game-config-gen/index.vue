@@ -105,8 +105,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NButton, NInput, NSelect, NModal, useMessage } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 const message = useMessage()
+const { copy: copyText } = useCopy('已复制到剪贴板')
 
 type RowType = 'string' | 'number' | 'boolean' | 'array' | 'object'
 interface ConfigRow {
@@ -310,11 +312,7 @@ function copyOutput(): void {
     message.warning('请先生成配置')
     return
   }
-  navigator.clipboard.writeText(output.value).then(() => {
-    message.success('已复制到剪贴板')
-  }).catch(() => {
-    message.error('复制失败')
-  })
+  copyText(output.value)
 }
 
 function downloadOutput(): void {

@@ -67,6 +67,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { NButton, NUpload, NUploadDragger, NInput, NAlert } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 import type { UploadFileInfo } from 'naive-ui'
 
 const fileName = ref('')
@@ -76,6 +77,7 @@ const markdown = ref('')
 const converting = ref(false)
 const statusMsg = ref('')
 const statusType = ref<'info' | 'success' | 'warning' | 'error'>('info')
+const { copy: copyText } = useCopy('已复制到剪贴板')
 
 // 动态加载 mammoth.js CDN 脚本
 function loadMammoth(): Promise<any> {
@@ -250,11 +252,11 @@ function tableToMarkdown(table: HTMLElement): string {
 // 复制
 async function copy() {
   if (!markdown.value) return
-  try {
-    await navigator.clipboard.writeText(markdown.value)
+  const ok = await copyText(markdown.value)
+  if (ok) {
     statusMsg.value = '已复制到剪贴板'
     statusType.value = 'success'
-  } catch {
+  } else {
     statusMsg.value = '复制失败，请手动复制'
     statusType.value = 'error'
   }

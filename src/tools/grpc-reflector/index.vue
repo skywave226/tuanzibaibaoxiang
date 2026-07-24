@@ -235,11 +235,13 @@
 import { ref, computed } from 'vue'
 import {
   NTabs, NTabPane, NCard, NAlert, NForm, NFormItem, NInput, NButton,
-  NSwitch, NRadioGroup, NRadioButton, NCheckbox, NTag, NDataTable, useMessage,
+  NSwitch, NRadioGroup, NRadioButton, NCheckbox, NTag, NDataTable,
 } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 import type { DataTableColumns } from 'naive-ui'
 
-const message = useMessage()
+const { copy: copyCommandText } = useCopy('命令已复制')
+const { copy: copyProtoText } = useCopy('.proto 模板已复制')
 
 // ===== grpcurl 生成器表单 =====
 const form = ref({
@@ -287,13 +289,8 @@ const generatedCommand = computed(() => {
   return parts.join(' ')
 })
 
-async function copyCommand() {
-  try {
-    await navigator.clipboard.writeText(generatedCommand.value)
-    message.success('命令已复制')
-  } catch {
-    message.error('复制失败，请手动复制')
-  }
+function copyCommand() {
+  copyCommandText(generatedCommand.value)
 }
 
 // ===== .proto 模板生成 =====
@@ -361,13 +358,8 @@ const generatedProto = computed(() => {
   return lines.join('\n')
 })
 
-async function copyProto() {
-  try {
-    await navigator.clipboard.writeText(generatedProto.value)
-    message.success('.proto 模板已复制')
-  } catch {
-    message.error('复制失败，请手动复制')
-  }
+function copyProto() {
+  copyProtoText(generatedProto.value)
 }
 
 // ===== protobuf 类型表 =====

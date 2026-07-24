@@ -72,6 +72,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { NInput, NSelect, NRadioGroup, NRadioButton, NButton, NSpace, NAlert } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
 interface Color {
   hex: string
@@ -82,6 +83,7 @@ const baseHex = ref('#3366ff')
 const scheme = ref('complementary')
 const exportFormat = ref<'css' | 'scss' | 'tailwind' | 'json'>('css')
 const copiedMsg = ref('')
+const { copy: copyText } = useCopy()
 
 const schemeOptions = [
   { label: '互补色 (Complementary)', value: 'complementary' },
@@ -256,13 +258,13 @@ const exportCode = computed(() => {
 })
 
 function copyColor(hex: string) {
-  navigator.clipboard.writeText(hex)
+  copyText(hex)
   copiedMsg.value = `已复制：${hex}`
   setTimeout(() => { copiedMsg.value = '' }, 2000)
 }
 
 function copyCode() {
-  navigator.clipboard.writeText(exportCode.value)
+  copyText(exportCode.value)
   copiedMsg.value = '代码已复制到剪贴板'
   setTimeout(() => { copiedMsg.value = '' }, 2000)
 }

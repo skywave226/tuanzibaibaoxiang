@@ -35,9 +35,10 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { NTabs, NTabPane, NInputNumber, NSelect, NInput, NButton, useMessage } from 'naive-ui'
+import { NTabs, NTabPane, NInputNumber, NSelect, NInput, NButton } from 'naive-ui'
+import { useCopy } from '@/composables/useCopy'
 
-const message = useMessage()
+const { copy } = useCopy()
 
 interface UnitDef {
   label: string
@@ -295,8 +296,7 @@ function reset(key: string) {
 }
 
 function copyResult(key: string) {
-  navigator.clipboard.writeText(`${values.value[key]} ${defs[key].units[fromUnits.value[key]].label} = ${result(key)} ${defs[key].units[toUnits.value[key]].label}`)
-  message.success('已复制')
+  copy(`${values.value[key]} ${defs[key].units[fromUnits.value[key]].label} = ${result(key)} ${defs[key].units[toUnits.value[key]].label}`)
 }
 
 function formula(key: string): string {
