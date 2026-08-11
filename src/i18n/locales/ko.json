@@ -16,7 +16,11 @@
     "filter_hint_keyword": "키워드: {keyword}",
     "no_results": "일치하는 도구를 찾을 수 없습니다",
     "view_all": "모두 보기",
-    "tools_count": "{count}개의 도구"
+    "tools_count": "{count}개의 도구",
+    "recently_used": "최근 사용",
+    "all_tools": "전체 도구",
+    "footer_hint": "모든 도구는 브라우저에서 로컬로 실행되며 데이터는 서버로 전송되지 않습니다",
+    "related_tools": "관련 도구"
   },
   "common": {
     "dark": "다크 모드",

@@ -16,7 +16,11 @@
     "filter_hint_keyword": "Mot-clé : {keyword}",
     "no_results": "Aucun outil correspondant trouvé",
     "view_all": "Voir Tout",
-    "tools_count": "{count} outils"
+    "tools_count": "{count} outils",
+    "recently_used": "Récemment utilisés",
+    "all_tools": "Tous les outils",
+    "footer_hint": "Tous les outils s'exécutent localement dans votre navigateur. Aucune donnée n'est téléchargée.",
+    "related_tools": "Outils associés"
   },
   "common": {
     "dark": "Mode Sombre",

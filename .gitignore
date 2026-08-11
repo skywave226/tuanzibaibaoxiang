@@ -29,3 +29,20 @@ dist-ssr
 
 # TypeScript build info
 *.tsbuildinfo
+
+# Build cache
+.npm-cache
+.vite
+
+# Generated SEO pages
+/de/
+/en/
+/es/
+/fr/
+/it/
+/ja/
+/ko/
+/pt/
+/ru/
+/zh-TW/
+/tools/

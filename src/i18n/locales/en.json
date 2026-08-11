@@ -16,7 +16,11 @@
     "filter_hint_keyword": "Keyword: {keyword}",
     "no_results": "No matching tools found",
     "view_all": "View All",
-    "tools_count": "{count} tools"
+    "tools_count": "{count} tools",
+    "recently_used": "Recently Used",
+    "all_tools": "All Tools",
+    "footer_hint": "All tools run locally in your browser. Your data never leaves your device.",
+    "related_tools": "Related Tools"
   },
   "common": {
     "dark": "Dark Mode",

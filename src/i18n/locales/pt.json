@@ -16,7 +16,11 @@
     "filter_hint_keyword": "Palavra-chave: {keyword}",
     "no_results": "Nenhuma ferramenta correspondente encontrada",
     "view_all": "Ver Todas",
-    "tools_count": "{count} ferramentas"
+    "tools_count": "{count} ferramentas",
+    "recently_used": "Usados recentemente",
+    "all_tools": "Todas as ferramentas",
+    "footer_hint": "Todas as ferramentas são executadas localmente no navegador. Os dados não são enviados para o servidor.",
+    "related_tools": "Ferramentas relacionadas"
   },
   "common": {
     "dark": "Modo Escuro",

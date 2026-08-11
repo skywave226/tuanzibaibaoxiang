@@ -34,6 +34,9 @@
           <template #prefix>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </template>
+          <template #suffix>
+            <kbd v-if="!searchQuery" class="search-kbd">/</kbd>
+          </template>
         </n-input>
       </div>
       <div class="header-right">
@@ -52,6 +55,10 @@
     </header>
     <div class="layout-body">
       <aside class="layout-sidebar">
+        <div class="sidebar-title">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>{{ t('nav.categories') }}</span>
+        </div>
         <n-menu
           :options="menuOptions"
           :value="activeCategory"
@@ -77,7 +84,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { NInput, NButton, NMenu, NDrawer, NDrawerContent, NSelect } from 'naive-ui'
@@ -163,6 +170,23 @@ function onSearch(value: string) {
     router.replace({ query: { ...route.query, q: value || undefined } })
   }
 }
+
+// 全局键盘快捷键：按 / 聚焦搜索框
+function onGlobalKeydown(e: KeyboardEvent) {
+  if (e.key === '/' && document.activeElement?.tagName !== 'INPUT' && document.activeElement?.tagName !== 'TEXTAREA') {
+    e.preventDefault()
+    const input = document.querySelector('.search-input .n-input__input-el') as HTMLInputElement | null
+    input?.focus()
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', onGlobalKeydown)
+})
+
+onUnmounted(() => {
+  document.removeEventListener('keydown', onGlobalKeydown)
+})
 </script>
 
 <style scoped>
@@ -235,6 +259,24 @@ function onSearch(value: string) {
   box-shadow: 0 0 0 3px var(--brand-ring);
 }
 
+.search-kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  font-size: 11px;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-weight: 600;
+  color: var(--faint);
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  line-height: 1;
+  user-select: none;
+}
+
 .header-right {
   flex-shrink: 0;
   display: flex;
@@ -254,6 +296,10 @@ function onSearch(value: string) {
   .locale-select {
     width: 92px;
   }
+
+  .search-kbd {
+    display: none;
+  }
 }
 
 /* ===== 主体布局 ===== */
@@ -271,6 +317,24 @@ function onSearch(value: string) {
   overflow-y: auto;
   background: var(--surface);
   border-right: 1px solid var(--border);
+}
+
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px 12px;
+  margin-bottom: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--faint);
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-title svg {
+  opacity: 0.7;
 }
 
 /* 菜单激活态：品牌色 + 左侧点睛条 */

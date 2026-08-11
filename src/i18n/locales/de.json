@@ -16,7 +16,11 @@
     "filter_hint_keyword": "Schlüsselwort: {keyword}",
     "no_results": "Keine passenden Werkzeuge gefunden",
     "view_all": "Alle Anzeigen",
-    "tools_count": "{count} Werkzeuge"
+    "tools_count": "{count} Werkzeuge",
+    "recently_used": "Zuletzt verwendet",
+    "all_tools": "Alle Werkzeuge",
+    "footer_hint": "Alle Werkzeuge laufen lokal in Ihrem Browser. Daten werden nicht hochgeladen.",
+    "related_tools": "Verwandte Werkzeuge"
   },
   "common": {
     "dark": "Dunkelmodus",

@@ -16,7 +16,11 @@
     "filter_hint_keyword": "關鍵字：{keyword}",
     "no_results": "沒有找到符合的工具",
     "view_all": "查看全部",
-    "tools_count": "共 {count} 個工具"
+    "tools_count": "共 {count} 個工具",
+    "recently_used": "最近使用",
+    "all_tools": "全部工具",
+    "footer_hint": "所有工具均在瀏覽器本地運行，數據不會上傳伺服器",
+    "related_tools": "相關工具"
   },
   "common": {
     "dark": "暗色模式",

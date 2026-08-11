@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <div class="home-header">
+      <!-- 分类筛选横幅 -->
       <div v-if="activeCategory !== '__all__'" class="category-banner">
         <div
           class="category-banner-icon"
@@ -18,13 +19,62 @@
           {{ t('home.view_all') }}
         </router-link>
       </div>
+
+      <!-- 首页 Hero -->
       <template v-else>
         <div class="home-hero">
           <h1 class="hero-title">{{ headerTitle }}</h1>
           <p class="hero-sub">{{ headerSubtitle }}</p>
         </div>
+
+        <!-- 快捷分类胶囊（仅首页、无搜索时显示） -->
+        <div v-if="!searchQuery" class="category-pills">
+          <button
+            v-for="cat in topCategories"
+            :key="cat"
+            class="category-pill"
+            :style="{
+              '--pill-color': getCategoryStyle(cat).color,
+              '--pill-bg': getCategoryStyle(cat).bg,
+            }"
+            @click="goToCategory(cat)"
+          >
+            <span class="pill-icon" v-html="getCategoryIcon(cat)"></span>
+            <span class="pill-label">{{ translateCategory(cat) }}</span>
+            <span class="pill-count">{{ getToolCountByCategory(cat) }}</span>
+          </button>
+        </div>
+
+        <!-- 最近使用 -->
+        <div v-if="!searchQuery && recentTools.length > 0" class="recent-section">
+          <div class="section-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>{{ t('home.recently_used') || '最近使用' }}</span>
+          </div>
+          <div class="recent-list">
+            <div
+              v-for="tool in recentTools"
+              :key="tool.path"
+              class="recent-item"
+              @click="goToTool(tool.path)"
+            >
+              <span
+                class="recent-dot"
+                :style="{ background: getCategoryStyle(tool.category).color }"
+              ></span>
+              <span class="recent-name">{{ tool.name }}</span>
+            </div>
+          </div>
+        </div>
       </template>
     </div>
+
+    <!-- 工具列表标题 -->
+    <div v-if="!searchQuery && activeCategory === '__all__' && recentTools.length > 0" class="list-label">
+      {{ t('home.all_tools') || '全部工具' }}
+    </div>
+
+    <!-- 工具网格 -->
     <div class="tool-grid">
       <div
         v-for="(tool, index) in displayTools"
@@ -59,17 +109,30 @@
         </div>
       </div>
     </div>
-    <n-empty v-if="displayTools.length === 0" :description="t('home.no_results')" class="mt-16" />
+
+    <!-- 空状态 -->
+    <div v-if="displayTools.length === 0" class="empty-state">
+      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <p class="empty-text">{{ t('home.no_results') }}</p>
+    </div>
+
+    <!-- 页脚 -->
+    <footer v-if="activeCategory === '__all__' && !searchQuery" class="home-footer">
+      <span>{{ t('home.tool_count', { count: displayTools.length }) }}</span>
+      <span class="footer-dot">·</span>
+      <span>{{ t('home.footer_hint') || '所有工具均在浏览器本地运行，数据不会上传服务器' }}</span>
+    </footer>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { NTag, NEmpty } from 'naive-ui'
-import { getLocalizedTools } from '@/tools/registry'
+import { NTag } from 'naive-ui'
+import { getLocalizedTools, categories, tools } from '@/tools/registry'
 import { getCategoryStyle, getCategoryIcon } from '@/composables/useCategoryStyle'
+import { getVisitStats, type VisitRecord } from '@/composables/useVisitStats'
 import type { SupportedLocale } from '@/i18n'
 
 const route = useRoute()
@@ -80,11 +143,19 @@ function goToTool(path: string) {
   router.push(path)
 }
 
+function goToCategory(cat: string) {
+  router.push({ path: '/', query: { category: cat } })
+}
+
 const currentLocale = computed<SupportedLocale>(() => locale.value as SupportedLocale)
 const localizedTools = computed(() => getLocalizedTools(currentLocale.value))
 
 function translateCategory(category: string) {
   return t(`categories.${category}`, category)
+}
+
+function getToolCountByCategory(cat: string) {
+  return tools.filter(t => t.category === cat).length
 }
 
 const activeCategory = computed(() => (route.query.category as string) || '__all__')
@@ -107,12 +178,10 @@ const headerSubtitle = computed(() => {
 const displayTools = computed(() => {
   let list = localizedTools.value
 
-  // 分类筛选
   if (activeCategory.value !== '__all__') {
     list = list.filter(t => t.category === activeCategory.value)
   }
 
-  // 关键词搜索（匹配名称、描述、关键词）
   const q = searchQuery.value.trim().toLowerCase()
   if (q) {
     list = list.filter(t => {
@@ -124,6 +193,30 @@ const displayTools = computed(() => {
   }
 
   return list
+})
+
+// 取前 8 个分类作为快捷入口
+const topCategories = computed(() => categories.slice(0, 8))
+
+// 最近访问工具
+const recentVisits = ref<VisitRecord[]>([])
+
+onMounted(() => {
+  const stats = getVisitStats()
+  // 去重，取最近 6 个
+  const seen = new Set<string>()
+  recentVisits.value = stats.recent.filter(v => {
+    if (v.path === '/' || seen.has(v.path)) return false
+    seen.add(v.path)
+    return true
+  }).slice(0, 6)
+})
+
+const recentTools = computed(() => {
+  return recentVisits.value
+    .map(v => localizedTools.value.find(t => t.path === v.path))
+    .filter(Boolean)
+    .slice(0, 6) as typeof localizedTools.value
 })
 </script>
 
@@ -150,6 +243,128 @@ const displayTools = computed(() => {
   font-size: 14px;
   color: var(--muted);
   letter-spacing: 0.01em;
+}
+
+/* ===== 快捷分类胶囊 ===== */
+.category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.category-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-2);
+  transition: all 0.2s var(--ease);
+}
+
+.category-pill:hover {
+  border-color: var(--pill-color);
+  background: var(--pill-bg);
+  color: var(--pill-color);
+  transform: translateY(-1px);
+}
+
+.pill-icon {
+  display: flex;
+  align-items: center;
+}
+
+.pill-icon :deep(svg) {
+  width: 14px;
+  height: 14px;
+}
+
+.pill-count {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--faint);
+  background: var(--surface-3);
+  padding: 1px 6px;
+  border-radius: var(--r-pill);
+  transition: all 0.2s var(--ease);
+}
+
+.category-pill:hover .pill-count {
+  background: var(--pill-bg);
+  color: var(--pill-color);
+}
+
+/* ===== 最近使用 ===== */
+.recent-section {
+  margin-top: 22px;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.section-label svg {
+  color: var(--faint);
+}
+
+.recent-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.recent-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: var(--r-sm);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+}
+
+.recent-item:hover {
+  border-color: var(--brand-soft-2);
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+
+.recent-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.recent-name {
+  font-weight: 500;
+}
+
+/* ===== 列表标签 ===== */
+.list-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin: 26px 0 12px;
 }
 
 /* ===== 分类横幅 ===== */
@@ -304,6 +519,41 @@ const displayTools = computed(() => {
   max-width: 100%;
 }
 
+/* ===== 空状态 ===== */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  color: var(--faint);
+}
+
+.empty-state svg {
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+.empty-text {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ===== 页脚 ===== */
+.home-footer {
+  margin-top: 40px;
+  padding: 20px 0 10px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--faint);
+}
+
+.footer-dot {
+  opacity: 0.5;
+}
+
 /* ===== 移动端 ===== */
 @media (max-width: 640px) {
   .category-banner {
@@ -329,6 +579,19 @@ const displayTools = computed(() => {
   .category-banner-back {
     padding: 6px 12px;
     font-size: 12px;
+  }
+
+  .category-pills {
+    gap: 6px;
+  }
+
+  .category-pill {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .recent-list {
+    flex-direction: column;
   }
 
   .tool-grid {
