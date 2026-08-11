@@ -1,6 +1,7 @@
 import type { ToolMeta } from '@/types/tool'
 import type { SupportedLocale } from '@/i18n'
 import toolTranslations from '@/i18n/toolTranslations.json'
+import { toolIconMap } from '@/data/toolIcons'
 
 const toolModules = import.meta.glob('./**/index.vue')
 const metaModules = import.meta.glob('./**/meta.ts', { eager: true })
@@ -13,6 +14,8 @@ export const tools: ToolMeta[] = Object.entries(metaModules)
     const loader = toolModules[componentPath]
     return {
       ...meta,
+      // 使用 toolIconMap 中的独特图标，覆盖 meta.ts 中的默认图标
+      icon: toolIconMap[meta.path] || meta.icon,
       component: loader,
     }
   })
