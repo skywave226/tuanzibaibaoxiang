@@ -25,5 +25,48 @@
   },
   "language": {
     "name": "한국어"
+  },
+  "networkSpeed": {
+    "alert_title": "브라우저 제한 사항",
+    "alert_body": "브라우저 보안 정책으로 인해 네이티브 ICMP Ping이 불가능합니다. 이 도구는 HTTP HEAD 요청을 보내 왕복 시간을 측정합니다(DNS, TCP, TLS 핸드셰이크 및 응답 헤더 전송 포함, 응답 본문의 영향 최소화). 결과는 대략적인 레이턴시이며 참고용입니다. 교차 출처 사이트는 no-cors 모드로 탐지하며, 접근할 수 없는 사이트는 시간 초과 또는 네트워크 오류로 보고됩니다.",
+    "timeout_label": "시간 초과(ms)",
+    "samples_label": "샘플 수",
+    "add_site_label": "사이트 추가",
+    "add_site_placeholder": "예: https://example.com",
+    "add": "추가",
+    "start": "테스트 시작",
+    "stop": "중지",
+    "reset": "재설정",
+    "tested": "테스트됨",
+    "min": "최소",
+    "avg": "평균",
+    "max": "최대",
+    "col_site": "웹사이트",
+    "col_latency": "레이턴시",
+    "col_status": "상태",
+    "col_action": "작업",
+    "status_pending": "테스트 중",
+    "status_pending_long": "테스트 중...",
+    "status_success": "정상",
+    "status_error": "오류",
+    "status_stopped": "중지됨",
+    "delete": "삭제",
+    "fail": "실패",
+    "timeout_err": "시간 초과",
+    "network_err": "네트워크 오류",
+    "empty": "\"테스트 시작\"을 클릭하여 네트워크 레이턴시를 측정하세요",
+    "warn_no_sites": "테스트할 사이트를 최소 하나 추가하세요",
+    "warn_exists": "이 사이트는 이미 존재합니다",
+    "warn_invalid": "유효한 URL을 입력하세요",
+    "sites": {
+      "baidu": "바이두",
+      "tencent": "텐센트",
+      "alibaba": "알리바바",
+      "jd": "JD.com",
+      "weibo": "웨이보",
+      "zhihu": "즈후",
+      "github": "GitHub",
+      "google": "Google"
+    }
   }
 }

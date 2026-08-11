@@ -25,5 +25,48 @@
   },
   "language": {
     "name": "English"
+  },
+  "networkSpeed": {
+    "alert_title": "Browser Limitations",
+    "alert_body": "Due to browser security policies, native ICMP ping is not possible. This tool measures round-trip time by sending HTTP HEAD requests (including DNS, TCP, TLS handshake and response header transfer, with response body impact minimized). Results are approximate latency and for reference only. Cross-origin sites are probed in no-cors mode; unreachable sites are reported as timeout or network error.",
+    "timeout_label": "Timeout (ms)",
+    "samples_label": "Samples",
+    "add_site_label": "Add Site",
+    "add_site_placeholder": "e.g. https://example.com",
+    "add": "Add",
+    "start": "Start Test",
+    "stop": "Stop",
+    "reset": "Reset",
+    "tested": "Tested",
+    "min": "Min",
+    "avg": "Avg",
+    "max": "Max",
+    "col_site": "Website",
+    "col_latency": "Latency",
+    "col_status": "Status",
+    "col_action": "Action",
+    "status_pending": "Testing",
+    "status_pending_long": "Testing...",
+    "status_success": "OK",
+    "status_error": "Error",
+    "status_stopped": "Stopped",
+    "delete": "Delete",
+    "fail": "Failed",
+    "timeout_err": "Timeout",
+    "network_err": "Network Error",
+    "empty": "Click \"Start Test\" to measure network latency",
+    "warn_no_sites": "Please add at least one site to test",
+    "warn_exists": "This site already exists",
+    "warn_invalid": "Please enter a valid URL",
+    "sites": {
+      "baidu": "Baidu",
+      "tencent": "Tencent",
+      "alibaba": "Alibaba",
+      "jd": "JD.com",
+      "weibo": "Weibo",
+      "zhihu": "Zhihu",
+      "github": "GitHub",
+      "google": "Google"
+    }
   }
 }

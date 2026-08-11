@@ -25,5 +25,48 @@
   },
   "language": {
     "name": "日本語"
+  },
+  "networkSpeed": {
+    "alert_title": "ブラウザの制限事項",
+    "alert_body": "ブラウザのセキュリティポリシーにより、ネイティブの ICMP Ping は実行できません。本ツールは HTTP HEAD リクエストを送信して往復時間を測定します（DNS、TCP、TLS ハンドシェイク、レスポンスヘッダー転送を含み、レスポンスボディの影響を最小化）。結果は概算のレイテンシであり、参考用です。クロスオリジンのサイトは no-cors モードで検出し、到達不能なサイトはタイムアウトまたはネットワークエラーとして報告されます。",
+    "timeout_label": "タイムアウト(ミリ秒)",
+    "samples_label": "サンプル数",
+    "add_site_label": "サイト追加",
+    "add_site_placeholder": "例: https://example.com",
+    "add": "追加",
+    "start": "テスト開始",
+    "stop": "停止",
+    "reset": "リセット",
+    "tested": "測定済",
+    "min": "最小",
+    "avg": "平均",
+    "max": "最大",
+    "col_site": "サイト",
+    "col_latency": "レイテンシ",
+    "col_status": "ステータス",
+    "col_action": "操作",
+    "status_pending": "テスト中",
+    "status_pending_long": "テスト中...",
+    "status_success": "正常",
+    "status_error": "異常",
+    "status_stopped": "停止済",
+    "delete": "削除",
+    "fail": "失敗",
+    "timeout_err": "タイムアウト",
+    "network_err": "ネットワークエラー",
+    "empty": "「テスト開始」をクリックしてネットワークレイテンシを測定",
+    "warn_no_sites": "テストするサイトを少なくとも1つ追加してください",
+    "warn_exists": "このサイトは既に存在します",
+    "warn_invalid": "有効な URL を入力してください",
+    "sites": {
+      "baidu": "バイドゥ",
+      "tencent": "テンセント",
+      "alibaba": "アリババ",
+      "jd": "JD.com",
+      "weibo": "ウェイボー",
+      "zhihu": "知乎",
+      "github": "GitHub",
+      "google": "Google"
+    }
   }
 }

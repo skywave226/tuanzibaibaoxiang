@@ -7,8 +7,8 @@
         </n-breadcrumb-item>
         <n-breadcrumb-item>{{ meta.name }}</n-breadcrumb-item>
       </n-breadcrumb>
-      <h2 class="text-xl font-bold mt-3">{{ meta.name }}</h2>
-      <p class="text-gray-500 text-sm mt-1">{{ meta.description }}</p>
+      <h2 class="tool-title">{{ meta.name }}</h2>
+      <p class="tool-desc">{{ meta.description }}</p>
     </div>
     <div class="tool-content mt-4">
       <component :is="toolComponent" v-if="toolComponent" />
@@ -55,26 +55,60 @@ watch(
   min-width: 0;
 }
 
+.tool-header {
+  animation: fade-in 0.4s var(--ease) both;
+}
+
+.tool-header :deep(.n-breadcrumb) {
+  font-size: 12.5px;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+
+.tool-header :deep(.n-breadcrumb__link) {
+  color: var(--muted);
+  transition: color 0.18s var(--ease);
+}
+
+.tool-header :deep(.n-breadcrumb__link:hover) {
+  color: var(--brand);
+}
+
 .tool-header a {
   text-decoration: none;
   color: inherit;
 }
 
-.tool-header h2 {
+.tool-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--text);
+  margin-top: 12px;
   word-break: break-word;
+}
+
+.tool-desc {
+  margin-top: 6px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 .tool-content {
   min-width: 0;
   overflow-x: hidden;
+  margin-top: 18px;
 }
 
 @media (max-width: 640px) {
-  .tool-header h2 {
+  .tool-title {
     font-size: 1.125rem;
   }
 
-  .tool-header p {
+  .tool-desc {
     font-size: 0.8125rem;
   }
 }

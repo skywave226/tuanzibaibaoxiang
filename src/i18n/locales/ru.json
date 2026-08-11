@@ -25,5 +25,48 @@
   },
   "language": {
     "name": "Русский"
+  },
+  "networkSpeed": {
+    "alert_title": "Ограничения браузера",
+    "alert_body": "Из-за политик безопасности браузера нативный ICMP Ping невозможен. Этот инструмент измеряет время кругового хода, отправляя HTTP HEAD-запросы (включая DNS, подтверждение TCP, TLS и передачу заголовков, минимизируя влияние тела ответа). Результаты являются приблизительной задержкой и носят справочный характер. Cross-origin сайты проверяются в режиме no-cors; недоступные сайты отмечаются как тайм-аут или сетевая ошибка.",
+    "timeout_label": "Тайм-аут (мс)",
+    "samples_label": "Замеры",
+    "add_site_label": "Добавить сайт",
+    "add_site_placeholder": "напр. https://example.com",
+    "add": "Добавить",
+    "start": "Начать тест",
+    "stop": "Остановить",
+    "reset": "Сбросить",
+    "tested": "Проверено",
+    "min": "Мин",
+    "avg": "Ср",
+    "max": "Макс",
+    "col_site": "Сайт",
+    "col_latency": "Задержка",
+    "col_status": "Статус",
+    "col_action": "Действие",
+    "status_pending": "Тестирование",
+    "status_pending_long": "Тестирование...",
+    "status_success": "ОК",
+    "status_error": "Ошибка",
+    "status_stopped": "Остановлено",
+    "delete": "Удалить",
+    "fail": "Ошибка",
+    "timeout_err": "Тайм-аут",
+    "network_err": "Сетевая ошибка",
+    "empty": "Нажмите «Начать тест», чтобы измерить сетевую задержку",
+    "warn_no_sites": "Добавьте хотя бы один сайт для проверки",
+    "warn_exists": "Этот сайт уже существует",
+    "warn_invalid": "Введите корректный URL",
+    "sites": {
+      "baidu": "Baidu",
+      "tencent": "Tencent",
+      "alibaba": "Alibaba",
+      "jd": "JD.com",
+      "weibo": "Weibo",
+      "zhihu": "Zhihu",
+      "github": "GitHub",
+      "google": "Google"
+    }
   }
 }

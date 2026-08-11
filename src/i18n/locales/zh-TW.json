@@ -25,5 +25,48 @@
   },
   "language": {
     "name": "中文（繁體）"
+  },
+  "networkSpeed": {
+    "alert_title": "瀏覽器限制說明",
+    "alert_body": "受瀏覽器安全策略限制，無法進行原生 ICMP Ping。本工具透過發起 HTTP HEAD 請求測量往返耗時（含 DNS、TCP、TLS 握手及回應標頭傳輸，已儘量減少回應主體影響），結果為近似延遲，僅供參考。跨域站點採用 no-cors 模式探測，不可達站點按逾時或網路錯誤判定。",
+    "timeout_label": "逾時(毫秒)",
+    "samples_label": "取樣次數",
+    "add_site_label": "新增站點",
+    "add_site_placeholder": "如 https://example.com",
+    "add": "新增",
+    "start": "開始測試",
+    "stop": "停止",
+    "reset": "重設",
+    "tested": "已測",
+    "min": "最低",
+    "avg": "平均",
+    "max": "最高",
+    "col_site": "網站",
+    "col_latency": "延遲",
+    "col_status": "狀態",
+    "col_action": "操作",
+    "status_pending": "測試中",
+    "status_pending_long": "測試中...",
+    "status_success": "正常",
+    "status_error": "異常",
+    "status_stopped": "已停止",
+    "delete": "刪除",
+    "fail": "失敗",
+    "timeout_err": "逾時",
+    "network_err": "網路錯誤",
+    "empty": "點擊「開始測試」按鈕測試網路延遲",
+    "warn_no_sites": "請先新增至少一個測試站點",
+    "warn_exists": "該站點已存在",
+    "warn_invalid": "請輸入有效的網址",
+    "sites": {
+      "baidu": "百度",
+      "tencent": "騰訊",
+      "alibaba": "阿里巴巴",
+      "jd": "京東",
+      "weibo": "微博",
+      "zhihu": "知乎",
+      "github": "GitHub",
+      "google": "Google"
+    }
   }
 }

@@ -25,5 +25,48 @@
   },
   "language": {
     "name": "Português"
+  },
+  "networkSpeed": {
+    "alert_title": "Limitações do navegador",
+    "alert_body": "Devido às políticas de segurança do navegador, o ping ICMP nativo não é possível. Esta ferramenta mede o tempo de ida e volta enviando requisições HTTP HEAD (incluindo DNS, handshake TCP, TLS e transferência de cabeçalhos, minimizando o impacto do corpo da resposta). Os resultados são latência aproximada e apenas de referência. Sites de origem cruzada são sondados no modo no-cors; sites inacessíveis são reportados como tempo limite ou erro de rede.",
+    "timeout_label": "Tempo limite (ms)",
+    "samples_label": "Amostras",
+    "add_site_label": "Adicionar site",
+    "add_site_placeholder": "ex. https://example.com",
+    "add": "Adicionar",
+    "start": "Iniciar teste",
+    "stop": "Parar",
+    "reset": "Redefinir",
+    "tested": "Testados",
+    "min": "Mín",
+    "avg": "Média",
+    "max": "Máx",
+    "col_site": "Site",
+    "col_latency": "Latência",
+    "col_status": "Status",
+    "col_action": "Ação",
+    "status_pending": "Testando",
+    "status_pending_long": "Testando...",
+    "status_success": "OK",
+    "status_error": "Erro",
+    "status_stopped": "Parado",
+    "delete": "Excluir",
+    "fail": "Falhou",
+    "timeout_err": "Tempo limite",
+    "network_err": "Erro de rede",
+    "empty": "Clique em \"Iniciar teste\" para medir a latência de rede",
+    "warn_no_sites": "Adicione pelo menos um site para testar",
+    "warn_exists": "Este site já existe",
+    "warn_invalid": "Insira uma URL válida",
+    "sites": {
+      "baidu": "Baidu",
+      "tencent": "Tencent",
+      "alibaba": "Alibaba",
+      "jd": "JD.com",
+      "weibo": "Weibo",
+      "zhihu": "Zhihu",
+      "github": "GitHub",
+      "google": "Google"
+    }
   }
 }

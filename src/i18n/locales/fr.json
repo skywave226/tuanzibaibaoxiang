@@ -25,5 +25,48 @@
   },
   "language": {
     "name": "Français"
+  },
+  "networkSpeed": {
+    "alert_title": "Limitations du navigateur",
+    "alert_body": "En raison des politiques de sécurité du navigateur, le ping ICMP natif n'est pas possible. Cet outil mesure le temps aller-retour en envoyant des requêtes HTTP HEAD (incluant DNS, handshake TCP, TLS et transfert des en-têtes, en minimisant l'impact du corps de la réponse). Les résultats sont une latence approximative et fournis à titre indicatif. Les sites multi-origines sont sondés en mode no-cors ; les sites inaccessibles sont signalés comme délai dépassé ou erreur réseau.",
+    "timeout_label": "Délai (ms)",
+    "samples_label": "Échantillons",
+    "add_site_label": "Ajouter un site",
+    "add_site_placeholder": "ex. https://example.com",
+    "add": "Ajouter",
+    "start": "Lancer le test",
+    "stop": "Arrêter",
+    "reset": "Réinitialiser",
+    "tested": "Testés",
+    "min": "Min",
+    "avg": "Moy",
+    "max": "Max",
+    "col_site": "Site web",
+    "col_latency": "Latence",
+    "col_status": "État",
+    "col_action": "Action",
+    "status_pending": "Test en cours",
+    "status_pending_long": "Test en cours...",
+    "status_success": "OK",
+    "status_error": "Erreur",
+    "status_stopped": "Arrêté",
+    "delete": "Supprimer",
+    "fail": "Échec",
+    "timeout_err": "Délai dépassé",
+    "network_err": "Erreur réseau",
+    "empty": "Cliquez sur « Lancer le test » pour mesurer la latence réseau",
+    "warn_no_sites": "Veuillez ajouter au moins un site à tester",
+    "warn_exists": "Ce site existe déjà",
+    "warn_invalid": "Veuillez saisir une URL valide",
+    "sites": {
+      "baidu": "Baidu",
+      "tencent": "Tencent",
+      "alibaba": "Alibaba",
+      "jd": "JD.com",
+      "weibo": "Weibo",
+      "zhihu": "Zhihu",
+      "github": "GitHub",
+      "google": "Google"
+    }
   }
 }

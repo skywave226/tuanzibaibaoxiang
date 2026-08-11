@@ -25,5 +25,48 @@
   },
   "language": {
     "name": "Deutsch"
+  },
+  "networkSpeed": {
+    "alert_title": "Browser-Einschränkungen",
+    "alert_body": "Aufgrund der Browser-Sicherheitsrichtlinien ist kein natives ICMP-Ping möglich. Dieses Tool misst die Round-Trip-Zeit durch HTTP-HEAD-Anfragen (inkl. DNS, TCP-, TLS-Handshake und Header-Übertragung, mit minimiertem Einfluss des Antwortkörpers). Die Ergebnisse sind ungefähre Latenzwerte und nur richtungsweisend. Cross-Origin-Sites werden im no-cors-Modus getestet; nicht erreichbare Sites werden als Timeout oder Netzwerkfehler gemeldet.",
+    "timeout_label": "Zeitüberschreitung (ms)",
+    "samples_label": "Messungen",
+    "add_site_label": "Site hinzufügen",
+    "add_site_placeholder": "z. B. https://example.com",
+    "add": "Hinzufügen",
+    "start": "Test starten",
+    "stop": "Stopp",
+    "reset": "Zurücksetzen",
+    "tested": "Getestet",
+    "min": "Min",
+    "avg": "Ø",
+    "max": "Max",
+    "col_site": "Website",
+    "col_latency": "Latenz",
+    "col_status": "Status",
+    "col_action": "Aktion",
+    "status_pending": "Teste",
+    "status_pending_long": "Teste...",
+    "status_success": "OK",
+    "status_error": "Fehler",
+    "status_stopped": "Gestoppt",
+    "delete": "Löschen",
+    "fail": "Fehlgeschlagen",
+    "timeout_err": "Timeout",
+    "network_err": "Netzwerkfehler",
+    "empty": "Klicken Sie auf „Test starten“, um die Netzwerklatenz zu messen",
+    "warn_no_sites": "Bitte fügen Sie mindestens eine Site zum Testen hinzu",
+    "warn_exists": "Diese Site existiert bereits",
+    "warn_invalid": "Bitte geben Sie eine gültige URL ein",
+    "sites": {
+      "baidu": "Baidu",
+      "tencent": "Tencent",
+      "alibaba": "Alibaba",
+      "jd": "JD.com",
+      "weibo": "Weibo",
+      "zhihu": "Zhihu",
+      "github": "GitHub",
+      "google": "Google"
+    }
   }
 }

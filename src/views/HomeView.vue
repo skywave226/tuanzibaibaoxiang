@@ -19,16 +19,19 @@
         </router-link>
       </div>
       <template v-else>
-        <h1 class="text-2xl font-bold">{{ headerTitle }}</h1>
-        <p class="text-gray-500 mt-2">{{ headerSubtitle }}</p>
+        <div class="home-hero">
+          <h1 class="hero-title">{{ headerTitle }}</h1>
+          <p class="hero-sub">{{ headerSubtitle }}</p>
+        </div>
       </template>
     </div>
     <div class="tool-grid">
-      <a
-        v-for="tool in displayTools"
+      <div
+        v-for="(tool, index) in displayTools"
         :key="tool.path"
-        :href="`${baseUrl}tools${tool.path}/`"
-        class="tool-card"
+        class="tool-card reveal"
+        :style="{ animationDelay: `${Math.min(index, 18) * 28}ms` }"
+        @click="goToTool(tool.path)"
       >
         <div
           class="tool-icon"
@@ -54,7 +57,7 @@
             {{ translateCategory(tool.category) }}
           </n-tag>
         </div>
-      </a>
+      </div>
     </div>
     <n-empty v-if="displayTools.length === 0" :description="t('home.no_results')" class="mt-16" />
   </div>
@@ -62,7 +65,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { NTag, NEmpty } from 'naive-ui'
 import { getLocalizedTools } from '@/tools/registry'
@@ -70,8 +73,12 @@ import { getCategoryStyle, getCategoryIcon } from '@/composables/useCategoryStyl
 import type { SupportedLocale } from '@/i18n'
 
 const route = useRoute()
+const router = useRouter()
 const { t, locale } = useI18n()
-const baseUrl = import.meta.env.BASE_URL
+
+function goToTool(path: string) {
+  router.push(path)
+}
 
 const currentLocale = computed<SupportedLocale>(() => locale.value as SupportedLocale)
 const localizedTools = computed(() => getLocalizedTools(currentLocale.value))
@@ -122,30 +129,45 @@ const displayTools = computed(() => {
 
 <style scoped>
 .home-header {
-  margin-bottom: 16px;
+  margin-bottom: 22px;
 }
 
+/* ===== Hero ===== */
+.home-hero {
+  padding: 6px 2px 2px;
+}
+
+.hero-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.hero-sub {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 0.01em;
+}
+
+/* ===== 分类横幅 ===== */
 .category-banner {
   display: flex;
   align-items: center;
   gap: 16px;
   padding: 18px 20px;
-  border-radius: 16px;
-  background: white;
-  border: 1px solid #f0f0f0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-}
-
-.dark .category-banner {
-  background: #1e293b;
-  border-color: #334155;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-xs);
 }
 
 .category-banner-icon {
   width: 52px;
   height: 52px;
-  border-radius: 14px;
+  border-radius: var(--r-md);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -166,48 +188,33 @@ const displayTools = computed(() => {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.3;
-  color: #333;
-}
-
-.dark .category-banner-title {
-  color: #f1f5f9;
+  color: var(--text);
 }
 
 .category-banner-count {
   font-size: 13px;
-  color: #888;
+  color: var(--muted);
   margin-top: 2px;
-}
-
-.dark .category-banner-count {
-  color: #94a3b8;
 }
 
 .category-banner-back {
   flex-shrink: 0;
   font-size: 13px;
-  font-weight: 500;
-  color: #36ad6a;
+  font-weight: 600;
+  color: var(--brand);
   text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 20px;
-  background: rgba(54, 173, 106, 0.08);
-  transition: background 0.2s;
+  padding: 7px 14px;
+  border-radius: var(--r-pill);
+  background: var(--brand-soft);
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease);
 }
 
 .category-banner-back:hover {
-  background: rgba(54, 173, 106, 0.15);
+  background: var(--brand-soft-2);
+  transform: translateX(-2px);
 }
 
-.dark .category-banner-back {
-  color: #63e2b7;
-  background: rgba(99, 226, 183, 0.12);
-}
-
-.dark .category-banner-back:hover {
-  background: rgba(99, 226, 183, 0.2);
-}
-
+/* ===== 工具网格 ===== */
 .tool-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
@@ -216,7 +223,7 @@ const displayTools = computed(() => {
 
 @media (min-width: 769px) {
   .tool-grid {
-    gap: 18px;
+    gap: 16px;
   }
 }
 
@@ -224,52 +231,42 @@ const displayTools = computed(() => {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 14px;
-  border-radius: 16px;
-  background: white;
+  padding: 15px 16px;
+  border-radius: var(--r-lg);
+  background: var(--surface);
   text-decoration: none;
-  color: inherit;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-  border: 1px solid transparent;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-xs);
+  cursor: pointer;
+  transition: transform 0.28s var(--ease-soft), box-shadow 0.28s var(--ease),
+    border-color 0.28s var(--ease);
 }
 
 .tool-card:hover {
-  border-color: currentColor;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  transform: translateY(-3px) scale(1.01);
-}
-
-.dark .tool-card {
-  background: #1e293b;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
-}
-
-.dark .tool-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border-color: var(--brand-soft-2);
+  box-shadow: var(--shadow-md), 0 0 0 1px var(--brand-soft);
+  transform: translateY(-3px);
 }
 
 .tool-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--r-md);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: transform 0.25s;
+  transition: transform 0.28s var(--ease-soft);
+}
+
+.tool-icon :deep(svg) {
+  width: 22px;
+  height: 22px;
 }
 
 .tool-card:hover .tool-icon {
-  transform: scale(1.08) rotate(-3deg);
-}
-
-.dark .tool-name {
-  color: #f1f5f9;
-}
-
-.dark .tool-desc {
-  color: #94a3b8;
+  transform: scale(1.06);
 }
 
 .tool-info {
@@ -280,12 +277,14 @@ const displayTools = computed(() => {
 .tool-name {
   font-weight: 600;
   font-size: 14px;
+  color: var(--text);
   margin-bottom: 4px;
+  letter-spacing: -0.005em;
 }
 
 .tool-desc {
   font-size: 12px;
-  color: #888;
+  color: var(--muted);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -295,6 +294,7 @@ const displayTools = computed(() => {
   flex-shrink: 0;
   max-width: 80px;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .tool-category :deep(.n-tag__content) {
@@ -304,7 +304,7 @@ const displayTools = computed(() => {
   max-width: 100%;
 }
 
-/* 移动端：单列卡片、更大触摸区域 */
+/* ===== 移动端 ===== */
 @media (max-width: 640px) {
   .category-banner {
     padding: 14px 16px;
@@ -314,7 +314,7 @@ const displayTools = computed(() => {
   .category-banner-icon {
     width: 44px;
     height: 44px;
-    border-radius: 12px;
+    border-radius: var(--r-sm);
   }
 
   .category-banner-icon :deep(svg) {
@@ -327,7 +327,7 @@ const displayTools = computed(() => {
   }
 
   .category-banner-back {
-    padding: 5px 10px;
+    padding: 6px 12px;
     font-size: 12px;
   }
 
@@ -337,7 +337,6 @@ const displayTools = computed(() => {
   }
 
   .tool-card {
-    padding: 14px;
     min-height: 64px;
   }
 
@@ -347,31 +346,23 @@ const displayTools = computed(() => {
 }
 
 @media (max-width: 480px) {
-  .home-header h1 {
-    font-size: 1.25rem;
+  .hero-title {
+    font-size: 22px;
   }
 
-  .home-header p {
-    font-size: 0.875rem;
+  .hero-sub {
+    font-size: 13px;
   }
 
   .tool-icon {
     width: 40px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: var(--r-sm);
   }
 
   .tool-card {
-    padding: 12px;
+    padding: 13px 14px;
     gap: 12px;
-  }
-
-  .tool-name {
-    font-size: 14px;
-  }
-
-  .tool-desc {
-    font-size: 12px;
   }
 }
 </style>
