@@ -1,0 +1,3066 @@
+{
+  "date": "2026-10-19T08:10:27.192Z",
+  "total": 180,
+  "results": [
+    {
+      "folder": "aes-encrypt",
+      "name": "AES 加密解密",
+      "route": "/aes-encrypt",
+      "category": "安全工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 4438,
+      "errors": []
+    },
+    {
+      "folder": "age-calculator",
+      "name": "年龄计算器",
+      "route": "/age-calculator",
+      "category": "生活计算",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 255,
+      "errors": []
+    },
+    {
+      "folder": "ai-code-assistant",
+      "name": "AI 代码助手",
+      "route": "/ai-code-assistant",
+      "category": "AI 工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 121,
+      "errors": []
+    },
+    {
+      "folder": "ai-config-generator",
+      "name": "AI 配置生成",
+      "route": "/ai-config-generator",
+      "category": "AI 辅助",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 271,
+      "errors": []
+    },
+    {
+      "folder": "ai-copywriter",
+      "name": "AI 文案生成",
+      "route": "/ai-copywriter",
+      "category": "AI 工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 220,
+      "errors": []
+    },
+    {
+      "folder": "ai-email",
+      "name": "AI 邮件助手",
+      "route": "/ai-email",
+      "category": "AI 工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 115,
+      "errors": []
+    },
+    {
+      "folder": "ai-image-generator",
+      "name": "AI 图片生成",
+      "route": "/ai-image-generator",
+      "category": "AI 工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 111,
+      "errors": []
+    },
+    {
+      "folder": "ai-naming",
+      "name": "AI 取名神器",
+      "route": "/ai-naming",
+      "category": "AI 工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 126,
+      "errors": []
+    },
+    {
+      "folder": "ai-qa",
+      "name": "AI 智能问答",
+      "route": "/ai-qa",
+      "category": "AI 工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 115,
+      "errors": []
+    },
+    {
+      "folder": "ai-report",
+      "name": "AI 周报生成",
+      "route": "/ai-report",
+      "category": "AI 工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 116,
+      "errors": []
+    },
+    {
+      "folder": "ai-sql",
+      "name": "AI SQL 生成",
+      "route": "/ai-sql",
+      "category": "AI 工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 118,
+      "errors": []
+    },
+    {
+      "folder": "ai-writer",
+      "name": "AI 写作助手",
+      "route": "/ai-writer",
+      "category": "AI 工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 128,
+      "errors": []
+    },
+    {
+      "folder": "api-key-generator",
+      "name": "API 密钥生成",
+      "route": "/api-key-generator",
+      "category": "API 测试",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 128,
+      "errors": []
+    },
+    {
+      "folder": "audio-converter",
+      "name": "音频格式转换",
+      "route": "/audio-converter",
+      "category": "音视频处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "audio-noise-reduction",
+      "name": "音频降噪",
+      "route": "/audio-noise-reduction",
+      "category": "音视频处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 115,
+      "errors": []
+    },
+    {
+      "folder": "audio-speed-changer",
+      "name": "音频变速",
+      "route": "/audio-speed-changer",
+      "category": "音视频处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 114,
+      "errors": []
+    },
+    {
+      "folder": "audio-trimmer",
+      "name": "音频剪辑",
+      "route": "/audio-trimmer",
+      "category": "音视频处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 243,
+      "errors": []
+    },
+    {
+      "folder": "audio-visualizer",
+      "name": "音频可视化",
+      "route": "/audio-visualizer",
+      "category": "音视频处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 129,
+      "errors": []
+    },
+    {
+      "folder": "base32-codec",
+      "name": "Base32 编解码",
+      "route": "/base32-codec",
+      "category": "安全工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 113,
+      "errors": []
+    },
+    {
+      "folder": "base64-codec",
+      "name": "Base64 编解码",
+      "route": "/base64-codec",
+      "category": "编码转换",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 126,
+      "errors": []
+    },
+    {
+      "folder": "bg-remover",
+      "name": "图片去背景",
+      "route": "/bg-remover",
+      "category": "图片工具",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 126,
+      "errors": []
+    },
+    {
+      "folder": "bmi-calculator",
+      "name": "BMI 计算器",
+      "route": "/bmi-calculator",
+      "category": "生活计算",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 117,
+      "errors": []
+    },
+    {
+      "folder": "case-converter",
+      "name": "大小写转换",
+      "route": "/case-converter",
+      "category": "文本处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 127,
+      "errors": []
+    },
+    {
+      "folder": "code-minifier",
+      "name": "代码压缩",
+      "route": "/code-minifier",
+      "category": "开发工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "collision-detector",
+      "name": "碰撞检测工具",
+      "route": "/collision-detector",
+      "category": "游戏开发",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 121,
+      "errors": []
+    },
+    {
+      "folder": "color-converter",
+      "name": "颜色转换",
+      "route": "/color-converter",
+      "category": "计算工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 116,
+      "errors": []
+    },
+    {
+      "folder": "color-picker",
+      "name": "颜色选择器",
+      "route": "/color-picker",
+      "category": "设计工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 111,
+      "errors": []
+    },
+    {
+      "folder": "color-picker-game",
+      "name": "颜色拾取工具",
+      "route": "/color-picker-game",
+      "category": "游戏开发",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "connection-string-parser",
+      "name": "连接串解析",
+      "route": "/connection-string-parser",
+      "category": "数据库工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 118,
+      "errors": []
+    },
+    {
+      "folder": "coord-converter",
+      "name": "坐标转换",
+      "route": "/coord-converter",
+      "category": "游戏开发",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 109,
+      "errors": []
+    },
+    {
+      "folder": "cron-expr-gen",
+      "name": "Cron 表达式生成器",
+      "route": "/cron-expr-gen",
+      "category": "运维工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 119,
+      "errors": []
+    },
+    {
+      "folder": "css-unit",
+      "name": "CSS 单位转换",
+      "route": "/css-unit",
+      "category": "开发工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 117,
+      "errors": []
+    },
+    {
+      "folder": "csv-chart-generator",
+      "name": "CSV 图表生成",
+      "route": "/csv-chart-generator",
+      "category": "数据可视化",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 115,
+      "errors": []
+    },
+    {
+      "folder": "csv-to-json",
+      "name": "CSV 转 JSON",
+      "route": "/csv-to-json",
+      "category": "文档处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 119,
+      "errors": []
+    },
+    {
+      "folder": "data-processor",
+      "name": "表格数据处理",
+      "route": "/data-processor",
+      "category": "办公工具",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 114,
+      "errors": []
+    },
+    {
+      "folder": "data-table-renderer",
+      "name": "数据表格渲染",
+      "route": "/data-table-renderer",
+      "category": "数据可视化",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 119,
+      "errors": []
+    },
+    {
+      "folder": "date-diff",
+      "name": "日期差计算",
+      "route": "/date-diff",
+      "category": "生活计算",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 116,
+      "errors": []
+    },
+    {
+      "folder": "disk-calculator",
+      "name": "磁盘容量计算",
+      "route": "/disk-calculator",
+      "category": "运维工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 110,
+      "errors": []
+    },
+    {
+      "folder": "dns-query",
+      "name": "DNS 查询",
+      "route": "/dns-query",
+      "category": "网络工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 114,
+      "errors": []
+    },
+    {
+      "folder": "doc-word-count",
+      "name": "文档字数统计",
+      "route": "/doc-word-count",
+      "category": "文档处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 127,
+      "errors": []
+    },
+    {
+      "folder": "docker-compose-gen",
+      "name": "Docker Compose 生成",
+      "route": "/docker-compose-gen",
+      "category": "运维工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 110,
+      "errors": []
+    },
+    {
+      "folder": "english-grammar",
+      "name": "英语语法",
+      "route": "/english-grammar",
+      "category": "教育学习",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 125,
+      "errors": []
+    },
+    {
+      "folder": "er-diagram-gen",
+      "name": "ER 图生成",
+      "route": "/er-diagram-gen",
+      "category": "数据库工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": true
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 121,
+      "errors": []
+    },
+    {
+      "folder": "excel-to-csv",
+      "name": "Excel 转 CSV",
+      "route": "/excel-to-csv",
+      "category": "文档处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 111,
+      "errors": []
+    },
+    {
+      "folder": "favicon-generator",
+      "name": "Favicon 生成",
+      "route": "/favicon-generator",
+      "category": "设计工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "flashcard",
+      "name": "记忆卡片",
+      "route": "/flashcard",
+      "category": "教育学习",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 114,
+      "errors": []
+    },
+    {
+      "folder": "flowchart-generator",
+      "name": "流程图生成",
+      "route": "/flowchart-generator",
+      "category": "数据可视化",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": true
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 111,
+      "errors": []
+    },
+    {
+      "folder": "formula-reference",
+      "name": "公式速查",
+      "route": "/formula-reference",
+      "category": "教育学习",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 115,
+      "errors": []
+    },
+    {
+      "folder": "game-color-picker",
+      "name": "游戏颜色拾取",
+      "route": "/game-color-picker",
+      "category": "游戏开发",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 117,
+      "errors": []
+    },
+    {
+      "folder": "game-config-gen",
+      "name": "游戏配置生成",
+      "route": "/game-config-gen",
+      "category": "游戏开发",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 109,
+      "errors": []
+    },
+    {
+      "folder": "game-random-gen",
+      "name": "游戏随机数",
+      "route": "/game-random-gen",
+      "category": "游戏开发",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 121,
+      "errors": []
+    },
+    {
+      "folder": "gradient-generator",
+      "name": "渐变生成器",
+      "route": "/gradient-generator",
+      "category": "设计工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 121,
+      "errors": []
+    },
+    {
+      "folder": "grammar-checker",
+      "name": "语法检查",
+      "route": "/grammar-checker",
+      "category": "AI 辅助",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 114,
+      "errors": []
+    },
+    {
+      "folder": "grammar-reference",
+      "name": "英语语法",
+      "route": "/grammar-reference",
+      "category": "教育学习",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 120,
+      "errors": []
+    },
+    {
+      "folder": "graphql-tester",
+      "name": "GraphQL 查询测试",
+      "route": "/graphql-tester",
+      "category": "API 测试",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 128,
+      "errors": []
+    },
+    {
+      "folder": "grpc-reflector",
+      "name": "gRPC 服务查询",
+      "route": "/grpc-reflector",
+      "category": "API 测试",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 118,
+      "errors": []
+    },
+    {
+      "folder": "hash-calculator",
+      "name": "Hash 计算",
+      "route": "/hash-calculator",
+      "category": "计算工具",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 126,
+      "errors": []
+    },
+    {
+      "folder": "heatmap-maker",
+      "name": "热力图",
+      "route": "/heatmap-maker",
+      "category": "数据可视化",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 113,
+      "errors": []
+    },
+    {
+      "folder": "history-timeline",
+      "name": "历史年表",
+      "route": "/history-timeline",
+      "category": "教育学习",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 111,
+      "errors": []
+    },
+    {
+      "folder": "hmac-signer",
+      "name": "HMAC 签名",
+      "route": "/hmac-signer",
+      "category": "API 测试",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 121,
+      "errors": []
+    },
+    {
+      "folder": "html-entity-codec",
+      "name": "HTML 实体编解码",
+      "route": "/html-entity-codec",
+      "category": "编码转换",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 115,
+      "errors": []
+    },
+    {
+      "folder": "http-request",
+      "name": "HTTP 请求测试",
+      "route": "/http-request",
+      "category": "网络工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 111,
+      "errors": []
+    },
+    {
+      "folder": "http-status",
+      "name": "HTTP 状态码查询",
+      "route": "/http-status",
+      "category": "网络工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 113,
+      "errors": []
+    },
+    {
+      "folder": "id-photo",
+      "name": "证件照换底色",
+      "route": "/id-photo",
+      "category": "图片工具",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 112,
+      "errors": []
+    },
+    {
+      "folder": "idiom-dictionary",
+      "name": "成语词典",
+      "route": "/idiom-dictionary",
+      "category": "教育学习",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 110,
+      "errors": []
+    },
+    {
+      "folder": "image-compress",
+      "name": "图片压缩",
+      "route": "/image-compress",
+      "category": "图片工具",
+      "flags": {
+        "network": true,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "image-crop",
+      "name": "图片裁剪",
+      "route": "/image-crop",
+      "category": "图片工具",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 121,
+      "errors": []
+    },
+    {
+      "folder": "image-format",
+      "name": "图片格式转换",
+      "route": "/image-format",
+      "category": "图片工具",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 112,
+      "errors": []
+    },
+    {
+      "folder": "image-merge",
+      "name": "图片拼接",
+      "route": "/image-merge",
+      "category": "图片工具",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 110,
+      "errors": []
+    },
+    {
+      "folder": "image-table-recognizer",
+      "name": "图片表格识别",
+      "route": "/image-table-recognizer",
+      "category": "文本处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "image-to-base64",
+      "name": "图片转 Base64",
+      "route": "/image-to-base64",
+      "category": "图片工具",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 119,
+      "errors": []
+    },
+    {
+      "folder": "image-watermark",
+      "name": "图片水印",
+      "route": "/image-watermark",
+      "category": "图片工具",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 112,
+      "errors": []
+    },
+    {
+      "folder": "index-optimizer",
+      "name": "索引优化建议",
+      "route": "/index-optimizer",
+      "category": "数据库工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 112,
+      "errors": []
+    },
+    {
+      "folder": "ip-query",
+      "name": "IP 地址查询",
+      "route": "/ip-query",
+      "category": "网络工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 127,
+      "errors": []
+    },
+    {
+      "folder": "json-formatter",
+      "name": "JSON 格式化",
+      "route": "/json-formatter",
+      "category": "编码转换",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 112,
+      "errors": []
+    },
+    {
+      "folder": "json-table-editor",
+      "name": "JSON 表格编辑器",
+      "route": "/json-table-editor",
+      "category": "开发工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "json-to-ts",
+      "name": "JSON 转 TS 类型",
+      "route": "/json-to-ts",
+      "category": "开发工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 113,
+      "errors": []
+    },
+    {
+      "folder": "json-tree-viewer",
+      "name": "JSON 树视图",
+      "route": "/json-tree-viewer",
+      "category": "数据可视化",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 110,
+      "errors": []
+    },
+    {
+      "folder": "jwt-debugger",
+      "name": "JWT 调试",
+      "route": "/jwt-debugger",
+      "category": "API 测试",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 115,
+      "errors": []
+    },
+    {
+      "folder": "jwt-decoder",
+      "name": "JWT 解析",
+      "route": "/jwt-decoder",
+      "category": "开发工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 118,
+      "errors": []
+    },
+    {
+      "folder": "keyword-density",
+      "name": "关键词密度分析",
+      "route": "/keyword-density",
+      "category": "SEO 工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 112,
+      "errors": []
+    },
+    {
+      "folder": "keyword-extractor",
+      "name": "关键词提取",
+      "route": "/keyword-extractor",
+      "category": "AI 辅助",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 108,
+      "errors": []
+    },
+    {
+      "folder": "keyword-miner",
+      "name": "关键词挖掘",
+      "route": "/keyword-miner",
+      "category": "站长工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 116,
+      "errors": []
+    },
+    {
+      "folder": "loan-calculator",
+      "name": "贷款计算器",
+      "route": "/loan-calculator",
+      "category": "生活计算",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 120,
+      "errors": []
+    },
+    {
+      "folder": "log-analyzer",
+      "name": "日志分析",
+      "route": "/log-analyzer",
+      "category": "运维工具",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "lorem-ipsum",
+      "name": "Lorem Ipsum 生成器",
+      "route": "/lorem-ipsum",
+      "category": "生成器",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": true
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 114,
+      "errors": []
+    },
+    {
+      "folder": "map-generator",
+      "name": "地图生成",
+      "route": "/map-generator",
+      "category": "游戏开发",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "markdown-polisher",
+      "name": "Markdown 润色",
+      "route": "/markdown-polisher",
+      "category": "AI 辅助",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": true
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 119,
+      "errors": []
+    },
+    {
+      "folder": "markdown-preview",
+      "name": "Markdown 预览",
+      "route": "/markdown-preview",
+      "category": "文本处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": true
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 126,
+      "errors": []
+    },
+    {
+      "folder": "markdown-to-pdf",
+      "name": "Markdown 转 PDF",
+      "route": "/markdown-to-pdf",
+      "category": "文档处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": true
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 111,
+      "errors": []
+    },
+    {
+      "folder": "markdown-to-word",
+      "name": "Markdown 转 Word",
+      "route": "/markdown-to-word",
+      "category": "文档处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": true
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 128,
+      "errors": []
+    },
+    {
+      "folder": "math-practice",
+      "name": "数学练习",
+      "route": "/math-practice",
+      "category": "教育学习",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "memory-unit-converter",
+      "name": "内存单位转换",
+      "route": "/memory-unit-converter",
+      "category": "运维工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 111,
+      "errors": []
+    },
+    {
+      "folder": "meta-tag-generator",
+      "name": "Meta 标签生成",
+      "route": "/meta-tag-generator",
+      "category": "SEO 工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 117,
+      "errors": []
+    },
+    {
+      "folder": "mind-map-maker",
+      "name": "思维导图",
+      "route": "/mind-map-maker",
+      "category": "数据可视化",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": true
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "mock-server",
+      "name": "Mock 服务器",
+      "route": "/mock-server",
+      "category": "API 测试",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 122,
+      "errors": []
+    },
+    {
+      "folder": "money-cn",
+      "name": "金额大写转换",
+      "route": "/money-cn",
+      "category": "文本处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 122,
+      "errors": []
+    },
+    {
+      "folder": "mongo-query-builder",
+      "name": "MongoDB 查询构建",
+      "route": "/mongo-query-builder",
+      "category": "数据库工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 116,
+      "errors": []
+    },
+    {
+      "folder": "morse-code",
+      "name": "摩斯密码",
+      "route": "/morse-code",
+      "category": "文本处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 117,
+      "errors": []
+    },
+    {
+      "folder": "network-speed",
+      "name": "网络延迟测试",
+      "route": "/network-speed",
+      "category": "网络工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 217,
+      "errors": []
+    },
+    {
+      "folder": "nginx-config-gen",
+      "name": "Nginx 配置生成",
+      "route": "/nginx-config-gen",
+      "category": "运维工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 118,
+      "errors": []
+    },
+    {
+      "folder": "noise-generator",
+      "name": "噪声生成",
+      "route": "/noise-generator",
+      "category": "游戏开发",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "number-base-converter",
+      "name": "进制转换",
+      "route": "/number-base-converter",
+      "category": "计算工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 126,
+      "errors": []
+    },
+    {
+      "folder": "openapi-validator",
+      "name": "OpenAPI 校验",
+      "route": "/openapi-validator",
+      "category": "API 测试",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "palette-generator",
+      "name": "调色板生成器",
+      "route": "/palette-generator",
+      "category": "设计工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "password-generator",
+      "name": "密码生成器",
+      "route": "/password-generator",
+      "category": "生成器",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "password-strength",
+      "name": "密码强度检测",
+      "route": "/password-strength",
+      "category": "安全工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 120,
+      "errors": []
+    },
+    {
+      "folder": "pdf-converter",
+      "name": "PDF 转换器",
+      "route": "/pdf-converter",
+      "category": "文档工具",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 110,
+      "errors": []
+    },
+    {
+      "folder": "pdf-toolbox",
+      "name": "PDF 工具箱",
+      "route": "/pdf-toolbox",
+      "category": "文档处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 109,
+      "errors": []
+    },
+    {
+      "folder": "percentage-calculator",
+      "name": "百分比计算器",
+      "route": "/percentage-calculator",
+      "category": "计算工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 122,
+      "errors": []
+    },
+    {
+      "folder": "periodic-table",
+      "name": "元素周期表",
+      "route": "/periodic-table",
+      "category": "教育学习",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 117,
+      "errors": []
+    },
+    {
+      "folder": "pinyin-converter",
+      "name": "拼音转换",
+      "route": "/pinyin-converter",
+      "category": "教育学习",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "pixel-art-editor",
+      "name": "像素艺术编辑",
+      "route": "/pixel-art-editor",
+      "category": "游戏开发",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "pixel-art-tool",
+      "name": "像素艺术",
+      "route": "/pixel-art-tool",
+      "category": "游戏开发",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 108,
+      "errors": []
+    },
+    {
+      "folder": "poetry-collection",
+      "name": "古诗词",
+      "route": "/poetry-collection",
+      "category": "教育学习",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 126,
+      "errors": []
+    },
+    {
+      "folder": "port-lookup",
+      "name": "端口查询",
+      "route": "/port-lookup",
+      "category": "网络工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "port-scanner",
+      "name": "端口扫描",
+      "route": "/port-scanner",
+      "category": "运维工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "process-lookup",
+      "name": "进程查询",
+      "route": "/process-lookup",
+      "category": "运维工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "prompt-templates",
+      "name": "提示词模板",
+      "route": "/prompt-templates",
+      "category": "AI 辅助",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": true
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "qrcode-beautifier",
+      "name": "二维码美化",
+      "route": "/qrcode-beautifier",
+      "category": "图片工具",
+      "flags": {
+        "network": true,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "qrcode-generator",
+      "name": "二维码生成器",
+      "route": "/qrcode-generator",
+      "category": "图片工具",
+      "flags": {
+        "network": true,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 122,
+      "errors": []
+    },
+    {
+      "folder": "qrcode-reader",
+      "name": "二维码识别",
+      "route": "/qrcode-reader",
+      "category": "图片工具",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 125,
+      "errors": []
+    },
+    {
+      "folder": "random-generator",
+      "name": "随机数生成",
+      "route": "/random-generator",
+      "category": "游戏开发",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 119,
+      "errors": []
+    },
+    {
+      "folder": "redis-command-ref",
+      "name": "Redis 命令查询",
+      "route": "/redis-command-ref",
+      "category": "数据库工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "regex-tester",
+      "name": "正则测试器",
+      "route": "/regex-tester",
+      "category": "文本处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 109,
+      "errors": []
+    },
+    {
+      "folder": "relation-graph-maker",
+      "name": "关系图",
+      "route": "/relation-graph-maker",
+      "category": "数据可视化",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": true
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "robots-generator",
+      "name": "Robots.txt 生成",
+      "route": "/robots-generator",
+      "category": "SEO 工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 120,
+      "errors": []
+    },
+    {
+      "folder": "rsa-encrypt",
+      "name": "RSA 加密解密",
+      "route": "/rsa-encrypt",
+      "category": "安全工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 107,
+      "errors": []
+    },
+    {
+      "folder": "scientific-calculator",
+      "name": "科学计算器",
+      "route": "/scientific-calculator",
+      "category": "计算工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 117,
+      "errors": []
+    },
+    {
+      "folder": "sentiment-analyzer",
+      "name": "情感分析",
+      "route": "/sentiment-analyzer",
+      "category": "AI 辅助",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 115,
+      "errors": []
+    },
+    {
+      "folder": "shadow-generator",
+      "name": "阴影生成器",
+      "route": "/shadow-generator",
+      "category": "设计工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 117,
+      "errors": []
+    },
+    {
+      "folder": "site-stats",
+      "name": "访问统计",
+      "route": "/site-stats",
+      "category": "站长工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "sitemap-generator",
+      "name": "Sitemap 生成",
+      "route": "/sitemap-generator",
+      "category": "SEO 工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 109,
+      "errors": []
+    },
+    {
+      "folder": "solar-term-query",
+      "name": "节气查询",
+      "route": "/solar-term-query",
+      "category": "日期时间",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 118,
+      "errors": []
+    },
+    {
+      "folder": "sprite-slicer",
+      "name": "精灵图切片工具",
+      "route": "/sprite-slicer",
+      "category": "游戏开发",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 116,
+      "errors": []
+    },
+    {
+      "folder": "sql-formatter",
+      "name": "SQL 格式化",
+      "route": "/sql-formatter",
+      "category": "开发工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 116,
+      "errors": []
+    },
+    {
+      "folder": "sql-formatter-db",
+      "name": "SQL 格式化",
+      "route": "/sql-formatter-db",
+      "category": "数据库工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "sql-injection-check",
+      "name": "SQL 注入检测",
+      "route": "/sql-injection-check",
+      "category": "数据库工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 110,
+      "errors": []
+    },
+    {
+      "folder": "sql-to-entity",
+      "name": "SQL 转实体",
+      "route": "/sql-to-entity",
+      "category": "数据库工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 125,
+      "errors": []
+    },
+    {
+      "folder": "sql-to-mongo",
+      "name": "SQL 转 MongoDB",
+      "route": "/sql-to-mongo",
+      "category": "数据库工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 108,
+      "errors": []
+    },
+    {
+      "folder": "sse-tester",
+      "name": "SSE 测试",
+      "route": "/sse-tester",
+      "category": "API 测试",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 125,
+      "errors": []
+    },
+    {
+      "folder": "ssh-keygen",
+      "name": "SSH 密钥生成",
+      "route": "/ssh-keygen",
+      "category": "运维工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "ssl-cert-parser",
+      "name": "SSL 证书解析",
+      "route": "/ssl-cert-parser",
+      "category": "运维工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "stats-chart-maker",
+      "name": "统计图表",
+      "route": "/stats-chart-maker",
+      "category": "数据可视化",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 118,
+      "errors": []
+    },
+    {
+      "folder": "subnet-calculator",
+      "name": "IP 子网计算器",
+      "route": "/subnet-calculator",
+      "category": "网络工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "table-schema-gen",
+      "name": "表结构生成",
+      "route": "/table-schema-gen",
+      "category": "数据库工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "tax-calculator",
+      "name": "个税计算器",
+      "route": "/tax-calculator",
+      "category": "生活计算",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 122,
+      "errors": []
+    },
+    {
+      "folder": "text-classifier",
+      "name": "文本分类",
+      "route": "/text-classifier",
+      "category": "AI 辅助",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "text-dedup-sort",
+      "name": "文本去重排序",
+      "route": "/text-dedup-sort",
+      "category": "文本处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 121,
+      "errors": []
+    },
+    {
+      "folder": "text-diff",
+      "name": "文本对比",
+      "route": "/text-diff",
+      "category": "文本处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": true
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 126,
+      "errors": []
+    },
+    {
+      "folder": "text-summarizer",
+      "name": "文本摘要",
+      "route": "/text-summarizer",
+      "category": "AI 辅助",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "text-to-speech",
+      "name": "文本转语音",
+      "route": "/text-to-speech",
+      "category": "文本处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 113,
+      "errors": []
+    },
+    {
+      "folder": "timeline-generator",
+      "name": "时间轴生成",
+      "route": "/timeline-generator",
+      "category": "数据可视化",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 117,
+      "errors": []
+    },
+    {
+      "folder": "timestamp-converter",
+      "name": "时间戳转换",
+      "route": "/timestamp-converter",
+      "category": "日期时间",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "timezone-converter",
+      "name": "时区转换",
+      "route": "/timezone-converter",
+      "category": "日期时间",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "token-counter",
+      "name": "Token 计数器",
+      "route": "/token-counter",
+      "category": "AI 辅助",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 110,
+      "errors": []
+    },
+    {
+      "folder": "traditional-simplified",
+      "name": "繁简转换",
+      "route": "/traditional-simplified",
+      "category": "文本处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 108,
+      "errors": []
+    },
+    {
+      "folder": "translation-compare",
+      "name": "翻译对比",
+      "route": "/translation-compare",
+      "category": "AI 辅助",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "translator",
+      "name": "中英文翻译",
+      "route": "/translator",
+      "category": "AI 工具",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 114,
+      "errors": []
+    },
+    {
+      "folder": "tree-diagram-drawer",
+      "name": "树状图绘制",
+      "route": "/tree-diagram-drawer",
+      "category": "数据可视化",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "tts-audio-synth",
+      "name": "TTS 音频合成",
+      "route": "/tts-audio-synth",
+      "category": "音视频处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 123,
+      "errors": []
+    },
+    {
+      "folder": "txt-to-epub",
+      "name": "TXT 转 EPUB",
+      "route": "/txt-to-epub",
+      "category": "文档处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 126,
+      "errors": []
+    },
+    {
+      "folder": "ua-parser",
+      "name": "UserAgent 解析",
+      "route": "/ua-parser",
+      "category": "网络工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 125,
+      "errors": []
+    },
+    {
+      "folder": "unicode-converter",
+      "name": "Unicode 转换",
+      "route": "/unicode-converter",
+      "category": "编码转换",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 122,
+      "errors": []
+    },
+    {
+      "folder": "unit-converter",
+      "name": "单位换算",
+      "route": "/unit-converter",
+      "category": "生活计算",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 113,
+      "errors": []
+    },
+    {
+      "folder": "unit-converter-edu",
+      "name": "单位换算",
+      "route": "/unit-converter-edu",
+      "category": "教育学习",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 117,
+      "errors": []
+    },
+    {
+      "folder": "url-codec",
+      "name": "URL 编解码",
+      "route": "/url-codec",
+      "category": "编码转换",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 115,
+      "errors": []
+    },
+    {
+      "folder": "uuid-generator",
+      "name": "UUID 生成器",
+      "route": "/uuid-generator",
+      "category": "生成器",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 111,
+      "errors": []
+    },
+    {
+      "folder": "vector-calculator",
+      "name": "向量计算工具",
+      "route": "/vector-calculator",
+      "category": "游戏开发",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 122,
+      "errors": []
+    },
+    {
+      "folder": "video-info-extract",
+      "name": "视频信息提取",
+      "route": "/video-info-extract",
+      "category": "音视频处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 118,
+      "errors": []
+    },
+    {
+      "folder": "video-screenshot",
+      "name": "视频截图",
+      "route": "/video-screenshot",
+      "category": "音视频处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 110,
+      "errors": []
+    },
+    {
+      "folder": "video-to-gif",
+      "name": "视频转 GIF",
+      "route": "/video-to-gif",
+      "category": "音视频处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 109,
+      "errors": []
+    },
+    {
+      "folder": "watermark-remover",
+      "name": "图片去水印",
+      "route": "/watermark-remover",
+      "category": "图片工具",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 125,
+      "errors": []
+    },
+    {
+      "folder": "waveform-generator",
+      "name": "波形图生成",
+      "route": "/waveform-generator",
+      "category": "音视频处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 124,
+      "errors": []
+    },
+    {
+      "folder": "webhook-tester",
+      "name": "Webhook 测试",
+      "route": "/webhook-tester",
+      "category": "API 测试",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 114,
+      "errors": []
+    },
+    {
+      "folder": "websocket-tester",
+      "name": "WebSocket 测试",
+      "route": "/websocket-tester",
+      "category": "API 测试",
+      "flags": {
+        "network": true,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 116,
+      "errors": []
+    },
+    {
+      "folder": "word-counter",
+      "name": "字数统计",
+      "route": "/word-counter",
+      "category": "文本处理",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 119,
+      "errors": []
+    },
+    {
+      "folder": "word-to-markdown",
+      "name": "Word 转 Markdown",
+      "route": "/word-to-markdown",
+      "category": "文档处理",
+      "flags": {
+        "network": false,
+        "fileUpload": true,
+        "dynamicHtml": true
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 108,
+      "errors": []
+    },
+    {
+      "folder": "xml-formatter",
+      "name": "XML 格式化",
+      "route": "/xml-formatter",
+      "category": "开发工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 122,
+      "errors": []
+    },
+    {
+      "folder": "yaml-json",
+      "name": "YAML ↔ JSON 转换",
+      "route": "/yaml-json",
+      "category": "开发工具",
+      "flags": {
+        "network": false,
+        "fileUpload": false,
+        "dynamicHtml": false
+      },
+      "duplicatePath": false,
+      "shadowed": false,
+      "routeLoaded": true,
+      "loaded": true,
+      "ms": 119,
+      "errors": []
+    }
+  ]
+}

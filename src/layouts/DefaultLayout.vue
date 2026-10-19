@@ -21,13 +21,14 @@
           <span class="font-bold text-lg logo-text">{{ t('nav.logo_text') }}</span>
         </router-link>
       </div>
-      <div class="header-center">
+      <div class="header-center" @focusin="searchOpen = true" @focusout="onSearchFocusOut">
         <n-input
           v-model:value="searchQuery"
           :placeholder="t('nav.search_placeholder')"
           clearable
           round
           class="search-input"
+          @update:value="onSearchInput"
           @keydown="onSearchKeydown"
           @clear="onSearch('')"
         >
@@ -38,6 +39,18 @@
             <kbd v-if="!searchQuery" class="search-kbd">/</kbd>
           </template>
         </n-input>
+        <nav v-if="searchOpen && searchSuggestions.length" class="search-suggestions" aria-label="工具搜索建议">
+          <router-link
+            v-for="tool in searchSuggestions"
+            :key="tool.path"
+            :to="tool.path"
+            class="search-suggestion"
+            @click="searchOpen = false"
+          >
+            <span>{{ tool.name }}</span>
+            <span class="suggestion-category">{{ translateCategory(tool.category) }}</span>
+          </router-link>
+        </nav>
       </div>
       <div class="header-right">
         <n-select
@@ -88,7 +101,7 @@ import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { NInput, NButton, NMenu, NDrawer, NDrawerContent, NSelect } from 'naive-ui'
-import { categories, tools } from '@/tools/registry'
+import { categories, getLocalizedTools, tools } from '@/tools/registry'
 import { useDark } from '@/composables/useDark'
 import { categoryIcons, renderCategoryIcon } from '@/composables/useCategoryStyle'
 import { SUPPORT_LOCALES, setLocale, type SupportedLocale } from '@/i18n'
@@ -98,6 +111,7 @@ const router = useRouter()
 const { t, locale } = useI18n()
 const { isDark, toggle: toggleDark } = useDark()
 const searchQuery = ref('')
+const searchOpen = ref(false)
 const showSidebar = ref(false)
 const selectedCategory = ref('__all__')
 
@@ -115,6 +129,16 @@ const localeOptions = computed(() =>
 const currentLocale = computed<SupportedLocale>({
   get: () => locale.value as SupportedLocale,
   set: (value: SupportedLocale) => setLocale(value),
+})
+
+const searchSuggestions = computed(() => {
+  const query = searchQuery.value.trim().toLowerCase()
+  if (!query) return []
+  return getLocalizedTools(currentLocale.value)
+    .filter(tool => tool.name.toLowerCase().includes(query)
+      || tool.description.toLowerCase().includes(query)
+      || tool.keywords.some(keyword => keyword.toLowerCase().includes(query)))
+    .slice(0, 5)
 })
 
 function onLocaleChange(value: SupportedLocale) {
@@ -159,7 +183,23 @@ function onCategoryChange(key: string) {
 function onSearchKeydown(e: KeyboardEvent) {
   if (e.key === 'Enter') {
     onSearch(searchQuery.value)
+    searchOpen.value = false
+  } else if (e.key === 'ArrowDown' && searchSuggestions.value.length) {
+    e.preventDefault()
+    document.querySelector<HTMLElement>('.search-suggestions a')?.focus()
+  } else if (e.key === 'Escape') {
+    searchOpen.value = false
   }
+}
+
+function onSearchInput(value: string) {
+  searchOpen.value = true
+  if (route.path === '/') onSearch(value)
+}
+
+function onSearchFocusOut(e: FocusEvent) {
+  const container = e.currentTarget as HTMLElement
+  if (!container.contains(e.relatedTarget as Node | null)) searchOpen.value = false
 }
 
 function onSearch(value: string) {
@@ -249,6 +289,46 @@ onUnmounted(() => {
   flex: 1;
   max-width: 520px;
   margin: 0 auto;
+  position: relative;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 20;
+  max-height: 280px;
+  overflow-y: auto;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: var(--surface);
+  box-shadow: var(--shadow-md);
+}
+
+.search-suggestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 10px;
+  border-radius: var(--r-sm);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.search-suggestion:hover,
+.search-suggestion:focus-visible {
+  background: var(--brand-soft);
+  outline: none;
+}
+
+.suggestion-category {
+  color: var(--muted);
+  font-size: 11px;
+  white-space: nowrap;
 }
 
 :deep(.search-input .n-input__input-el) {

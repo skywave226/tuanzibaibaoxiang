@@ -914,7 +914,7 @@
   },
   {
     "name": "SQL 格式化",
-    "path": "/sql-formatter",
+    "path": "/sql-formatter-db",
     "description": "SQL 语句格式化与美化，支持多种方言",
     "category": "数据库工具",
     "keywords": [

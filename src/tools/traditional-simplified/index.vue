@@ -19,9 +19,13 @@ let t2sConverter: ((text: string) => string) | null = null
 let s2tConverter: ((text: string) => string) | null = null
 
 onMounted(async () => {
-  const OpenCC = await import('opencc-js')
-  t2sConverter = OpenCC.Converter('t2s' as any)
-  s2tConverter = OpenCC.Converter('s2t' as any)
+  try {
+    const OpenCC = await import('opencc-js')
+    t2sConverter = OpenCC.Converter({ from: 'tw', to: 'cn' })
+    s2tConverter = OpenCC.Converter({ from: 'cn', to: 'tw' })
+  } catch (error) {
+    output.value = '转换器加载失败：' + (error instanceof Error ? error.message : String(error))
+  }
 })
 
 const toSimplified = () => {

@@ -18,7 +18,7 @@
             <n-space align="center">
               <n-checkbox v-model:checked="includeHeaders">自定义请求头</n-checkbox>
               <n-checkbox v-model:checked="includeBody" v-if="hasBody">请求体</n-checkbox>
-              <n-checkbox v-model:checked="noCors">no-cors 模式（绕过预检，但读取受限）</n-checkbox>
+              <n-checkbox v-model:checked="noCors">no-cors 模式（请求类型受限，无法读取响应）</n-checkbox>
             </n-space>
           </div>
 
@@ -43,8 +43,11 @@
           </div>
 
           <div class="curl-actions mt-3">
-            <n-button size="small" @click="exportCurl">复制 cURL 命令</n-button>
+            <n-button size="small" @click="exportCurl">复制 cURL 命令（Bash）</n-button>
             <n-button size="small" @click="showCurlImport = true">从 cURL 导入</n-button>
+          </div>
+          <div v-if="noCors" class="text-sm text-gray-500 mt-2">
+            cURL 不受浏览器跨域限制，导出命令不会包含 no-cors 选项。
           </div>
         </div>
 
@@ -435,25 +438,28 @@ async function send() {
 // cURL 导出
 function exportCurl() {
   const parts: string[] = ['curl']
-  if (noCors.value) parts.push('--no-cors')
   parts.push('-X', method.value)
 
   if (includeHeaders.value) {
     headers.value.forEach(h => {
       if (h.key.trim()) {
-        parts.push('-H', `'${h.key.trim()}: ${applyEnvVars(h.value)}'`)
+        parts.push('-H', shellQuote(`${h.key.trim()}: ${applyEnvVars(h.value)}`))
       }
     })
   }
 
   if (includeBody.value && hasBody.value && body.value.trim()) {
-    parts.push('-H', "'Content-Type: application/json'")
-    parts.push('-d', `'${applyEnvVars(body.value)}'`)
+    parts.push('-H', shellQuote('Content-Type: application/json'))
+    parts.push('-d', shellQuote(applyEnvVars(body.value)))
   }
 
-  parts.push(`'${applyEnvVars(url.value.trim())}'`)
+  parts.push(shellQuote(applyEnvVars(url.value.trim())))
   const cmd = parts.join(' ')
   copyText(cmd)
+}
+
+function shellQuote(value: string): string {
+  return `'${value.replace(/'/g, "'\\''")}'`
 }
 
 // cURL 导入
@@ -472,7 +478,7 @@ function importCurl() {
     includeHeaders.value = parsed.headers.length > 0
     body.value = parsed.body
     includeBody.value = !!parsed.body
-    noCors.value = parsed.noCors
+    noCors.value = false
     showCurlImport.value = false
     curlImportText.value = ''
     activeTab.value = 'request'
@@ -486,7 +492,6 @@ function parseCurl(cmd: string) {
   let url = ''
   let body = ''
   const headers: HeaderItem[] = []
-  let noCors = false
 
   const tokens = tokenizeCurl(cmd)
   let i = 0
@@ -502,8 +507,6 @@ function parseCurl(cmd: string) {
       }
     } else if (t === '-d' || t === '--data' || t === '--data-raw' || t === '--data-binary') {
       body = tokens[++i] || ''
-    } else if (t === '--no-cors') {
-      noCors = true
     } else if (t === '--url') {
       url = tokens[++i] || ''
     } else if (t.startsWith('http://') || t.startsWith('https://')) {
@@ -513,41 +516,40 @@ function parseCurl(cmd: string) {
   }
 
   if (!url) throw new Error('未能解析出 URL')
-  return { method, url, headers, body, noCors }
+  return { method, url, headers, body }
 }
 
 function tokenizeCurl(cmd: string): string[] {
   const tokens: string[] = []
   let current = ''
-  let inQuote = false
   let quoteChar = ''
+  let hasToken = false
   for (let i = 0; i < cmd.length; i++) {
     const ch = cmd[i]
-    if (inQuote) {
-      if (ch === quoteChar && cmd[i - 1] !== '\\') {
-        inQuote = false
-        tokens.push(current)
-        current = ''
-      } else {
-        current += ch
-      }
+    if (quoteChar === "'") {
+      if (ch === "'") quoteChar = ''
+      else current += ch
+    } else if (quoteChar === '"') {
+      if (ch === '"') quoteChar = ''
+      else if (ch === '\\' && i + 1 < cmd.length) current += cmd[++i]
+      else current += ch
     } else if (ch === '"' || ch === "'") {
-      inQuote = true
       quoteChar = ch
-      if (current.trim()) {
-        tokens.push(current.trim())
-        current = ''
-      }
-    } else if (ch === ' ' || ch === '\n') {
-      if (current.trim()) {
-        tokens.push(current.trim())
-        current = ''
-      }
+      hasToken = true
+    } else if (ch === '\\' && i + 1 < cmd.length) {
+      current += cmd[++i]
+      hasToken = true
+    } else if (/\s/.test(ch)) {
+      if (hasToken) tokens.push(current)
+      current = ''
+      hasToken = false
     } else {
       current += ch
+      hasToken = true
     }
   }
-  if (current.trim()) tokens.push(current.trim())
+  if (quoteChar) throw new Error('cURL 命令的引号未闭合')
+  if (hasToken) tokens.push(current)
   return tokens
 }
 </script>

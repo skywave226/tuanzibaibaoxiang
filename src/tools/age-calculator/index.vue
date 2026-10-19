@@ -24,14 +24,20 @@ const age = computed(() => {
   if (!birthDate.value) return null
   const birth = new Date(birthDate.value)
   const now = new Date()
-  const years = now.getFullYear() - birth.getFullYear()
-  const months = now.getMonth() - birth.getMonth()
-  const totalDays = Math.floor((now.getTime() - birth.getTime()) / (1000 * 60 * 60 * 24))
-  const totalMonths = years * 12 + months
-  const totalHours = totalDays * 24
-  const nextBirthday = new Date(now.getFullYear(), birth.getMonth(), birth.getDate())
-  if (nextBirthday < now) nextBirthday.setFullYear(now.getFullYear() + 1)
-  const daysToNextBirthday = Math.floor((nextBirthday.getTime() - now.getTime()) / (1000 * 60 * 60 * 24))
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+  const birthday = new Date(birth.getFullYear(), birth.getMonth(), birth.getDate())
+  if (birthday > today) return null
+
+  let nextBirthday = new Date(now.getFullYear(), birth.getMonth(), birth.getDate())
+  const birthdayPassed = nextBirthday <= today
+  const years = now.getFullYear() - birth.getFullYear() - (birthdayPassed ? 0 : 1)
+  const totalMonths = (now.getFullYear() - birth.getFullYear()) * 12
+    + now.getMonth() - birth.getMonth() - (now.getDate() < birth.getDate() ? 1 : 0)
+  const dayNumber = (date: Date) => Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) / 86400000
+  const totalDays = dayNumber(today) - dayNumber(birthday)
+  const totalHours = Math.floor((now.getTime() - birthday.getTime()) / 3600000)
+  if (nextBirthday < today) nextBirthday = new Date(now.getFullYear() + 1, birth.getMonth(), birth.getDate())
+  const daysToNextBirthday = dayNumber(nextBirthday) - dayNumber(today)
   return { years, totalMonths, totalDays, totalHours, nextBirthday: nextBirthday.toLocaleDateString(), daysToNextBirthday }
 })
 </script>

@@ -95,33 +95,30 @@ function generateV4(): string {
   return formatBytes(array)
 }
 
-let lastV1Time = 0
-let v1ClockSeq = 0
+let lastV1Timestamp = 0n
+const v1ClockSeq = crypto.getRandomValues(new Uint16Array(1))[0] & 0x3fff
+const v1Node = crypto.getRandomValues(new Uint8Array(6))
+v1Node[0] |= 0x01 // Locally generated node identifier; do not imply a real MAC address.
 
 function generateV1(): string {
-  const now = Date.now()
-  const time = now + 12219292800000 // UUID epoch offset
-  if (time <= lastV1Time) {
-    v1ClockSeq = (v1ClockSeq + 1) & 0x3fff
-  } else {
-    v1ClockSeq = (Math.random() * 0x4000) | 0
-  }
-  lastV1Time = time
+  // UUID v1 stores 100 ns ticks since 1582-10-15. BigInt preserves all 60 bits.
+  let timestamp = BigInt(Date.now() + 12219292800000) * 10000n
+  // Multiple UUIDs generated within one millisecond must still be distinct.
+  if (timestamp <= lastV1Timestamp) timestamp = lastV1Timestamp + 1n
+  lastV1Timestamp = timestamp
 
   const array = new Uint8Array(16)
-  let t = time * 10000
-  array[0] = (t >> 24) & 0xff
-  array[1] = (t >> 16) & 0xff
-  array[2] = (t >> 8) & 0xff
-  array[3] = t & 0xff
-  array[4] = (t >> 40) & 0xff
-  array[5] = (t >> 32) & 0xff
-  array[6] = 0x10 | ((t >> 60) & 0x0f)
-  array[7] = (t >> 52) & 0xff
+  array[0] = Number((timestamp >> 24n) & 0xffn)
+  array[1] = Number((timestamp >> 16n) & 0xffn)
+  array[2] = Number((timestamp >> 8n) & 0xffn)
+  array[3] = Number(timestamp & 0xffn)
+  array[4] = Number((timestamp >> 40n) & 0xffn)
+  array[5] = Number((timestamp >> 32n) & 0xffn)
+  array[6] = 0x10 | Number((timestamp >> 56n) & 0x0fn)
+  array[7] = Number((timestamp >> 48n) & 0xffn)
   array[8] = 0x80 | ((v1ClockSeq >> 8) & 0x3f)
   array[9] = v1ClockSeq & 0xff
-  // random node
-  crypto.getRandomValues(array.subarray(10, 16))
+  array.set(v1Node, 10)
   return formatBytes(array)
 }
 

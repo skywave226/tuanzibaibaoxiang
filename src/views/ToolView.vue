@@ -37,11 +37,11 @@
     <div v-if="relatedTools.length > 0" class="related-section">
       <div class="related-label">{{ t('home.related_tools') || '相关工具' }}</div>
       <div class="related-grid">
-        <div
+        <router-link
           v-for="tool in relatedTools"
           :key="tool.path"
+          :to="tool.path"
           class="related-card"
-          @click="goToTool(tool.path)"
         >
           <div
             class="related-icon"
@@ -55,7 +55,7 @@
             <div class="related-name">{{ tool.name }}</div>
             <div class="related-desc">{{ tool.description }}</div>
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
   </div>
@@ -63,7 +63,7 @@
 
 <script setup lang="ts">
 import { computed, defineAsyncComponent, shallowRef, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { NBreadcrumb, NBreadcrumbItem } from 'naive-ui'
 import { getToolByPath, getLocalizedTools, localizeTool } from '@/tools/registry'
@@ -71,15 +71,10 @@ import { getCategoryStyle, getCategoryIcon } from '@/composables/useCategoryStyl
 import type { SupportedLocale } from '@/i18n'
 
 const route = useRoute()
-const router = useRouter()
 const { locale, t } = useI18n()
 
 function translateCategory(category: string) {
   return t(`categories.${category}`, category)
-}
-
-function goToTool(path: string) {
-  router.push(path)
 }
 
 const meta = computed(() => {
@@ -228,6 +223,8 @@ const relatedTools = computed(() => {
   background: var(--surface);
   border: 1px solid var(--border);
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
   transition: all 0.2s var(--ease);
 }
 
@@ -235,6 +232,11 @@ const relatedTools = computed(() => {
   border-color: var(--brand-soft-2);
   box-shadow: var(--shadow-sm);
   transform: translateY(-2px);
+}
+
+.related-card:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
 }
 
 .related-icon {

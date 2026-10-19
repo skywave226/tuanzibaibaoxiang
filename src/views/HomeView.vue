@@ -52,36 +52,48 @@
             <span>{{ t('home.recently_used') || '最近使用' }}</span>
           </div>
           <div class="recent-list">
-            <div
+            <router-link
               v-for="tool in recentTools"
               :key="tool.path"
+              :to="tool.path"
               class="recent-item"
-              @click="goToTool(tool.path)"
             >
               <span
                 class="recent-dot"
                 :style="{ background: getCategoryStyle(tool.category).color }"
               ></span>
               <span class="recent-name">{{ tool.name }}</span>
-            </div>
+            </router-link>
           </div>
         </div>
       </template>
     </div>
 
     <!-- 工具列表标题 -->
+    <div v-if="activeCategory !== '__all__' && searchQuery" class="active-filters" aria-label="当前筛选条件">
+      <span class="filter-label">当前筛选：</span>
+      <router-link :to="{ path: '/', query: { q: searchQuery } }" class="filter-chip">
+        {{ translateCategory(activeCategory) }} <span aria-hidden="true">×</span>
+        <span class="sr-only">移除分类筛选</span>
+      </router-link>
+      <router-link :to="{ path: '/', query: { category: activeCategory } }" class="filter-chip">
+        “{{ searchQuery }}” <span aria-hidden="true">×</span>
+        <span class="sr-only">移除搜索词</span>
+      </router-link>
+    </div>
+
     <div v-if="!searchQuery && activeCategory === '__all__' && recentTools.length > 0" class="list-label">
       {{ t('home.all_tools') || '全部工具' }}
     </div>
 
     <!-- 工具网格 -->
     <div class="tool-grid">
-      <div
+      <router-link
         v-for="(tool, index) in displayTools"
         :key="tool.path"
+        :to="tool.path"
         class="tool-card reveal"
         :style="{ animationDelay: `${Math.min(index, 18) * 28}ms` }"
-        @click="goToTool(tool.path)"
       >
         <div
           class="tool-icon"
@@ -107,7 +119,7 @@
             {{ translateCategory(tool.category) }}
           </n-tag>
         </div>
-      </div>
+      </router-link>
     </div>
 
     <!-- 空状态 -->
@@ -138,10 +150,6 @@ import type { SupportedLocale } from '@/i18n'
 const route = useRoute()
 const router = useRouter()
 const { t, locale } = useI18n()
-
-function goToTool(path: string) {
-  router.push(path)
-}
 
 function goToCategory(cat: string) {
   router.push({ path: '/', query: { category: cat } })
@@ -337,6 +345,7 @@ const recentTools = computed(() => {
   font-size: 13px;
   color: var(--text-2);
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.2s var(--ease);
 }
 
@@ -344,6 +353,43 @@ const recentTools = computed(() => {
   border-color: var(--brand-soft-2);
   background: var(--brand-soft);
   color: var(--brand);
+}
+
+.recent-item:focus-visible,
+.tool-card:focus-visible,
+.filter-chip:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+}
+
+.active-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -6px 0 18px;
+  font-size: 13px;
+}
+
+.filter-label { color: var(--muted); }
+
+.filter-chip {
+  padding: 5px 10px;
+  border-radius: var(--r-pill);
+  background: var(--brand-soft);
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.filter-chip:hover { background: var(--brand-soft-2); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .recent-dot {

@@ -1,7 +1,7 @@
 <template>
   <div class="audio-converter">
     <n-alert type="info" class="mb-4">
-      基于 Web Audio API 实现，音频解码与 WAV 编码均在浏览器本地完成。MP3 仅支持编码为 WAV（浏览器原生不支持 MP3 编码）。
+      基于 Web Audio API 在浏览器本地解码音频并输出 WAV。可调整采样率和声道数。
     </n-alert>
 
     <div class="card mb-4">
@@ -37,14 +37,6 @@
       <h3 class="text-sm font-bold mb-3">输出设置</h3>
       <div class="config-section">
         <div class="config-item">
-          <label>输出格式</label>
-          <n-select
-            v-model:value="outputFormat"
-            :options="formatOptions"
-            style="width: 240px"
-          />
-        </div>
-        <div class="config-item">
           <label>采样率</label>
           <n-select
             v-model:value="sampleRate"
@@ -60,9 +52,6 @@
             style="width: 160px"
           />
         </div>
-      </div>
-      <div class="hint mt-2" v-if="outputFormat === 'mp3'">
-        注意：浏览器原生不支持 MP3 编码，将输出 WAV 格式（扩展名仍为所选格式）。
       </div>
     </div>
 
@@ -131,14 +120,9 @@ const resultSize = ref('')
 const statusMsg = ref('')
 const statusType = ref<'info' | 'success' | 'warning' | 'error'>('info')
 
-const outputFormat = ref<'wav' | 'mp3'>('wav')
 const sampleRate = ref(44100)
 const channelCount = ref(2)
 
-const formatOptions = [
-  { label: 'WAV (无损 PCM)', value: 'wav' },
-  { label: 'MP3 (兼容性更好)', value: 'mp3' },
-]
 const sampleRateOptions = [
   { label: '44100 Hz (CD 音质)', value: 44100 },
   { label: '48000 Hz (DVD 音质)', value: 48000 },
@@ -281,7 +265,7 @@ async function convert() {
     if (resultUrl.value) URL.revokeObjectURL(resultUrl.value)
     resultBlob.value = blob
     resultUrl.value = URL.createObjectURL(blob)
-    resultFormat.value = outputFormat.value.toUpperCase()
+    resultFormat.value = 'WAV'
     resultSize.value = formatSize(blob.size)
     statusMsg.value = '转换完成'
     statusType.value = 'success'
@@ -295,11 +279,10 @@ async function convert() {
 
 function download() {
   if (!resultBlob.value) return
-  const ext = outputFormat.value
   const baseName = originalFile ? originalFile.name.replace(/\.[^.]+$/, '') : 'audio'
   const a = document.createElement('a')
   a.href = resultUrl.value
-  a.download = `${baseName}_converted.${ext}`
+  a.download = `${baseName}_converted.wav`
   a.click()
 }
 

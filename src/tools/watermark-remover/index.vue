@@ -34,7 +34,7 @@
         </div>
       </div>
 
-      <n-button v-if="imageLoaded" type="primary" class="mt-4" @click="download">下载结果</n-button>
+      <n-button v-if="imageLoaded" type="primary" class="mt-4" @click="download">按原图尺寸下载</n-button>
     </div>
 
     <div v-if="imageLoaded" class="canvas-area card">
@@ -65,7 +65,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onUnmounted } from 'vue'
+import { ref, onUnmounted, nextTick } from 'vue'
 import { NUpload, NButton, NSlider, NRadioGroup, NRadioButton, NAlert } from 'naive-ui'
 import type { UploadCustomRequestOptions } from 'naive-ui'
 
@@ -80,7 +80,6 @@ const fileName = ref('')
 
 let originalImage: HTMLImageElement | null = null
 let isDrawing = false
-let scaleRatio = 1
 
 function handleUpload({ file }: UploadCustomRequestOptions) {
   const uploadFile = file.file as File
@@ -90,9 +89,10 @@ function handleUpload({ file }: UploadCustomRequestOptions) {
   const reader = new FileReader()
   reader.onload = () => {
     originalImage = new Image()
-    originalImage.onload = () => {
-      initCanvas()
+    originalImage.onload = async () => {
       imageLoaded.value = true
+      await nextTick()
+      initCanvas()
     }
     originalImage.src = reader.result as string
   }
@@ -103,11 +103,8 @@ function initCanvas() {
   if (!originalImage || !canvasRef.value || !wrapperRef.value) return
 
   const canvas = canvasRef.value
-  const maxWidth = Math.min(wrapperRef.value.clientWidth || 800, 900)
-  scaleRatio = Math.min(1, maxWidth / originalImage.width)
-
-  canvas.width = originalImage.width * scaleRatio
-  canvas.height = originalImage.height * scaleRatio
+  canvas.width = originalImage.naturalWidth
+  canvas.height = originalImage.naturalHeight
 
   const ctx = canvas.getContext('2d')
   if (!ctx) return
@@ -165,7 +162,8 @@ function applyTool(x: number, y: number) {
   const ctx = canvas.getContext('2d')
   if (!ctx) return
 
-  const r = brushSize.value * scaleRatio
+  const displayScale = canvas.width / canvas.getBoundingClientRect().width
+  const r = brushSize.value * displayScale
 
   ctx.save()
   ctx.beginPath()
@@ -173,7 +171,7 @@ function applyTool(x: number, y: number) {
   ctx.clip()
 
   if (mode.value === 'clone') {
-    const offset = cloneOffset.value * scaleRatio
+    const offset = cloneOffset.value * displayScale
     const sx = Math.max(0, x - offset)
     ctx.drawImage(canvas, sx - r, y - r, r * 2, r * 2, x - r, y - r, r * 2, r * 2)
   } else {

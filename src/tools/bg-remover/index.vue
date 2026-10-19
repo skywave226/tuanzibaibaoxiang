@@ -55,7 +55,7 @@
     </div>
 
     <div class="card mt-4" v-if="resultUrl">
-      <n-button type="primary" @click="download">下载结果</n-button>
+      <n-button type="primary" @click="download">按原图尺寸下载</n-button>
     </div>
 
     <n-alert v-if="error" type="error" class="mt-4" closable @close="error = ''">{{ error }}</n-alert>
@@ -63,7 +63,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onUnmounted } from 'vue'
+import { ref, onUnmounted, nextTick } from 'vue'
 import { NUpload, NButton, NSlider, NRadioGroup, NRadioButton, NCheckbox, NAlert } from 'naive-ui'
 import type { UploadCustomRequestOptions } from 'naive-ui'
 
@@ -105,9 +105,10 @@ function handleUpload({ file }: UploadCustomRequestOptions) {
   const reader = new FileReader()
   reader.onload = () => {
     originalImage = new Image()
-    originalImage.onload = () => {
-      drawSource()
+    originalImage.onload = async () => {
       imageLoaded.value = true
+      await nextTick()
+      drawSource()
       autoPickBackground()
     }
     originalImage.src = reader.result as string
@@ -118,17 +119,11 @@ function handleUpload({ file }: UploadCustomRequestOptions) {
 function drawSource() {
   if (!originalImage || !sourceCanvas.value) return
   const canvas = sourceCanvas.value
-  const maxWidth = 800
-  let { width, height } = originalImage
-  if (width > maxWidth) {
-    height = (height * maxWidth) / width
-    width = maxWidth
-  }
-  canvas.width = width
-  canvas.height = height
+  canvas.width = originalImage.naturalWidth
+  canvas.height = originalImage.naturalHeight
   const ctx = canvas.getContext('2d')
   if (!ctx) return
-  ctx.drawImage(originalImage, 0, 0, width, height)
+  ctx.drawImage(originalImage, 0, 0)
 }
 
 function getCanvasPixel(canvas: HTMLCanvasElement, x: number, y: number) {

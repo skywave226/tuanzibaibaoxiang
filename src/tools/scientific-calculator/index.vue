@@ -175,20 +175,23 @@ function factorial(n: number): number {
 function buildExpression(expr: string): string {
   let jsExpr = expr
 
-  // 角度转弧度（DEG 模式下三角函数）
-  const angleFactor = angleMode.value === 'deg' ? '(Math.PI/180)' : ''
-
-  // 替换函数
-  jsExpr = jsExpr.replace(/sin\(/g, `Math.sin(${angleFactor ? angleFactor + '(' : ''}`)
-  jsExpr = jsExpr.replace(/cos\(/g, `Math.cos(${angleFactor ? angleFactor + '(' : ''}`)
-  jsExpr = jsExpr.replace(/tan\(/g, `Math.tan(${angleFactor ? angleFactor + '(' : ''}`)
-
-  // 补全角度转换的右括号
-  if (angleFactor) {
-    const funcCount = (expr.match(/(sin|cos|tan)\(/g) || []).length
-    for (let i = 0; i < funcCount; i++) {
-      // 找到对应函数的右括号位置并补一个右括号
+  // Replace innermost trigonometric calls first so nested calls keep balanced parentheses.
+  const trigCalls = [...jsExpr.matchAll(/\b(sin|cos|tan)\(/g)]
+  for (let i = trigCalls.length - 1; i >= 0; i--) {
+    const call = trigCalls[i]
+    const start = call.index!
+    const open = start + call[0].length - 1
+    let depth = 1
+    let close = open + 1
+    while (close < jsExpr.length && depth > 0) {
+      if (jsExpr[close] === '(') depth++
+      else if (jsExpr[close] === ')') depth--
+      close++
     }
+    if (depth !== 0) throw new Error('括号未闭合')
+    const argument = jsExpr.slice(open + 1, close - 1)
+    const radians = angleMode.value === 'deg' ? `(${argument}) * PI / 180` : argument
+    jsExpr = jsExpr.slice(0, start) + `Math.${call[1]}(${radians})` + jsExpr.slice(close)
   }
 
   // 对数与指数

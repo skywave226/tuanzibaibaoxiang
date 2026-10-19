@@ -104,7 +104,14 @@ async function calculateHash() {
   for (const algo of algorithms) {
     try {
       if (algo.value === 'MD5') {
-        hashes[algo.value] = outputBase64.value ? md5Base64(input.value) : md5Hex(input.value)
+        if (key) {
+          const signature = hmacMd5(key, data)
+          hashes[algo.value] = outputBase64.value
+            ? btoa(String.fromCharCode(...signature))
+            : signature.map(b => b.toString(16).padStart(2, '0')).join('')
+        } else {
+          hashes[algo.value] = outputBase64.value ? md5Base64(input.value) : md5Hex(input.value)
+        }
       }
       else if (key) {
         const cryptoKey = await crypto.subtle.importKey(
@@ -193,6 +200,24 @@ function clearInput() {
 }
 
 // MD5 implementation
+function hmacMd5(key: Uint8Array, data: Uint8Array): number[] {
+  const blockSize = 64
+  const normalizedKey = key.length > blockSize ? Uint8Array.from(md5(key)) : key
+  const innerPad = new Uint8Array(blockSize)
+  const outerPad = new Uint8Array(blockSize)
+  for (let i = 0; i < blockSize; i++) {
+    innerPad[i] = (normalizedKey[i] || 0) ^ 0x36
+    outerPad[i] = (normalizedKey[i] || 0) ^ 0x5c
+  }
+  const inner = new Uint8Array(blockSize + data.length)
+  inner.set(innerPad)
+  inner.set(data, blockSize)
+  const outer = new Uint8Array(blockSize + 16)
+  outer.set(outerPad)
+  outer.set(md5(inner), blockSize)
+  return md5(outer)
+}
+
 function md5Hex(str: string): string {
   return md5ArrayBufferHex(new TextEncoder().encode(str).buffer)
 }

@@ -78,14 +78,14 @@
     </div>
 
     <div class="card" v-if="passwords.length > 0">
-      <div class="pane-label mb-2">生成结果（平均熵: {{ averageEntropy.toFixed(1) }} bits）</div>
+      <div class="pane-label mb-2">生成结果（估算熵: {{ generatedEntropy.toFixed(1) }} bits）</div>
       <div class="password-list">
         <div v-for="(pwd, index) in passwords" :key="index" class="password-item">
           <span class="password-index text-gray-400">{{ index + 1 }}.</span>
           <span class="password-value font-mono">{{ pwd }}</span>
           <div class="password-strength">
-            <n-tag :type="getStrengthType(pwd)" size="small">
-              {{ getStrengthLabel(pwd) }}
+            <n-tag :type="getStrengthType()" size="small">
+              {{ getStrengthLabel() }}
             </n-tag>
           </div>
           <n-button text size="tiny" @click="copyOne(pwd)">复制</n-button>
@@ -100,7 +100,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { NInputNumber, NCheckbox, NButton, NTag, NEmpty, NTabs, NTabPane, NInput, useMessage } from 'naive-ui'
 import { useCopy } from '@/composables/useCopy'
 
@@ -122,6 +122,7 @@ const passphraseIncludeNumber = ref(true)
 const passphraseSeparatorCustom = ref(false)
 const passphraseSeparator = ref('-')
 const passwords = ref<string[]>([])
+const generatedEntropy = ref(0)
 
 const UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 const LOWERCASE = 'abcdefghijklmnopqrstuvwxyz'
@@ -138,32 +139,22 @@ const WORD_LIST = [
   'quiet', 'ruby', 'solar', 'timber', 'urban', 'vivid', 'wild', 'young',
 ]
 
-const averageEntropy = computed(() => {
-  if (passwords.value.length === 0) return 0
-  return passwords.value.reduce((sum, pwd) => sum + calculateEntropy(pwd), 0) / passwords.value.length
-})
+function getTypeCharsets(): string[] {
+  const types = [
+    includeUppercase.value ? UPPERCASE : '',
+    includeLowercase.value ? LOWERCASE : '',
+    includeNumbers.value ? NUMBERS : '',
+    includeSymbols.value ? customSymbols.value || '!@#$%^&*()_+-=[]{}|;:,.<>?' : '',
+  ]
+  return types.map(chars => [...new Set(chars)].filter(ch => !excludeAmbiguous.value || !AMBIGUOUS.includes(ch)).join('')).filter(Boolean)
+}
 
 function getCharset(): string {
-  let charset = ''
-  if (includeUppercase.value) charset += UPPERCASE
-  if (includeLowercase.value) charset += LOWERCASE
-  if (includeNumbers.value) charset += NUMBERS
-  if (includeSymbols.value) charset += customSymbols.value || '!@#$%^&*()_+-=[]{}|;:,.<>?'
-
-  if (excludeAmbiguous.value) {
-    for (const ch of AMBIGUOUS) {
-      charset = charset.replace(ch, '')
-    }
-  }
-  return charset
+  return [...new Set(getTypeCharsets().join(''))].join('')
 }
 
 function ensureEachType(pwd: string): string {
-  const required: string[] = []
-  if (includeUppercase.value) required.push(pickRandom(UPPERCASE.replace(excludeAmbiguous.value ? /[OI]/g : '', '')))
-  if (includeLowercase.value) required.push(pickRandom(LOWERCASE.replace(excludeAmbiguous.value ? /[l]/g : '', '')))
-  if (includeNumbers.value) required.push(pickRandom(NUMBERS.replace(excludeAmbiguous.value ? /[01]/g : '', '')))
-  if (includeSymbols.value) required.push(pickRandom(customSymbols.value || '!@#$%^&*()_+-=[]{}|;:,.<>?'))
+  const required = getTypeCharsets().map(pickRandom)
 
   if (required.length === 0) return pwd
 
@@ -176,25 +167,31 @@ function ensureEachType(pwd: string): string {
 
 function pickRandom(str: string): string {
   if (!str) return ''
+  return str[randomInt(str.length)]
+}
+
+function randomInt(max: number): number {
+  const range = 0x100000000
+  const limit = range - (range % max)
   const array = new Uint32Array(1)
-  crypto.getRandomValues(array)
-  return str[array[0] % str.length]
+  do {
+    crypto.getRandomValues(array)
+  } while (array[0] >= limit)
+  return array[0] % max
 }
 
 function shuffle<T>(arr: T[]): T[] {
   for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
+    const j = randomInt(i + 1)
     ;[arr[i], arr[j]] = [arr[j], arr[i]]
   }
   return arr
 }
 
 function generateRandomPassword(charset: string, len: number): string {
-  const array = new Uint32Array(len)
-  crypto.getRandomValues(array)
   let password = ''
   for (let j = 0; j < len; j++) {
-    password += charset[array[j] % charset.length]
+    password += charset[randomInt(charset.length)]
   }
   return requireEachType.value ? ensureEachType(password) : password
 }
@@ -202,10 +199,8 @@ function generateRandomPassword(charset: string, len: number): string {
 function generatePassphrase(): string {
   const sep = passphraseSeparatorCustom.value ? passphraseSeparator.value : '-'
   const words: string[] = []
-  const array = new Uint32Array(wordCount.value)
-  crypto.getRandomValues(array)
   for (let i = 0; i < wordCount.value; i++) {
-    let word = WORD_LIST[array[i] % WORD_LIST.length]
+    let word = WORD_LIST[randomInt(WORD_LIST.length)]
     if (passphraseCapitalize.value) {
       word = word.charAt(0).toUpperCase() + word.slice(1)
     }
@@ -213,9 +208,7 @@ function generatePassphrase(): string {
   }
   let result = words.join(sep)
   if (passphraseIncludeNumber.value) {
-    const numArray = new Uint32Array(1)
-    crypto.getRandomValues(numArray)
-    result += sep + (numArray[0] % 1000)
+    result += sep + randomInt(1000)
   }
   return result
 }
@@ -230,7 +223,7 @@ function generate() {
       return
     }
     if (requireEachType.value) {
-      const requiredCount = [includeUppercase.value, includeLowercase.value, includeNumbers.value, includeSymbols.value].filter(Boolean).length
+      const requiredCount = getTypeCharsets().length
       if (length.value < requiredCount) {
         message.warning(`密码长度至少为 ${requiredCount} 才能包含所有选中类型`)
         return
@@ -239,34 +232,28 @@ function generate() {
     for (let i = 0; i < count.value; i++) {
       passwords.value.push(generateRandomPassword(charset, length.value))
     }
+    const typeCharsets = requireEachType.value ? getTypeCharsets() : []
+    generatedEntropy.value = (length.value - typeCharsets.length) * Math.log2(charset.length)
+      + typeCharsets.reduce((sum, chars) => sum + Math.log2(chars.length), 0)
   }
   else {
     for (let i = 0; i < count.value; i++) {
       passwords.value.push(generatePassphrase())
     }
+    generatedEntropy.value = wordCount.value * Math.log2(WORD_LIST.length)
+      + (passphraseIncludeNumber.value ? Math.log2(1000) : 0)
   }
 }
 
-function calculateEntropy(pwd: string): number {
-  let pool = 0
-  if (/[A-Z]/.test(pwd)) pool += 26
-  if (/[a-z]/.test(pwd)) pool += 26
-  if (/[0-9]/.test(pwd)) pool += 10
-  if (/[^A-Za-z0-9]/.test(pwd)) pool += 32
-  if (/[A-Za-z0-9\-]/.test(pwd) && pool === 0) pool = 36
-  if (pool === 0) pool = 26
-  return Math.log2(Math.pow(pool, pwd.length))
-}
-
-function getStrengthType(pwd: string): 'error' | 'warning' | 'success' {
-  const entropy = calculateEntropy(pwd)
+function getStrengthType(): 'error' | 'warning' | 'success' {
+  const entropy = generatedEntropy.value
   if (entropy < 40) return 'error'
   if (entropy < 70) return 'warning'
   return 'success'
 }
 
-function getStrengthLabel(pwd: string): string {
-  const entropy = calculateEntropy(pwd)
+function getStrengthLabel(): string {
+  const entropy = generatedEntropy.value
   if (entropy < 40) return '弱'
   if (entropy < 70) return '中'
   return '强'
@@ -282,6 +269,7 @@ function copyAll() {
 
 function clearAll() {
   passwords.value = []
+  generatedEntropy.value = 0
 }
 </script>
 

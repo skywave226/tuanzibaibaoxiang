@@ -43,7 +43,8 @@ export function searchTools(query: string): ToolMeta[] {
 /** 获取单个工具的本地化元数据 */
 export function localizeTool(tool: ToolMeta, locale: SupportedLocale): ToolMeta {
   if (locale === 'zh-CN') return tool
-  const tr = (toolTranslations as Record<string, Partial<Record<SupportedLocale, { name?: string; description?: string; keywords?: string[] }>>>)[tool.path]?.[locale]
+  const translationPath = tool.path === '/sql-formatter-db' ? '/sql-formatter' : tool.path
+  const tr = (toolTranslations as Record<string, Partial<Record<SupportedLocale, { name?: string; description?: string; keywords?: string[] }>>>)[translationPath]?.[locale]
   if (!tr) return tool
   return {
     ...tool,
