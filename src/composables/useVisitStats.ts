@@ -19,7 +19,16 @@ export function getVisits(): VisitRecord[] {
   if (typeof window === 'undefined') return []
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    return raw ? (JSON.parse(raw) as VisitRecord[]) : []
+    const parsed: unknown = raw ? JSON.parse(raw) : []
+    if (!Array.isArray(parsed)) return []
+    return parsed.filter((entry): entry is VisitRecord =>
+      entry !== null && typeof entry === 'object'
+      && typeof entry.path === 'string'
+      && typeof entry.name === 'string'
+      && typeof entry.timestamp === 'number'
+      && Number.isFinite(entry.timestamp)
+      && !Number.isNaN(new Date(entry.timestamp).getTime()),
+    ).slice(-MAX_RECORDS)
   }
   catch {
     return []

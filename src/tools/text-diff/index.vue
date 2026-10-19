@@ -90,7 +90,7 @@
             :class="line.type"
           >
             <span class="line-number">{{ line.lineNum }}</span>
-            <span class="line-content" v-html="line.highlighted || line.content"></span>
+            <span class="line-content" v-html="highlightInline(line)"></span>
           </div>
         </div>
       </div>
@@ -159,28 +159,13 @@ function compare() {
   let i = 0, j = 0, k = 0
 
   while (i < lines1.length || j < lines2.length) {
-    if (k < lcs.length && i < lines1.length && normalized1[i] === lcs[k]) {
-      if (j < lines2.length && normalized2[j] === lcs[k]) {
-        result.push({ type: 'same', lineNum: i + 1, prefix: ' ', content: lines1[i] })
-        i++
-        j++
-        k++
-      } else {
-        result.push({ type: 'removed', lineNum: i + 1, prefix: '-', content: lines1[i] })
-        i++
-      }
-    } else if (k < lcs.length && j < lines2.length && normalized2[j] === lcs[k]) {
-      result.push({ type: 'added', lineNum: j + 1, prefix: '+', content: lines2[j] })
-      j++
+    if (k < lcs.length && normalized1[i] === lcs[k] && normalized2[j] === lcs[k]) {
+      result.push({ type: 'same', lineNum: i + 1, prefix: ' ', content: lines1[i] })
+      i++; j++; k++
+    } else if (i < lines1.length && (k >= lcs.length || normalized1[i] !== lcs[k])) {
+      result.push({ type: 'removed', lineNum: i + 1, prefix: '-', content: lines1[i++] })
     } else {
-      if (i < lines1.length) {
-        result.push({ type: 'removed', lineNum: i + 1, prefix: '-', content: lines1[i] })
-        i++
-      }
-      if (j < lines2.length) {
-        result.push({ type: 'added', lineNum: j + 1, prefix: '+', content: lines2[j] })
-        j++
-      }
+      result.push({ type: 'added', lineNum: j + 1, prefix: '+', content: lines2[j++] })
     }
   }
 
@@ -227,27 +212,14 @@ function highlightWordDiff(oldText: string, newText: string): { removedHtml: str
   const addedParts: string[] = []
 
   while (i < oldWords.length || j < newWords.length) {
-    if (k < lcs.length && i < oldWords.length && oldWords[i] === lcs[k]) {
-      if (j < newWords.length && newWords[j] === lcs[k]) {
-        removedParts.push(escapeHtml(oldWords[i]))
-        addedParts.push(escapeHtml(newWords[j]))
-        i++; j++; k++
-      } else {
-        removedParts.push(`<span class="inline-removed">${escapeHtml(oldWords[i])}</span>`)
-        i++
-      }
-    } else if (k < lcs.length && j < newWords.length && newWords[j] === lcs[k]) {
-      addedParts.push(`<span class="inline-added">${escapeHtml(newWords[j])}</span>`)
-      j++
+    if (k < lcs.length && oldWords[i] === lcs[k] && newWords[j] === lcs[k]) {
+      removedParts.push(escapeHtml(oldWords[i++]))
+      addedParts.push(escapeHtml(newWords[j++]))
+      k++
+    } else if (i < oldWords.length && (k >= lcs.length || oldWords[i] !== lcs[k])) {
+      removedParts.push('<span class="inline-removed">' + escapeHtml(oldWords[i++]) + '</span>')
     } else {
-      if (i < oldWords.length) {
-        removedParts.push(`<span class="inline-removed">${escapeHtml(oldWords[i])}</span>`)
-        i++
-      }
-      if (j < newWords.length) {
-        addedParts.push(`<span class="inline-added">${escapeHtml(newWords[j])}</span>`)
-        j++
-      }
+      addedParts.push('<span class="inline-added">' + escapeHtml(newWords[j++]) + '</span>')
     }
   }
 
