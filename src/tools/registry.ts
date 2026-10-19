@@ -1,62 +1,80 @@
+import { shallowRef } from 'vue'
 import type { ToolMeta } from '@/types/tool'
 import type { SupportedLocale } from '@/i18n'
-import toolTranslations from '@/i18n/toolTranslations.json'
-import { toolIconMap } from '@/data/toolIcons'
+import toolIndex from '../../scripts/tools-data.json'
+
+type ToolTranslation = Pick<ToolMeta, 'name' | 'description' | 'keywords'>
+type ToolTranslations = Record<string, ToolTranslation>
 
 const toolModules = import.meta.glob('./**/index.vue')
-const metaModules = import.meta.glob('./**/meta.ts', { eager: true })
+const localeLoaders = import.meta.glob('../generated/tool-locales/*.json')
+const localeData = shallowRef<Partial<Record<SupportedLocale, ToolTranslations>>>({})
+const localePromises = new Map<SupportedLocale, Promise<void>>()
+const localizedLists = new Map<SupportedLocale, ToolMeta[]>()
 
-export const tools: ToolMeta[] = Object.entries(metaModules)
-  .filter(([path]) => path.endsWith('/meta.ts'))
-  .map(([path, mod]) => {
-    const meta = (mod as any).default
-    const componentPath = path.replace('/meta.ts', '/index.vue')
-    const loader = toolModules[componentPath]
-    return {
-      ...meta,
-      // 使用 toolIconMap 中的独特图标，覆盖 meta.ts 中的默认图标
-      icon: toolIconMap[meta.path] || meta.icon,
-      component: loader,
-    }
-  })
-  .sort((a, b) => {
-    if (a.category !== b.category) return a.category.localeCompare(b.category)
-    return a.name.localeCompare(b.name)
-  })
+export const tools: ToolMeta[] = toolIndex.map(meta => {
+  const loader = toolModules[`.${meta.path}/index.vue`]
+  if (!loader) throw new Error(`Missing component for ${meta.path}`)
+  return {
+    ...meta,
+    component: loader as ToolMeta['component'],
+  }
+})
 
-export const categories = [...new Set(tools.map(t => t.category))]
+const byPath = new Map(tools.map(tool => [tool.path, tool]))
+export const categories = [...new Set(tools.map(tool => tool.category))]
+export const categoryCounts: Record<string, number> = {}
+for (const tool of tools) categoryCounts[tool.category] = (categoryCounts[tool.category] || 0) + 1
 
 export function getToolByPath(path: string): ToolMeta | undefined {
-  return tools.find(t => t.path === path)
+  return byPath.get(path)
 }
 
 export function searchTools(query: string): ToolMeta[] {
   const q = query.toLowerCase().trim()
   if (!q) return tools
-  return tools.filter(t =>
-    t.name.toLowerCase().includes(q) ||
-    t.description.toLowerCase().includes(q) ||
-    t.keywords.some(k => k.toLowerCase().includes(q))
+  return tools.filter(tool =>
+    tool.name.toLowerCase().includes(q) ||
+    tool.description.toLowerCase().includes(q) ||
+    tool.keywords.some(keyword => keyword.toLowerCase().includes(q))
   )
 }
 
-/** 获取单个工具的本地化元数据 */
-export function localizeTool(tool: ToolMeta, locale: SupportedLocale): ToolMeta {
-  if (locale === 'zh-CN') return tool
-  const translations = toolTranslations as Record<string, Partial<Record<SupportedLocale, { name?: string; description?: string; keywords?: string[] }>>>
-  const tr = translations[tool.path]?.[locale]
-  const fallback = tool.path === '/sql-formatter-db' ? translations['/sql-formatter']?.[locale] : undefined
-  if (!tr && !fallback) return tool
-  return {
-    ...tool,
-    name: tr?.name || fallback?.name || tool.name,
-    description: tr?.description || fallback?.description || tool.description,
-    keywords: tr?.keywords?.length ? tr.keywords : fallback?.keywords?.length ? fallback.keywords : tool.keywords,
-  }
+export function loadToolLocale(locale: SupportedLocale): Promise<void> {
+  if (locale === 'zh-CN' || localeData.value[locale]) return Promise.resolve()
+  const existing = localePromises.get(locale)
+  if (existing) return existing
+  const loader = localeLoaders[`../generated/tool-locales/${locale}.json`]
+  if (!loader) return Promise.reject(new Error(`Missing tool translations for ${locale}`))
+  const pending = loader().then(module => {
+    const translations = (module as { default: ToolTranslations }).default
+    localeData.value = { ...localeData.value, [locale]: translations }
+  }).finally(() => localePromises.delete(locale))
+  localePromises.set(locale, pending)
+  return pending
 }
 
-/** 获取指定语言的全部工具列表 */
+export function localizeTool(tool: ToolMeta, locale: SupportedLocale): ToolMeta {
+  if (locale === 'zh-CN') return tool
+  const data = localeData.value[locale]
+  if (!data) {
+    void loadToolLocale(locale).catch(error => console.error(error))
+    return tool
+  }
+  const translated = data[tool.path]
+  return translated ? { ...tool, ...translated } : tool
+}
+
 export function getLocalizedTools(locale: SupportedLocale): ToolMeta[] {
   if (locale === 'zh-CN') return tools
-  return tools.map(t => localizeTool(t, locale))
+  const data = localeData.value[locale]
+  if (!data) {
+    void loadToolLocale(locale).catch(error => console.error(error))
+    return tools
+  }
+  const existing = localizedLists.get(locale)
+  if (existing) return existing
+  const list = tools.map(tool => data[tool.path] ? { ...tool, ...data[tool.path] } : tool)
+  localizedLists.set(locale, list)
+  return list
 }

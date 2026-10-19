@@ -13,7 +13,14 @@
         ></div>
         <div class="category-banner-info">
           <h1 class="category-banner-title">{{ translateCategory(activeCategory) }}</h1>
-          <p class="category-banner-count">{{ t('home.tools_count', { count: displayTools.length }) }}</p>
+          <p class="category-banner-count">{{ t('home.tools_count', { count: filteredTools.length }) }}</p>
+          <n-input
+            :value="searchQuery"
+            :placeholder="t('nav.search_placeholder')"
+            clearable
+            class="category-search"
+            @update:value="onCategorySearch"
+          />
         </div>
         <router-link to="/" class="category-banner-back">
           {{ t('home.view_all') }}
@@ -101,7 +108,7 @@
             background: getCategoryStyle(tool.category).bg,
             color: getCategoryStyle(tool.category).color,
           }"
-          v-html="tool.icon"
+          v-html="getToolIcon(tool.path, tool.category)"
         ></div>
         <div class="tool-info">
           <div class="tool-name">{{ tool.name }}</div>
@@ -123,14 +130,18 @@
     </div>
 
     <!-- 空状态 -->
-    <div v-if="displayTools.length === 0" class="empty-state">
+    <div v-if="filteredTools.length === 0" class="empty-state">
       <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       <p class="empty-text">{{ t('home.no_results') }}</p>
     </div>
 
+    <div v-if="pageCount > 1" class="pagination">
+      <n-pagination v-model:page="activePage" :page-count="pageCount" :page-slot="5" />
+    </div>
+
     <!-- 页脚 -->
     <footer v-if="activeCategory === '__all__' && !searchQuery" class="home-footer">
-      <span>{{ t('home.tool_count', { count: displayTools.length }) }}</span>
+      <span>{{ t('home.tool_count', { count: filteredTools.length }) }}</span>
       <span class="footer-dot">·</span>
       <span>{{ t('home.footer_hint') || '所有工具均在浏览器本地运行，数据不会上传服务器' }}</span>
     </footer>
@@ -138,11 +149,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, onMounted } from 'vue'
+import { computed, ref, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { NTag } from 'naive-ui'
-import { getLocalizedTools, categories, tools } from '@/tools/registry'
+import { NInput, NPagination, NTag } from 'naive-ui'
+import { getLocalizedTools, categories, categoryCounts } from '@/tools/registry'
+import { getToolIcon, loadToolIcons } from '@/tools/icons'
 import { getCategoryStyle, getCategoryIcon } from '@/composables/useCategoryStyle'
 import { getVisitStats, type VisitRecord } from '@/composables/useVisitStats'
 import type { SupportedLocale } from '@/i18n'
@@ -150,6 +162,7 @@ import type { SupportedLocale } from '@/i18n'
 const route = useRoute()
 const router = useRouter()
 const { t, locale } = useI18n()
+const PAGE_SIZE = 48
 
 function goToCategory(cat: string) {
   router.push({ path: '/', query: { category: cat } })
@@ -163,7 +176,7 @@ function translateCategory(category: string) {
 }
 
 function getToolCountByCategory(cat: string) {
-  return tools.filter(t => t.category === cat).length
+  return categoryCounts[cat] || 0
 }
 
 const activeCategory = computed(() => (route.query.category as string) || '__all__')
@@ -178,12 +191,12 @@ const headerSubtitle = computed(() => {
   const parts: string[] = []
   if (searchQuery.value) parts.push(t('home.filter_hint_keyword', { keyword: searchQuery.value }))
   if (parts.length) {
-    return t('home.tool_count_filtered', { count: displayTools.value.length, filters: parts.join('，') })
+    return t('home.tool_count_filtered', { count: filteredTools.value.length, filters: parts.join('，') })
   }
-  return t('home.tool_count', { count: displayTools.value.length })
+  return t('home.tool_count', { count: filteredTools.value.length })
 })
 
-const displayTools = computed(() => {
+const filteredTools = computed(() => {
   let list = localizedTools.value
 
   if (activeCategory.value !== '__all__') {
@@ -202,6 +215,31 @@ const displayTools = computed(() => {
 
   return list
 })
+
+const pageCount = computed(() => Math.max(1, Math.ceil(filteredTools.value.length / PAGE_SIZE)))
+const activePage = computed({
+  get: () => {
+    const value = Number(route.query.page)
+    return Number.isInteger(value) && value > 0 ? Math.min(value, pageCount.value) : 1
+  },
+  set: (page: number) => {
+    router.push({ path: '/', query: { ...route.query, page: page > 1 ? String(page) : undefined } })
+  },
+})
+const displayTools = computed(() => {
+  const start = (activePage.value - 1) * PAGE_SIZE
+  return filteredTools.value.slice(start, start + PAGE_SIZE)
+})
+
+watch(displayTools, visible => {
+  for (const category of new Set(visible.map(tool => tool.category))) {
+    void loadToolIcons(category).catch(error => console.error(error))
+  }
+}, { immediate: true })
+
+function onCategorySearch(value: string) {
+  router.replace({ path: '/', query: { category: activeCategory.value, q: value || undefined } })
+}
 
 // 取前 8 个分类作为快捷入口
 const topCategories = computed(() => categories.slice(0, 8))
@@ -458,6 +496,11 @@ const recentTools = computed(() => {
   margin-top: 2px;
 }
 
+.category-search {
+  max-width: 360px;
+  margin-top: 12px;
+}
+
 .category-banner-back {
   flex-shrink: 0;
   font-size: 13px;
@@ -582,6 +625,12 @@ const recentTools = computed(() => {
 .empty-text {
   font-size: 14px;
   color: var(--muted);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
 }
 
 /* ===== 页脚 ===== */

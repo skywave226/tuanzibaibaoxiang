@@ -1,4 +1,4 @@
-import { access, readFile, readdir, writeFile } from 'node:fs/promises'
+import { access, mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import { dirname, join, relative, sep } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import ts from 'typescript'
@@ -8,6 +8,8 @@ const rootDir = join(scriptsDir, '..')
 const toolsDir = join(rootDir, 'src', 'tools')
 const inventoryFile = join(scriptsDir, 'tools-data.json')
 const catalogFile = join(rootDir, 'docs', 'tool-catalog.md')
+const localeDir = join(rootDir, 'src', 'generated', 'tool-locales')
+const iconDir = join(rootDir, 'src', 'generated', 'tool-icons')
 const taxonomy = JSON.parse(await readFile(join(scriptsDir, 'category-taxonomy.json'), 'utf8'))
 const checkOnly = process.argv.includes('--check')
 
@@ -35,6 +37,7 @@ function parseMeta(source, file) {
     meta[field] = literal(properties.get(field), field, file)
     if (!meta[field]) throw new Error(`${file}: ${field} 不能为空`)
   }
+  meta.icon = literal(properties.get('icon'), 'icon', file)
   const keywordNode = properties.get('keywords')
   if (!keywordNode || !ts.isArrayLiteralExpression(keywordNode)) {
     throw new Error(`${file}: keywords 必须是字符串数组`)
@@ -44,6 +47,24 @@ function parseMeta(source, file) {
     throw new Error(`${file}: keywords 不能为空`)
   }
   return meta
+}
+
+function parseIconOverrides(source) {
+  const ast = ts.createSourceFile('toolIcons.ts', source, ts.ScriptTarget.Latest, true)
+  const declaration = ast.statements
+    .filter(ts.isVariableStatement)
+    .flatMap(statement => [...statement.declarationList.declarations])
+    .find(item => item.name.getText(ast) === 'toolIconMap')
+  if (!declaration || !declaration.initializer || !ts.isObjectLiteralExpression(declaration.initializer)) {
+    throw new Error('src/data/toolIcons.ts: 缺少 toolIconMap 对象')
+  }
+  const overrides = {}
+  for (const property of declaration.initializer.properties) {
+    if (!ts.isPropertyAssignment(property)) continue
+    const path = literal(property.name, 'icon path', 'src/data/toolIcons.ts')
+    overrides[path] = literal(property.initializer, 'icon', 'src/data/toolIcons.ts')
+  }
+  return overrides
 }
 
 async function findMetaFiles(dir) {
@@ -109,6 +130,8 @@ async function main() {
   const paths = new Set()
   const names = new Set()
   const tools = []
+  const toolIcons = {}
+  const iconOverrides = parseIconOverrides(await readFile(join(rootDir, 'src', 'data', 'toolIcons.ts'), 'utf8'))
   for (const file of await findMetaFiles(toolsDir)) {
     const meta = parseMeta(await readFile(file, 'utf8'), relative(rootDir, file))
     const folder = relative(toolsDir, dirname(file)).split(sep).join('/')
@@ -122,7 +145,9 @@ async function main() {
     })
     paths.add(meta.path)
     names.add(nameKey)
-    tools.push(meta)
+    toolIcons[meta.path] = iconOverrides[meta.path] || meta.icon
+    const { icon, ...indexMeta } = meta
+    tools.push(indexMeta)
   }
   for (const category of categories) {
     if (!tools.some(tool => tool.category === category)) throw new Error(`空分类：${category}`)
@@ -148,6 +173,27 @@ async function main() {
   tools.sort((a, b) => a.category.localeCompare(b.category, 'zh-CN') || a.name.localeCompare(b.name, 'zh-CN') || a.path.localeCompare(b.path))
   await verifyOrWrite(inventoryFile, `${JSON.stringify(tools, null, 2)}\n`)
   await verifyOrWrite(catalogFile, buildCatalog(tools))
+  if (!checkOnly) await mkdir(localeDir, { recursive: true })
+  if (!checkOnly) await mkdir(iconDir, { recursive: true })
+  for (const category of categories) {
+    const icons = {}
+    for (const tool of tools.filter(item => item.category === category)) icons[tool.path] = toolIcons[tool.path]
+    await verifyOrWrite(join(iconDir, `${category}.json`), `${JSON.stringify(icons)}\n`)
+  }
+  for (const locale of locales.filter(item => item !== 'zh-CN')) {
+    const overlay = {}
+    for (const tool of tools) {
+      const direct = translations[tool.path]?.[locale]
+      const fallback = tool.path === '/sql-formatter-db' ? translations['/sql-formatter']?.[locale] : undefined
+      if (!direct && !fallback) continue
+      overlay[tool.path] = {
+        name: direct?.name || fallback?.name || tool.name,
+        description: direct?.description || fallback?.description || tool.description,
+        keywords: direct?.keywords?.length ? direct.keywords : fallback?.keywords?.length ? fallback.keywords : tool.keywords,
+      }
+    }
+    await verifyOrWrite(join(localeDir, `${locale}.json`), `${JSON.stringify(overlay)}\n`)
+  }
   console.log(`${checkOnly ? 'Verified' : 'Generated'} ${tools.length} tools across ${taxonomy.length} categories`)
 }
 

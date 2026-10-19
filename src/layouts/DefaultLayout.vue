@@ -54,10 +54,11 @@
       </div>
       <div class="header-right">
         <n-select
-          v-model:value="currentLocale"
+          :value="currentLocale"
           :options="localeOptions"
           size="small"
           class="locale-select"
+          :loading="localeLoading"
           @update:value="onLocaleChange"
         />
         <n-button quaternary circle @click="toggleDark">
@@ -101,7 +102,7 @@ import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { NInput, NButton, NMenu, NDrawer, NDrawerContent, NSelect } from 'naive-ui'
-import { categories, getLocalizedTools, tools } from '@/tools/registry'
+import { categories, categoryCounts, getLocalizedTools, loadToolLocale } from '@/tools/registry'
 import { useDark } from '@/composables/useDark'
 import { categoryIcons, renderCategoryIcon } from '@/composables/useCategoryStyle'
 import { SUPPORT_LOCALES, setLocale, type SupportedLocale } from '@/i18n'
@@ -113,6 +114,7 @@ const { isDark, toggle: toggleDark } = useDark()
 const searchQuery = ref('')
 const searchOpen = ref(false)
 const showSidebar = ref(false)
+const localeLoading = ref(false)
 const selectedCategory = ref('__all__')
 
 function translateCategory(category: string) {
@@ -126,10 +128,7 @@ const localeOptions = computed(() =>
   }))
 )
 
-const currentLocale = computed<SupportedLocale>({
-  get: () => locale.value as SupportedLocale,
-  set: (value: SupportedLocale) => setLocale(value),
-})
+const currentLocale = computed<SupportedLocale>(() => locale.value as SupportedLocale)
 
 const searchSuggestions = computed(() => {
   const query = searchQuery.value.trim().toLowerCase()
@@ -141,8 +140,16 @@ const searchSuggestions = computed(() => {
     .slice(0, 5)
 })
 
-function onLocaleChange(value: SupportedLocale) {
-  setLocale(value)
+async function onLocaleChange(value: SupportedLocale) {
+  localeLoading.value = true
+  try {
+    await loadToolLocale(value)
+    setLocale(value)
+  } catch (error) {
+    console.error('Tool translations could not be loaded', error)
+  } finally {
+    localeLoading.value = false
+  }
 }
 
 const menuOptions = computed(() => {
@@ -152,7 +159,7 @@ const menuOptions = computed(() => {
     icon: renderCategoryIcon(categoryIcons['其他']),
   }
   const categoryItems = categories.map(c => ({
-    label: `${translateCategory(c)} (${tools.filter(t => t.category === c).length})`,
+    label: `${translateCategory(c)} (${categoryCounts[c]})`,
     key: c,
     icon: renderCategoryIcon(categoryIcons[c] || categoryIcons['其他']),
   }))
@@ -207,7 +214,7 @@ function onSearch(value: string) {
   if (route.path !== '/') {
     router.push({ path: '/', query: { q: value || undefined } })
   } else {
-    router.replace({ query: { ...route.query, q: value || undefined } })
+    router.replace({ query: { ...route.query, q: value || undefined, page: undefined } })
   }
 }
 

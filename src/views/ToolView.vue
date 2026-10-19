@@ -21,7 +21,7 @@
             background: getCategoryStyle(meta.category || '').bg,
             color: getCategoryStyle(meta.category || '').color,
           }"
-          v-html="meta.icon || getCategoryIcon(meta.category || '')"
+          v-html="getToolIcon(meta.path, meta.category)"
         ></div>
         <div class="tool-header-text">
           <h2 class="tool-title">{{ meta.name }}</h2>
@@ -49,7 +49,7 @@
               background: getCategoryStyle(tool.category).bg,
               color: getCategoryStyle(tool.category).color,
             }"
-            v-html="tool.icon"
+            v-html="getToolIcon(tool.path, tool.category)"
           ></div>
           <div class="related-info">
             <div class="related-name">{{ tool.name }}</div>
@@ -67,7 +67,8 @@ import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { NBreadcrumb, NBreadcrumbItem } from 'naive-ui'
 import { getToolByPath, getLocalizedTools, localizeTool } from '@/tools/registry'
-import { getCategoryStyle, getCategoryIcon } from '@/composables/useCategoryStyle'
+import { getCategoryStyle } from '@/composables/useCategoryStyle'
+import { getToolIcon, loadToolIcons } from '@/tools/icons'
 import type { SupportedLocale } from '@/i18n'
 
 const route = useRoute()
@@ -82,6 +83,10 @@ const meta = computed(() => {
   if (!tool) return undefined
   return localizeTool(tool, locale.value as SupportedLocale)
 })
+
+watch(() => meta.value?.category, category => {
+  if (category) void loadToolIcons(category).catch(error => console.error(error))
+}, { immediate: true })
 
 const toolComponent = shallowRef<any>(null)
 

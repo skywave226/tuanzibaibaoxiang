@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "generate-seo": "node scripts/generate-seo-pages.mjs",
     "catalog:generate": "node scripts/extract-tools-data.mjs",
-    "catalog:check": "node scripts/extract-tools-data.mjs --check"
+    "catalog:check": "node scripts/extract-tools-data.mjs --check",
+    "test:catalog-ui": "node scripts/test-catalog-ui.mjs"
   },
   "dependencies": {
     "@iarna/toml": "^2.2.5",
