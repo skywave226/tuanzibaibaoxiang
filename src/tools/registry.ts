@@ -43,14 +43,15 @@ export function searchTools(query: string): ToolMeta[] {
 /** 获取单个工具的本地化元数据 */
 export function localizeTool(tool: ToolMeta, locale: SupportedLocale): ToolMeta {
   if (locale === 'zh-CN') return tool
-  const translationPath = tool.path === '/sql-formatter-db' ? '/sql-formatter' : tool.path
-  const tr = (toolTranslations as Record<string, Partial<Record<SupportedLocale, { name?: string; description?: string; keywords?: string[] }>>>)[translationPath]?.[locale]
-  if (!tr) return tool
+  const translations = toolTranslations as Record<string, Partial<Record<SupportedLocale, { name?: string; description?: string; keywords?: string[] }>>>
+  const tr = translations[tool.path]?.[locale]
+  const fallback = tool.path === '/sql-formatter-db' ? translations['/sql-formatter']?.[locale] : undefined
+  if (!tr && !fallback) return tool
   return {
     ...tool,
-    name: tr.name || tool.name,
-    description: tr.description || tool.description,
-    keywords: tr.keywords?.length ? tr.keywords : tool.keywords,
+    name: tr?.name || fallback?.name || tool.name,
+    description: tr?.description || fallback?.description || tool.description,
+    keywords: tr?.keywords?.length ? tr.keywords : fallback?.keywords?.length ? fallback.keywords : tool.keywords,
   }
 }
 

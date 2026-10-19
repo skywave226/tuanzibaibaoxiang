@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Check tool catalog
+        run: npm run catalog:check
+
       - name: Build
         run: npm run build
 

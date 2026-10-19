@@ -24,17 +24,20 @@
     ]
   },
   {
-    "name": "Base32 编解码",
-    "path": "/base32-codec",
-    "description": "Base32 编码与解码（RFC 4648 标准）",
+    "name": "Hash 计算",
+    "path": "/hash-calculator",
+    "description": "计算文本与文件的 MD5、SHA-1、SHA-256、SHA-512 哈希值，支持 HMAC 与 Base64 输出",
     "category": "安全工具",
     "keywords": [
-      "base32",
-      "encode",
-      "decode",
-      "编码",
-      "解码",
-      "rfc4648"
+      "hash",
+      "md5",
+      "sha",
+      "哈希",
+      "摘要",
+      "HMAC",
+      "文件",
+      "Base64",
+      "加密"
     ]
   },
   {
@@ -63,6 +66,20 @@
       "合并",
       "筛选",
       "表格"
+    ]
+  },
+  {
+    "name": "Base32 编解码",
+    "path": "/base32-codec",
+    "description": "Base32 编码与解码（RFC 4648 标准）",
+    "category": "编码转换",
+    "keywords": [
+      "base32",
+      "encode",
+      "decode",
+      "编码",
+      "解码",
+      "rfc4648"
     ]
   },
   {
@@ -115,7 +132,7 @@
   {
     "name": "Unicode 转换",
     "path": "/unicode-converter",
-    "description": "Unicode 转义序列转换（\\\\uXXXX），支持中文与特殊字符",
+    "description": "Unicode 转义序列转换（\\uXXXX），支持中文与特殊字符",
     "category": "编码转换",
     "keywords": [
       "unicode",
@@ -187,40 +204,6 @@
     ]
   },
   {
-    "name": "颜色转换",
-    "path": "/color-converter",
-    "description": "HEX、RGB、HSL、CMYK 颜色格式互转，支持 WCAG 对比度检查、配色方案、CSS 颜色名识别",
-    "category": "计算工具",
-    "keywords": [
-      "color",
-      "hex",
-      "rgb",
-      "hsl",
-      "cmyk",
-      "颜色",
-      "转换",
-      "对比度",
-      "配色"
-    ]
-  },
-  {
-    "name": "Hash 计算",
-    "path": "/hash-calculator",
-    "description": "计算文本与文件的 MD5、SHA-1、SHA-256、SHA-512 哈希值，支持 HMAC 与 Base64 输出",
-    "category": "计算工具",
-    "keywords": [
-      "hash",
-      "md5",
-      "sha",
-      "哈希",
-      "摘要",
-      "HMAC",
-      "文件",
-      "Base64",
-      "加密"
-    ]
-  },
-  {
     "name": "成语词典",
     "path": "/idiom-dictionary",
     "description": "成语查询词典，支持释义、出处、例句",
@@ -230,20 +213,6 @@
       "词典",
       "idiom",
       "查询"
-    ]
-  },
-  {
-    "name": "单位换算",
-    "path": "/unit-converter-edu",
-    "description": "多类别单位换算工具，支持长度、质量、温度、时间、面积、体积、速度、数据",
-    "category": "教育学习",
-    "keywords": [
-      "单位",
-      "换算",
-      "converter",
-      "长度",
-      "质量",
-      "温度"
     ]
   },
   {
@@ -269,6 +238,20 @@
       "古诗",
       "poetry",
       "唐诗"
+    ]
+  },
+  {
+    "name": "基础单位换算",
+    "path": "/unit-converter-edu",
+    "description": "多类别单位换算工具，支持长度、质量、温度、时间、面积、体积、速度、数据",
+    "category": "教育学习",
+    "keywords": [
+      "单位",
+      "换算",
+      "converter",
+      "长度",
+      "质量",
+      "温度"
     ]
   },
   {
@@ -325,7 +308,7 @@
     ]
   },
   {
-    "name": "英语语法",
+    "name": "英语语法基础",
     "path": "/english-grammar",
     "description": "英语语法参考工具，时态、句型、词性详解",
     "category": "教育学习",
@@ -337,7 +320,7 @@
     ]
   },
   {
-    "name": "英语语法",
+    "name": "英语语法速查",
     "path": "/grammar-reference",
     "description": "英语语法速查，含时态、句型、从句、虚拟语气等",
     "category": "教育学习",
@@ -434,7 +417,7 @@
     ]
   },
   {
-    "name": "SQL 格式化",
+    "name": "SQL 快速格式化",
     "path": "/sql-formatter",
     "description": "SQL 语句美化和压缩",
     "category": "开发工具",
@@ -481,6 +464,19 @@
       "农历",
       "传统文化",
       "二十四节气"
+    ]
+  },
+  {
+    "name": "日期差计算",
+    "path": "/date-diff",
+    "description": "计算两个日期之间的天数、月数、年数",
+    "category": "日期时间",
+    "keywords": [
+      "日期",
+      "差",
+      "天数",
+      "月数",
+      "年数"
     ]
   },
   {
@@ -550,6 +546,23 @@
       "HEX",
       "RGB",
       "HSL"
+    ]
+  },
+  {
+    "name": "颜色转换",
+    "path": "/color-converter",
+    "description": "HEX、RGB、HSL、CMYK 颜色格式互转，支持 WCAG 对比度检查、配色方案、CSS 颜色名识别",
+    "category": "设计工具",
+    "keywords": [
+      "color",
+      "hex",
+      "rgb",
+      "hsl",
+      "cmyk",
+      "颜色",
+      "转换",
+      "对比度",
+      "配色"
     ]
   },
   {
@@ -684,19 +697,6 @@
       "生日",
       "计算",
       "岁数"
-    ]
-  },
-  {
-    "name": "日期差计算",
-    "path": "/date-diff",
-    "description": "计算两个日期之间的天数、月数、年数",
-    "category": "生活计算",
-    "keywords": [
-      "日期",
-      "差",
-      "天数",
-      "月数",
-      "年数"
     ]
   },
   {
@@ -848,6 +848,20 @@
     ]
   },
   {
+    "name": "多方言 SQL 格式化",
+    "path": "/sql-formatter-db",
+    "description": "SQL 语句格式化与美化，支持多种方言",
+    "category": "数据库工具",
+    "keywords": [
+      "sql",
+      "format",
+      "格式化",
+      "美化",
+      "mysql",
+      "postgres"
+    ]
+  },
+  {
     "name": "连接串解析",
     "path": "/connection-string-parser",
     "description": "解析数据库连接字符串（MySQL/PostgreSQL/MongoDB 等）",
@@ -910,20 +924,6 @@
       "命令",
       "缓存",
       "nosql"
-    ]
-  },
-  {
-    "name": "SQL 格式化",
-    "path": "/sql-formatter-db",
-    "description": "SQL 语句格式化与美化，支持多种方言",
-    "category": "数据库工具",
-    "keywords": [
-      "sql",
-      "format",
-      "格式化",
-      "美化",
-      "mysql",
-      "postgres"
     ]
   },
   {
@@ -1306,20 +1306,6 @@
     ]
   },
   {
-    "name": "图片表格识别",
-    "path": "/image-table-recognizer",
-    "description": "上传图片识别表格内容，自动生成可编辑表格并导出",
-    "category": "文本处理",
-    "keywords": [
-      "图片",
-      "表格",
-      "OCR",
-      "识别",
-      "Excel",
-      "转换"
-    ]
-  },
-  {
     "name": "文本对比",
     "path": "/text-diff",
     "description": "对比两段文本的差异，高亮显示新增、删除和修改的内容",
@@ -1342,19 +1328,6 @@
       "排序",
       "重复",
       "排序"
-    ]
-  },
-  {
-    "name": "文本转语音",
-    "path": "/text-to-speech",
-    "description": "将文本转换为语音播放，支持多语言与语速调节",
-    "category": "文本处理",
-    "keywords": [
-      "tts",
-      "speech",
-      "语音",
-      "朗读",
-      "speechSynthesis"
     ]
   },
   {
@@ -1399,6 +1372,20 @@
       "预览",
       "渲染",
       "文档"
+    ]
+  },
+  {
+    "name": "图片表格识别",
+    "path": "/image-table-recognizer",
+    "description": "上传图片识别表格内容，自动生成可编辑表格并导出",
+    "category": "文档处理",
+    "keywords": [
+      "图片",
+      "表格",
+      "OCR",
+      "识别",
+      "Excel",
+      "转换"
     ]
   },
   {
@@ -1461,18 +1448,22 @@
     ]
   },
   {
-    "name": "PDF 工具箱",
-    "path": "/pdf-toolbox",
-    "description": "PDF 合并、拆分、旋转、压缩、提取文本多功能工具箱",
+    "name": "PDF 转换器",
+    "path": "/pdf-converter",
+    "description": "将 PDF 转换为 Word、Excel、OCR 文本或图片，支持页面预览与批量导出",
     "category": "文档处理",
     "keywords": [
       "pdf",
-      "合并",
-      "拆分",
-      "旋转",
-      "压缩",
-      "提取文本",
-      "工具箱"
+      "word",
+      "docx",
+      "excel",
+      "xlsx",
+      "ocr",
+      "转换",
+      "提取",
+      "图片",
+      "text",
+      "文档"
     ]
   },
   {
@@ -1500,22 +1491,18 @@
     ]
   },
   {
-    "name": "PDF 转换器",
-    "path": "/pdf-converter",
-    "description": "将 PDF 转换为 Word、Excel、OCR 文本或图片，支持页面预览与批量导出",
+    "name": "PDF 工具箱",
+    "path": "/pdf-toolbox",
+    "description": "PDF 合并、拆分、旋转、压缩、提取文本多功能工具箱",
     "category": "文档工具",
     "keywords": [
       "pdf",
-      "word",
-      "docx",
-      "excel",
-      "xlsx",
-      "ocr",
-      "转换",
-      "提取",
-      "图片",
-      "text",
-      "文档"
+      "合并",
+      "拆分",
+      "旋转",
+      "压缩",
+      "提取文本",
+      "工具箱"
     ]
   },
   {
@@ -1566,6 +1553,19 @@
       "gif",
       "转换",
       "动图"
+    ]
+  },
+  {
+    "name": "文本转语音",
+    "path": "/text-to-speech",
+    "description": "将文本转换为语音播放，支持多语言与语速调节",
+    "category": "音视频处理",
+    "keywords": [
+      "tts",
+      "speech",
+      "语音",
+      "朗读",
+      "speechSynthesis"
     ]
   },
   {
@@ -1752,7 +1752,7 @@
     ]
   },
   {
-    "name": "颜色拾取工具",
+    "name": "游戏配色与对比度",
     "path": "/color-picker-game",
     "description": "游戏开发专用颜色工具，支持 HEX/RGB/HSL/HSV 互转、调色板生成、WCAG 对比度检测及配置导出",
     "category": "游戏开发",
@@ -1996,20 +1996,6 @@
     ]
   },
   {
-    "name": "关键词挖掘",
-    "path": "/keyword-miner",
-    "description": "基于种子词生成长尾关键词组合，并分析文本关键词密度与搜索意图",
-    "category": "站长工具",
-    "keywords": [
-      "关键词",
-      "seo",
-      "长尾词",
-      "搜索",
-      "关键词密度",
-      "挖掘"
-    ]
-  },
-  {
     "name": "翻译对比",
     "path": "/translation-compare",
     "description": "多引擎翻译结果对比（链接生成）",
@@ -2153,6 +2139,39 @@
     ]
   },
   {
+    "name": "AI 代码助手",
+    "path": "/ai-code-assistant",
+    "description": "AI 代码生成、解释、重构与优化，支持多种编程语言",
+    "category": "AI 工具",
+    "keywords": [
+      "ai",
+      "code",
+      "代码",
+      "生成",
+      "解释",
+      "重构",
+      "优化",
+      "programming",
+      "开发"
+    ]
+  },
+  {
+    "name": "AI 取名神器",
+    "path": "/ai-naming",
+    "description": "AI 为产品、项目、品牌、域名智能取名，支持风格定制",
+    "category": "AI 工具",
+    "keywords": [
+      "ai",
+      "取名",
+      "命名",
+      "品牌",
+      "产品名",
+      "项目名",
+      "naming",
+      "brand"
+    ]
+  },
+  {
     "name": "AI 图片生成",
     "path": "/ai-image-generator",
     "description": "调用 OpenAI 兼容接口根据提示词生成图片，支持自定义模型和尺寸",
@@ -2170,6 +2189,22 @@
     ]
   },
   {
+    "name": "AI 文案生成",
+    "path": "/ai-copywriter",
+    "description": "AI 营销文案、产品描述、广告语与种草文案自动生成",
+    "category": "AI 工具",
+    "keywords": [
+      "ai",
+      "文案",
+      "营销",
+      "广告",
+      "种草",
+      "产品描述",
+      "copywriting",
+      "marketing"
+    ]
+  },
+  {
     "name": "AI 写作助手",
     "path": "/ai-writer",
     "description": "基于 OpenAI 兼容接口的 AI 写作、改写、标题生成与文案润色工具",
@@ -2183,6 +2218,68 @@
       "openai",
       "gpt",
       "文案"
+    ]
+  },
+  {
+    "name": "AI 邮件助手",
+    "path": "/ai-email",
+    "description": "AI 撰写商务邮件、回复邮件与邮件模板生成",
+    "category": "AI 工具",
+    "keywords": [
+      "ai",
+      "email",
+      "邮件",
+      "商务",
+      "回复",
+      "撰写",
+      "mail"
+    ]
+  },
+  {
+    "name": "AI 智能问答",
+    "path": "/ai-qa",
+    "description": "AI 智能问答助手，支持多轮对话与上下文记忆",
+    "category": "AI 工具",
+    "keywords": [
+      "ai",
+      "qa",
+      "问答",
+      "对话",
+      "聊天",
+      "助手",
+      "chat",
+      "gpt"
+    ]
+  },
+  {
+    "name": "AI 周报生成",
+    "path": "/ai-report",
+    "description": "输入工作要点，AI 自动生成结构化工作周报",
+    "category": "AI 工具",
+    "keywords": [
+      "ai",
+      "周报",
+      "工作报告",
+      "总结",
+      "汇报",
+      "report",
+      "weekly"
+    ]
+  },
+  {
+    "name": "AI SQL 生成",
+    "path": "/ai-sql",
+    "description": "自然语言转 SQL 查询，支持表结构描述与多方言",
+    "category": "AI 工具",
+    "keywords": [
+      "ai",
+      "sql",
+      "数据库",
+      "查询",
+      "自然语言",
+      "database",
+      "query",
+      "nl2sql"
     ]
   },
   {
@@ -2318,6 +2415,20 @@
       "密度",
       "词频",
       "分析"
+    ]
+  },
+  {
+    "name": "关键词挖掘",
+    "path": "/keyword-miner",
+    "description": "基于种子词生成长尾关键词组合，并分析文本关键词密度与搜索意图",
+    "category": "SEO 工具",
+    "keywords": [
+      "关键词",
+      "seo",
+      "长尾词",
+      "搜索",
+      "关键词密度",
+      "挖掘"
     ]
   },
   {

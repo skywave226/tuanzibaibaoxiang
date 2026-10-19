@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vue-tsc -b && vite build && npm run generate-seo -- --inject-spa",
     "preview": "vite preview",
-    "generate-seo": "node scripts/generate-seo-pages.mjs"
+    "generate-seo": "node scripts/generate-seo-pages.mjs",
+    "catalog:generate": "node scripts/extract-tools-data.mjs",
+    "catalog:check": "node scripts/extract-tools-data.mjs --check"
   },
   "dependencies": {
     "@iarna/toml": "^2.2.5",

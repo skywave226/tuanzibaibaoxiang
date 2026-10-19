@@ -2100,7 +2100,7 @@
   },
   "/unit-converter-edu": {
     "en": {
-      "name": "Unit Converter",
+      "name": "Basic Unit Converter",
       "description": "Multi-category unit conversion tool supporting length, mass, temperature, time, area, volume, speed and data.",
       "keywords": [
         "unit",
@@ -2112,7 +2112,7 @@
       ]
     },
     "es": {
-      "name": "Conversor de Unidades",
+      "name": "Conversor Básico de Unidades",
       "description": "Herramienta de conversión de unidades multicategoría, compatible con longitud, masa, temperatura, tiempo, área, volumen, velocidad y datos.",
       "keywords": [
         "unidad",
@@ -2124,7 +2124,7 @@
       ]
     },
     "fr": {
-      "name": "Convertisseur d'Unités",
+      "name": "Convertisseur d’Unités Basique",
       "description": "Outil de conversion multi-catégories prenant en charge la longueur, la masse, la température, le temps, la surface, le volume, la vitesse et les données.",
       "keywords": [
         "unité",
@@ -2136,7 +2136,7 @@
       ]
     },
     "de": {
-      "name": "Einheitenumrechner",
+      "name": "Einfacher Einheitenumrechner",
       "description": "Mehrkategorie-Umrechnungstool für Länge, Masse, Temperatur, Zeit, Fläche, Volumen, Geschwindigkeit und Daten.",
       "keywords": [
         "einheit",
@@ -2148,7 +2148,7 @@
       ]
     },
     "ja": {
-      "name": "単位換算",
+      "name": "基本単位換算",
       "description": "長さ、質量、温度、時間、面積、体積、速度、データをサポートする多カテゴリ単位換算ツールです。",
       "keywords": [
         "単位",
@@ -2160,7 +2160,7 @@
       ]
     },
     "it": {
-      "name": "Convertitore di Unità",
+      "name": "Convertitore di Unità Base",
       "description": "Strumento di conversione multi-categoria che supporta lunghezza, massa, temperatura, tempo, area, volume, velocità e dati.",
       "keywords": [
         "unità",
@@ -2172,7 +2172,7 @@
       ]
     },
     "ko": {
-      "name": "단위 변환기",
+      "name": "기초 단위 변환기",
       "description": "길이, 질량, 온도, 시간, 면적, 부피, 속도, 데이터를 지원하는 다중 카테고리 단위 변환 도구입니다.",
       "keywords": [
         "단위",
@@ -2184,7 +2184,7 @@
       ]
     },
     "ru": {
-      "name": "Конвертер Единиц Измерения",
+      "name": "Базовый Конвертер Единиц",
       "description": "Многокатегориальный инструмент конвертации, поддерживает длину, массу, температуру, время, площадь, объём, скорость и данные.",
       "keywords": [
         "единица",
@@ -2196,7 +2196,7 @@
       ]
     },
     "pt": {
-      "name": "Conversor de Unidades",
+      "name": "Conversor Básico de Unidades",
       "description": "Ferramenta de conversão de unidades multicategoria, com suporte a comprimento, massa, temperatura, tempo, área, volume, velocidade e dados.",
       "keywords": [
         "unidade",
@@ -2208,7 +2208,7 @@
       ]
     },
     "zh-CN": {
-      "name": "单位换算",
+      "name": "基础单位换算",
       "description": "多类别单位换算工具，支持长度、质量、温度、时间、面积、体积、速度、数据",
       "keywords": [
         "单位",
@@ -2220,7 +2220,7 @@
       ]
     },
     "zh-TW": {
-      "name": "單位換算",
+      "name": "基礎單位換算",
       "description": "多類別單位換算工具，支持長度、質量、溫度、時間、面積、體積、速度、數據",
       "keywords": [
         "單位",
@@ -2999,7 +2999,7 @@
   },
   "/english-grammar": {
     "en": {
-      "name": "English Grammar",
+      "name": "English Grammar Basics",
       "description": "English grammar reference tool with detailed explanations of tenses, sentence patterns, and parts of speech.",
       "keywords": [
         "english",
@@ -3010,7 +3010,7 @@
       ]
     },
     "es": {
-      "name": "Gramática Inglesa",
+      "name": "Fundamentos de Gramática Inglesa",
       "description": "Herramienta de referencia de gramática inglesa con explicaciones detalladas de tiempos verbales, estructuras y categorías gramaticales.",
       "keywords": [
         "inglés",
@@ -3021,7 +3021,7 @@
       ]
     },
     "fr": {
-      "name": "Grammaire Anglaise",
+      "name": "Bases de la Grammaire Anglaise",
       "description": "Outil de référence de grammaire anglaise avec explications détaillées des temps, structures et catégories grammaticales.",
       "keywords": [
         "anglais",
@@ -3032,7 +3032,7 @@
       ]
     },
     "de": {
-      "name": "Englische Grammatik",
+      "name": "Grundlagen der Englischen Grammatik",
       "description": "Englische Grammatik-Referenz mit detaillierten Erklärungen zu Zeiten, Satzmustern und Wortarten.",
       "keywords": [
         "englisch",
@@ -3043,7 +3043,7 @@
       ]
     },
     "ja": {
-      "name": "英語文法",
+      "name": "英語文法の基礎",
       "description": "時制、文型、品詞を詳しく解説する英語文法参考ツールです。",
       "keywords": [
         "英語",
@@ -3054,7 +3054,7 @@
       ]
     },
     "it": {
-      "name": "Grammatica Inglese",
+      "name": "Basi di Grammatica Inglese",
       "description": "Strumento di riferimento per la grammatica inglese con spiegazioni dettagliate su tempi verbali, modelli di frase e parti del discorso.",
       "keywords": [
         "inglese",
@@ -3065,7 +3065,7 @@
       ]
     },
     "ko": {
-      "name": "영어 문법",
+      "name": "영어 문법 기초",
       "description": "시제, 문형, 품사를 상세히 설명하는 영어 문법 참고 도구입니다.",
       "keywords": [
         "영어",
@@ -3076,7 +3076,7 @@
       ]
     },
     "ru": {
-      "name": "Английская Грамматика",
+      "name": "Основы Английской Грамматики",
       "description": "Справочник по английской грамматике с подробными объяснениями времён, структур предложений и частей речи.",
       "keywords": [
         "английский",
@@ -3087,7 +3087,7 @@
       ]
     },
     "pt": {
-      "name": "Gramática Inglesa",
+      "name": "Fundamentos da Gramática Inglesa",
       "description": "Ferramenta de referência de gramática inglesa com explicações detalhadas sobre tempos verbais, estruturas e classes gramaticais.",
       "keywords": [
         "inglês",
@@ -3098,7 +3098,7 @@
       ]
     },
     "zh-CN": {
-      "name": "英语语法",
+      "name": "英语语法基础",
       "description": "英语语法参考工具，时态、句型、词性详解",
       "keywords": [
         "英语",
@@ -3108,7 +3108,7 @@
       ]
     },
     "zh-TW": {
-      "name": "英語語法",
+      "name": "英語文法基礎",
       "description": "英語語法參考工具，時態、句型、詞性詳解",
       "keywords": [
         "英語",
@@ -3120,7 +3120,7 @@
   },
   "/grammar-reference": {
     "en": {
-      "name": "Grammar Reference",
+      "name": "English Grammar Reference",
       "description": "Quick English grammar reference covering tenses, sentence patterns, clauses, subjunctive mood, and more.",
       "keywords": [
         "english",
@@ -3132,7 +3132,7 @@
       ]
     },
     "es": {
-      "name": "Referencia de Gramática",
+      "name": "Guía de Gramática Inglesa",
       "description": "Referencia rápida de gramática inglesa que abarca tiempos verbales, estructuras, oraciones subordinadas y subjuntivo.",
       "keywords": [
         "inglés",
@@ -3144,7 +3144,7 @@
       ]
     },
     "fr": {
-      "name": "Référence de Grammaire",
+      "name": "Référence de Grammaire Anglaise",
       "description": "Référence rapide de grammaire anglaise couvrant les temps, structures, propositions subordonnées et subjonctif.",
       "keywords": [
         "anglais",
@@ -3156,7 +3156,7 @@
       ]
     },
     "de": {
-      "name": "Grammatik-Referenz",
+      "name": "Englische Grammatik-Nachschlagewerk",
       "description": "Schnelle englische Grammatik-Referenz zu Zeiten, Satzmustern, Nebensätzen und Konjunktiv.",
       "keywords": [
         "englisch",
@@ -3168,7 +3168,7 @@
       ]
     },
     "ja": {
-      "name": "文法リファレンス",
+      "name": "英語文法早見表",
       "description": "時制、文型、節、仮定法などをカバーする英語文法のクイックリファレンスです。",
       "keywords": [
         "英語",
@@ -3180,7 +3180,7 @@
       ]
     },
     "it": {
-      "name": "Riferimento Grammaticale",
+      "name": "Guida alla Grammatica Inglese",
       "description": "Riferimento rapido di grammatica inglese che copre tempi verbali, modelli di frase, proposizioni e congiuntivo.",
       "keywords": [
         "inglese",
@@ -3192,7 +3192,7 @@
       ]
     },
     "ko": {
-      "name": "문법 참고",
+      "name": "영어 문법 빠른 참조",
       "description": "시제, 문형, 절, 가정법 등을 다루는 영어 문법 빠른 참고 자료입니다.",
       "keywords": [
         "영어",
@@ -3204,7 +3204,7 @@
       ]
     },
     "ru": {
-      "name": "Справка по Грамматике",
+      "name": "Справочник по Английской Грамматике",
       "description": "Краткий справочник по английской грамматике: времена, структуры предложений, придаточные предложения, сослагательное наклонение.",
       "keywords": [
         "английский",
@@ -3216,7 +3216,7 @@
       ]
     },
     "pt": {
-      "name": "Referência Gramatical",
+      "name": "Guia de Gramática Inglesa",
       "description": "Referência rápida de gramática inglesa cobrindo tempos verbais, estruturas, orações subordinadas e subjuntivo.",
       "keywords": [
         "inglês",
@@ -3228,7 +3228,7 @@
       ]
     },
     "zh-CN": {
-      "name": "英语语法",
+      "name": "英语语法速查",
       "description": "英语语法速查，含时态、句型、从句、虚拟语气等",
       "keywords": [
         "英语",
@@ -3239,7 +3239,7 @@
       ]
     },
     "zh-TW": {
-      "name": "英語語法",
+      "name": "英語文法速查",
       "description": "英語語法速查，含時態、句型、從句、虛擬語氣等",
       "keywords": [
         "英語",
@@ -4056,7 +4056,7 @@
   },
   "/sql-formatter": {
     "en": {
-      "name": "SQL Formatter",
+      "name": "Quick SQL Formatter",
       "description": "Format and beautify SQL statements, supporting multiple dialects",
       "keywords": [
         "sql",
@@ -4067,7 +4067,7 @@
       ]
     },
     "es": {
-      "name": "Formateador SQL",
+      "name": "Formateador SQL Rápido",
       "description": "Formatea y embellece sentencias SQL, compatible con múltiples dialectos",
       "keywords": [
         "sql",
@@ -4078,7 +4078,7 @@
       ]
     },
     "fr": {
-      "name": "Formateur SQL",
+      "name": "Formatage SQL Rapide",
       "description": "Formate et embellit les instructions SQL, avec prise en charge de plusieurs dialectes",
       "keywords": [
         "sql",
@@ -4089,7 +4089,7 @@
       ]
     },
     "de": {
-      "name": "SQL-Formatierer",
+      "name": "Schneller SQL-Formatierer",
       "description": "Formatiert und verschönert SQL-Anweisungen mit Unterstützung mehrerer Dialekte",
       "keywords": [
         "sql",
@@ -4100,7 +4100,7 @@
       ]
     },
     "ja": {
-      "name": "SQL フォーマッタ",
+      "name": "SQL クイック整形",
       "description": "SQL 文を整形・美化し、複数の方言に対応",
       "keywords": [
         "sql",
@@ -4111,7 +4111,7 @@
       ]
     },
     "it": {
-      "name": "Formattatore SQL",
+      "name": "Formattatore SQL Rapido",
       "description": "Formatta e abbellisce le istruzioni SQL, supportando più dialetti",
       "keywords": [
         "sql",
@@ -4122,7 +4122,7 @@
       ]
     },
     "ko": {
-      "name": "SQL 포맷터",
+      "name": "빠른 SQL 포맷터",
       "description": "SQL 문을 포맷팅 및 다듬고 여러 방언 지원",
       "keywords": [
         "sql",
@@ -4133,7 +4133,7 @@
       ]
     },
     "ru": {
-      "name": "SQL Форматтер",
+      "name": "Быстрое Форматирование SQL",
       "description": "Форматирует и улучшает SQL-запросы, поддерживает несколько диалектов",
       "keywords": [
         "sql",
@@ -4144,7 +4144,7 @@
       ]
     },
     "pt": {
-      "name": "Formatador SQL",
+      "name": "Formatador SQL Rápido",
       "description": "Formata e embeleza instruções SQL, com suporte a vários dialetos",
       "keywords": [
         "sql",
@@ -4155,7 +4155,7 @@
       ]
     },
     "zh-CN": {
-      "name": "SQL 格式化",
+      "name": "SQL 快速格式化",
       "description": "SQL 语句格式化与美化，支持多种方言",
       "keywords": [
         "sql",
@@ -4167,7 +4167,7 @@
       ]
     },
     "zh-TW": {
-      "name": "SQL 格式化",
+      "name": "SQL 快速格式化",
       "description": "SQL 語句格式化與美化，支持多種方言",
       "keywords": [
         "sql",
@@ -16070,7 +16070,7 @@
   },
   "/color-picker-game": {
     "en": {
-      "name": "Color Picker",
+      "name": "Game Color Palette & Contrast",
       "description": "Game development color tool supporting HEX/RGB/HSL/HSV conversion, palette generation, WCAG contrast checking, and config export.",
       "keywords": [
         "color",
@@ -16084,7 +16084,7 @@
       ]
     },
     "es": {
-      "name": "Selector de Color",
+      "name": "Paleta y Contraste para Juegos",
       "description": "Herramienta de color para desarrollo de juegos que soporta conversión HEX/RGB/HSL/HSV, generación de paletas, verificación de contraste WCAG y exportación de configuración.",
       "keywords": [
         "color",
@@ -16098,7 +16098,7 @@
       ]
     },
     "fr": {
-      "name": "Sélecteur de Couleur",
+      "name": "Palette et Contraste pour Jeux",
       "description": "Outil de couleur pour le développement de jeux prenant en charge la conversion HEX/RGB/HSL/HSV, la génération de palettes, la vérification du contraste WCAG et l'export de configuration.",
       "keywords": [
         "couleur",
@@ -16112,7 +16112,7 @@
       ]
     },
     "de": {
-      "name": "Farbwähler",
+      "name": "Spiel-Farbpalette und Kontrast",
       "description": "Farbtool für die Spieleentwicklung mit Unterstützung für HEX/RGB/HSL/HSV-Umrechnung, Palettengenerierung, WCAG-Kontrastprüfung und Konfigurationsexport.",
       "keywords": [
         "farbe",
@@ -16126,7 +16126,7 @@
       ]
     },
     "ja": {
-      "name": "カラーピッカー",
+      "name": "ゲーム配色とコントラスト",
       "description": "HEX/RGB/HSL/HSVの相互変換、パレット生成、WCAGコントラスト検査、設定エクスポートに対応するゲーム開発向けカラーツールです。",
       "keywords": [
         "color",
@@ -16140,7 +16140,7 @@
       ]
     },
     "it": {
-      "name": "Selettore Colore",
+      "name": "Palette e Contrasto per Giochi",
       "description": "Strumento colore per lo sviluppo di giochi che supporta conversione HEX/RGB/HSL/HSV, generazione di tavolozze, controllo contrasto WCAG ed esportazione configurazione.",
       "keywords": [
         "colore",
@@ -16154,7 +16154,7 @@
       ]
     },
     "ko": {
-      "name": "색상 선택기",
+      "name": "게임 색상 팔레트와 대비",
       "description": "HEX/RGB/HSL/HSV 변환, 팔레트 생성, WCAG 대비 검사, 구성 내보내기를 지원하는 게임 개발용 색상 도구입니다.",
       "keywords": [
         "color",
@@ -16168,7 +16168,7 @@
       ]
     },
     "ru": {
-      "name": "Выбор Цвета",
+      "name": "Игровая палитра и контраст",
       "description": "Цветовой инструмент для разработки игр с поддержкой преобразования HEX/RGB/HSL/HSV, генерации палитр, проверки контраста WCAG и экспорта конфигурации.",
       "keywords": [
         "color",
@@ -16182,7 +16182,7 @@
       ]
     },
     "pt": {
-      "name": "Seletor de Cor",
+      "name": "Paleta e Contraste para Jogos",
       "description": "Ferramenta de cor para desenvolvimento de jogos que suporta conversão HEX/RGB/HSL/HSV, geração de paletas, verificação de contraste WCAG e exportação de configuração.",
       "keywords": [
         "cor",
@@ -16196,7 +16196,7 @@
       ]
     },
     "zh-CN": {
-      "name": "颜色拾取工具",
+      "name": "游戏配色与对比度",
       "description": "游戏开发专用颜色工具，支持 HEX/RGB/HSL/HSV 互转、调色板生成、WCAG 对比度检测及配置导出",
       "keywords": [
         "颜色",
@@ -16212,7 +16212,7 @@
       ]
     },
     "zh-TW": {
-      "name": "顏色拾取工具",
+      "name": "遊戲配色與對比度",
       "description": "遊戲開發專用顏色工具，支持 HEX/RGB/HSL/HSV 互轉、調色板生成、WCAG 對比度檢測及配置導出",
       "keywords": [
         "顏色",
@@ -21553,6 +21553,41 @@
         "站點地圖",
         "SEO"
       ]
+    }
+  },
+  "/sql-formatter-db": {
+    "en": {
+      "name": "Multi-Dialect SQL Formatter"
+    },
+    "es": {
+      "name": "Formateador SQL Multidialecto"
+    },
+    "fr": {
+      "name": "Formatage SQL Multidialecte"
+    },
+    "de": {
+      "name": "SQL-Formatierer für mehrere Dialekte"
+    },
+    "ja": {
+      "name": "複数方言 SQL 整形"
+    },
+    "it": {
+      "name": "Formattatore SQL Multidialetto"
+    },
+    "ko": {
+      "name": "다중 방언 SQL 포맷터"
+    },
+    "ru": {
+      "name": "Форматирование SQL разных диалектов"
+    },
+    "pt": {
+      "name": "Formatador SQL Multidialeto"
+    },
+    "zh-CN": {
+      "name": "多方言 SQL 格式化"
+    },
+    "zh-TW": {
+      "name": "多方言 SQL 格式化"
     }
   }
 }
